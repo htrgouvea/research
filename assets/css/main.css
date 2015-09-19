@@ -6,6 +6,8 @@ html,body {
 	padding: 0px;
 	margin: 0px;
 	font-family: "Open Sans";
+	background: url(../images/background.png) center center no-repeat fixed;
+	background-size: cover;
 }
 
 a { text-decoration: none; }
@@ -17,8 +19,6 @@ img { max-width: 100%; }
 header {
 	width: 100%;
 	min-height: 100%;
-	background: url(../images/background.png) center center no-repeat fixed;
-	background-size: cover;
 }
 
 header h1 {
