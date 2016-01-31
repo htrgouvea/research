@@ -1,5 +1,3 @@
-# [**https://heitorg.github.io**](https://heitorg.github.io)
-
 ***My website :grin:***
 
 ##### Technologies used:
