@@ -132,6 +132,8 @@ footer img {
     color: #333;
     border-radius: 4px;
     padding-left: 20px;
+    outline: none;
+    resize: none;
 }
 
 #email, #name { height: 45px; }
@@ -142,6 +144,7 @@ footer img {
     color: #FFF;
     border: medium none;
     border-radius: 1px;
+    cursor: pointer;
 }
 
 #submit { background: none repeat scroll 0% 0% #000000; }
