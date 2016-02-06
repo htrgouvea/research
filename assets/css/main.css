@@ -94,7 +94,7 @@ footer img {
 	background: #ffffff;
 }
 
-#whatido h1, #whychooseme h1, #contact h1 {
+#whatido h2, #whychooseme h2, #contact h2 {
 	color: #000;
 	font-weight: 600;
 	padding-top: 10%;
@@ -223,3 +223,7 @@ footer img {
 }
 
 .message { padding-top: 1%; }
+
+@media screen (min-width: 1000px) {
+	
+}
