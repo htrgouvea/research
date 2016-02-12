@@ -1,6 +1,6 @@
 
 Artistic License 2.0
-Copyright (c) [year] [fullname]
+Copyright (c) 2016, Heitor Gouvea.
 
 Everyone is permitted to copy and distribute verbatim copies of this license
 document, but changing it is not allowed.
