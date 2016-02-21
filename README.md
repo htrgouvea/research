@@ -1,4 +1,8 @@
 In construction.
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1ff4d2c49c4a78c359604a141816ef8cde47cd1b
 # ***My website :grin:***
 
 ##### Technologies used:
@@ -10,7 +14,11 @@ In construction.
 
 ##### Bugs
 
+<<<<<<< HEAD
+- Report bugs by contacting me through facebook or email: hi@heitorgouvea.me
+=======
 - Report bugs in my email: hi@heitorgouvea.me
+>>>>>>> 1ff4d2c49c4a78c359604a141816ef8cde47cd1b
 
 ##### License
 
