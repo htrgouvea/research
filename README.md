@@ -11,7 +11,7 @@ In construction.
 
 ##### Bugs
 
-- Report bugs by contacting me through facebook or email: hi@heitorgouvea.me
+- Report bugs by contacting me through facebook or email: **hi@heitorgouvea.me**
 
 ##### License
 
