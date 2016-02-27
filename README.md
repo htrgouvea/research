@@ -1,6 +1,6 @@
 In construction.
 
-# ***My website :grin:***
+# ***My website :smile:***
 
 ##### Technologies used:
 
