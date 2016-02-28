@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
 });
 
 $(document).ready(function() {
-	/* style for scroll bar */ 
 	$('html').niceScroll({
 		cursorborder: '#00aeef',
 		cursorcolor:  '#00aeef'
