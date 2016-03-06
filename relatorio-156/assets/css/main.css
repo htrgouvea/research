@@ -11,15 +11,19 @@ header {
 	z-index: 999;	
 }
 
-.inicio a {
-	color: #fff;
-	font-weight: 300;
-	font-size: 20px;
-	text-decoration: none;
-	font-family: 'Open Sans';
-	text-transform: uppercase;
-	margin-top: 20px;
+.campinas img {
+	padding-top: 100px;
+	margin-left: 10px;
+	width: 176px;
+	height: 76px;
 	position: fixed;
+}
+
+.ima img  {
+	padding-top: 100px;
+	margin-left: 10px;
+	width: 176px;
+	height: 76px;
 }
 
 #more a {
@@ -39,6 +43,7 @@ header h2 {
 	color: #fff;
 	text-transform: uppercase;
 	padding-top: 20px;
+	position: fixed;
 }
 
 footer {
