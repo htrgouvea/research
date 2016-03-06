@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html  ng-app="bigbang">
+	<head>
+		<meta charset="UTF-8">
+		<title>Relatorio 156</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../../assets/css/rusty.css">
+		<link rel="stylesheet" href="../../assets/css/main.css">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		
+   		<script type="text/javascript">
+     		google.charts.load('current', {'packages':['gauge']});
+      		google.charts.setOnLoadCallback(drawChart);
+      	
+      		function drawChart() {
+        		var data = google.visualization.arrayToDataTable([
+          		['Label', 'Value'],
+          		['Chamados', 0],
+          		['Fora prazo', 0],
+          		['Tempo medio', 0],
+		  		['Contestado', 0]
+        	]);
+
+        	var options = {
+          		width: 1000, height: 400,
+          		redFrom: 90, redTo: 100,
+          		yellowFrom:75, yellowTo: 90,
+          		minorTicks: 5
+        	};
+
+        	var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        	chart.draw(data, options);
+
+        	setInterval(function() {
+		  
+				$.getJSON( "http://52.7.200.222:28080/services/rest/dados-secretaria/GABINETE%20DO%20PREFEITO/2016/1" , function ( json_api ) {
+				
+				data.setValue(0, 1,json_api.qtdChamados );
+				data.setValue(1, 1, json_api.foraprazo);
+				data.setValue(2, 1, json_api.med_diff_cad_conc);
+				data.setValue(3, 1, json_api.qtdQuestionados);
+    			chart.draw(data, options);
+ 			});
+ 		}, 1500);
+    }
+    </script>
+	</head>
+	<body>
+		<header class="txt-center">
+			<div class="container">
+				<h2>Relatorio 156</h2>
+			</div>
+		</header>
+
+		<section id="graficos" class="txt-center">
+			<div class="container">
+				<div id="chart_div"></div>
+				</div>
+				<div id="more">
+					<a href="http://bigbangpy.appsolucoesdigitais.com.br/chart.html">Mais informações</a>
+				</div>
+			</div>
+		</section>
+
+		<footer class="txt-center">
+			<div class="container">
+			<h4>&copy 2016 - Todos os direitos reservados.</h4>
+			</div>
+		</footer>
+	</body>
+</html>
