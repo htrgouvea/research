@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["motionchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Secretaria');
+        data.addColumn('date', 'Date Solicitação');
+        data.addColumn('number', 'Chamados');
+        data.addColumn('number', 'Med Conclusão');
+        data.addColumn('number', 'Fora prazo');
+$.getJSON( "http://52.7.200.222:28080/services/rest/dados-secretaria" , function ( json_api ) {
+var items = [];
+ $.each( json_api, function ( key, val ) { 
+ var linha = [];
+ linha.push(val.secretaria);
+ linha.push(new Date(val.anosolicitacao,val.mesSolicitacao,0));
+ linha.push(val.qtdChamados);
+ linha.push(val.med_diff_cad_conc);
+ linha.push(val.foraprazo);
+ 
+ items.push(linha);
+ 
+ });
+ console.log(items);
+ data.addRows(items);
+
+/*	   data.addRows([
+          ['Apples',  new Date (1988,0,1), 1000, 300, 'East'],
+          ['Oranges', new Date (1988,0,1), 1150, 200, 'West'],
+          ['Bananas', new Date (1988,0,1), 300,  250, 'West'],
+          ['Apples',  new Date (1989,6,1), 1200, 400, 'East'],
+          ['Oranges', new Date (1989,6,1), 750,  150, 'West'],
+          ['Bananas', new Date (1989,6,1), 788,  617, 'West']
+        ]);
+*/
+        var chart = new google.visualization.MotionChart(document.getElementById('chart_div'));
+
+        chart.draw(data, {width: 1100, height:600});
+ 
+ 
+ });       
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 600px; height: 300px;"></div>
+  </body>
+</html>
