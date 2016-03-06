@@ -49,6 +49,12 @@
     			chart.draw(data, options);
  			});
  		}, 1500);
+ 		
+ 		$.getJSON( "http://52.7.200.222:28080/services/rest/execucao-orcamentaria/GABINETE%20DO%20PREFEITO/2015" , function ( json_api ) {
+	$("#chart_div").append("Execucao Orcamentaria: Ano "+json_api.ano+" R$"+json_api.totalDisponivel);
+ 
+ });  
+
     }
     </script>
 	</head>

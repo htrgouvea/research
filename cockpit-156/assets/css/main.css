@@ -8,7 +8,8 @@ header {
 	background-color: #4285F4;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14), 0px 4px 8px rgba(0, 0, 0, 0.28);
 	position: fixed;
-	z-index: 999;	
+	z-index: 2;
+	border-bottom: url(http://i.imgur.com/BrcrB8J.jpg) 30 30 repeat;
 }
 
 .campinas img {
@@ -24,6 +25,7 @@ header {
 	margin-left: 10px;
 	width: 176px;
 	height: 76px;
+	z-index: 99999999;
 }
 
 #more a {
