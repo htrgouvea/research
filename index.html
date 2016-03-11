@@ -56,8 +56,14 @@
 					<a href="/curriculum/" target="_blank" class="btn">MY CURRICULUM</a>
 			</div>
 			<div id="arrow" class="txt-right">
-				<li><a class="arrow-top animated bounce scroll" href="#home"></a></li>
-				<li><a class="arrow-down animated bounce scroll" href="#whatido"></a></li>
+				<ul>
+					<li>
+						<a class="arrow-top animated bounce scroll" href="#home"></a>
+					</li>
+					<li>
+						<a class="arrow-down animated bounce scroll" href="#whatido"></a>
+					</li>
+				</ul>
 			</div>	
 		</header>
 
@@ -65,7 +71,7 @@
 			<div class="container">
 				<h2>WHAT I DO?</h2>
 				<h3>
-					I am enthusiastic of technology, and in my free time I try<br>
+					I am enthusiastic of technology, and in my free time i try<br>
 					to contribute to open source projects in github.
 				</h3>
 				<div id="icons" class="txt-center">
@@ -82,8 +88,8 @@
 						<img src="assets/images/backend.png" alt="Development back end">
 						<h3>DEVELOPMENT BACK END</h3>
 						<h4>
-							Work with backend development using languages: Perl Script,
-							Shell Script, Ruby and your framework On Rails.I'm always searching
+							Work with backend development using modern languages such as: Perl Script,
+							Shell Script, Ruby and your framework On Rails. I'm always searching
 							to meet new programming languages.
 						</h4>
 					</div>
@@ -125,7 +131,7 @@
 					</div>
 					<div class="text">
 						<img src="assets/images/time.png" alt="">
-						<h3>VERY FASTER</h3>
+						<h3>MORE FAST</h3>
 						<h4>
 							The time of freelancer is dedicated totally to the project until they are ready.
 						</h4>
@@ -154,13 +160,12 @@
 				<h2>CONTACT</h2>
 				<h3>Say hi to me, it's free!</h3>
 				<div class="message">
-					<form action="contato.php" method="post" name="FormContact" enctype="multipart/form-data">
-						<input id="name" name="name" placeholder="Name here" required="" type="text">
+					<form action="index.html" method="post" name="FormContact" enctype="multipart/form-data">
+						<input id="name" name="name" placeholder="Name here" type="text" required="true">
 						<br>
-    					<input id="email" name="email" placeholder="Email here" required="" type="email">
+    					<input id="email" name="email" placeholder="Email here" type="email" required="true">
     					<br>
-    					<textarea id="message" name="message" cols="50" rows="6" placeholder="Write your message here"required="">
-    					</textarea>
+    					<textarea id="message" name="message" cols="50" rows="6" placeholder="Write your message here" required="true"></textarea>
 						<br>
     					<input id="submit" value="Submit" type="submit">
     					<input id="clean" value="Clean" type="reset">
