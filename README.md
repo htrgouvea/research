@@ -8,7 +8,7 @@ In construction.
 - HTML5
 - CSS3
 - JavaScript
-- Jquery
+- Angular.js
 
 ##### Bugs
 

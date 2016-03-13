@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 	<head>
 		<title>Heitor Gouvea - Just a boy making programs overnight... - heitorgouvea.me</title>
 		<meta charset="UTF-8">
@@ -11,12 +11,12 @@
 		css3, javascript, git, web developer full stack, borda da mata, campinas, pouso alegre, santa
 		rita do sapucai, freelancer, brazil, sao paulo, minas gerais, heitorgouvea.me">
     	<meta name="author" content="Heitor Gouvea">
-    	<meta name="description" content="My name is Heitor Gouvea and work with of researcher information security in Brazil and i'm Pentester and Programmer.">
+    	<meta name="description" content="Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a company on Brazil.">
 
     	<meta property="og:url" content="http://heitorgouvea.me">
     	<meta property="og:site_name" content="Heitor Gouvea">
     	<meta property="og:title" content="Heitor Gouvea - Just a boy making programs overnight... - heitorgouvea.me">
-    	<meta property="og:description" content="My name is Heitor Gouvea and work with of researcher information security in Brazil and i'm Pentester and Programmer.">
+    	<meta property="og:description" content="Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a company on Brazil.">
     	<meta property="og:image" content="http://heitorgouvea.me/assets/images/og-background.png">
    		<meta property="og:image:type" content="image/png">
     	<meta property="og:image:width" content="1200">
@@ -24,32 +24,45 @@
 
     	<meta property="twitter:site" content="http://heitorgouvea.me">
     	<meta property="twitter:title" content="Heitor Gouvea - Just a boy making programs overnight... - heitorgouvea.me">
-    	<meta property="twitter:description" content="My name is Heitor Gouvea and work with of researcher information security in Brazil and i'm Pentester and Programmer.">
+    	<meta property="twitter:description" content="Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a company on Brazil.">
 
     	<link rel="stylesheet" href="assets/css/main.css">
 	</head>
 
-	<body>
+	<body ng-controller="myAppCtrl">
+		<section id="logo">
+			<div class="container">
+				<a href="#home">
+					<img src="assets/images/logo.png" alt="heitor gouvea logo">
+				</a>
+			</div>	
+		</section>
+
 		<nav id="menu">
 			<div class="container">
 				<ul class="txt-right">
-					<li><a href="#home" class="scroll">HOME</a></li>
-					<li><a href="#whatido" class="scroll">WHAT I DO</a></li>
-					<li><a href="#whychooseme" class="scroll">WHY CHOOSE ME</a></li>
-					<li><a href="#contact" class="scroll">CONTACT</a></li>
+					<li>
+						<a href="#whatido" du-smooth-scroll du-scrollspy duration="1500">WHAT I DO</a>
+					</li>
+					<li>
+						<a href="#whychooseme" du-smooth-scroll du-scrollspy duration="1500">WHY CHOOSE ME</a>
+					</li>
+					<li>
+						<a href="#contact" du-smooth-scroll du-scrollspy duration="1500">CONTACT</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
 
 		<header id="home">
 			<div class="container">
-				<h1>
+				<h2>
 					are you need to complete your project?<br>
 					I 'am ready to work for you.
-				</h1>
+				</h2>
 				<h3>
-					My name is Heitor Gouvea and work with of researcher information security in<br>
-					Brazil and i'm Pentester and Programmer.
+					Hi, I'm Heitor Gouvea. I am Web Developer Full Stack<br>
+					in a company on Brazil.
 				</h3>
 				<div class="buttons">
 					<a href="/portfolio/" target="_blank" class="btn blue">MY PORTFOLIO</a>
@@ -57,12 +70,8 @@
 			</div>
 			<div id="arrow" class="txt-right">
 				<ul>
-					<li>
-						<a class="arrow-top animated bounce scroll" href="#home"></a>
-					</li>
-					<li>
-						<a class="arrow-down animated bounce scroll" href="#whatido"></a>
-					</li>
+					<li><a class="arrow-top animated bounce" ng-click="toTop()"></a></li>
+					<li><a class="arrow-down animated bounce" ng-click="toDown()"></a></li>
 				</ul>
 			</div>	
 		</header>
@@ -76,7 +85,7 @@
 				</h3>
 				<div id="icons" class="txt-center">
 					<div  class="text">
-						<img src="assets/images/frontend.png" alt="Development front end">
+						<img src="assets/images/frontend.png" alt="heitor gouvea development front end">
 						<h3>DEVELOPMENT FRONT END</h3>
 						<h4>
 							I try to be always updated on new technologies of development front end,
@@ -85,7 +94,7 @@
 						</h4>
 					</div>
 					<div class="text">
-						<img src="assets/images/backend.png" alt="Development back end">
+						<img src="assets/images/backend.png" alt="development back end">
 						<h3>DEVELOPMENT BACK END</h3>
 						<h4>
 							Work with backend development using modern languages such as: Perl Script,
@@ -94,7 +103,7 @@
 						</h4>
 					</div>
 						<div class="text">
-						<img src="assets/images/security.png" alt="IT Security">
+						<img src="assets/images/security.png" alt="heitor gouvea it security">
 						<h3>IT SECURITY</h3>
 						<h4>
 							Work to identify and exploit vulnerabilities and security holes and thus help
@@ -123,21 +132,21 @@
 				</h3>
 				<div id="icons" class="txt-center">
 					<div class="text">
-						<img src="assets/images/money.png" alt="">
-						<h3>SPEND LESSS</h3>
+						<img src="assets/images/money.png" alt="heitor gouvea freelancer">
+						<h3>SPEND LESS</h3>
 						<h4>
 							Save money by hiring of only a professional.
 						</h4>
 					</div>
 					<div class="text">
-						<img src="assets/images/time.png" alt="">
+						<img src="assets/images/time.png" alt="heitor gouvea freelancer">
 						<h3>MORE FAST</h3>
 						<h4>
 							The time of freelancer is dedicated totally to the project until they are ready.
 						</h4>
 					</div>
 						<div class="text">
-						<img src="assets/images/people.png" alt="">
+						<img src="assets/images/people.png" alt="heitor gouvea freelancer">
 						<h3>CONTACT DIRECT</h3>
 						<h4>
 							Talk about the project directly with the professional.
@@ -180,19 +189,20 @@
 					&copy 2016 - All rights reserved. Developed with love by Heitor Gouvea.
 				</h4>
 				<a href="https://fb.com/viniciushgouvea" target="_blank">
-					<img src="assets/images/facebook.svg" alt="facebook">
+					<img src="assets/images/facebook.svg" alt="heitor gouvea facebook">
 				</a>
 				<a href="https://github.com/HeitorG" target="_blank">
-					<img src="assets/images/github.svg" alt="github">
+					<img src="assets/images/github.svg" alt="heitor gouvea github">
 				</a>
 				<a href="https://twitter.com/GouveaHeitor" target="_blank">
-					<img src="assets/images/twitter.svg" alt="twitter">
+					<img src="assets/images/twitter.svg" alt="heitor gouvea twitter">
 				</a>
 			</div>
 		</footer>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js.map"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
