@@ -66,8 +66,8 @@ footer img {
 }
 
 #logo img {
-	width: 68px;
-	height: 70px;
+	width: 65px;
+	height: 68px;
 }
 
 #home {
@@ -189,9 +189,7 @@ footer img {
 	padding-left: 8%;
 }
 
-.buttons a { 
-	color: #fff;
-}
+.buttons a {  color: #fff; }
 
 .btn {
 	display: inline-block;
