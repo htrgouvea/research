@@ -82,7 +82,7 @@ footer img {
 }
 
 #home h2 {
-	font-size: 32px;
+	font-size: 2em;
 	padding-top: 18%;
 	padding-left: 8%;
 	color: #fff;
@@ -240,32 +240,24 @@ footer img {
 
 .text {
 	width: 25%;
-	position: relative;
 	min-height: 1px;
 	padding-right: 50px;
 	padding-left: 50px;
 	float: left;
 }
 
-.phrase {
+#phrase {
 	width: 100%;
-	height: 200px;
 	min-width: 100%;
+	height: 200px;
 	background: #000;
 }
 
-.phrase h3 {
+#phrase h3 {
 	color: #fff;
 	font-weight: 400;
 	padding-top: 6%;
 	text-transform: uppercase;
-}
-
-.background {
-	background: url(../images/background2.jpg) center center no-repeat fixed;
-	background-size: cover;
-	padding: 0px;
-	margin: 0px;
 }
 
 .message { padding-top: 1%; }
@@ -298,4 +290,45 @@ footer img {
 .bounce {
     -webkit-animation-name: bounce;
     animation-name: bounce;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1150px) {
+	#home h2 { 
+		padding-top: 30%;
+	}
+}
+
+@media screen and (max-width: 580px) { 
+	nav li a { r
+		right: 0px;
+	}
+
+	#home h2 { 
+		padding-top: 35%;
+	}
+} 
+
+@media screen and (max-width: 1240px) {
+
+	#whatido { 
+		max-height: 100%; 
+		margin-left: auto; 
+		margin-right: auto;
+	}
+	
+	#icons, #icons h3, #icons h4 { padding-top: 1%; }
+
+	#icons img {
+		height: 80px;
+		width: 80px;
+		padding-top: 2%;
+	}
+
+	.text {
+		min-width: 50%;
+		padding-right: 0%;
+		padding-left: 0%;
+		max-height: 100%;
+	}
 }
