@@ -40,8 +40,6 @@ nav a:hover {
 	color: #333;
 }
 
-nav a:visited { text-decoration: none; }
-
 /* Start the responsive design */
 @media screen and (max-width: 650px) {
 
