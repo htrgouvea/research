@@ -2,20 +2,8 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://heitorgouvea.me/</loc>
-        <lastmod>2016-02-27</lastmod>
+        <lastmod>2016-04-11</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-   <url>
-        <loc>http://heitorgouvea.me/portfolio</loc>
-        <lastmod>2016-02-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://heitorgouvea.me/curriculum</loc>
-        <lastmod>2016-02-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>1</priority>
     </url>
 </urlset>
