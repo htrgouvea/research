@@ -1,213 +1,23 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="myApp">
-	<head>
-		<title>Heitor Gouvea - Just a boy making programs overnight... - heitorgouvea.me</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-		
-		<meta name="keywords" content="heitor gouvea, perl, ruby, shell script, programmer, coder,
-		front end, back end, developer, web, it security, pentenster, cybersecurity, html5,
-		css3, javascript, git, web developer full stack, borda da mata, campinas, pouso alegre, santa
-		rita do sapucai, freelancer, brazil, sao paulo, minas gerais, heitorgouvea.me">
-    	<meta name="author" content="Heitor Gouvea">
-    	<meta name="description" content="Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a awesome company on Brazil.">
+---
+layout: default
+---
 
-    	<meta property="og:url" content="http://heitorgouvea.me">
-    	<meta property="og:site_name" content="Heitor Gouvea">
-    	<meta property="og:title" content="Heitor Gouvea - Just a boy making programs overnight... - heitorgouvea.me">
-    	<meta property="og:description" content="Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a awesome company on Brazil.">
-    	<meta property="og:image" content="http://heitorgouvea.me/assets/images/og-background.png">
-   		<meta property="og:image:type" content="image/png">
-    	<meta property="og:image:width" content="1200">
-    	<meta property="og:image:height" content="1200">
+<div class="home">
 
-    	<meta property="twitter:site" content="http://heitorgouvea.me">
-    	<meta property="twitter:title" content="Heitor Gouvea - Just a boy making programs overnight... - heitorgouvea.me">
-    	<meta property="twitter:description" content="Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a awesome company on Brazil.">
+  <h1 class="page-heading">Posts</h1>
 
-    	<link rel="stylesheet" href="assets/css/main.css" media="screen">
-	</head>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-	<body ng-controller="myAppCtrl">
-		<section id="logo">
-			<div class="container">
-				<a href="#home">
-					<img src="assets/images/logo.png" alt="heitor gouvea logo">
-				</a>
-			</div>	
-		</section>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-		<nav id="menu">
-			<div class="container">
-				<ul class="txt-right">
-					<li>
-						<a href="#whatido" du-smooth-scroll du-scrollspy duration="1500">WHAT I DO</a>
-					</li>
-					<li>
-						<a href="#whychooseme" du-smooth-scroll du-scrollspy duration="1500">WHY CHOOSE ME</a>
-					</li>
-					<li>
-						<a href="#contact" du-smooth-scroll du-scrollspy duration="1500">CONTACT</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+  <p class="rss-subscribe">subscribe <a href="{{ "/" | prepend: site.baseurl }}">via RSS</a></p>
 
-		<header id="home">
-			<div class="container">
-				<h2>
-					are you need to complete your project?<br>
-					I 'am ready to work for you.
-				</h2>
-				<h3>
-					Hi, I'm Heitor Gouvea. I am Web Developer Full Stack<br>
-					in a awesome company on Brazil.
-				</h3>
-				<div class="buttons">
-					<a href="/portfolio/" target="_blank" class="btn blue">MY PORTFOLIO</a>
-					<a href="/curriculum/" target="_blank" class="btn">MY CURRICULUM</a>
-				</div>
-				<div class="txt-center">
-					<a class="arrow" href="#whatido" du-smooth-scroll du-scrollspy duration="1500"></a>
-				</div>
-			</div>	
-		</header>
-
-		<section id="whatido" class="txt-center">
-			<div class="container">
-				<h2>WHAT I DO?</h2>
-				<h3>
-					I am enthusiastic of technology, and in my free time i try<br>
-					to contribute to open source projects in github.
-				</h3>
-				<div id="icons" class="txt-center">
-					<div  class="text">
-						<img src="assets/images/frontend.png" alt="heitor gouvea development front end">
-						<h3>DEVELOPMENT FRONT END</h3>
-						<h4>
-							I try to be always updated on new technologies of development front end,
-							i use tools and technologies moderns like html5, css3 and JavaScript
-							for a better user experience.
-						</h4>
-					</div>
-					<div class="text">
-						<img src="assets/images/backend.png" alt="development back end">
-						<h3>DEVELOPMENT BACK END</h3>
-						<h4>
-							Work with backend development using modern languages such as: Perl Script,
-							Shell Script, Ruby and your framework On Rails. I'm always searching
-							to meet new programming languages.
-						</h4>
-					</div>
-						<div class="text">
-						<img src="assets/images/security.png" alt="heitor gouvea it security">
-						<h3>IT SECURITY</h3>
-						<h4>
-							Work to identify and exploit vulnerabilities and security holes and thus help
-							your company to understand where security breaches occur to mitigate them in future.
-						</h4>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="phrase txt-center">
-			<div class="container">
-				<h3>
-					"The mind which dominates the magic of the bits<br>
-					controls the world!" - Constantine
-				</h3>
-			</div>
-		</section>
-
-		<section id="whychooseme" class="txt-center">
-			<div id="container">
-				<h2>WHY CHOOSE A FREELANCER?</h2>
-				<h3>
-					Do you have doubts as to hire a freelancer?<br>
-					Below are some reasons to choose me.
-				</h3>
-				<div id="icons" class="txt-center">
-					<div class="text">
-						<img src="assets/images/money.png" alt="heitor gouvea freelancer">
-						<h3>SPEND LESS</h3>
-						<h4>
-							Save money by hiring of only a professional.
-						</h4>
-					</div>
-					<div class="text">
-						<img src="assets/images/time.png" alt="heitor gouvea freelancer">
-						<h3>MORE FAST</h3>
-						<h4>
-							The time of freelancer is dedicated totally to the project until they are ready.
-						</h4>
-					</div>
-					<div class="text">
-						<img src="assets/images/people.png" alt="heitor gouvea freelancer">
-						<h3>CONTACT DIRECT</h3>
-						<h4>
-							Talk about the project directly with the professional.
-						</h4>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="phrase txt-center">
-			<div class="container">
-				<h3>
-					"Talk is cheap, show me the code." - Linus Torvalds
-				</h3>
-			</div>
-		</section>
-
-		<section id="contact" class="txt-center">
-			<div class="container">
-				<h2>CONTACT</h2>
-				<h3>
-					I do not like forms, I like direct contact!<br>
-					Say hi to me, it's free!
-				</h3>
-
-				<div class="noForm txt-center">
-					<img src="assets/images/email.svg" alt="email heitor gouvea">
-					<h4>hi@heitorgouvea.me</h4>
-				</div>
-		
-				<div  class="noForm txt-center">
-					<img src="assets/images/phone.svg" alt="phone heitor gouvea">
-					<h4>+55 (35) 99817-3063</h4>
-				</div>
-		
-				<div id="social-icons">
-					<a href="https://fb.com/viniciushgouvea" target="_blank">
-						<img src="assets/images/facebook.svg" alt="heitor gouvea facebook">
-					</a>
-					<a href="https://github.com/HeitorG" target="_blank">
-						<img src="assets/images/github.svg" alt="heitor gouvea github">
-					</a>
-					<a href="https://twitter.com/GouveaHeitor" target="_blank">
-						<img src="assets/images/twitter.svg" alt="heitor gouvea twitter">
-					</a>
-					<a href="https://plus.google.com/u/0/+HeitorGouveaHere" target="_blank">
-						<img src="assets/images/google-plus.svg" alt="heitor gouvea twitter">
-					</a>
-				</div>
-			</div>			
-		</section>
-
-		<footer class="txt-center">
-			<div class="container">
-				<h4>
-					&copy 2016 - All rights reserved. Developed with love by Heitor Gouvea.
-				</h4>
-			</div>
-		</footer>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js.map"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
-</html>
+</div>
