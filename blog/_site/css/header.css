@@ -1,0 +1,47 @@
+header {
+	width: 100%;
+	height: 300px;
+	background-color: #252336;
+	font-family: "Open Sans";
+	background: url("../images/background.jpg") center center no-repeat fixed;
+	background-size: cover;
+}
+
+header h1 {
+	padding-top: 60px;
+	color: #fff;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+nav ul { 
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	list-style: none;
+	border-top: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+}
+
+nav li { display: inline-block; }
+
+nav a {
+	padding: 8px;
+	font-size: 17px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav a:hover {
+	text-decoration: none;
+	color: #2a7ae2;
+}
+
+/* Start the responsive design */
+@media screen and (max-width: 0px) {
+
+}
+/* /End the responsive design */
