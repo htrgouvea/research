@@ -1,4 +1,4 @@
-# ***My website :smile:***
+# ***My simple blog :smile:***
 
 [**View demo here :metal:**](http://heitorgouvea.me)
 ##### Technologies used:
