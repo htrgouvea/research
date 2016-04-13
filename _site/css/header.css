@@ -35,13 +35,9 @@ nav a {
 	color: #fff;
 }
 
-nav a:hover {
+nav a:hover { text-decoration: none; transition: 0.5s; }
+
+nav a:visited {
 	text-decoration: none;
-	color: #333;
+	color: #fff;
 }
-
-/* Start the responsive design */
-@media screen and (max-width: 650px) {
-
-}
-/* /End the responsive design */

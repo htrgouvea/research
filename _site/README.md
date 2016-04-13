@@ -1,12 +1,11 @@
 # ***My website :smile:***
 
-[**View here :metal:**](http://heitorgouvea.me)
+[**View demo here :metal:**](http://heitorgouvea.me)
 ##### Technologies used:
 
 - HTML5
 - CSS3
-- JavaScript
-- Angular.js
+- Jekyll
 
 ##### Bugs
 
