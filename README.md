@@ -7,6 +7,7 @@
 - CSS3
 - Sass
 - Jekyll
+- Rusty.css
 
 ##### Bugs
 

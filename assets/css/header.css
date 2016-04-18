@@ -35,9 +35,8 @@ nav a {
 	color: #fff;
 }
 
-nav a:hover { text-decoration: none; transition: 0.5s; }
-
-nav a:visited {
-	text-decoration: none;
-	color: #fff;
+nav a:hover { 
+	text-decoration: none; 
+	transition: 0.5s; 
+	color: #333;
 }
