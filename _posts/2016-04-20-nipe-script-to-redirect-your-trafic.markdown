@@ -11,32 +11,32 @@ Download nipe:
 
 {% highlight bash %}
 ---
-#~ git clone https://github.com/HeitorG/nipe
-#~ cd nipe
+git clone https://github.com/HeitorG/nipe
+cd nipe
 {% endhighlight %}
 
 Install dependecies:
 
 {% highlight bash %}
-#~ sudo cpan install Switch WWW::Mechanize LWP::Protocol::https
+sudo cpan install Switch WWW::Mechanize LWP::Protocol::https
 {% endhighlight %}
 
 Install Nipe:
 
 {% highlight bash %}
-#~ sudo perl nipe.pl install
+sudo perl nipe.pl install
 {% endhighlight %}
 
 Start the Nipe:
 
 {% highlight bash %}
-#~ sudo perl nipe.pl start
+sudo perl nipe.pl start
 {% endhighlight %}
 
 Stop the Nipe:
 
 {% highlight bash %}
-#~ sudo perl nipe.pl stop
+sudo perl nipe.pl stop
 {% endhighlight %}
 
 The End!! Bye =P
