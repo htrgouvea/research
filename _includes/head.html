@@ -4,16 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-  <meta name="keywords" content="">
+  
+  <meta name="keywords" content="heitor gouvea, web developer, perl, css3, campinas, html5, freelancer, full stack, programador,
+  desenvolvedor web, shell script, javascript, js, linux, ruby, hacker, pentester, biohacker, biohacking, ima">
   <meta name="author" content="Heitor Gouvea">
-  <meta name="description" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
-
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://inploit.com/rusty.min.css" screen="media">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" screen="media">
