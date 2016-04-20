@@ -184,7 +184,7 @@
     }
 }
 
-.post-date {
+.post-meta {
     font-size: $small-font-size;
     color: $grey-color;
 }
@@ -203,11 +203,10 @@
     margin-bottom: $spacing-unit;
 }
 
-.title-post {
+.post-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-    color: #333;
 
     @include media-query($on-laptop) {
         font-size: 36px;
