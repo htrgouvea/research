@@ -10,7 +10,6 @@ The nipe is a tool written in Perl Script, it use the Tor project and iptables, 
 Download nipe:
 
 {% highlight bash %}
----
 git clone https://github.com/HeitorG/nipe
 cd nipe
 {% endhighlight %}
