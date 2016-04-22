@@ -1,16 +1,33 @@
----
-layout: default
----
-<div class="home">
-  <h1 class="page-heading">Posts</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Heitor Gouvea - Web Developer Full Stack - heitorgouvea.me</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  		<meta name="keywords" content="">
+  		<meta name="author" content="Heitor Gouvea">
+  		<meta name="description" content="">
+
+  		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  		<link rel="stylesheet" href="https://inploit.com/rusty.min.css" screen="media">
+  		<link rel="stylesheet" href="assets/css/main.css" screen="media">
+	</head>
+	<body>
+		<section id="content" class="txt-center">
+			<div class="container">
+				<img src="assets/images/heitorgouvea.jpg" alt="heitor gouvea">
+				<h1>Heitor Gouvea</h1>
+				<hr class="center">
+				<h2>
+					Hi, i'm Heitor Gouvea, i'm a Web Developer Full Stack in a awesome <br/>
+					company on Brazil, <a href="https://ima.sp.gov.br" target="_blank">IMA S/A</a>,
+					see <a href="/curriculum/">my curriculum</a>, <a href="/portfolio/">portfolio</a>
+					or <a href="/blog/">my blog.</a>
+				</h2>
+				<hr class="center">
+			</div>
+		</section>
+	</body>
+</html>
