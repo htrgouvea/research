@@ -1,9 +1,9 @@
 # Site settings
-title: Heitor Gouvea - Researcher Biohacking - heitorgouvea.me
+title: Heitor Gouvea - Web Developer Full Stack - heitorgouvea.me
 email: hi@heitorgouvea.me
 description: >
-  Hi, I'm Heitor Gouvea. I am Web Developer Full Stack in a awesome company on Brazil.
-baseurl: ""
+
+baseurl: "http://heitorgouvea.me/blog/"
 url: "http://heitorgouvea.me/blog/"
 twitter_username: GouveaHeitor
 github_username:  HeitorG
