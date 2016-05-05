@@ -1,12 +1,10 @@
-# ***My simple blog :smile:***
+## My personal website
 
 [**View demo here :metal:**](http://heitorgouvea.me)
 ##### Technologies used:
 
 - HTML5
 - CSS3
-- Sass
-- Jekyll
 - Rusty.css
 
 ##### Bugs
