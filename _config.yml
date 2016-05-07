@@ -1,0 +1,39 @@
+# Site settings
+title: Heitor  Gouvea
+description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
+url: 'http://heitorgouvea.me/'
+baseurl: ''
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Heitor Gouvea'
+  email: hi@heitorgouvea.me
+  twitter_username: GouveaHeitor
+  facebook_username: viniciushgouvea
+  github_username:  HeitorG
+  linkedin_username:  heitorgouvea
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

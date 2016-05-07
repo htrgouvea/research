@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Heitor Gouvea - Web Developer Full Stack - heitorgouvea.me</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  		<meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+---
 
-  		<meta name="keywords" content="">
-  		<meta name="author" content="Heitor Gouvea">
-  		<meta name="description" content="">
+<div class="main-post-list">
 
-  		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  		<link rel="stylesheet" href="https://inploit.com/rusty.min.css" screen="media">
-  		<link rel="stylesheet" href="assets/css/main.css" screen="media">
-	</head>
-	<body>
-		<section id="content" class="txt-center">
-			<div class="container">
-				<img src="assets/images/heitorgouvea.jpg" alt="heitor gouvea">
-				<h1>Heitor Gouvea</h1>
-				<hr class="center">
-				<h2>
-					Hi, i'm Heitor Gouvea, i'm a Web Developer Full Stack in a awesome <br/>
-					company on Brazil, <a href="https://ima.sp.gov.br" target="_blank">IMA S/A</a>,
-					see <a href="/curriculum/">my curriculum</a>, <a href="/portfolio/">portfolio</a>
-					or <a href="/blog/">my blog.</a>
-				</h2>
-				<hr class="center">
-			</div>
-		</section>
-	</body>
-</html>
+  <ol class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        <p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}&hellip;</p>
+        <div class="post-list__meta"><time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time> &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span></div>
+        <hr class="post-list__divider">
+      </li>
+    {% endfor %}
+  </ol>
+
+  <hr class="post-list__divider ">
+
+  {% if paginator.previous_page or paginator.next_page %}
+      {% include pagination.html %}
+  {% endif %}
+
+</div>
