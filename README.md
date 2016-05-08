@@ -5,6 +5,7 @@
 
 - HTML5
 - CSS3
+- Jekyll
 - Rusty.css
 
 ##### Bugs
