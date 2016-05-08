@@ -42,4 +42,4 @@ sudo perl nipe.pl stop
 
 The End!! Bye =P
 
-|[Imagem](https://cdn-images-1.medium.com/max/800/1*prMxBsonY40OqtfFgqUwJQ.jpeg)
+[!Imagem](https://cdn-images-1.medium.com/max/800/1*prMxBsonY40OqtfFgqUwJQ.jpeg)
