@@ -1,18 +1,18 @@
 # Site settings
-title: Heitor  Gouvea
+title: Jekyll-Uno
 description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://heitorgouvea.me/'
-baseurl: ''
+url: 'http://joshgerdes.com/jekyll-uno'
+baseurl: '/jekyll-uno/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
 author:
-  name: 'Heitor Gouvea'
-  email: hi@heitorgouvea.me
-  twitter_username: GouveaHeitor
-  facebook_username: viniciushgouvea
-  github_username:  HeitorG
-  linkedin_username:  heitorgouvea
+  name: 'Josh Gerdes'
+  email: josh@joshgerdes.com
+  twitter_username: joshgerdes
+  facebook_username: joshgerdes
+  github_username:  joshgerdes
+  linkedin_username:  joshgerdes
 
 defaults:
   -
