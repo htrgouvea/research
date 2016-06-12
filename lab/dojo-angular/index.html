@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="dojoApp">
+	<head>
+		<title>Dojo AngularJS</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/style/main.css">
+	</head>
+	<body ng-controller="DojoCtrl as vm">
+
+		<header id="search" class="txt-center">
+			<div class="container">
+				<h1>Procure por alguém</h1>
+				<form>
+					<input type="text" class="search" placeholder="Escreva sua busca aqui" ng-model="searchText">
+					</input>
+					<br>
+					<input type="submit" class="button" value="buscar" href="#apis" ng-disable="!searchText"></input>
+				</form>
+			</div>
+		</header>
+		
+		<section class="txt-center content">
+			<div class="container">
+				<h2>our team</h2>
+				<hr class="center">
+
+				<div ng-repeat="dojo in vm.dojos | filter:searchText" class="card">
+					<img src="{{ dojo.foto }}">
+					<h3>{{ dojo.nome }}</h3>
+					<h4>{{ dojo.cargo }}</h4>
+				</div>
+
+			</div>
+		</section>
+
+		<footer class="txt-center">
+			<div class="container">
+				<h4>
+					&copy 2016 - IMA S/A Informática de Múnicipios Associados
+					<br>
+					Todos os direitos reservados.
+				</h4>
+			</div>
+		</footer>
+
+		<script src="assets/javascript/angular.min.js"></script>
+		<script src="assets/javascript/app.js"></script>
+		<script src="assets/javascript/controllers/appCtrl.js"></script>
+		<script src="assets/javascript/services/appSrv.js"></script>
+	</body>
+</html>
