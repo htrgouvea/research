@@ -1,5 +1,8 @@
 ## My personal website
 
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/HeitorG/awesome-biohacking/blob/master/LICENSE.md)
+ 
+ 
 [**View demo here :metal:**](http://heitorgouvea.me)
 ##### Technologies used:
 
