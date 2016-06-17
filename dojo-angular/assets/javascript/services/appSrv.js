@@ -8,7 +8,7 @@ function dojoService($http) {
   function get() {
     return $http({
       method: 'GET',
-      url: '/assets/json/team.json'
+      url: '/assets/json/product.json'
     })
     .then(function(res) {
       return res;
