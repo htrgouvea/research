@@ -3,7 +3,7 @@ layout: post_layout
 title: Nipe: script to redirect all traffic from the machine to the Tor network!
 time: 15/07/2016
 location: São Paulo, Brazil
-pulished: true
+published: true
 excerpt_separator: "#"
 ---
 
