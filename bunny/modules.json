@@ -1,0 +1,10 @@
+[
+	{
+		"name": "find-domain",
+		"desc": "Script to find sub domains using brute-force",
+	},
+	{
+		"name": "checkhost",
+		"desc": "Script to check if the host is online or not",
+	}
+]
