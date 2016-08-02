@@ -19,7 +19,7 @@ Install dependecies:
 
 ``` bash
 cd nipe
-cpan install  Switch Mojo::UserAgent
+cpan install  Switch JSON LWP::UserAgent
 ```
 
 Install nipe:
