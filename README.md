@@ -2,23 +2,22 @@
 
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/HeitorG/heitorg.github.io/blob/master/LICENSE.md)
  
- 
 [**View demo here :metal:**](http://heitorgouvea.me)
-##### Technologies used:
+
+#### Technologies used:
 
 - HTML5
 - CSS3
 - Jekyll
-- Rusty.css
 
-##### Bugs
+#### Bugs
 
 - Report bugs in my email: **hi@heitorgouvea.me**
 
-##### License
+#### License
 
 - This work is licensed under [**Artistic License 2.0**](https://github.com/HeitorG/heitorg.github.io/blob/master/LICENSE.md)
 
-##### Contribution
+#### Contribution
 
 - Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕)
