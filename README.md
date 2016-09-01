@@ -1,6 +1,6 @@
 ## My personal website
 
-[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/HeitorG/heitorg.github.io/blob/master/LICENSE.md)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/HeitorG/gouveaheitor.github.io/blob/master/LICENSE.md)
  
 [**View demo here :metal:**](http://heitorgouvea.me)
 
