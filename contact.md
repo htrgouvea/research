@@ -7,6 +7,7 @@ is_contact: true
 * Phone: [+55 (19) 9.9189-1355](tel:+5519991891355)
 
 ---
+
 ## Mailing Address
 
 > Street: Professora Alayde Toledo, n° 613, Jardim Esmeraldina
