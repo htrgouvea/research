@@ -15,7 +15,7 @@ I am fascinated by the hacker lifestyle and i also love everything that is conne
 electrical outlet and that's why try to hack everything!
 And for this reason my searches is about information security.
 
-In my [Github](https://github.com/GouveaHeitor) you can see some of the code i write during my searches.
+On my [Github](https://github.com/GouveaHeitor) you can see some of the code i write during my searches.
 
 ## Projects
 
