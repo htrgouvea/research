@@ -1,6 +1,7 @@
 ---
 layout: default
 is_contact: true
+title: Contact
 ---
 
 * Email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)

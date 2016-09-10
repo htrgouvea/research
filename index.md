@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Heitor Gouvêa
 ---
 
 ## About Me
@@ -10,7 +11,7 @@ Perl and Shell Script.
 
 ## Research Interest
 
-I am fascinated by the hacker lifestyle and i also love everything that is connected to 
+I am fascinated by the hacker lifestyle and i also love everything that is connected to
 electrical outlet and that's why try to hack everything!
 And for this reason my searches is about information security.
 
