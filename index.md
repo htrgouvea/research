@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Heitor Gouvêa
+title: Home
 ---
 
 ## About Me
