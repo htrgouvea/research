@@ -15,12 +15,12 @@ I am fascinated by the hacker lifestyle and also love everything that is connect
 electrical outlet and that's why try to hack everything!
 And for this reason my searches is about information security.
 
-In my [profile on Github](https://github.com/GouveaHeitor) you can see some of the codes 
-wrote during my searches.
+In my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
+some of the codes wrote during my searches.
 
 ## Projects
 
-1. [Nipe:](https://github.com/GouveaHeitor/nipe) a script to make Tor Network your default gateway.
+1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
 
 ## Publications
 
