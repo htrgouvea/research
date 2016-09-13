@@ -21,8 +21,8 @@ title: Contact
 
 ## Social
 
-1. [Github](https://github.com/GouveaHeitor)
-2. [Twitter](https://twitter.com/GouveaHeitor)
-3. [Medium](https://medium.com/@gouveaheitor)
-4. [Facebook](https://fb.com/GouveaHeitor)
-5. [Linkedin](https://br.linkedin.com/in/heitorgouvea)
+1. [Github](https://github.com/GouveaHeitor){:target="_blank"}
+2. [Twitter](https://twitter.com/GouveaHeitor){:target="_blank"}
+3. [Medium](https://medium.com/@gouveaheitor){:target="_blank"}
+4. [Facebook](https://fb.com/GouveaHeitor){:target="_blank"}
+5. [Linkedin](https://br.linkedin.com/in/heitorgouvea){:target="_blank"}
