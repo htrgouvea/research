@@ -1,13 +1,13 @@
 ## My personal website
 
-[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/HeitorG/gouveaheitor.github.io/blob/master/LICENSE.md)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
  
 [**View demo here :metal:**](http://heitorgouvea.me)
 
 #### Technologies used:
 
 - HTML5
-- CSS3
+- CSS3 with Sass
 - Jekyll
 
 #### Bugs
@@ -16,7 +16,7 @@
 
 #### License
 
-- This work is licensed under [**Artistic License 2.0**](https://github.com/HeitorG/heitorg.github.io/blob/master/LICENSE.md)
+- This work is licensed under [**Artistic License 2.0**](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
 
 #### Contribution
 
