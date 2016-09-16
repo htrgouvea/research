@@ -24,4 +24,5 @@ some of the codes wrote during my searches.
 
 ## Publications
 
-1. [Anonymity: the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
+1. [Anonymity in the cyberspace, the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
+2. [Encryption: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
