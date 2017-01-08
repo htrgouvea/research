@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-HI! I am a independent Security Researcher Jr, currently live in Campinas,
+Hi! I am a independent Security Researcher Jr, currently live in Campinas,
 a quiet city in Brazil. I have more than 3 years experience of programming and
 studies on information security.
 
