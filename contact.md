@@ -11,7 +11,7 @@ title: Contact
 
 ## Mailing Address
 
-> Street: Professora Alayde Toledo, n° 613, Jardim Esmeraldina
+> Street: Professora Alayde Toledo Garlipp, n° 613, Jardim Esmeraldina
 >
 > Campinas - SP
 >
