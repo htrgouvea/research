@@ -8,7 +8,8 @@
 #### Technologies used:
 
 - HTML5
-- CSS3 with Sass
+- CSS3
+- Sass
 - Jekyll
 
 #### Bugs

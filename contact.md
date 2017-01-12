@@ -25,4 +25,4 @@ title: Contact
 2. [Twitter](https://twitter.com/GouveaHeitor){:target="_blank"}
 3. [Medium](https://medium.com/@gouveaheitor){:target="_blank"}
 4. [Facebook](https://fb.com/GouveaHeitor){:target="_blank"}
-5. [Linkedin](https://br.linkedin.com/in/heitorgouvea){:target="_blank"}
+5. [Linkedin](https://br.linkedin.com/in/gouveaheitor){:target="_blank"}
