@@ -5,9 +5,9 @@ title: Home
 
 ## About Me
 
-Hi! I am a independent Security Researcher Jr, currently live in Campinas,
-a quiet city in Brazil. I have more than 3 years experience of programming and
-studies on information security.
+Hi! I am a Software Engineer Jr, and also study about Business Analysis...
+Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
+of programming and studies on information security.
 
 ## Research Interest
 
@@ -26,3 +26,4 @@ some of the codes wrote during my searches.
 
 1. [Anonymity in the cyberspace, the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
 2. [Encryption: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
+3. []()
