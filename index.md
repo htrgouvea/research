@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home 
+title: Home
 ---
 
 ## About Me
@@ -15,8 +15,8 @@ I am fascinated by the hacker lifestyle and also love everything that is connect
 electrical outlet and that's why try to hack everything!
 And for this reason my searches is about information security.
 
-In my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
-some of the codes wrote during my searches.
+On my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
+some of my codes written during my researches.
 
 ## Projects
 
