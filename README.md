@@ -14,7 +14,7 @@
 
 #### Bugs
 
-- Report bugs in my email: **hi@heitorgouvea.me**
+- Report bugs in my email: **heitorvgp@gmail.com**
 
 #### License
 
