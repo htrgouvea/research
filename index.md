@@ -28,6 +28,3 @@ some of my codes written during my researches.
 
 1. [Anonymity in the cyberspace: the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
 2. [Encryption: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
-3. [Rapid Development of exploits.](/publications/rapid-development-of-exploits.pdf)
-4. [Pivoting: escalation of privileges.](/publications/pivoting-escalation-of-privileges.pdf)
-5. [Backdoors: maintenance of access.](/publications/backdoors-maintenance-of-access.pdf)
