@@ -4,7 +4,7 @@ is_contact: true
 title: Contact
 ---
 
-* Email: [heitorvgp@gmail.com](mailto:heitorvgp@gmail.com)
+* Email: [hgouvea@protonmail.com](mailto:hgouvea@protonmail.com)
 * Phone: [+55 (19) 9.9189-1355](tel:+5519991891355)
 
 ---

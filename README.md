@@ -14,7 +14,7 @@
 
 #### Bugs
 
-- Report bugs in my email: **heitorvgp@gmail.com**
+- Report bugs in my email: **hgouvea@protonmail.com**
 
 #### License
 
