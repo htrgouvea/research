@@ -5,16 +5,15 @@ title: Home
 
 ## About Me
 
-Hi! My names is Heitor Gouvêa and I am a Information Security Entrepreneur,
+Hi! My names is Heitor Gouvêa and I am a Anonymity & Privacy Researcher,
  and also study about Business Analysis...
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
 of programming and studies on information security.
 
 ## Research Interest
 
-I am fascinated by the hacker lifestyle and also love everything that is connected to
-electrical outlet and that's why try to hack everything!
-And for this reason my searches is about information security.
+My researches are in the area of cryptography and cryptanalysis.
+More specifically I work on projects that help people take control of their own security and privacy.
 
 On my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
 some of my codes written during my researches.
