@@ -23,7 +23,7 @@ some of my codes written during my researches.
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
 2. [Chefy:](https://github.com/GouveaHeitor/chefy){:target="_blank"} a script to application security analysis automation.
 
-## Publications
+## Research papers
 
 1. [Anonymity in the cyberspace: the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
 2. [Encryption: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
