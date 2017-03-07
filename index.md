@@ -5,8 +5,8 @@ title: Home
 
 ## About Me
 
-Hi! My names is Heitor Gouvêa and I am a Anonymity & Privacy Researcher,
- and also study about Business Analysis...
+Hi! My names is Heitor Gouvêa and I am a Developer Advocate and Anonymity & Privacy Researcher,
+also study about Business Analysis...
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
 of programming and studies on information security.
 

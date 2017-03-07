@@ -4,7 +4,7 @@ is_contact: true
 title: Contact
 ---
 
-* Email: [hgouvea@protonmail.com](mailto:hgouvea@protonmail.com)
+* Email: [hgouvea@protonmail.com](mailto:hi@heitorgouvea.me)
 * Phone: [+55 (19) 9.9189-1355](tel:+5519991891355)
 
 ---
