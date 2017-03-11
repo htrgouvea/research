@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My names is Heitor Gouvêa and I am a Developer Advocate and Anonymity & Privacy Researcher,
+Hi! My name is Heitor Gouvêa and I am Developer Relations and a Independent Researcher,
 also study about Business Analysis...
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
 of programming and studies on information security.
@@ -21,7 +21,7 @@ some of my codes written during my researches.
 ## Projects
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
-2. [Chefy:](https://github.com/GouveaHeitor/chefy){:target="_blank"} a script to application security analysis automation.
+2. [Chefy:](https://github.com/GouveaHeitor/chefy){:target="_blank"} A simple script for monitoring of process.
 
 ## Research papers
 
