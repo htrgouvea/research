@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am Developer Relations and a Independent Researcher,
+Hi! My name is Heitor Gouvêa and I am Developer Advocate and a Independent Researcher,
 also study about Business Analysis...
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
 of programming and studies on information security.
