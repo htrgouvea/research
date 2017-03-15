@@ -5,14 +5,14 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am Developer Advocate and a Independent Researcher,
-also study about Business Analysis...
+Hi! My name is Heitor Gouvêa and I am a independent Anonymity & Privacy Researcher,
+also study about Developer Relations...
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
 of programming and studies on information security.
 
 ## Research Interest
 
-My researches are in the area of cryptography and cryptanalysis.
+My researches are in the area of cryptology (cryptography and cryptanalysis).
 More specifically I work on projects that help people take control of their own security and privacy.
 
 On my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
