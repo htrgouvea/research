@@ -1,9 +1,8 @@
+author: Heitor Gouvêa
 title: Heitor Gouvêa
 url: "http://heitorgouvea.me"
 baseurl: "/"
-author: Heitor Gouvêa
-og_image: https://instagram.fcpq5-1.fna.fbcdn.net/t51.2885-15/e35/14276437_1776700445939080_1229398943_n.jpg
-twitter_username: @GouveaHeitor
+
 
 markdown: kramdown
 
