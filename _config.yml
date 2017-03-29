@@ -1,9 +1,7 @@
 author: Heitor Gouvêa
 title: Heitor Gouvêa
 url: "http://heitorgouvea.me"
-baseurl: "/"
-og_image: "/images/heitorgouvea.jpg"
-twitter_username: @GouveaHeitor
+baseurl: ""
 
 markdown: kramdown
 
