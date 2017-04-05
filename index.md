@@ -5,15 +5,24 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am a independent Anonymity & Privacy Researcher,
-also study about Developer Relations...
+Hi! My name is Heitor Gouvêa and I am an Information Security Consultant, i have working on projects that help people,
+organizations and companies take control of their own security.  
+
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
-of programming and studies on information security.
+of Software Development and on Information Security.
+
+My work is focused on understanding threat models, analyzing existing
+applications and building intelligent tools to combat current and future security
+risk for both individuals or groups.
+
+I have audited high profile websites for security vulnerabilities and have
+managed and worked in teams of software developers and computer scientists
+delivering high performance architectures.
 
 ## Research Interest
 
-My researches are in the area of cryptology (cryptography and cryptanalysis).
-More specifically I work on projects that help people take control of their own security and privacy.
+My researches are in the area of Information Security,
+more specifically I work on projects that help people take control of their own security and privacy.
 
 On my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
 some of my codes written during my researches.

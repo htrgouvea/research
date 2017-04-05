@@ -3,7 +3,7 @@
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
 [![Version-Program](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/GouveaHeitor/gouveaheitor.github.io/releases)
 
-[**View demo here :metal:**](http://heitorgouvea.me){:target="_blank"}
+[**View demo here :metal:**](http://heitorgouvea.me)
 
 #### Technologies used:
 
