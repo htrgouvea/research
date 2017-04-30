@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an Information Security Consultant at [Inploit Security](http://inploitsecurity.me),
+Hi! My name is Heitor Gouvêa and I am an Information Security Lead at [Inploit Security](http://inploitsecurity.me),
 i have working on projects that help people,
 organizations and companies take control of their own security.  
 
