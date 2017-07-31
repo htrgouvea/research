@@ -5,9 +5,9 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an Information Security Lead at [Inploit Security](http://inploitsecurity.me),
-i have working on projects that help people,
-organizations and companies take control of their own security.  
+Hi! My name is Heitor Gouvêa and I am an Information Security Specialist, working how Information
+Security Lead at [Inploit Security](http://inploitsecurity.me).
+I have working on projects that help people, organizations and companies take control of their own security.  
 
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
 of Software Development and on Information Security.
@@ -23,7 +23,7 @@ delivering high performance architectures.
 ## Research Interest
 
 My researches are in the area of Information Security,
-more specifically I work on projects that help people take control of their own security and privacy.
+more specifically I work on projects that help people take control of their own security, anonymity and privacy.
 
 On my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
 some of my codes written during my researches.
@@ -36,4 +36,4 @@ some of my codes written during my researches.
 ## Research papers
 
 1. [Anonymity in the cyberspace: the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
-2. [Encryption: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
+2. [Cryptography: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
