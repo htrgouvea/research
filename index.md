@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an Information Security Specialist, working as Information
+Hi! My name is Heitor Gouvêa and I am an Information Security Reseacher, working as Information
 Security Leader at [Inploit Security](http://inploitsecurity.me).
 I have been working on projects that help people, organizations and companies take control of their own security.  
 
