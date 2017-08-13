@@ -16,6 +16,11 @@ body {
     height: 100%;
 }
 
+h1 {
+  font-size: 0;
+  font-weight: normal;
+}
+
 a {
     text-decoration: none;
     color: $accent;
@@ -96,7 +101,7 @@ hr {
     .container {
         max-width: 83%;
     }
-    
+
     .navbar-ul {
         margin-top: 5px;
     }

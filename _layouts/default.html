@@ -11,14 +11,9 @@
 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="heitor gouvêa, cybersecurity, privacy, anonymity, Campinas, Brazil, researcher {{ site.author }}, {{ site.title }}">
+      <meta name="keywords" content="Heitor Gouvêa, freelancer, information security, pentest, cybersecurity, privacy, anonymity, Campinas, Brazil, researcher">
+      <meta name="description" content="{{ site.description }}">
       <meta name="author" content="{{ site.author }}">
-
-      {% if page.description %}
-         {% assign desc = page.description %}
-      {% else %}
-         {% assign desc = site.description %}
-      {% endif %}
 
       {% if page.url %}
          {% assign url = site.url | append: site.baseurl | append: page.url %}
@@ -34,37 +29,19 @@
          <link rel="shortcut-icon" type="image/ico" href="{{ site.favicon_location }}">
       {% endif %}
 
-      {% if site.twitter_username %}
-         <link rel="author" href="https://twitter.com/{{ site.twitter_username }}">
-      {% endif %}
-
-      <!-- Facebook Open Graph -->
-      <meta name="og:description" content="{{ desc }}">
-      <meta name="og:title" content="{{ site.title }}">
-      <meta name="og:url" content="{{ url }}">
-      <meta name="og:type" content="article">
-
       {% if site.og_image %}
          <meta name="og:image" content="{{ site.og_image }}">
-      {% endif %}
-
-      <!-- Twitter -->
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="{{ site.title }}">
-      <meta name="twitter:description" content="{{ desc }}">
-      <meta name="twitter:url" content="{{ url }}">
-
-      {% if site.twitter_image %}
-         <meta name="twitter:image" content="{{ site.twitter_image }}">
-      {% else %}
-         <meta name="twitter:image" content="{{ site.profile_picture }}">
       {% endif %}
    </head>
 
    <body>
     <div class="wrapper">
       <div class="navbar container">
-        <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+        <h1>
+          <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">
+            {{ site.title }}
+          </a>
+        </h1>
         <ul class="alignable pull-right navbar-ul">
           {% for x in site.data.nav %}
             {% if x.name == "Resume" %}

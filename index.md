@@ -5,8 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an Information Security Reseacher, working as Information
-Security Leader at [Inploit Security](http://inploitsecurity.me).
+Hi! My name is Heitor Gouvêa and I am an Information Security Reseacher, working as independet Information Security Consultant.
 I have been working on projects that help people, organizations and companies take control of their own security.  
 
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
