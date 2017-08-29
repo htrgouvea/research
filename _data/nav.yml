@@ -2,7 +2,7 @@
   link: "contact"
 
 - name: "Resume"
-  link: "/resume.pdf"
+  link: "/files/resume.pdf"
 
 - name: "Home"
   link: "/"

@@ -34,5 +34,5 @@ some of my codes written during my researches.
 
 ## Research papers
 
-1. [Anonymity in the cyberspace: the two sides of the coin.](/publications/anonymity-the-two-sides-of-the-coin.pdf)
-2. [Cryptography: from zero to one.](/publications/encryption-from-zero-to-one.pdf)
+1. [Anonymity in the cyberspace: the two sides of the coin.](/files/anonymity-the-two-sides-of-the-coin.pdf)
+2. [Cryptography: from zero to one.](/files/encryption-from-zero-to-one.pdf)
