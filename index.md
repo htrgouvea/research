@@ -21,8 +21,8 @@ delivering high security architectures.
 
 ## Research Interest
 
-My researches are in the area of Information Security,
-more specifically I work on projects that help people take control of their own security, anonymity and privacy.
+My researches are in the area of anonymity, privacy, cryptography and cryptanalysis,
+more specifically I work on projects that help people take control of their own security.
 
 On my [profile on Github](https://github.com/GouveaHeitor){:target="_blank"} you can see
 some of my codes written during my researches.
@@ -30,9 +30,9 @@ some of my codes written during my researches.
 ## Projects
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
-2. [Chefy:](https://github.com/GouveaHeitor/chefy){:target="_blank"}  anonymous peer-to-peer instant messaging.
+2. [Oniro:](https://github.com/GouveaHeitor/oniro){:target="_blank"}  anonymous peer-to-peer instant messaging.
 
 ## Research papers
 
 1. [Anonymity in the cyberspace: the two sides of the coin.](/files/anonymity-the-two-sides-of-the-coin.pdf)
-2. [Cryptography: from zero to one.](/files/encryption-from-zero-to-one.pdf)
+2. [Cryptology: from zero to one.](/files/cryptology-from-zero-to-one.pdf)
