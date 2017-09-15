@@ -1,8 +1,9 @@
 author: Heitor Gouvêa
 title: Heitor Gouvêa
-url: "http://heitorgouvea.me"
+url: "https://heitorgouvea.me"
+enforce_ssl: www.heitorgouvea.me
 og_image: /images/heitorgouvea.jpg
-description: Hi! My name is Heitor Gouvêa and I am an Information Security Reseacher, working as independet Information Security Consultant.  
+description: Hi! My name is Heitor Gouvêa and I am an independent Information Security Researcher.
 baseurl: ""
 
 markdown: kramdown

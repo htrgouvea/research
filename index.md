@@ -5,15 +5,15 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an Information Security Reseacher, working as independet Information Security Consultant.
+Hi! My name is Heitor Gouvêa and I am an independent Information Security Researcher.
 I have been working on projects that help people, organizations and companies take control of their own security.  
 
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
-of Software Development and on Information Security.
+of Software Development and Information Security.
 
 My work is focused on understanding threat models, analyzing existing
-applications and building intelligent tools to combat current and future security
-risk for both individuals or groups.
+applications and building intelligent tools to combat risk current and future security
+for both individuals or groups.
 
 I have audited high profile websites for security vulnerabilities and have
 managed and worked in teams of software developers and computer scientists
