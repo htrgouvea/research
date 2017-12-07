@@ -11,7 +11,7 @@ title: Contact
 
 ## Mailing Address
 
-> Street: Professora Alayde Toledo Garlipp, n° 613, Jardim Esmeraldina
+> Street: Av. João Erbolato, 376 - Vila Castelo Branco
 >
 > Campinas - SP
 >
