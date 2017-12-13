@@ -40,7 +40,7 @@ some of my codes written during my researches.
 ## Projects
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
-2. [Oniro:](https://github.com/GouveaHeitor/oniro){:target="_blank"}  anonymous peer-to-peer instant messaging.
+2. [Tricks:](https://github.com/GouveaHeitor/tricks){:target="_blank"}  my security tricks/scripts.
 
 ## Research papers
 
