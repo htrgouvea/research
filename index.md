@@ -5,11 +5,11 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an independent Information Security Researcher.
+Hi! My name is Heitor Gouvêa and I am an independent Pentester.
 I have been working on projects that help people, organizations and companies take control of their own security.  
 
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
-of Software Development and Information Security.
+of Offensive Information Security.
 
 My work is focused on understanding threat models, analyzing existing
 applications and building intelligent tools to combat risk current and future security
@@ -40,7 +40,7 @@ some of my codes written during my researches.
 ## Projects
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
-2. [Tricks:](https://github.com/GouveaHeitor/tricks){:target="_blank"}  my security tricks/scripts.
+2. [Tricks:](https://github.com/GouveaHeitor/tricks){:target="_blank"}  my collection of security tricks/scripts.
 
 ## Research papers
 
