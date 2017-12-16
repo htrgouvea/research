@@ -16,10 +16,11 @@ title: Contact
 > Campinas - SP
 >
 > Brazil
-
 ---
 
 ## Social
 
 1. [Github](https://github.com/GouveaHeitor){:target="_blank"}
-2. [Linkedin](https://br.linkedin.com/in/gouveaheitor){:target="_blank"}
+2. [Bugcrowd](https://bugcrowd.com/GouveaHeitor){:target="_blank"}
+3. [Linkedin](https://br.linkedin.com/in/gouveaheitor){:target="_blank"}
+4. [HackerOne](https://hackerone.com/GouveaHeitor){:target="_blank"}
