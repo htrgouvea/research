@@ -41,8 +41,3 @@ some of my codes written during my researches.
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
 2. [Tricks:](https://github.com/GouveaHeitor/tricks){:target="_blank"}  my collection of security tricks/scripts.
-
-## Research papers
-
-1. [Anonymity in the cyberspace: the two sides of the coin.](/files/anonymity-the-two-sides-of-the-coin.pdf)
-2. [Cryptology: from zero to one.](/files/cryptology-from-zero-to-one.pdf)
