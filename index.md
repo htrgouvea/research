@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an independent Pentester.
+Hi! My name is Heitor Gouvêa and I am an Cybersecurity Researcher and Bug Bounty Hunter.
 I have been working on projects that help people, organizations and companies take control of their own security.  
 
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
