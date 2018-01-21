@@ -40,4 +40,4 @@ some of my codes written during my researches.
 ## Projects
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
-2. [Tricks:](https://github.com/GouveaHeitor/tricks){:target="_blank"}  my collection of security tricks/scripts.
+2. [Security spellbook:](https://github.com/GouveaHeitor/security-spellbook){:target="_blank"}  My collection of information security tricks/scripts.
