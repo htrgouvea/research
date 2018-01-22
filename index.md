@@ -43,7 +43,6 @@ some of my codes written during my researches.
 2. [Security spellbook:](https://github.com/GouveaHeitor/security-spellbook){:target="_blank"}  My collection of information security tricks/scripts.
 
 
-
-
+##
 
 * Last talk: [25/01/2018 - Security Tricks: 11 Tors e um segredo](http://slides.com/gouveaheitor/11-tors-e-um-segredo#/)
