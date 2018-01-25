@@ -27,7 +27,7 @@ I am available for security related freelance work, helping your organization wi
 2. [Application Security Assessments]()
 3. [Security Training: Awareness, Tools & Techniques]()
 
-Please get in touch via email: hi@heitorgouvea.me
+Please get in touch via email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
 
 ## Research Interest
 
@@ -41,7 +41,6 @@ some of my codes written during my researches.
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
 2. [Security spellbook:](https://github.com/GouveaHeitor/security-spellbook){:target="_blank"}  My collection of information security tricks/scripts.
-
 
 ##
 
