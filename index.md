@@ -44,4 +44,4 @@ some of my codes written during my researches.
 
 ##
 
-* Last talk: [25/01/2018 - Security Tricks #1: 11 Tors e um segredo](http://slides.com/gouveaheitor/11-tors-e-um-segredo#/)
+* Last talk: [06/02/2018 - Nerdzão #24: 11 Tors e um segredo](http://slides.com/gouveaheitor/11-tors-e-um-segredo-2#/)
