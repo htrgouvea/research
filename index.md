@@ -19,15 +19,16 @@ I have audited high profile websites for security vulnerabilities and have
 managed and worked in teams of software developers and computer scientists
 delivering high security architectures.
 
-## Security Consulting
+## Cybersecurity Consulting
 
-I am available for security related freelance work, helping your organization with:
+I am available for cybersecurity related freelance work, helping your organization with:
 
-1. [Vulnerability Analysis]()
-2. [Application Security Assessments]()
-3. [Security Training: Awareness, Tools & Techniques]()
+1. [Penetration Testing's](/publications/penetration-testing/)
+2. [Vulnerability Analysis]()
+3. [Training: Awareness, Tools & Techniques]()
 
 Please get in touch via email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+
 
 ## Research Interest
 
