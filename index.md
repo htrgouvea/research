@@ -5,7 +5,7 @@ title: Home
 
 ## About Me
 
-Hi! My name is Heitor Gouvêa and I am an Cybersecurity Researcher and Bug Bounty Hunter.
+Hi! My name is Heitor Gouvêa and I am an Cyber Security Researcher and Bug Bounty Hunter.
 I have been working on projects that help people, organizations and companies take control of their own security.  
 
 Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience
@@ -23,7 +23,7 @@ delivering high security architectures.
 
 I am available for cybersecurity related freelance work, helping your organization with:
 
-1. [Penetration Testing's](/publications/penetration-testing/)
+1. [Penetration Testing's](/publications/penetration-testing)
 2. [Vulnerability Analysis]()
 3. [Training: Awareness, Tools & Techniques]()
 
@@ -42,7 +42,3 @@ some of my codes written during my researches.
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
 2. [Security spellbook:](https://github.com/GouveaHeitor/security-spellbook){:target="_blank"}  My collection of information security tricks/scripts.
-
-##
-
-* Last talk: [06/02/2018 - Nerdzão #24: 11 Tors e um segredo](http://slides.com/gouveaheitor/11-tors-e-um-segredo-2#/)
