@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Papers
+title: Publications
 ---
 
 ## Papers publications:
