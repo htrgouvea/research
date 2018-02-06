@@ -77,5 +77,5 @@ Please contact me, send an email to: [hi@heitorgouvea.me](mailto:hi@heitorgouvea
 
 ### About the autor:
 
-[Heitor Gouvêa](https://heitorgouvea.me) is a Researcher of Cybersecurity and Bug Bounty Hunter, with over 3 years of experience in the field of offensive security. Author of the anonymity tool Nipe,
+[Heitor Gouvêa](https://heitorgouvea.me) is a Researcher of Cyber Security and Bug Bounty Hunter, with over 3 years of experience in the field of offensive security. Author of the anonymity tool Nipe,
 present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
