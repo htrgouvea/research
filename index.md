@@ -25,7 +25,7 @@ I am available for cybersecurity related freelance work, helping your organizati
 
 1. [Penetration Testing's](/publications/penetration-testing)
 2. [Vulnerability Analysis]()
-3. [Training: Awareness, Tools & Techniques]()
+3. [Training: awareness, tools & techniques]()
 
 Please get in touch via email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
 
@@ -41,4 +41,4 @@ some of my codes written during my researches.
 ## Projects
 
 1. [Nipe:](https://github.com/GouveaHeitor/nipe){:target="_blank"} a script to make Tor Network your default gateway.
-2. [Security spellbook:](https://github.com/GouveaHeitor/security-spellbook){:target="_blank"}  My collection of information security tricks/scripts.
+2. [Security spellbook:](https://github.com/GouveaHeitor/security-spellbook){:target="_blank"}  my collection of information security tricks/scripts.
