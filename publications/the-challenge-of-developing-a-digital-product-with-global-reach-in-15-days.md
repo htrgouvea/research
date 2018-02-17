@@ -27,7 +27,7 @@ Our team was formed by employees from 3 companies: [Assertiva Soluções](https:
 
 Since 4 of these people were not fixed on our team, I would "disregard" them from our training, so our team was in the following structure: we had 6 people taking care of the Front-End part, 3 in the Infrastructure part, 1 Designer / UX, 1 Product Owner and 5 Back-end Developers.
 
-The main development Stack of the [Horizon Four](https://horizonfour.com.br) team is JavaScript, the [Gestão Super](https://gestaosuper.com.br) employees present in the project also had an excellent command of it, but the [Assertiva](https://assertivasolucoes.com.br) team was not yet familiar with such technology, and this was not a problem , [Erick Wendel](https://erickwendel.com.br), CTO here at [Horizon Four](https://horizonfour.com.br), was able to quickly think of a solution: an [Immersion in Development of APis with Node.js](https://horizonfour.com.br/treinamentos/node/) lasting 16 hours, enough to get all project developers on the same page.
+The main development Stack of the [Horizon Four](https://horizonfour.com.br) team is JavaScript, the [Gestão Super](https://gestaosuper.com.br) employees present in the project also had an excellent command of it, but the [Assertiva](https://assertivasolucoes.com.br) team was not yet familiar with such technology, and this was not a problem , [Erick Wendel](https://erickwendel.com.br), CTO here at [Horizon Four](https://horizonfour.com.br), was able to quickly think of a solution: an ["Immersion in Development of APis with Node.js!"](https://horizonfour.com.br/treinamentos/node/) lasting 16 hours, enough to get all project developers on the same page.
 
 Once we had all project developers leveled on the technology issue, it was time to understand the root of the problem. We were immersed for 1 day in the sales area of [Assertiva](https://assertivasolucoes.com.br) closely following the whole process, so that we could feel the difficulties on our skin so we could visualize the best possible ways to solve such pains.
 
@@ -41,9 +41,11 @@ Through the experiences and the day-to-day of this project, I was able to evolve
 
 But I can assure you it was an extremely aggregating experience!
 
+-
+
 ### About the autor:
 
-[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Researcher and Instructor from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe),
+[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Engineer and Instructor from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe),
 present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
 
 -

@@ -23,6 +23,7 @@ make it clear that information security is no joke. In this article, I'll introd
 ### What is a penetration test?
 
 An penetration test is nothing more than a set of processes and concepts that use tools, hacking techniques and specific concepts for the evaluation of information security.
+
 It has as main objective to visualize all the vulnerabilities in the environment responsible for the information of a company, such as: computers, web applications, databases, servers and etc.
 
 -
@@ -77,5 +78,7 @@ Please contact me, send an email to: [hi@heitorgouvea.me](mailto:hi@heitorgouvea
 
 ### About the autor:
 
-[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Researcher and Instructor, with over 3 years of experience in the field of offensive security. Author of the anonymity tool Nipe,
+[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Engineer and Instructor from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe),
 present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
+
+-
