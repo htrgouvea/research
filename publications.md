@@ -3,9 +3,11 @@ layout: default
 title: Publications
 ---
 
-## Papers publications:
+## Publications:
 
   - 30/12/2017 - [What do not you mind making Sunday night?!](/publications/what-do-not-you-mind-making-sunday-night)
+
+  - 15/01/2018 - [Java will not give you a job](/publications/java-will-not-give-you-a-job)
 
   - 03/02/2018 - [It's time for your Startup to undergo an penetration test](/publications/penetration-testing)
 
