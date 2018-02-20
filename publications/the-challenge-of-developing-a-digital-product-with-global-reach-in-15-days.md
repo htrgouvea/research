@@ -1,6 +1,8 @@
 ---
 layout: default
+og_image: /files/images/pic-01.jpg
 title: The challenge of developing a digital product with global reach in 15 days
+description: Today I no longer work in the area of software development, but I have spent two years working directly in this area, where I went through projects from private, public companies, from small startups to multinational companies and in no time a challenge as great as this was me tax.
 ---
 
 ## The challenge of developing a digital product with global reach in 15 days
@@ -12,7 +14,7 @@ I remember when I finished the same, the following thought crossed my mind: "Guy
 
 I could barely know that soon in December even of the same year, another experience even more incredible and frightening battery on my doorstep: the challenge of developing in just 15 days a digital product - a sales management platform - whose same had an international reach.
 
-![Image](https://i.imgur.com/xzX7gYu.jpg)
+![Image](/files/images/pic-01.jpg)
 
 -
 

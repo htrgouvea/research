@@ -11,7 +11,14 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="keywords" content="Heitor Gouvêa, freelancer, information security, pentest, cybersecurity, privacy, anonymity, Campinas, Brazil, researcher">
-      <meta name="description" content="{{ site.description }}">
+
+      {% if page.description %}
+        {% assign desc = page.description %}
+      {% else %}
+        {% assign desc = site.description %}
+      {% endif %}
+
+      <meta name="description" content="{{ desc }}">
       <meta name="author" content="{{ site.author }}">
       {% if page.url %}
          {% assign url = site.url | append: site.baseurl | append: page.url %}
@@ -24,8 +31,15 @@
          <link rel="icon" type="image/ico" href="{{ site.favicon_location }}">
          <link rel="shortcut-icon" type="image/ico" href="{{ site.favicon_location }}">
       {% endif %}
+
+      {% if page.og_image %}
+        {% assign image = page.og_image %}
+      {% else %}
+        {% assign image = site.og_image %}
+      {% endif %}
+
       {% if site.og_image %}
-         <meta name="og:image" content="{{ site.og_image }}">
+         <meta name="og:image" content="{{ image }}">
       {% endif %}
    </head>
    <body>
