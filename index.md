@@ -24,7 +24,7 @@ delivering high security architectures.
 I am available for cybersecurity related freelance work, helping your organization with:
 
 1. [Penetration Testing's](/publications/penetration-testing)
-2. [Vulnerability Analysis]()
+2. [Vulnerability Analysis](/publications/vulnerability-analysis-an-indispensable-practice-for-your-startup)
 3. [Training: awareness, tools & techniques]()
 
 Please get in touch via email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)

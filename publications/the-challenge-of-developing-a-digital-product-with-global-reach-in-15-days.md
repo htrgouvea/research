@@ -37,6 +37,10 @@ Soon after this stage, we began codifying the entire platform, the dynamic was t
 
 All the tasks were categorized by priority, and divided for each of the team members through Trello, and since our production time was small, we did two "daily meetings", one at 9 a.m. in the morning and one at the end of the file.
 
+-
+
+### Conclusion:
+
 Through the experiences and the day-to-day of this project, I was able to evolve my interpersonal relationship side, to share some of my experience and knowledge, often even debating with each other about the best way to do X thing, after all this is also necessary.
 
 But I can assure you it was an extremely aggregating experience!

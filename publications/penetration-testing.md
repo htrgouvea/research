@@ -18,6 +18,7 @@ If not, I can tell you some of these recent cases:
 
 I could go on to mention many other companies / systems that were invaded only in the year 2017, from small businesses to large corporations, but I believe these are enough to
 make it clear that information security is no joke. In this article, I'll introduce you to a method that can help you with this famous penetration test.
+
 -
 
 ### What is a penetration test?
