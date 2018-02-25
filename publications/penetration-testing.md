@@ -1,6 +1,7 @@
 ---
 layout: default
 title: It's time for your Startup to undergo an penetration test
+description: If you follow the news about technology, you certainly ended up hearing about some companies that were invaded by "hackers" and suffered a huge loss because of this.
 ---
 
 ## It's time for your Startup to undergo an penetration test

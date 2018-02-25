@@ -1,6 +1,7 @@
 ---
 layout: default
 title: What do not you mind making Sunday night?!
+description: Or rather, on a Monday morning? The answer to these questions should be your profession!
 ---
 
 ## What do not you mind making Sunday night?!

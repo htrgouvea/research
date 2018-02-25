@@ -1,6 +1,8 @@
 ---
 layout: default
+og_image: /files/images/pic-03.jpg
 title: My experience working on a coworking and its benefits
+description: I worked in corporate environments throughout my career, but by the end of 2017, I started working on a coworking and that changed my life, literally.
 ---
 
 ## My experience working on a coworking and its benefits
