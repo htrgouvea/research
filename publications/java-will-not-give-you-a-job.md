@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Java will not give you a job!
-description: When you are young and are looking to build a career in the IT industry most of the staff will tell you to: do the X graduation, learn to program in the Y language and take the Z certification, because for them, it will be the way for you you have a successful career in the business.
+title: Java will not give you a job
+description: When you are young and are looking to build a career in the IT industry most of the staff will tell you to do the X graduation, learn to program in the Y language and take the Z certification, because for them, it will be the way for you you have a successful career in the business
 ---
 
 ## Java will not give you a job!
