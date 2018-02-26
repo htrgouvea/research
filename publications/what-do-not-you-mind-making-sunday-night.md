@@ -23,6 +23,7 @@ At this point I came to the conclusion that: to have a successful career you hav
 Maybe this thought is wrong, but it's working with me. I truly believe that this is the way to a professional achievement.
 
 So what do not you mind doing on a Sunday night?!
+
 -
 
 ### About the autor:
