@@ -1,5 +1,6 @@
 ---
 layout: default
+og_image: /files/images/pic-04.jpg
 title: What do not you mind making Sunday night?!
 description: Or rather, on a Monday morning? The answer to these questions should be your profession!
 ---
