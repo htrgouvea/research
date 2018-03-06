@@ -5,12 +5,17 @@ title: Home
 
 ## * About Me
 
-Hi! My name is Heitor Gouvêa and I am an Cybersecurity Engineer and Instructor.
-I have been working on projects that help people, organizations and companies take control of their own informations. Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience of Offensive Information Security.
+Hi! My name is Heitor Gouvêa and I am an Cybersecurity Engineer and Instructor, I have been working on projects that help people,
+organizations and companies take control of their own informations. I am an itinerant professional who travels while working. I work remotely around the world
+conducting offensive information security projects for incredible companies like: Cabify, HackerOne,
+Github and other not-so-famous but equally amazing companies.
 
 My work is focused on understanding threat models, analyzing existing applications and building intelligent tools to combat risk current and future security for both individuals or groups.
 
 I have audited high profile websites for security vulnerabilities and have managed and worked in teams of software developers and computer scientists delivering high security architectures.
+
+I travel the world while working in the market offering the following services as a cybersecurity consultancy: [vulnerability analysis](/publications/vulnerability-analysis-an-indispensable-practice-for-your-startup), [penetration test](/publications/penetration-testing) and [training in:
+techniques, concepts and awareness]()
 
 -
 
