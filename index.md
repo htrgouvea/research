@@ -14,7 +14,7 @@ My work is focused on understanding threat models, analyzing existing applicatio
 
 I have audited high profile websites for security vulnerabilities and have managed and worked in teams of software developers and computer scientists delivering high security architectures.
 
-I travel the world while working in the market offering the following services as a cybersecurity consultancy: [vulnerability analysis](/publications/vulnerability-analysis-an-indispensable-practice-for-your-startup), [penetration test](/publications/penetration-testing) and [training in:
+I travel the world while working in the market offering the following services as a cybersecurity consultancy: [vulnerability analysis](/publications/vulnerability-analysis), [penetration test](/publications/penetration-testing) and [training in:
 techniques, concepts and awareness]()
 
 -

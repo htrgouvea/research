@@ -15,6 +15,6 @@ title: Publications
 
   - 19/02/2018 - [My experience working on a coworking and its benefits](/publications/my-experience-working-on-a-coworking-and-its-benefits)
 
-  - 23/02/2018 - [Vulnerability analysis: an indispensable practice for your Startup](/publications/vulnerability-analysis-an-indispensable-practice-for-your-startup)
+  - 23/02/2018 - [Vulnerability analysis: an indispensable practice for your Startup](/publications/vulnerability-analysis)
 
 ---
