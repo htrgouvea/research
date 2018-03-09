@@ -6,15 +6,11 @@ title: Home
 ## * About Me
 
 Hi! My name is Heitor Gouvêa and I am an Cybersecurity Engineer and Instructor.
-I have been working on projects that help people, organizations and companies take control of their own informations. Currently live in
-Campinas, a quiet city in Brazil. I have more than 3 years experience of Offensive Information Security.
+I have been working on projects that help people, organizations and companies take control of their own informations. Currently live in Campinas, a quiet city in Brazil. I have more than 3 years experience of Offensive Information Security.
 
-My work is focused on understanding threat models, analyzing existing
-applications and building intelligent tools to combat risk current and future security for both individuals or groups.
+My work is focused on understanding threat models, analyzing existing applications and building intelligent tools to combat risk current and future security for both individuals or groups.
 
-I have audited high profile websites for security vulnerabilities and have
-managed and worked in teams of software developers and computer scientists
-delivering high security architectures.
+I have audited high profile websites for security vulnerabilities and have managed and worked in teams of software developers and computer scientists delivering high security architectures.
 
 -
 
