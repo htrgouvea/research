@@ -5,7 +5,7 @@ title: Home
 
 ## * About Me
 
-Hi! My name is Heitor Gouvêa and I am an Cybersecurity Engineer and Instructor, I have been working on projects that help people,
+Hi! My name is Heitor Gouvêa and I am an Cybersecurity Researcher and Speaker, I have been working on projects that help people,
 organizations and companies take control of their own informations. I am an itinerant professional who travels while working. I work remotely around the world
 conducting offensive information security projects for incredible companies like: Cabify, HackerOne,
 Github and other not-so-famous but equally amazing companies.

@@ -29,7 +29,7 @@ But always take with you the question: "How long do I still have ?!"
 
 ### About the autor:
 
-[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Engineer and Instructor from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe),
+[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Researcher and Speaker from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe),
 present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
 
 -
