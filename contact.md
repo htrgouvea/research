@@ -17,10 +17,4 @@ title: Contact
 2. [Linkedin](https://br.linkedin.com/in/gouveaheitor){:target="_blank"}
 3. [HackerOne](https://hackerone.com/GouveaHeitor){:target="_blank"}
 
-### * Mailing Address
-
-> Street: Av. João Erbolato, 376 - Vila Castelo Branco
-> Campinas - SP
-> Brazil
-
 ---
