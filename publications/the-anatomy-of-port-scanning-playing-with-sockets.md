@@ -59,7 +59,6 @@ and sometimes an obscure error message, when your scanner connects and then clos
 
 ### About the autor:
 
-[Heitor Gouvêa](https://heitorgouvea.me) is a Cybersecurity Researcher and Speaker from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe),
-present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
+[Heitor Gouvêa](https://heitorgouvea.me) is a Information Security Researcher and Technical Writer from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe), present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
 
 -
