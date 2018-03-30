@@ -7,8 +7,7 @@ title: Home
 
 Hi! My name is Heitor Gouvêa and I am an Cybersecurity Researcher and Speaker, I have been working on projects that help people,
 organizations and companies take control of their own informations. I am an itinerant professional who travels while working. I work remotely around the world
-conducting offensive information security projects for incredible companies like: Cabify, HackerOne,
-Github and other not-so-famous but equally amazing companies.
+conducting offensive information security projects for incredible companies like: Cabify, Bugcrowd Inc, Github and other not-so-famous but equally amazing companies.
 
 My work is focused on understanding threat models, analyzing existing applications and building intelligent tools to combat risk current and future security for both individuals or groups.
 

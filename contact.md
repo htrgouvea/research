@@ -15,6 +15,6 @@ title: Contact
 
 1. [Github](https://github.com/GouveaHeitor){:target="_blank"}
 2. [Linkedin](https://br.linkedin.com/in/gouveaheitor){:target="_blank"}
-3. [Bugcrowd Inc](https://bugcrowd.com/gouveaheitor){:target="_blank"}
+3. [Bugcrowd](https://bugcrowd.com/gouveaheitor){:target="_blank"}
 
 ---
