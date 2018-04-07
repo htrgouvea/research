@@ -51,6 +51,7 @@ But I can assure you it was an extremely aggregating experience!
 
 ### About the autor:
 
-[Heitor Gouvêa](https://heitorgouvea.me) is a Information Security Researcher and Technical Writer from Brazil, with over 3 years of experience in the field of offensive security. Author of the anonymity tool [Nipe](https://github.com/GouveaHeitor/nipe), present in several Linux distributions focused on information security such as BlackArch, LionSec and WeakNet.
+[Heitor Gouvêa:](https://heitorgouvea.me) with more than 3 years of experience in the field of information security offensive, now acts as Pentester Freelancer besides being the main developer of the [project Nipe](https://github.com/GouveaHeitor/nipe), tool responsible for guaranteeing anonymity to its users, present in various Linux distributions such as: Black Arch, Weak Net and LionSec Linux.
 
--
+*
+ If you think the writer of this text has some potential, take a look at the other things I create. I have a weekly [newsletter](https://heitorgouvea.me/newsletter) on possibly interesting things and I even think about creating a youtube channel in the future. But seriously, [subscribe to the newsletter](https://heitorgouvea.me/newsletter) that is very legal and this is the way we can continue to exchange ideas.

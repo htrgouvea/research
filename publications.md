@@ -11,7 +11,7 @@ title: Publications
 
   - 23/02/2018 - [Vulnerability analysis: an indispensable practice for your Startup](/publications/vulnerability-analysis)
 
-  - 26/03/2018 - [Conquering digital anonymity with the help of Project Tor](/publications/conquering-digital-anonymity-with-the-help-of-project-tor.md)
+  - 26/03/2018 - [Conquering digital anonymity with the help of Project Tor](/publications/conquering-digital-anonymity-with-the-help-of-project-tor)
 
   - 12/04/2018 - [The anatomy of port scanning, playing with sockets](/publications/the-anatomy-of-port-scanning-playing-with-sockets)
 
