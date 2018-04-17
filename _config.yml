@@ -18,8 +18,9 @@ title: Heitor Gouvêa
 subtitle: "Information Security Entrepreneur, Speaker & Writer"
 url: "https://heitorgouvea.me" #
 baseurl: ""
-cover: "/assets/bg.png"
+cover: "/assets/bg.jpeg"
 logo: "/assets/logo.png"
+og_image: "/assets/heitorgouvea.png"
 
 # Build settings
 markdown: kramdown

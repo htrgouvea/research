@@ -1,8 +1,35 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="description" content="">
+<title>
+  {% if page.title %}
+    {{ page.title }} - {{ site.title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</title>
+
+<meta name="keywords" content="Heitor Gouvêa, freelancer, information security, pentest, cybersecurity, privacy, anonymity, Campinas, Brazil, researcher">
+
+{% if page.description %}
+  {% assign desc = page.description %}
+{% else %}
+  {% assign desc = site.description %}
+{% endif %}
+
+<meta name="description" content="{{ desc }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="{{ site.author }}">
+
+{% if page.og_image %}
+  {% assign image = page.og_image %}
+{% else %}
+  {% assign image = site.og_image %}
+{% endif %}
+
+{% if site.og_image %}
+  <meta name="og:image" content="{{ image }}">
+{% endif %}
+
 <!-- CSS -->
 <link rel="stylesheet" href="{{ site.baseurl }}/css/owl.carousel.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
@@ -13,6 +40,7 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/css/animate.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/responsive.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" />
+
 <!-- Js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
