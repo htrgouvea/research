@@ -1,15 +1,36 @@
-author: Heitor Gouvêa
-title: Heitor Gouvêa
-url: "https://heitorgouvea.me"
-enforce_ssl: www.heitorgouvea.me
-og_image: /images/heitorgouvea.png
-description: Hi! My name is Heitor Gouvêa and I am an Cybersecurity Researcher and Speaker from Brazil. I have been working on projects that help people, organizations and companies take control of their own security.
-baseurl: ""
 
+exclude:
+  - "/vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "LICENSE.md"
+  - "*.gemspec"
+
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+
+# Site settings
+title: Heitor Gouvêa
+subtitle: "Information Security Entrepreneur, Speaker & Writer"
+url: "https://heitorgouvea.me" #
+baseurl: ""
+cover: "/assets/cover.png"
+logo: "/assets/logo.png"
+
+# Build settings
 markdown: kramdown
 
-tracking_id: #
+# Google analytics
+ga_tracking_id: "UA-105655736-1"
 
-sass:
-    style: compressed
-    sass_dir: _sass
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
+
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."
