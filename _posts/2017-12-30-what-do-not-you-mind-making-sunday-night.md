@@ -3,6 +3,7 @@ layout: post
 title: What do not you mind making Sunday night?!
 date: 2017-12-30
 author: Heitor Gouvêa
+og_image:
 ---
 
 ## What do not you mind making Sunday night?!

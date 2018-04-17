@@ -3,6 +3,7 @@ layout: post
 title: It's time for your Startup to undergo an penetration test
 date: 2018-02-03
 author: Heitor Gouvêa
+og_image:
 ---
 
 ## It's time for your Startup to undergo an penetration test

@@ -3,6 +3,7 @@ layout: post
 title: Java will not give you a job
 date: 2018-01-15
 author: Heitor Gouvêa
+og_image:
 ---
 
 ## Java will not give you a job!

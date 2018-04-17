@@ -7,10 +7,7 @@
 
 #### Technologies used:
 
-- HTML5
-- CSS3
-- Sass
-- Jekyll
+- HTML5, CSS3, JavaScript and Jekyll
 
 #### Bugs
 

@@ -15,6 +15,7 @@ keep_files:
 
 # Site settings
 title: Heitor Gouvêa
+author: Heitor Gouvêa
 subtitle: "Information Security Entrepreneur, Speaker & Writer"
 url: "https://heitorgouvea.me" #
 baseurl: ""

@@ -3,6 +3,7 @@ layout: post
 title: The challenge of developing a digital product with global reach in 15 days
 date: 2018-02-18
 author: Heitor Gouvêa
+og_image: /files/images/pic-01.jpg
 ---
 
 ## The challenge of developing a digital product with global reach in 15 days

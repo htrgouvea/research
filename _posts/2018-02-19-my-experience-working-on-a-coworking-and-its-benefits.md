@@ -3,6 +3,7 @@ layout: post
 title: My experience working on a coworking and its benefits
 date: 2018-02-19
 author: Heitor Gouvêa
+og_image:
 ---
 
 ## My experience working on a coworking and its benefits
