@@ -382,10 +382,9 @@ header .logo {
 #global-header .block h1 {
   font-weight: 100;
   font-size: 45px;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   padding-bottom: 15px;
   margin-top: 0;
-  text-transform: capitalize;
 }
 #global-header .block p {
   font-size: 16px;
