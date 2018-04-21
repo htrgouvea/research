@@ -5,7 +5,7 @@ title: Home
 
 ## * About Me
 
-Hi! My name is Heitor Gouvêa and I am an Information Security Researcher and Technical Writer, I have been working on projects that help people,
+Hi! My name is Heitor Gouvêa and I am an Information Security Professional and Technical Writer, I have been working on projects that help people,
 organizations and companies take control of their own informations. I am an itinerant professional who travels while working. I work remotely around the world
 conducting offensive information security projects for incredible companies like: Cabify, Bugcrowd Inc, Github and other not-so-famous but equally amazing companies.
 
