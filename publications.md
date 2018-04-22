@@ -17,4 +17,6 @@ title: Publications
 
   - 23/02/2018 - [Vulnerability analysis: an indispensable practice for your Startup](/publications/vulnerability-analysis)
 
+  - 12/03/2018 - [The anatomy of port scanning, playing with sockets](/publications/the-anatomy-of-port-scanning-playing-with-sockets)
+
 ---
