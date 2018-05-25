@@ -32,7 +32,7 @@ I am currently fascinated by the theme of "Car Hacking" as I am sure that a near
 I share on my blog a lot of discoveries I make during my day-to-day life and some lessons from stories I've lived through.
 In addition, I have been a mentor in Hackathons organized by companies such as IBM, Assertiva Solutions and City Hall of Campinas.
 
-Whenever possible, I speaking in technical conferences... More about my [speaking here](http://tomcritchlow.com/speaking).
+Whenever possible, I speaking in technical conferences... More about my [speaking here](https://heitorgouvea.me/speaking).
 
 ## Get in touch
 
