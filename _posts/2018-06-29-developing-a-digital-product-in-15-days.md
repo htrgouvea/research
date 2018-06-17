@@ -1,9 +1,10 @@
 ---
 layout: blog
 title: The challenge of developing a digital product with global reach in 15 days
+subtitle: Today I no longer work in the area of software development, but I have spent two years working directly in this area, where I went through projects from private, public companies, from small startups to multinational companies and in no moment a challenge as great as this was me tax...
 ---
 
-In August of 2017, I wrote a publication titled ["Almost two years away from home"](https://www.linkedin.com/pulse/quase-dois-anos-longe-de-casa-heitor-gouv%C3%AAa/), where I tell a little of the experience of leaving my parents' house in the interior of MG, and moving to SP to work as a Developer. I remember when I finished the same, the following thought crossed my mind: "Man, what a life experience fuck!".
+In December of 2017, I wrote a publication titled ["Almost two years away from home"](https://www.linkedin.com/pulse/quase-dois-anos-longe-de-casa-heitor-gouv%C3%AAa/), where I tell a little of the experience of leaving my parents' house in the interior of MG, and moving to SP to work as a Developer. I remember when I finished the same, the following thought crossed my mind: "Man, what a life experience fuck!".
 
 I could barely know that soon in December even of the same year, another experience even more incredible and frightening battery on my doorstep: the challenge of developing in just 15 days a digital product - a sales management platform - whose same had an international reach.
 
@@ -21,7 +22,7 @@ Once we had all the project developers leveled on the technology side, it was ti
 
 From there, we spent about 2 to 3 days to draw - in even papers - all screens of the system that was to be developed. Before all this, the whole scope of the project had already been done by the business team, the technology team only made some minor adjustments.
 
-![Image]()
+![Image](/images/posts/project.jpeg)
 
 Soon after this stage, we began codifying the entire platform, the dynamic was that of "continuous deliveries", however, in a much shorter period than normal. We made the deliveries every 2 days at the beginning, and later we started to make 2 deliveries a day, one in the middle of the day, and another at the end. On many of these days it took some extra hours to get the message across.
 
