@@ -2,6 +2,7 @@
 layout: blog
 title: The importance of sitting and doing
 subtitle: This guy in the picture is me, while I try to write something new for the blog. In about half an hour, this is the fifth text I try to do.
+category: stories
 ---
 
 ![Image](/images/posts/write.jpeg)
