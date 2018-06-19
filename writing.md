@@ -27,5 +27,3 @@ title: Latest Writing
   {% endif %}
   {% endif %}
 {% endfor %}
-
-<script id="dsq-count-scr" src="//tomcritchlow.disqus.com/count.js" async></script>

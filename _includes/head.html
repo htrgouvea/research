@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% if page.metatitle %}{{page.metatitle}}{% elsif page.title%}{{page.title}}{% else %}Heitor Gouvêa - Independent Information Security Researcher{% endif %}</title>
-    <meta name="description" content="I am an Independent Information Security Researcher looking to make the internet more secure.">
+    <meta name="description" content="% if page.subtitle %}{{page.subtitle}}{% else %}I am an Independent Information Security Researcher looking to make the internet more secure.{% endif %}">
 
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700,300,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/tachyons.min.css">
