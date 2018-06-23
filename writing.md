@@ -13,7 +13,7 @@ title: Latest Writing
   {% endcapture %}
 
   {% if forloop.first %}
-  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+  <h2 id="{{ this_year }}-ref"></h2>
   <ul>
   {% endif %}
   <li class="pv2"><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%D" }}</li>
