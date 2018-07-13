@@ -2,23 +2,21 @@
 ---
 
 {% include head.html %}
-
 {% include googleanalytics.html %}
-
 {% include header.html %}
 
 <section class="ph3 ph0-ns center w-100 pb0-l pb3">
-   <div class="w-60-l center mv6-l mv3 mb0-l mb2 tombox">
-            <div class="w-50-l fr-l lh-copy f4 pa3 pa0-ns relative">
-               <div class="tomboxinner">
-                <img src="/images/photos/heitor_perfil.jpg" />
-                </div>
-            <h2 class="fw6 f1">Hello there!</h2>
-            <p>I have been working on projects that help people, organizations and companies take control of their own informations. <a href="/consulting">Read more about that here</a>.</p>
-            <p>I am an Bug Bounty Hunter looking to make the internet more secure.</p>
-            <p><a href="/about">Learn more about my background here</a></p>
-            </div>
-        </div>
+  <div class="w-60-l center mv6-l mv3 mb0-l mb2 tombox">
+    <div class="w-50-l fr-l lh-copy f4 pa3 pa0-ns relative">
+      <div class="tomboxinner">
+        <img src="/images/photos/heitor_perfil.jpg" />
+      </div>
+      <h2 class="fw6 f1">Hello there!</h2>
+        <p>I have been working on projects that help people, organizations and companies take control of their own informations. <a href="/consulting">Read more about that here</a>.</p>
+        <p>I am an Bug Bounty Hunter looking to make the internet more secure.</p>
+        <p><a href="/about">Learn more about my background here</a></p>
+    </div>
+  </div>
 </section>
 
 <section class="cf pv4 tcgrey">
@@ -31,7 +29,7 @@
         <h2>My Blog</h2>
         <p>I have a <a href="https://heitorgouvea.me/writing/">blog</a>. Nothing fancy but it's not hosted on Medium so that's a relief. Here's the latest:</p>
         <ul>
-          {% for post in site.posts limit:5 %}
+          {% for post in site.posts limit:3 %}
             <li><a href="{{post.url}}">{{post.title}}</a> - {{ post.date | date_to_string }}</li>
           {% endfor %}
         </ul>
@@ -47,40 +45,35 @@
           Or <a href="https://us18.campaign-archive.com/home/?u=77880a5412a598542dd152bdd&id=ab7f9d0b68">view the archives here</a>.
         </p>
       </div>
-
-                    <div class="fl w-third-l w-100 pa3 pa4-l lh-copy">
-                        <h2>Hire Me</h2>
-                        <p>I'm a Bug Bounty Hunter. What does that mean? Read up:</p>
-                        <ul>
-                            <li><a href="https://heitorgouvea.me/consulting/">My consulting page</a></li>
-                            <li><a href="https://heitorgouvea.me/2018/12/14/fieldguide-independent-researching/">A field guide for independent researching</a> - some tips for those wanting to be an independent researcher</li>
-                        </ul>
-                    </div>
-                </div>
-        </div>
-
+      <div class="fl w-third-l w-100 pa3 pa4-l lh-copy">
+        <h2>Hire Me</h2>
+        <p>I'm a Bug Bounty Hunter. What does that mean? Read up:</p>
+        <ul>
+            <li>
+              <a href="https://heitorgouvea.me/consulting/">My consulting page</a>
+            </li>
+            <li>
+              <a href="https://heitorgouvea.me/stories/2018/08/11/fieldguide-to-bug-bounty-hunting/">A guide to become a Bug Bounty Hunter</a> - Just a feel tips
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="cf pv5">
-<div class="mw8-l w-90-s center tc">
-        <h2> Clients</h2>
-
-        <div class="fl w-100 w-third-l pa2 tc"><img class="h4 pa2" src="/images/clients/github.png" /></div>
-        <div class="fl w-100 w-third-l pa2 tc"><img class="h4 pa2" src="/images/clients/bugcrowd.svg" /></div>
-        <div class="fl w-100 w-third-l pa2 tc"><img class="h4 pa2" src="/images/clients/assertiva.svg" /></div>
-
-        <!-- <div class="fl w-100 w-third-l pa2 tc"><img class="h3 pa2" src="/images/clients/fundera.png" /></div>
-        <div class="fl w-100 w-third-l pa2 tc"><img class="h3 pa2" src="/images/clients/gucci.png" /></div>
-        <div class="fl w-100 w-third-l pa2 tc"><img class="h3 pa2" src="/images/clients/grovo.png" /></div>
-        -->
-
-        </div>
+  <div class="mw8-l w-90-s center tc">
+    <h2> Clients</h2>
+    <div class="fl w-100 w-third-l pa2 tc"><img class="h4 pa2" src="/images/clients/github.png" /></div>
+    <div class="fl w-100 w-third-l pa2 tc"><img class="h4 pa2" src="/images/clients/bugcrowd.svg" /></div>
+    <div class="fl w-100 w-third-l pa2 tc"><img class="h4 pa2" src="/images/clients/assertiva.svg" /></div>
+  </div>
 </section>
 
 <section class="cf pv5">
-        <div class="mw6 center tc contactbox">
-            <h2><a class="no-underline tcblack" href="mailto:hi@heitorgouvea.me">Get in touch</a></h2>
-        </div>
+  <div class="mw6 center tc contactbox">
+    <h2><a class="no-underline tcblack" href="mailto:hi@heitorgouvea.me">Get in touch</a></h2>
+  </div>
 </section>
 
 {% include footer.html %}

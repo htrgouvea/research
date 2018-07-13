@@ -29,4 +29,4 @@ I can also conduct training for professionals in the Information Security segmen
 
 --
 
-Please get in touch: <hi@heitorgouvea.me> / (19) 991 891 355
+Please get in touch: <hi@heitorgouvea.me> / +55 (19) 991 891 355
