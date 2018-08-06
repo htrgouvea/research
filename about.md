@@ -5,7 +5,7 @@ title: About Me
 
 
 
-Hi there, I’m currently have been working on projects that help people, organizations and companies take control of their own informations as an independent Information Security Researcher.
+Hi there, I’m currently have been working on projects that help people, organizations and companies take control of their own informations as an Independent Security Researcher.
 
 Get in touch: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
 
