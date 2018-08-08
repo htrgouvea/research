@@ -1,6 +1,6 @@
 ---
 layout: page
-metatitle: Information Security Researching from Heitor Gouvêa
+metatitle: Security Researching from Heitor Gouvêa
 title: Working with me
 subtitle: I have been working on projects that help people, organizations and companies take control of their own informations.
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: /now
-subtitle: What I'm working on now, inspired by Derek Sivers
+subtitle: What I'm working on now
 ---
 
 I like reading about War Strategies, skateboarding, running, attending tech meetups and playing some Capture The Flag.
