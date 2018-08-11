@@ -1,6 +1,6 @@
 ---
 layout: page
-metatitle: Security Researching from Heitor Gouvêa
+metatitle: Bounty Hunter from Heitor Gouvêa
 title: Working with me
 subtitle: I have been working on projects that help people, organizations and companies take control of their own informations.
 ---

@@ -7,7 +7,7 @@ I love the opportunity to speak at conferences. I've been to incredible places a
 
 Upcoming speaking:
 
-- [07/09/2018] HackTown - Pentest em aplicações Mobile
+- [07/09/2018] HackTown - "Intro to the exploitation of Mobile Applications"
 
 These are the last events in which I speaking:
 

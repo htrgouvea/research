@@ -10,10 +10,9 @@ I am living in São Paulo, BR, and here you have many conferences, of the most v
 
 Here's what I'm up to right now:
 
- - Running an independent Information Security Researching practice. I've been at this almost three years now and have worked with some great brands...
+ - Running an independent Bug Bounty Hunting practice. I’ve been at this almost three years now and have worked with some great brands…
  - Writing a book on the Perl Language applied to the practice of Pentesting
  - Keeping the <a href="https://github.com/GouveaHeitor/nipe" target="_blank_">Nipe project</a>: a project focused on anonymity and digital privacy
- - Studying more and more about Car Hacking...
 
 In the past I've done a lot of conference speaking - I'm open to new speaking opportunities so get in touch if you have an event you'd like me to speak at.
 
