@@ -1,6 +1,6 @@
 ---
 layout: page
-metatitle: Bounty Hunter from Heitor Gouvêa
+metatitle: IT Security Consulting by Heitor Gouvêa
 title: Working with me
 subtitle: I have been working on projects that help people, organizations and companies take control of their own informations.
 ---
@@ -15,13 +15,13 @@ My work is focused on understanding threat models, analyzing existing applicatio
 
 There are typically three ways to engage with me:
 
-## Vulnerability Analysis
-
-This is the process of identifying known vulnerabilities and vulnerabilities present in the environment and exposing them to threats. After performing the vulnerability analysis, you will receive a detailed report explaining all the vulnerabilities in your environment, as well as effective ways to mitigate such threats.
-
 ## Penetration Testing
 
 It is a real attack simulation, this is the best way to properly assess your security posture. Demonstration of exploitation and exfiltration of data not only helps the business to understand the risks, it also helps to prioritize the changes within the organization.
+
+## Development of a Security Design and Architecture
+
+Is the design artifacts that describe how the security controls (security countermeasures) are positioned and how they relate to the overall systems architecture. These controls serve the purpose to maintain the system’s quality attributes such as confidentiality, integrity and availability.
 
 ## Information Security Training
 

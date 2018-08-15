@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-Hi there, I’m currently have been working on projects that help people, organizations and companies take control of their own informations as an Bug Bounty Hunter.
+Hi there, I’m currently have been working on projects that help people, organizations and companies take control of their own informations as an Independent Security Researcher.
 
 Get in touch: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
 
@@ -12,7 +12,7 @@ Get in touch: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](
 By the end of 2014 I started to study programming independently, and by the end of 2015 I was already fascinated by the world of offensive information security.
 
 At the beginning of 2016 I participated in a Hackathon and later I was hired to work in the Brazilian Government in the area of ​​Information Technology.
-After two years working for the Government, I decided that I would start a career as an Bug Bounty Hunter, so that I could focus on things that really made sense.
+After two years working for the Government, I decided that I would start a career as an Independent Security Researcher, so that I could focus on things that really made sense.
 
 During my work as a Bounty Hunter I worked alongside incredible companies like Cabify, Github and Bugcrowd and other not-so-famous but equally incredible companies.
 I am fascinated by the area of ​​offensive security, so I spend many hours studying in this field.

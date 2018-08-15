@@ -10,7 +10,7 @@ I am living in São Paulo, BR, and here you have many conferences, of the most v
 
 Here's what I'm up to right now:
 
- - Running an independent Bug Bounty Hunting practice. I’ve been at this almost three years now and have worked with some great brands…
+ - Running an independent security researcher practice. I’ve been at this almost three years now and have worked with some great brands…
  - Writing a book on the Perl Language applied to the practice of Pentesting
  - Keeping the <a href="https://github.com/GouveaHeitor/nipe" target="_blank_">Nipe project</a>: a project focused on anonymity and digital privacy
 
