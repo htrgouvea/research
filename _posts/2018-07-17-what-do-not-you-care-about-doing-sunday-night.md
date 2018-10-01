@@ -1,8 +1,7 @@
 ---
-layout: blog
+layout: post
 title: What do not you care about doing Sunday night?!
 subtitle: Or rather, on a Monday morning?
-category: stories
 ---
 
 The answer to these questions should be your profession.

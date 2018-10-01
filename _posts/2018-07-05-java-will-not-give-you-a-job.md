@@ -1,8 +1,7 @@
 ---
-layout: blog
+layout: post
 title: Java will not give you a job
 subtitle: When you are young and are looking to build a career in the IT industry most of the staff will tell you to
-category: stories
 ---
 
 When you are young and are looking to build a career in the IT industry most of the staff will tell you to: do the X graduation, learn to program in the Y language and take the Z certification, because for them, it will be the way to you have a successful career in the business.

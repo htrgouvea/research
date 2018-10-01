@@ -1,8 +1,7 @@
 ---
-layout: blog
+layout: post
 title: The challenge of developing a digital product with global reach in 15 days
 subtitle: Today I no longer work in the area of software development, but I have spent two years working directly in this area, where I went through projects from private, public companies, from small startups to multinational companies and in no moment a challenge as great as this was me tax...
-category: stories
 ---
 
 In December of 2017, I wrote a publication titled ["Almost two years away from home"](https://www.linkedin.com/pulse/quase-dois-anos-longe-de-casa-heitor-gouv%C3%AAa/), where I tell a little of the experience of leaving my parents' house in the interior of MG, and moving to SP to work as a Developer. I remember when I finished the same, the following thought crossed my mind: "Man, what a life experience fuck!".
