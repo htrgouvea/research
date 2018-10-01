@@ -1,9 +1,9 @@
 ---
 layout: post
 title: What do not you care about doing Sunday night?!
-subtitle: Or rather, on a Monday morning?
 ---
 
+Or rather, on a Monday morning?
 The answer to these questions should be your profession.
 
 As soon as the year 2017 began, I decided to chase after my dream. The dream of working as an Information Security Researcher. I decided that I would start slowly, performing some Freelas for friends and colleagues and simultaneously writing some Papers. In the first few months I realized that this was really what I wanted for my life, I felt passionate about autonomy in carrying out my work, the need for strategic thinking and many other things.
