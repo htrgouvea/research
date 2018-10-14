@@ -1,0 +1,46 @@
+{% include head.html %}
+{% include googleanalytics.html %}
+{% include header.html %}
+
+<div class="mw8 center lh-copy f4 postcontainer ph3 ph0-l">
+  <div class="pt4 w-two-thirds-ns">
+
+      <h1 class="f2 f1-l fw8 lh-solid mv2 posttitle">{{page.title}}</h1>
+
+    {% if page.subtitle %}
+    <h2 class="f3 fw3 lh-copy mv2">{{page.subtitle}}</h2>
+      {% endif %}
+
+    {% if page.date %}
+    <div class="f5 f6-s ttu black-20 pv3">{{ page.date | date: "%B %-d, %Y" }}</div>
+      {% endif %}
+  </div>
+
+
+  <div class="w-two-thirds-ns">
+
+  {{content}}
+
+
+  <hr class="w3 mv5">
+
+<div class="f5 i">
+  <p>
+    <a href="https://heitorgouvea.me">Heitor Gouvêa</a>: with more than 3 years of experience in the field of information security offensive,
+    today he acts independently as an Security Researcher, as well as being the main developer of the <a href="https://github.com/GouveaHeitor/nipe">Nipe project</a>,
+    a tool responsible for guaranteeing the anonymity of its users, present in several Linux distributions like: Black Arch, Weak Net
+    and LionSec Linux.
+  </p>
+  <br />
+  <p>
+    If you think the writer of this text has some potential, take a look at the other things I create. I have a weekly <a href="https://heitorgouvea.me/newsletter">newsletter</a> on
+    possibly interesting things and I even think about creating a youtube channel in the future. But seriously, subscribe to the <a href="https://heitorgouvea.me/newsletter">newsletter</a>
+    that is very legal and this is the way we can continue to exchange ideas.
+  </p>
+  <br />
+</div>
+
+</div>
+</div>
+
+{% include footer.html %}

@@ -1,29 +1,8 @@
-# Site settings
-title:          Heitor Gouvêa
-description:    "Independent Security Researcher"
-baseurl:        ""
-url:            "https://heitorgouvea.me"
-
-# Author
-author:
-  name:         Heitor Gouvêa
-  url:          https://heitorgouvea.me
-  email:        hi@heitorgouvea.me
-
-# Build settings
-markdown:       kramdown
-
-# Assets
-sass:
-  sass_dir:     _sass
-  style:        compressed
-
-# Gems
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  # - jemoji #Uncomment this to allow emoji in your post
-
 # Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+  links:
+    output: true
