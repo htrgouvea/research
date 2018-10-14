@@ -59,7 +59,7 @@ brand:after{
   height:95%;
   -webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	filter: gray; /* IE */
+	filter: gray;
 }
 
 .tcsectionheader{
