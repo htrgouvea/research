@@ -1,28 +1,26 @@
 @media (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
 
-.navigation{
-    display:none;
-}
+  .mobilemenu {
+    display: block;
+  }
 
-.mobilemenu{
-    display:block;
-}
+  .tombox {
+    height: initial;
+  }
 
-.tombox{
-    height:initial;
-}
+  .tombox img {
+    display: none;
+  }
 
-.tombox img{
-    display:none;
-}
-
-.postcontainer img{
+  .postcontainer img {
     margin-left: 0px;
     max-width: 100%;
-}
-
-.postcontainer iframe{
-    max-width:100%;
-}
-
+  }
+  
+  .postcontainer iframe {
+    max-width: 100%;
+  }
 }
