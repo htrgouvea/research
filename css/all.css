@@ -111,6 +111,11 @@ blockquote {
   padding-bottom: 30px;
 }
 
+.postcontent {
+  margin: 0 auto;
+  text-align: justify;
+}
+
 #copytext { cursor: pointer; }
 
 .tcgrey { background-color: #f3f3f3; }
