@@ -101,7 +101,7 @@ blockquote {
 .postcontainer h2, .postcontainer h3 { padding-top: 1rem; }
 
 .postcontainer img {
-  max-width: 150%;
+  max-width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 }
