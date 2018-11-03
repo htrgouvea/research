@@ -13,7 +13,7 @@ No final de 2014, comecei a estudar programação de forma independente e, no fi
 
 No início de 2016 participei de uma Hackathon e depois fui contratado para trabalhar no governo brasileiro na área de Tecnologia da Informação. Depois de dois anos trabalhando como Trainee, decidi iniciar uma carreira como Pesquisador de Segurança Independente, para poder me concentrar em coisas que realmente faziam sentido com o meu propósito.
 
-Durante meu trabalho como Pesquisador Securiy eu trabalhei ao lado de empresas incríveis como Cabify, Github e Bugcrowd e outras empresas não tão famosas, mas igualmente incríveis. Sou fascinado pela área de segurança ofensiva, por isso passo muitas horas estudando nesse campo.
+Durante meu trabalho como Pesquisador de Segurança, trabalhei ao lado de empresas incríveis como Cabify, Github e Bugcrowd e outras empresas não tão famosas, mas igualmente incríveis. Sou fascinado pela área de segurança ofensiva, por isso passo muitas horas estudando nesse campo.
 
 Aqui estão alguns dos documentos públicos que eu escrevi:
 
