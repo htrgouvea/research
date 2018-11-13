@@ -8,10 +8,10 @@ Eu amo a oportunidade de falar em conferências. Já estive em lugares incrívei
 Próximas palestras:
 
 - [24/11/2018] DevFest Paraná - "Be serverless but not securityless"
-- [10/11/2018] Roadsec 2018 - "Why does burnout affect both cybersecurity practitioners?"
 
 Estes são os últimos eventos em que palestrei:
 
+- [10/11/2018] Roadsec - "Why does burnout affect both cybersecurity practitioners?"
 - [28/09/2018] Feira de Tecnologia INATEL
 - [07/09/2018] HackTown
 - [28/07/2018] DevParaná Conference
