@@ -16,7 +16,7 @@ title: Publicações
   <h2 id="{{ this_year }}-ref"></h2>
   <ul>
   {% endif %}
-  <li class="pv2"><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%D" }}</li>
+  <li class="pv2"><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% if forloop.last %}
   </ul>
   {% else %}
