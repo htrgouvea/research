@@ -5,10 +5,6 @@ title: Palestras
 
 Eu amo a oportunidade de falar em conferências. Já estive em lugares incríveis no Brasil (já palestrei em 3 estados diferentes) e conheci pessoas maravilhosas.
 
-Próximas palestras:
-
-- [24/11/2018] DevFest Paraná - "Be serverless but not securityless"
-
 Estes são os últimos eventos em que palestrei:
 
 - [10/11/2018] Roadsec - "Why does burnout affect both cybersecurity practitioners?"
