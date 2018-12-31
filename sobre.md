@@ -25,10 +25,10 @@ Atualmente, sou fascinado pelo tema "Car Hacking", pois tenho certeza de que, nu
 
 ## Compartilhamento de conhecimento & Palestras
 
-Compartilho no meu blog muitas descobertas que faço durante o dia-a-dia e lições de histórias que vivi.
+Compartilho no meu blog muitas descobertas que faço durante o dia-a-dia e lições que tiro de histórias que vivi.
 Além disso, fui mentor em Hackathons organizados por empresas como IBM, Assertiva Soluções e até pela Prefeitura Municipal de Campinas.
 
-Sempre que possível, eu falo em conferências técnicas ... Veja mais sobre [minhas palestras aqui](https://heitorgouvea.me/palestras).
+Sempre que possível, palestro em conferências técnicas... Veja mais sobre [minhas palestras aqui](https://heitorgouvea.me/palestras).
 
 ## Entre em contato
 
