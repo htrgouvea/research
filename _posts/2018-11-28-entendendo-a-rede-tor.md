@@ -10,7 +10,7 @@ Muito se fala em anonimato digital nos últimos tempos, mas poucos tentam pratic
 
 ## The Tor Project
 
-Tor (O roteador cebola, do inglês “The Onion Router”) é um projeto livre e de código aberto que pro‘por’ciona o anonimato pessoal ao navegar na Internet e em atividades online, protegendo contra a censura e principalmente a privacidade pessoal.
+Tor (O roteador cebola, do inglês “The Onion Router”) é um projeto livre e de código aberto que proporciona o anonimato pessoal - ou o quão perto der - ao navegar na Internet e em atividades online, protegendo contra a censura e principalmente a privacidade pessoal.
 
 Ele pode ser entendido basicamente como 3 coisas diferentes: uma rede, um protocolo ou um navegador.
 
@@ -21,7 +21,7 @@ Ele pode ser entendido basicamente como 3 coisas diferentes: uma rede, um protoc
 
 ## O que é de fato?!
 
-O próprio projeto define o termo Tor como uma rede de ínumeros servidores operados por vonlutários que fornecem a seus usuários a possibilidade de permanecerem anônimos na Internet.
+O próprio projeto define o termo Tor como: uma rede de ínumeros servidores operados por vonlutários que fornecem a seus usuários a possibilidade de permanecerem anônimos na Internet.
 
 De fato é uma vasta gama de túneis virtuais que são utilizados/criados entre a conexão original e os servidores/serviços que os usuários desejam utilizar através da Internet, de forma a não comprometer a privacidade destes usuários. O Tor também age como uma importante ferramenta de combate a tentativa de censura e filtros de informações. Além de oferecer a possibilidade de usuários acessarem serviços e conteúdos de forma anônima, também é possível publicar e servir conteúdos de forma anônima através dos chamados “onion services”. Todos os endereços dentro da rede Tor são identificados por um sufixo .onion jutamente ao nome/hash do serviço que o usuário deseja acessar.
 
@@ -39,7 +39,7 @@ Utilizar o Tor pode te proteger contra vários tipos de ataques ou monitoramento
 
 Diversos e diferentes sites/portais de comércio eletrônico podem identificar os comportamentos de seus usuários e, de maneira abusiva, alterar preços e enviar propagandas diferenciadas a seus visitantes (muitos podem, até, bloquear ou redirecionar visitantes para outros portais). Com ajuda do Tor você pode prevenir que seus comportamentos sejam rastreados numa rede pública, ou até mesmo numa rede privada.
 
-Se você estiver viajando de férias e visitar sua conta de email pessoal através da rede de um hotel/motel/hostel, além de ser possível que pessoas mal intensionadas interceptem seu tráfego, é possível que você comece a receber mensagens indesejadas , seja abordado nos corredores ou até mesmo na recepção para ser questionado sobre promoções e outras situações peculiares.
+Se você estiver viajando de férias e visitar sua conta de email pessoal através da rede de um hotel/motel/hostel, além de ser possível que pessoas mal intensionadas interceptem seu tráfego, é possível que você comece a receber mensagens indesejadas, seja abordado nos corredores ou até mesmo na recepção para ser questionado sobre promoções e outras situações peculiares.
 
 ## Quem usa?
 

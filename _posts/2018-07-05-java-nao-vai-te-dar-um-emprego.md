@@ -3,7 +3,7 @@ layout: blog
 title:  Java não vai te dar um emprego
 category: stories
 ---
-Quando você é jovem e está buscando construir uma carreira no ramo de T.I a maioria do pessoal vai te dizer para: fazer a graduação X, aprender a programar na linguagem Y e tirar a certificação Z, pois para eles, será assim o caminho para que você tenha uma carreira de sucesso no ramo.
+Quando você é jovem e está buscando construir uma carreira no ramo de T.I a maioria do pessoal vai te dizer para: fazer a graduação X, aprender a programar na linguagem Y e tirar a certificação Z, pois para eles, será assim o caminho para que tu tenha uma carreira de sucesso no ramo.
 
 Mas me deixe te contar uma coisa: tudo isso não passa de uma mentira.
 
@@ -17,4 +17,4 @@ Se eu tivesse um conselho, apenas um, para te dar, seria: use filtro solar — D
 
 Como eu tenho mais de um, eu te digo: aprenda o máximo de coisas que você puder, enquanto você ainda é novo. Daqui alguns poucos anos você poderá pensar com mais clareza sobre o que é que você quer mesmo fazer e, onde que você acha que você vai se dar melhor.
 
-Mas sempre leve contigo a pergunta: “Quanto tempo eu ainda tenho?!”
+Mas sempre leve contigo a pergunta: “Quanto tempo ainda tenho?!”
