@@ -5,7 +5,7 @@ subtitle: No que eu estou trabalhando agora
 ---
 Tenho a prática de ler sobre estratégias de guerra,   correr, participar de meetups de tecnologia e jogar a alguns CTF's.
 
-Estou morando em São Paulo, BR, e aqui você vê muitas conferências, dos mais variados assuntos e sempre que posso, frequento algumas delas.
+Estou morando em São Paulo, BR, e aqui você acontece muitas conferências, dos mais variados assuntos e sempre que posso, frequento algumas delas.
 
 Aqui está o que eu estou fazendo agora:
 

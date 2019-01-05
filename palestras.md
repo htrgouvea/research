@@ -3,7 +3,7 @@ layout: page
 title: Palestras
 ---
 
-Eu amo a oportunidade de falar em conferências. Já estive em lugares incríveis no Brasil (já palestrei em 3 estados diferentes) e conheci pessoas maravilhosas.
+Eu amo a oportunidade de falar em conferências, inclusive já estive em lugares incríveis no Brasil (passei por 3 estados diferentes) e conheci pessoas maravilhosas.
 
 Estes são os últimos eventos em que palestrei:
 
@@ -14,6 +14,6 @@ Estes são os últimos eventos em que palestrei:
 - [28/04/2018] Flisol Pouso Alegre
 - [25/11/2017] Security Tricks Conference 2018
 
-Se você está interessado em me convidar para palestrar em um evento, me mande uma e-mail: hi@heitorgouvea.me
+Se você está interessado em me convidar para palestrar em um evento, me mande um e-mail: hi@heitorgouvea.me
 
 ![](/images/photos/heitor-gouvea.png)

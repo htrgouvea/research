@@ -12,13 +12,13 @@ Meu trabalho é focado na compreensão de modelos de ameaças, na análise de ap
 
 --
 
+A segurança é um problema complexo e dinâmico, e a maioria das empresas não tem tempo, conhecimento ou capacidades para gerenciá-lo efetivamente. E o meu trabalho é ajudar empresas de todas as formas e tamanhos a avaliar de forma realista sua posição de segurança e orienta-las a responder adequadamente aos pontos fracos. Ao longo do tempo, meus parceiros e clientes compreendem melhor a natureza do panorama tecnológico, melhoram suas capacidades defensivas e identificam corretamente os elementos de sua estratégia de segurança que precisam de atenção.
+
 Normalmente, há três maneiras de se envolver comigo:
 
 ## Penetration Testing
 
-A segurança é um problema complexo e dinâmico, e a maioria das empresas não tem tempo, conhecimento ou capacidades para gerenciá-lo efetivamente. E o meu trabalho é ajudar empresas de todas as formas e tamanhos a avaliar de forma realista sua posição de segurança e orienta-las a responder adequadamente aos pontos fracos. Ao longo do tempo, meus parceiros e clientes compreendem melhor a natureza do panorama tecnológico, melhoram suas capacidades defensivas e identificam corretamente os elementos de sua estratégia de segurança que precisam de atenção.
-
-Meus serviços de simulação de ataque fornecem um meio de avaliar adequadamente a segurança, reforçando assim as capacidades defensivas das empresas. Esta é a melhor maneira de avaliar adequadamente sua postura de segurança. Demonstração de exploração e exfiltração de dados não só ajuda o negócio a entender os riscos, ela ajuda a priorizar as mudanças dentro da organização.
+É o método que avalia a segurança de um site, sistema de computador ou de uma rede, simulando um ataque de uma fonte maliciosa. Meus serviços de simulação de ataque fornecem um meio de avaliar adequadamente a segurança, reforçando assim as capacidades defensivas das empresas. Esta é a melhor maneira de avaliar adequadamente sua postura de segurança. Demonstração de exploração e exfiltração de dados não só ajuda o negócio a entender os riscos, ela ajuda a priorizar as mudanças dentro da organização.
 
 Mais e mais organizações estão sendo comprometidas, brechas de dados e fechamentos de negócios estão se tornando notícias diárias. O que aconteceria com o seu negócio se ele se tornasse o próximo alvo?
 
@@ -32,4 +32,4 @@ Também posso realizar treinamentos para profissionais, no campo de Segurança d
 
 --
 
-Por favor entre em contato através de: <hi@heitorgouvea.me> / +55 (19) 991 891 355
+Entre em contato através de: <hi@heitorgouvea.me> / +55 (19) 991 891 355

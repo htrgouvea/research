@@ -21,15 +21,15 @@ Aqui estão alguns dos documentos públicos que eu escrevi:
 - Linguagem Perl: uma abordagem para Pentesters;
 - Anonimato no ciberespaço: os dois lados da moeda;
 
-Atualmente, sou fascinado pelo tema "Car Hacking", pois tenho certeza de que, num futuro próximo, esse assunto será discutido com frequência.
+Atualmente, estou pesquisando sobre vulnerabilidades presentes em ambientes mobile, mais especificamentes em arquiteturas Android, pois a cada dia este ambiente cresce cada vez mais, e este assunto é discutido com frequência.
 
-## Compartilhamento de conhecimento & Palestras
+## Compartilhamento de conhecimento
 
-Compartilho no meu blog muitas descobertas que faço durante o dia-a-dia e lições que tiro de histórias que vivi.
+Compartilho no meu blog algumass descobertas que faço durante o dia-a-dia e lições que tiro de histórias que vivi.
 Além disso, fui mentor em Hackathons organizados por empresas como IBM, Assertiva Soluções e até pela Prefeitura Municipal de Campinas.
 
 Sempre que possível, palestro em conferências técnicas... Veja mais sobre [minhas palestras aqui](https://heitorgouvea.me/palestras).
 
 ## Entre em contato
 
-Estou sempre feliz em conhecer pessoas interessantes para tomar um bom café. Meu e-mail está aqui: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+Sempre fico feliz em conhecer pessoas interessantes para tomar um bom café. Meu e-mail está aqui: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
