@@ -28,7 +28,7 @@ São os artefatos de design que descrevem como os controles de segurança (contr
 
 ## Treinamentos
 
-Também posso realizar treinamentos para profissionais, no campo de Segurança da Informação, tais como: conscientização, uso de ferramentas e técnicas.
+Também posso realizar treinamentos para profissionais, no campo de Segurança da Informação e de áreas relacionadas, tais como: conscientização, uso de ferramentas e técnicas.
 
 --
 

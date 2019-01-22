@@ -7,11 +7,11 @@ category: stories
 Ou melhor: em uma segunda de manhã?
 A resposta pra essas perguntas deveria ser a sua profissão.
 
-Assim que o ano de 2017 começou, decidi correr atrás do meu sonho. O sonho de trabalhar como Pesquisador de Segurança da Informação. Decidi que começaria aos poucos, realizando alguns Freelas para amigos e colegas e simultaneamente escrevendo alguns Papers. Logo nos primeiros meses percebi que realmente era isso que queria para a minha vida, me senti apaixonado pela autonomia ao realizar meus trabalhos, pela necessidade de um pensamento estratégico e por muitas outras coisas.
+Assim que o ano de 2017 começou, decidi correr atrás do meu sonho. O sonho de trabalhar como Consultor de Segurança da Informação. Decidi que começaria aos poucos, realizando alguns Freelas para amigos e colegas e simultaneamente escrevendo alguns Papers. Logo nos primeiros meses percebi que realmente era isso que queria para a minha vida, me senti apaixonado pela autonomia ao realizar meus trabalhos, pela necessidade de um pensamento estratégico e por muitas outras coisas.
 
 ![Image](/images/posts/code.jpeg)
 
-Até Dezembro de 2016 eu era o Desenvolvedor de Software, o carinha que fazia programas (me desculpem pela piadinha sem graça), mas quando virei Pesquisador de S.I, eu finalmente achei algo que me dava tesão. E eu descobri isso num domingo de noite.
+Até Dezembro de 2016 eu era o Desenvolvedor de Software, o carinha que fazia programas (me desculpem pela piadinha sem graça), mas quando virei Consultor de S.I, eu finalmente achei algo que me dava tesão. E eu descobri isso num domingo de noite.
 
 Normalmente as noites de domingo não eram tão boas, eu apenas as dedicava para me preparar psicologicamente para enfrentar a semana de trabalho e estudos que estava por vir. Talvez seja assim para todo mundo, talvez todo mundo odeie os domingos assim como eu odiava.
 
