@@ -11,7 +11,7 @@ Entre em contato: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeit
 
 No final de 2014, comecei a estudar programação de forma independente e, no final de 2015, já estava fascinado pelo mundo da segurança da informação ofensiva.
 
-No início de 2016 participei de uma Hackathon e depois fui contratado para trabalhar no governo brasileiro na área de Tecnologia da Informação. Depois de dois anos trabalhando como Trainee, decidi iniciar uma carreira como Consultor de Segurança Independente, para poder me concentrar em coisas que realmente faziam sentido com o meu propósito.
+No início de 2016 participei de uma Hackathon e depois fui contratado para trabalhar no governo brasileiro na área de Tecnologia da Informação - trabalhei em diversos times, como: desenvolvimento, arquitura, segurança da informação e auxílio na gestão de grandes projetos. Um tempo depois de estar trabalhando como Trainee, trabalhei como Analista de Segurança para algumas empresas brasileiras, e após um tempo decidi iniciar uma carreira como Consultor Independente de Segurança, para poder me concentrar em coisas que realmente faziam sentido com o meu propósito.
 
 Durante meu trabalho como Consultor de Segurança, trabalhei ao lado de empresas incríveis como Shawee, Github e Bugcrowd e outras empresas não tão famosas, mas igualmente incríveis. Sou fascinado pela área de segurança ofensiva, por isso passo muitas horas estudando nesse campo.
 
