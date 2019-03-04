@@ -5,6 +5,10 @@ title: Palestras
 
 Eu amo a oportunidade de falar em conferências, inclusive já estive em lugares incríveis no Brasil (passei por 3 estados diferentes) e conheci pessoas maravilhosas.
 
+Próximos eventos:
+
+- [06/04/2018] BxSec Conference - "How to Become a Rockstar: a Bug Bounty Hunter journey"
+
 Estes são os últimos eventos em que palestrei:
 
 - [10/11/2018] Roadsec - "Why does burnout affect both cybersecurity practitioners?"
