@@ -9,6 +9,7 @@ Próximos eventos:
 
 - [06/04/2018] BxSec Conference - "How to Become a Rockstar: a Bug Bounty Hunter journey"
 - [03/05/2018] Technovação 2019 - "Introdução a programação em Perl aplicada a Segurança da Informação"
+- [10/05/2018] SecWeekend FATEC Ourinhos - "Automation for Bug Bounty Hunters"
 
 Estes são os últimos eventos em que palestrei:
 
