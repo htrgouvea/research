@@ -7,12 +7,12 @@ Eu amo a oportunidade de falar em conferências, inclusive já estive em lugares
 
 Próximos eventos:
 
-- [06/04/2018] BxSec Conference - "How to Become a Rockstar: a Bug Bounty Hunter journey"
 - [03/05/2018] Technovação 2019 - "Introdução a programação em Perl aplicada a Segurança da Informação"
 - [10/05/2018] SecWeekend FATEC Ourinhos - "Automation for Bug Bounty Hunters"
 
 Estes são os últimos eventos em que palestrei:
 
+- [06/04/2018] BxSec Conference - "How to Become a Rockstar: a Bug Bounty Hunter journey"
 - [10/11/2018] Roadsec - "Why does burnout affect both cybersecurity practitioners?"
 - [28/09/2018] Feira de Tecnologia INATEL
 - [07/09/2018] HackTown
