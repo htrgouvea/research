@@ -3,7 +3,7 @@ layout: page
 title: Palestras
 ---
 
-Eu amo a oportunidade de falar em conferências, inclusive já estive em lugares incríveis no Brasil (passei por 3 estados diferentes) e conheci pessoas maravilhosas.
+Amo a oportunidade de falar em conferências, inclusive já estive em lugares incríveis no Brasil (passei por 3 estados diferentes) e conheci pessoas maravilhosas.
 
 Próximos eventos:
 
