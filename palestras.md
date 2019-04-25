@@ -8,7 +8,7 @@ Amo a oportunidade de falar em conferências, inclusive já estive em lugares in
 Próximos eventos:
 
 - [03/05/2018] Technovação 2019 - "Introdução a programação em Perl aplicada a Segurança da Informação"
-- [10/05/2018] SecWeekend FATEC Ourinhos - "Automation for Bug Bounty Hunters"
+- [10/05/2018] SecWeekend FATEC Ourinhos - "Bug Bounty Collaboration: how to work with others hackers on a target/bounty"
 
 Estes são os últimos eventos em que palestrei:
 
