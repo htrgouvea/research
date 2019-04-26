@@ -22,7 +22,7 @@ Mas por qual motivo estou tendo esse problema tão básico só hoje?! Cara, pra 
 
  - Hoje é um daqueles dias… Um dia aonde acordei com frio por que a coberta caiu. Um dia chuvoso. Um dia que meu café não estava tão quente. Um dia que perdi umas 3 horas resolvendo coisas no banco — mas aí tinha essa obrigação aqui, de escrever um texto.
 
-Quando fui começar a escrever, fiz o de sempre, fui nos meus rascunhos, aonde eu guardo algumas ideias/raciocínios que tenho ao longo do dia, escolhi algo e comecei.
+Quando fui começar a escrever, fiz o de sempre, fui nos meus rascunhos, aonde guardo algumas ideias/raciocínios que tenho ao longo do dia, escolhi algo e comecei.
 
 A primeira tentativa foi um texto sobre a importância do pensamento estratégico para quem trabalha com segurança da informação, escrevi umas 3 linhas e fui pegar uma água. Mas quando voltei já não estava sentido mais uma “paixão” por aquele assunto. 
 
@@ -36,7 +36,7 @@ Quando abri o Medium vazio, vi a barrinha piscando, me deu um desespero.
 
 Mais uma vez “TA HEITOR, CHEGA! SENTA E ESCREVE.", me veio na mente que talvez esse seria o título. Mas aí me dei conta que ninguém iria clicar nessa merda.
 
-Aí eu pensei que essa luta por achar o texto certo poderia render um texto legal. Achei que o fato de “sentar e fazer” poderia ser algo que muitos de vocês passam. Achei que seria legal fazer esse texto e comecei.
+Aí pensei que essa luta por achar o texto certo poderia render um texto legal. Achei que o fato de “sentar e fazer” poderia ser algo que muitos de vocês passam. Achei que seria legal fazer esse texto e comecei.
 
 E aqui estamos nós, não é mesmo? Certa vez ouvi a seguinte frase: “O importante é fazer, mesmo que não seja da melhor forma…”. Mas depois de escrever isso aqui, consegui perceber que não é sobre “sentar e fazer” e sim sobre “por quê eu tô fazendo isso aqui?!”, e respondendo minha própria pergunta: faço isso porque amo, escolhi fazer isso e vou continuar fazendo durante todos os dias da minha vida.
 
@@ -46,7 +46,7 @@ Pra sempre vou lembrar do Golden Circle, do Simon Sinek: "O começo é o porquê
 
 --
 
-Enquanto eu escrevia esse texto, fiz um TimeStamp… Por pura curiosidade, queria ver como é o lado "externo" desse lance todo de criar um texto novo:
+Enquanto escrevia esse texto, fiz um TimeStamp… Por pura curiosidade, queria ver como é o lado "externo" desse lance todo de criar um texto novo:
 
 <p align="center">
 <iframe width="744" height="419" src="https://www.youtube.com/embed/w_hRVENvqrU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
