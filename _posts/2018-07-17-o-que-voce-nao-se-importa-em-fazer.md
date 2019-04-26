@@ -11,15 +11,15 @@ Assim que o ano de 2017 começou, decidi correr atrás do meu sonho. O sonho de 
 
 ![Image](/images/posts/code.jpeg)
 
-Até Dezembro de 2016 eu era o Desenvolvedor de Software, o carinha que fazia programas (me desculpem pela piadinha sem graça), mas quando virei Consultor de S.I, eu finalmente achei algo que me dava tesão. E eu descobri isso num domingo de noite.
+Até Dezembro de 2016 eu era o Desenvolvedor de Software, o carinha que fazia programas (me desculpem pela piadinha sem graça), mas quando virei Consultor de S.I, finalmente achei algo que me dava tesão. E descobri isso num domingo de noite.
 
 Normalmente as noites de domingo não eram tão boas, eu apenas as dedicava para me preparar psicologicamente para enfrentar a semana de trabalho e estudos que estava por vir. Talvez seja assim para todo mundo, talvez todo mundo odeie os domingos assim como eu odiava.
 
-Naquele domingo eu tinha prometido para um colega que avaliaria a segurança de um produto que ele estava prestes a lançar no mercado. Normalmente eu ficaria muito puto por ter que trabalhar domingo a noite, e mesmo assim ter que acordar cedo na segunda-feira e ir trabalhar.
+Naquele domingo tinha feito uma "promessa" para um colega que começaria a avaliar a segurança de um produto que ele estava prestes a lançar no mercado. Normalmente eu ficaria muito puto por ter que trabalhar domingo a noite, e mesmo assim ter que acordar cedo na segunda-feira e ir trabalhar.
 
-Mas dessa vez foi diferente, dessa vez eu percebi que era isso que eu queria, eu sabia que “não era hora pra eu estar trabalhando”, mas nesse momento percebi que realmente estava certo de ter encontrado minha paixão profissional, me sentia confortável por estar fazendo aquilo, mesmo sendo em um domingo a noite.
+Mas dessa vez foi diferente, dessa vez percebi que era isso que queria, sabia que “não era hora pra estar trabalhando”, mas nesse momento percebi que realmente estava certo de ter encontrado minha paixão profissional, me sentia confortável por estar fazendo aquilo, mesmo sendo em um domingo a noite.
 
-Neste momento cheguei a conclusão que: para ter uma carreira de sucesso você tem que estar disposto a quebrar algumas “regras sociais”. Só encontrei minha felicidade profissional quando passei a não ligar para a hora ou dia que era. Eu só queria continuar com as minhas pesquisas. Não queria nem saber se era “errado falar sobre o trabalho” no jantar, ou se era “desrespeitoso mexer no celular”, se fosse algo sobre as minhas pesquisas, eu mexia.
+Neste momento cheguei a conclusão que: para ter uma carreira de sucesso você tem que estar disposto a quebrar algumas “regras sociais”. Só encontrei minha felicidade profissional quando passei a não ligar para a hora ou dia que era. Só queria continuar com as minhas pesquisas e meus projetos. Não queria nem saber se era “errado falar sobre o trabalho” no jantar, ou se era “desrespeitoso mexer no celular”, se fosse algo sobre as minhas pesquisas e projetos, eu mexia.
 
 Talvez este pensamento esteja errado, mas está funcionando comigo. Realmente acredito que este é o caminho para uma realização profissional.
 
