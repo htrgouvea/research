@@ -11,9 +11,8 @@
     <link href="/css/mobile.css" rel="stylesheet">
     <link rel="icon" href="/images/favicon.ico" />
     <meta name="viewport" content="width=device-width">
-
-    <script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-
+    <meta name="googlebot" content="noarchive">
+    
     <meta property="og:type"   content="article" />
     <meta property="og:url"    content="https://heitorgouvea.me{{page.url}}" />
     <meta property="og:title"  content="{% if page.title %}{{page.title}}{% else %}Heitor Gouvêa - Consultor Independente de Segurança da Informação {% endif %}" />
@@ -29,6 +28,8 @@
       <meta name="twitter:description" content="{% if page.subtitle %}{{page.subtitle}}{% else %}{{page.content | truncatewords:20 | strip_html}}{% endif %}">
       <meta name="twitter:image" content="https://heitorgouvea.me/images/photos/heitor-gouvea.png">
     {% endif %}
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
   </head>
 
   <body class="w-100 ph0-l center">
