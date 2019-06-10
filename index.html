@@ -30,7 +30,7 @@
     <div class="cf w-100 lh-copy">
       <div class="fl w-third-l w-100 pa3 pa4-l lh-copy">
         <h2>My blog</h2>
-        <p>Tenho um <a href="https://heitorgouvea.me/posts/">blog</a>, não é nada extravagante, mas não é hospedado no Medium, então isso é um alívio. Aqui está o conteúdo mais recente:</p>
+        <p>Tenho um <a href="/blog/">blog</a>, não é nada extravagante, mas não é hospedado no Medium, então isso é um alívio. Aqui está o conteúdo mais recente:</p>
         <ul>
           {% for post in site.posts limit:3 %}
             <li><a href="{{post.url}}">{{post.title}}</a> - {{ post.date | date_to_string }}</li>
