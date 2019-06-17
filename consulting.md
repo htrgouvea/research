@@ -1,7 +1,7 @@
 ---
 layout: page
-metatitle: Consultoria em Offensive Security e Arquitetura
-title: Trabalhe comigo
+metatitle: Offensive Security and Architecture Consulting
+title: Work with me
 ---
 
 Trabalho com Segurança da Informação há mais de 3 anos - ao lado de startups e empresas de médio/grande porte - fornecendo consultoria em pentesting, revisão de código, arquitetura de segurança e treinamentos...

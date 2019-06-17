@@ -2,13 +2,13 @@
     <a class="no-underline" href="/"><brand class="relative">Heitor Gouvêa</brand></a>
 
     <div class="fr f5 pv2 fw3 mobilemenu">
-        <a href="#" id="mobilemenu">menu</a>
+      <a href="#" id="mobilemenu">menu</a>
     </div>
 
     <div class="fr-l navigation w-100-s pv4 pt0-l tc" id="navigation">
       <a class="ma3-l mh2 no-underline" href="/blog">BLOG</a>
-      <a class="ma3-l mh2 no-underline" href="/consultoria">CONSULTORIA</a>
-      <a class="ma3-l mh2 no-underline" href="/sobre">SOBRE</a>
+      <a class="ma3-l mh2 no-underline" href="/consulting">CONSULTING</a>
+      <a class="ma3-l mh2 no-underline" href="/about">ABOUT</a>
       <a class="ma3-l mh2 no-underline" href="/talks">TALKS</a>
     </div>
 </header>
@@ -17,9 +17,11 @@
   document.getElementById('mobilemenu').onclick = function() {
     var x = document.getElementById("navigation");
     if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
+      x.style.display = "none";
+    } 
+    
+    else {
+      x.style.display = "block";
     }
   }
 </script>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sobre
+title: About
 ---
 
 Atualmente estou trabalhando em projetos que ajudam pessoas, organizações e empresas a assumirem o controle de suas próprias informações, como Consultor Independente em Segurança da Informação.
