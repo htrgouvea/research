@@ -3,33 +3,33 @@ layout: page
 title: About
 ---
 
-Atualmente estou trabalhando em projetos que ajudam pessoas, organizações e empresas a assumirem o controle de suas próprias informações, como Consultor Independente em Segurança da Informação.
+I am currently working on projects that help people, organizations and companies take control of their own information, as an Independent Information Security Advisor.
 
-Entre em contato: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
+Contact us: hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
 
-## Meu caminho até aqui
+## My way here
 
-No final de 2014, comecei a estudar programação de forma independente e, no final de 2015, já estava fascinado pelo mundo da segurança da informação ofensiva.
+By the end of 2014, I started studying programming independently and by the end of 2015 I was already fascinated by the world of offensive information security.
 
-No início de 2016 participei de uma Hackathon e depois fui contratado para trabalhar no governo brasileiro na área de Tecnologia da Informação - trabalhei em diversos times, como: desenvolvimento, arquitetura, segurança da informação e auxílio na gestão de grandes projetos. Um tempo depois de estar trabalhando como Trainee, trabalhei como Analista de Segurança para algumas empresas brasileiras, e após um tempo decidi iniciar uma carreira como Consultor Independente em Segurança, para poder me concentrar em coisas que realmente faziam sentido com o meu propósito.
+In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects. Some time after working as a Trainee, I worked as a Security Analyst for some Brazilian companies, and after a while I decided to start a career as an Independent Security Advisor so that I could concentrate on things that really made sense to my purpose.
 
-Durante meu trabalho como Consultor de Segurança, trabalhei ao lado de empresas incríveis como Shawee, Github e Bugcrowd e outras empresas não tão famosas, mas igualmente incríveis. Sou fascinado pela área de segurança ofensiva, por isso passo muitas horas estudando nesse campo.
+During my work as a Security Advisor, I worked alongside incredible companies like Shawee, Github and Bugcrowd and other not-so-famous but equally amazing companies. I am fascinated by the area of ​​offensive security, so I spend many hours studying in this field.
 
-Aqui estão alguns dos papers públicos que eu escrevi nos últimos tempos:
+Here are some of the public papers I've written recently:
 
-- [Criptologia: de zero a um;]()
-- [Linguagem Perl: uma abordagem para Pentesters;]()
-- [Anonimato no ciberespaço: os dois lados da moeda;]()
+- [Cryptology: from zero to one;](#)
+- [Perl Language: An Approach to Pentesters;](#)
+- [Anonymity in cyberspace: the two sides of the coin;](#)
 
-Atualmente, estou pesquisando sobre vulnerabilidades presentes em ambientes mobile, mais especificamentes em sistemas operacionais Android, pois a cada dia este ambiente cresce cada vez mais, e este assunto é discutido com mais frequência.
+Currently, I am researching about vulnerabilities present in mobile environments, more specifically in Android operating systems, because every day this environment grows more and more, and this subject is discussed more frequently.
 
-## Compartilhamento de conhecimento
+## Sharing knowledge
 
-Compartilho no meu blog algumas descobertas que faço durante o dia-a-dia e lições que tiro de histórias que vivi.
-Além disso, fui mentor em Hackathons organizados por empresas como IBM, Assertiva Soluções e até pela Prefeitura Municipal de Campinas.
+I share in my blog some discoveries that I make during the day-to-day and lessons that I shot of stories that I lived.
+In addition, I was a mentor in Hackathons organized by companies like IBM, Assertive Solutions and even by the City Hall of Campinas.
 
-Sempre que possível, palestro em conferências técnicas... Veja mais sobre [minhas palestras aqui](https://heitorgouvea.me/palestras).
+Whenever possible i speak at technical conferences... See more about [my talks here.](https://heitorgouvea.me/palestras).
 
-## Entre em contato
+## Contact
 
-Sempre fico feliz em conhecer pessoas interessantes para tomar um bom café. Meu e-mail está aqui: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+I'm always happy to meet interesting people to have a good coffee. My email is here: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
