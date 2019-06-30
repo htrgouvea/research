@@ -32,4 +32,4 @@ Whenever possible i speak at technical conferences... See more about [my talks h
 
 ## Contact
 
-I'm always happy to meet interesting people to have a good coffee. My email is here: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+I’m always happy to meet interesting people for coffee. Email is here: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
