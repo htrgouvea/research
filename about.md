@@ -28,7 +28,7 @@ Currently, I am researching about vulnerabilities present in mobile environments
 I share in my blog some discoveries that I make during the day-to-day and lessons that I shot of stories that I lived.
 In addition, I was a mentor in Hackathons organized by companies like IBM, Assertive Solutions and even by the City Hall of Campinas.
 
-Whenever possible i speak at technical conferences... See more about [my talks here.](https://heitorgouvea.me/palestras).
+Whenever possible i speak at technical conferences, see more about [my talks here.](https://heitorgouvea.me/palestras)
 
 ## Contact
 
