@@ -29,7 +29,7 @@
 
 #### Bugs
 
-- Report bugs via [issues page.](/issues)
+- Report bugs via [**issues page.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues)
 
 #### License
 
