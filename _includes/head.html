@@ -27,7 +27,7 @@
       <meta name="twitter:creator" content="@GouveaHeitor">
       <meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}Heitor Gouvêa - Independent Information Security Consultant   {% endif %}">
       <meta name="twitter:description" content="{% if page.subtitle %}{{page.subtitle}}{% else %}{{page.content | truncatewords:20 | strip_html}}{% endif %}">
-      <meta name="twitter:image" content="https://heitorgouvea.me/images/photos/heitor-gouvea.png">
+      <meta name="twitter:image" content="{% if page.og_image %}{{page.og_image}}{% else %}https://heitorgouvea.me/images/photos/heitor-gouvea.png{% endif %}">
     {% endif %}
 
     <script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
