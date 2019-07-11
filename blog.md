@@ -11,7 +11,6 @@ title: Blog
   {% capture next_year %}
     {{ post.previous.date | date: "%Y" }}
   {% endcapture %}
-
   {% if forloop.first %}
   <h2 id="{{ this_year }}-ref"></h2>
   <ul>
@@ -26,4 +25,5 @@ title: Blog
   <ul>
   {% endif %}
   {% endif %}
+  <br /><br /><br /><br /><br />
 {% endfor %}
