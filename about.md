@@ -5,7 +5,7 @@ title: About
 
 I am currently working on projects that help people, organizations and companies take control of their own information, as an Independent Information Security Advisor.
 
-Contact us: hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
+Contact us: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
 
 ## My way here
 

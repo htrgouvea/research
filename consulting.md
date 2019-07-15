@@ -32,4 +32,4 @@ I also conduct training for professionals in the field of Information Security a
 
 --
 
-Contact us through: <hi@heitorgouvea.me> / +55 (19) 991 891 355
+Contact us through: <hi@heitorgouvea.me>
