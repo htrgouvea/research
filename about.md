@@ -1,9 +1,9 @@
 ---
 layout: page
-title: About
+title: About me
 ---
 
-I am currently working on projects that help people, organizations and companies take control of their own information, as an Independent Information Security Advisor.
+I just create things I need to see exist in the world, I am currently working on projects that help people, organizations, and companies take control of their own information.
 
 Contact us: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
 
@@ -31,4 +31,4 @@ Whenever possible i speak at technical conferences, see more about [my talks her
 
 ## Contact
 
-I’m always happy to meet interesting people for coffee. Email is here: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+I’m always happy to meet interesting people for coffee. My email is here: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
