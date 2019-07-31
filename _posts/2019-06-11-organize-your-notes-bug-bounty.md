@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: How to better organize your notes while hunting for bugs
+title: 'How to better organize your notes while hunting for bugs - #BugBountyTips'
 category: stories
 og_image: https://heitorgouvea.me/files/0x01/home.png
 ---
