@@ -1,11 +1,16 @@
 ---
-layout: blog
+layout: default
 title: 'How to better organize your notes while hunting for bugs - #BugBountyTips'
-category: stories
+category: tips
 og_image: https://heitorgouvea.me/files/0x01/home.png
 ---
 
-<blockquote align="center" class="twitter-tweet" data-lang="pt"><p lang="en" dir="ltr">Maybe one of the most valuable tips I can give you all is: be organized<br><br>Due to the extreme amount of targets, techs, payloads and differents contexts, it is very easy to get lost and don&#39;t give enough attention to some of the most important details during your hunt<a href="https://twitter.com/hashtag/bugbountytip?src=hash&amp;ref_src=twsrc%5Etfw">#bugbountytip</a></p>&mdash; Heitor Gouvêa (@GouveaHeitor) <a href="https://twitter.com/GouveaHeitor/status/1129142073305784323?ref_src=twsrc%5Etfw">16 de maio de 2019</a></blockquote>
+<br>
+<blockquote align="center" class="twitter-tweet" data-lang="pt">
+    <p lang="en" dir="ltr">
+        Maybe one of the most valuable tips I can give you all is: be organized<br><br>Due to the extreme amount of targets, techs, payloads and differents contexts, it is very easy to get lost and don&#39;t give enough attention to some of the most important details during your hunt<a href="https://twitter.com/hashtag/bugbountytip?src=hash&amp;ref_src=twsrc%5Etfw">#bugbountytip</a>
+    </p>&mdash; Heitor Gouvêa (@GouveaHeitor) <a href="https://twitter.com/GouveaHeitor/status/1129142073305784323?ref_src=twsrc%5Etfw">16 de maio de 2019</a>
+</blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 --

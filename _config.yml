@@ -1,8 +1,19 @@
-# Permalinks
-permalink: pretty
+title: Heitor Gouvêa
+url: "https://heitorgouvea.me"
+baseurl: ""
 
-collections:
-  projects:
-    output: true
-  links:
-    output: true
+markdown: kramdown
+
+tracking_id: #
+
+footer: yes
+footer_url: "https://heitorgouvea.me"
+footer_text: "© 2019 Heitor Gouvêa. All rights reserved. "
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
+nav:
+ - name: "About"
+   link: "/about"

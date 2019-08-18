@@ -1,34 +1,33 @@
 ---
-layout: page
-title: About me
+layout: default
 ---
 
-I just create things I need to see exist in the world, I am currently working on projects that help people, organizations, and companies take control of their own information.
 
-Contact us: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) / [@GouveaHeitor](https://twitter.com/GouveaHeitor)
+## About me
 
-## My way here
+My name is Heitor "D3LET" Gouvêa and I just create things I need to see exist in the world; I am currently working on projects that help people, organizations, and companies take control of their own information.
 
-By the end of 2014, I started studying programming independently and by the end of 2015 I was already fascinated by the world of offensive information security.
+### My way here
 
-In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects. Some time after working as a Trainee, I worked as a Security Analyst for some Brazilian companies, and after a while I decided to start a career as an Independent Information Security Consultant so that I could concentrate on things that really made sense to my purpose.
+In the end of 2014, I started studying programming independently and by the end of 2015 I was already fascinated by the world of offensive information security.
 
-During my work as a Information Security Consultant, I worked alongside incredible companies like Shawee, Github and HackerOne and other not-so-famous but equally amazing companies. I am fascinated by the area of ​​offensive security, so I spend many hours studying in this field.
+In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects. Some time after working as a Trainee, I worked as a Information Security Analyst for some Brazilian companies, and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with purpose.
 
-Here are some of the public papers I've written recently:
+During my work as a Independent Researcher, I worked alongside incredible companies like Shawee, Github and HackerOne and other not-so-famous but equally amazing companies. I am fascinated by the area of ​​offensive security, so I spend many hours studying this segment. In the past I won some prizes, for example: first place in the CTF of Bsides São Paulo 16th, the qualification of Hackaflag in 2019, and first place in Hackathon of the city of Campinas in 2017.
 
-- [Cryptology: from zero to one;](#)
-- [Perl Language: an Approach to Pentesters;](#)
-- [Anonymity in cyberspace: the two sides of the coin;](#)
+I audited high-profile sites for security vulnerabilities and managed/worked on teams of software developers and computer scientists, providing high-security architectures. My work is focused on understanding threat models, analyzing existing applications, and building smart tools to combat the current and future security risk for individuals or groups.
 
-Currently, I am researching about vulnerabilities present in mobile environments, more specifically in Android operating systems, because every day this environment grows more and more, and this subject is discussed more frequently.
 
-## Sharing knowledge
+## Talks
 
-I share in my blog some discoveries that I make during the day-to-day and lessons that I shot of stories that I lived. In addition, I was a mentor in Hackathons organized by companies like IBM and even by the City Hall of Campinas.
-
-Whenever possible i speak at technical conferences, see more about [my talks here.](/talks)
+-   [DevParaná Conference - "An intro to vulnerabilities exploitation on Mobile Apps"](#)
+-   [Roadsec SP 2018 - “Why does burnout affect both cybersecurity practitioners?”](#)
+-   [BxSec Conference - “How to Become a Rockstar: a Bug Bounty Hunter journey”](#)
+-   [SecWeekend FATEC - “Bug Bounty Collaboration: working with others hackers on a target/bounty”](#)
 
 ## Contact
 
-I’m always happy to meet interesting people for coffee. My email is here: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+* Email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+* Twitter: [@GouveaHeitor](https://twitter.com/GouveaHeitor)
+* Github: [/GouveaHeitor](https://github.com/GouveaHeitor)
+* HackerOne: [/GouveaHeitor](https://hackerone.com/GouveaHeitor)
