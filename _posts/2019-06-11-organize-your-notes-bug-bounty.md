@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 'How to better organize your notes while hunting for bugs - #BugBountyTips'
-category: tips
+category: stories
 og_image: https://heitorgouvea.me/files/0x01/home.png
 ---
 

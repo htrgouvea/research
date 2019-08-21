@@ -1,7 +1,8 @@
 title: Heitor Gouvêa
 url: "https://heitorgouvea.me"
 baseurl: ""
-
+og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
+twitter_username: '@GouveaHeitor'
 markdown: kramdown
 
 tracking_id: #
