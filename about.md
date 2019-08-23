@@ -17,6 +17,8 @@ During my work as a Independent Researcher, I worked alongside incredible compan
 
 I audited high-profile sites for security vulnerabilities and managed/worked on teams of software developers and computer scientists, providing high-security architectures. My work is focused on understanding threat models, analyzing existing applications, and building smart tools to combat the current and future security risk for individuals or groups.
 
+CVE's: CVE-2019-15032 / CVE-2019-15033;
+
 
 ## Talks
 
