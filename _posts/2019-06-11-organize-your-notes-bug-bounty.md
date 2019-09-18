@@ -1,7 +1,8 @@
 ---
 layout: default
-title: 'How to better organize your notes while hunting for bugs - #BugBountyTips'
 category: stories
+title: 'How to better organize your notes while hunting for bugs - #BugBountyTips'
+description: 'A while time ago I did a Tweet about the importance of the effective organization on your annotations for Bug Bounty Hunting and I was asked about how I do it and through this article, I want to share my favorite tool.'
 og_image: https://heitorgouvea.me/files/0x01/home.png
 ---
 
