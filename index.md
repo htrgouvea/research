@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Heitor Gouvêa - Independent Researcher
+description: I just create things I need to see exist in the world
 ---
 
 ## Bug Bounty Tips:
