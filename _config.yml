@@ -4,6 +4,7 @@ baseurl: ""
 og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
 twitter_username: '@GouveaHeitor'
 markdown: kramdown
+desc: "I just create things I need to see exist in the world"
 
 tracking_id: #
 

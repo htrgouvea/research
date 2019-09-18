@@ -2,15 +2,10 @@
 layout: default
 ---
 
-
-<!-- ## Publications:
-
--   [1. Simple example](#) -->
-
 ## Bug Bounty Tips:
 
-- [1. How to better organize your notes while hunting for bugs](/stories/2019/06/11/organize-your-notes-bug-bounty)
+- [How to better organize your notes while hunting for bugs](/stories/2019/06/11/organize-your-notes-bug-bounty)
 
-<!-- ## Write Ups:
+## Security Advisories:
 
--   [1. Simple Example](#) -->
+- Pydio Community Vulnerabilities: [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](2019/09/17/CVE-2019-15033)

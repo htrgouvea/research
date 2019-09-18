@@ -5,6 +5,8 @@ category: stories
 og_image: https://heitorgouvea.me/files/0x01/home.png
 ---
 
+# How to better organize your notes while hunting for bugs - #BugBountyTips
+
 <br>
 <blockquote align="center" class="twitter-tweet" data-lang="pt">
     <p lang="en" dir="ltr">
