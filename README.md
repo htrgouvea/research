@@ -26,14 +26,11 @@
 
 - HTML5/CSS3/JS/Jekyll
 
-#### Bugs
+### Contribution
 
-- Report bugs via [**issues page.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues)
+- Your contributions and suggestions are heartily♥ welcome. [**See here the contribution guidelines.**](/.github/CONTRIBUTING.md) Please, report bugs via [**issues page.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues)(✿◕‿◕) 
 
 #### License
 
-- This work is licensed under [**MIT License**](https://github.com/GouveaHeitor/gouveaheitor.github.com/blob/master/LICENSE.md)
+- This work is licensed under [**MIT License**](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
 
-#### Contribution
-
-- Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕) [**See here the contribution guidelines**](/.github/CONTRIBUTING.md)
