@@ -1,7 +1,7 @@
 
 <p align="center">
   <h3 align="center">heitorgouvea.me</h3>
-  <p align="center">Just a web page.</p>
+  <p align="center">Just a simple web page</p>
 
   <p align="center">
     <a href="https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md">
@@ -32,5 +32,5 @@
 
 #### License
 
-- This work is licensed under [**MIT License**](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
+- This work is licensed under [**MIT License.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
 
