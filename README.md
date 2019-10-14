@@ -26,7 +26,7 @@
 
 - HTML5/CSS3/JS/Jekyll
 
-### Contribution
+#### Contribution
 
 - Your contributions and suggestions are heartily♥ welcome. [**See here the contribution guidelines.**](/.github/CONTRIBUTING.md) Please, report bugs via [**issues page.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues)(✿◕‿◕) 
 
