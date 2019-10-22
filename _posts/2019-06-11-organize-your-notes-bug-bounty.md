@@ -3,7 +3,7 @@ layout: default
 category: stories
 title: 'How to better organize your notes while hunting for bugs - #BugBountyTips'
 description: 'A while time ago I did a Tweet about the importance of the effective organization on your annotations for Bug Bounty Hunting and I was asked about how I do it and through this article, I want to share my favorite tool.'
-og_image: https://heitorgouvea.me/files/0x01/home.png
+og_image: https://heitorgouvea.me/images/publications/switness/home.png
 ---
 
 # How to better organize your notes while hunting for bugs - #BugBountyTips
@@ -22,7 +22,7 @@ A while time ago I did a Tweet about the importance of the effective organizatio
 
 ## SwiftnessX: "A cross-platform note-taking & target-tracking app for penetration testers"
 
-![Image](/files/0x01/home.png)
+![Image](/images/publications/swiftness/home.png)
 
 Certainly, my favorite tool for information organization is [Swiftness.](https://github.com/ehrishirajsharma/SwiftnessX) I discovered it through my Github feed and as soon as I used it for the first time I found myself in love with all the ease and dynamics it delivers.
 
@@ -32,19 +32,19 @@ Swiftness is a cross-platform (Windows, Linux, and MacOS) annotation software fo
 
 The first feature that I want mention is the section of "Templates", with the content templates for reports, you are reusing reports that you already write in another moment, example:
 
-![Image](/files/0x01/templates.png)
+![Image](/images/publications/swiftness/templates.png)
 
 ### Payloads
 
 In addition, Swiftness has an excellent solution for you to save your Payloads in an organized way:
 
-![Image](/files/0x01/payloads.png)
+![Image](/images/publications/swiftness/payloads.png)
 
 ### Libraries
 
 Through the Libraries you are able to pre-establish a workflow/checklist that you will follow during your hunting:
 
-![Image](/files/0x01/libraries.png)
+![Image](/images/publications/swiftness/libraries.png)
 
 This for example is a Checklist based on OTGv5. You can download the same by [clicking here](https://raw.githubusercontent.com/ehrishirajsharma/swiftness-static/master/Checklist/OWASP-Testing-Checklist.json). You can create your own Libraries.
 
