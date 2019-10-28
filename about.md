@@ -34,4 +34,3 @@ Security Advisories: [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15
 * Email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
 * Twitter: [/GouveaHeitor](https://twitter.com/GouveaHeitor)
 * Github: [/GouveaHeitor](https://github.com/GouveaHeitor)
-* HackerOne: [/GouveaHeitor](https://hackerone.com/GouveaHeitor)
