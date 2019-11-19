@@ -21,17 +21,8 @@ I audited high-profile sites for security vulnerabilities and managed/worked on 
 
 Security Advisories: [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](2019/09/17/CVE-2019-15033);
 
-
-## Talks
-
--   [DevParaná Conference - "An intro to vulnerabilities exploitation on Mobile Apps"](#)
--   [Roadsec SP 2018 - “Why does burnout affect both cybersecurity practitioners?”](#)
--   [BxSec Conference - “How to Become a Rockstar: a Bug Bounty Hunter journey”](#)
--   [SecWeekend FATEC - “Bug Bounty Collaboration: working with others hackers on a target/bounty”](#)
-
 ## Contact
 
 * Email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
 * Twitter: [/GouveaHeitor](https://twitter.com/GouveaHeitor)
 * Github: [/GouveaHeitor](https://github.com/GouveaHeitor)
-* HackerOne: [/GouveaHeitor](https://hackerone.com/GouveaHeitor)
