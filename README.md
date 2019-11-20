@@ -24,7 +24,7 @@
 
 #### Stack
 
-- HTML5/CSS3/JS/Jekyll
+- HTML5 / CSS3 / JS / Jekyll
 
 #### Contribution
 
