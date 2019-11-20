@@ -2,13 +2,13 @@
 layout: default
 title: 'A technical overview about the Nipe'
 description: 'Tor enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.'
-# og_image: https://heitorgouvea.me/images/
+og_image: https://heitorgouvea.me/images/heitor-gouvea.png
 ---
 
 # [DRAFT POST] A technical overview about the Nipe
 
 
-## Summary
+## Introduction
 
 Tor enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.
 
