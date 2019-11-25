@@ -7,6 +7,9 @@ og_image: https://heitorgouvea.me/images/heitor-gouvea.png
 
 # [DRAFT POST] A technical overview about the Nipe
 
+## WARNING
+
+This post is still a draft, so a lot of things here won't make much sense at first, but it's continually being updated with new content, restricted changes, and so on.
 
 ## Introduction
 
