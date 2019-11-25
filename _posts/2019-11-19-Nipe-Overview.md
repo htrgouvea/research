@@ -1,15 +1,19 @@
 ---
 layout: default
-title: 'A technical overview about the Nipe'
+title: '[DRAFT] - A technical overview about the Nipe'
 description: 'Tor enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.'
-og_image: https://heitorgouvea.me/images/heitor-gouvea.png
+og_image: https://heitorgouvea.me/images/publications/nipe-overview/thumb.png
 ---
 
-# [DRAFT POST] A technical overview about the Nipe
+# [DRAFT] A technical overview about the Nipe
+
+![Image](/images/publications/nipe-overview/logo.png){: height="240px"}
 
 ## WARNING
 
 This post is still a draft, so a lot of things here won't make much sense at first, but it's continually being updated with new content, restricted changes, and so on.
+
+-
 
 ## Introduction
 
@@ -19,10 +23,15 @@ This Perl script enables you to directly route all your traffic from your comput
 
 Currently Nipe only supports IPv4, we are working on a solution to add IPv6 support and also only traffic other than DNS requests destined for local/loopback addresses is not passed through Tor. All non-local UDP/ICMP traffic is blocked.
 
-## Whats is Tor?
-## How Tor works
-## Tor VS VPN
+-
 
+## Whats is Tor?
+### How Tor works
+### Tor VS VPN
+
+-
+
+## Using Nipe
 
 ### Download and install:
 
@@ -59,6 +68,7 @@ Currently Nipe only supports IPv4, we are working on a solution to add IPv6 supp
     perl nipe.pl status
 ```
 
+-
 
 ## Internal Engineering
 
@@ -66,6 +76,8 @@ Currently Nipe only supports IPv4, we are working on a solution to add IPv6 supp
 ### Start
 ### Stop
 ### Status
+
+-
 
 ### License and Contribuitions
  

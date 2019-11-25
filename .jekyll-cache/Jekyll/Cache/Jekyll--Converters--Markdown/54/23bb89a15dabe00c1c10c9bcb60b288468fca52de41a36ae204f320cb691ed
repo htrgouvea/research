@@ -1,0 +1,72 @@
+I"�<h1 id="draft---a-technical-overview-about-the-nipe">[DRAFT] - A technical overview about the Nipe</h1>
+
+<p><img src="/images/publications/nipe-overview/logo.png =100x20" alt="Image" /></p>
+
+<h2 id="warning">WARNING</h2>
+
+<p>This post is still a draft, so a lot of things here won’t make much sense at first, but it’s continually being updated with new content, restricted changes, and so on.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Tor enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.</p>
+
+<p>This Perl script enables you to directly route all your traffic from your computer to the Tor network through which you can surf the internet anonymously without having to worry about being tracked or traced back.</p>
+
+<p>Currently Nipe only supports IPv4, we are working on a solution to add IPv6 support and also only traffic other than DNS requests destined for local/loopback addresses is not passed through Tor. All non-local UDP/ICMP traffic is blocked.</p>
+
+<h2 id="whats-is-tor">Whats is Tor?</h2>
+<h2 id="how-tor-works">How Tor works</h2>
+<h2 id="tor-vs-vpn">Tor VS VPN</h2>
+
+<h3 id="download-and-install">Download and install:</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># Download</span>
+    <span class="nv">$ </span>git clone https://github.com/GouveaHeitor/nipe
+    <span class="nv">$ </span><span class="nb">cd </span>nipe
+
+    <span class="c"># Automatic installation</span>
+    <span class="nv">$ </span><span class="nb">chmod</span> +x setup.sh
+    <span class="nv">$ </span>./setup.sh
+    
+    <span class="c"># Manual installation</span>
+    <span class="nv">$ </span>cpan <span class="nb">install </span>Switch JSON LWP::UserAgent Config::Simple
+    <span class="nv">$ </span>perl nipe.pl <span class="nb">install</span>
+</code></pre></div></div>
+
+<h3 id="commands">Commands:</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    COMMAND          FUNCTION
+    <span class="nb">install          </span>Install dependencies
+    start            Start routing
+    stop             Stop routing
+    restart          Restart the Nipe process
+    status           See status
+
+    Examples:
+
+    perl nipe.pl <span class="nb">install
+    </span>perl nipe.pl start
+    perl nipe.pl stop
+    perl nipe.pl restart
+    perl nipe.pl status
+</code></pre></div></div>
+
+<h2 id="internal-engineering">Internal Engineering</h2>
+
+<h3 id="install">Install</h3>
+<h3 id="start">Start</h3>
+<h3 id="stop">Stop</h3>
+<h3 id="status">Status</h3>
+
+<h3 id="license-and-contribuitions">License and Contribuitions</h3>
+
+<p>This work is licensed under <a href="https://github.com/GouveaHeitor/nipe/blob/master/LICENSE.md">MIT License</a> and your contributions and suggestions are heartily♥ welcome. <a href="https://github.com/GouveaHeitor/nipe/blob/master/.github/CONTRIBUTING.md">See here the contribution guidelines.</a> Please, report bugs via <a href="https://github.com/GouveaHeitor/nipe/issues">issues page on Github.</a>(✿◕‿◕)</p>
+
+<p>-</p>
+
+<h3 id="referencies">Referencies</h3>
+
+<ul>
+  <li><a href="https://github.com/GouveaHeitor/nipe">https://github.com/GouveaHeitor/nipe</a></li>
+</ul>
+:ET
