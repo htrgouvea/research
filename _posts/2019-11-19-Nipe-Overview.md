@@ -1,13 +1,13 @@
 ---
 layout: default
 title: '[DRAFT] - A technical overview about the Nipe'
-description: 'Tor enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.'
+description: 'TOR enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. TOR has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.'
 og_image: https://heitorgouvea.me/images/publications/nipe-overview/thumb.png
 ---
 
 # [DRAFT] A technical overview about the Nipe
 
-![Image](/images/publications/nipe-overview/logo.png){: height="240px"}
+![Image](/images/publications/nipe-overview/logo.png){:height="230px" width="180px"}
 
 ## WARNING
 
@@ -17,17 +17,17 @@ This post is still a draft, so a lot of things here won't make much sense at fir
 
 ## Introduction
 
-Tor enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.
+TOR enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. Tor has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.
 
-This Perl script enables you to directly route all your traffic from your computer to the Tor network through which you can surf the internet anonymously without having to worry about being tracked or traced back.
+This Perl script enables you to directly route all your traffic from your computer to the TOR network through which you can surf the internet anonymously without having to worry about being tracked or traced back.
 
-Currently Nipe only supports IPv4, we are working on a solution to add IPv6 support and also only traffic other than DNS requests destined for local/loopback addresses is not passed through Tor. All non-local UDP/ICMP traffic is blocked.
+Currently Nipe only supports IPv4, we are working on a solution to add IPv6 support and also only traffic other than DNS requests destined for local/loopback addresses is not passed through TOR. All non-local UDP/ICMP traffic is blocked.
 
 -
 
-## Whats is Tor?
-### How Tor works
-### Tor VS VPN
+## Whats is TOR?
+### The basic about TOR
+### TOR VS VPN
 
 -
 
@@ -87,4 +87,6 @@ This work is licensed under [MIT License](https://github.com/GouveaHeitor/nipe/b
 
 ### Referencies
 
+- [https://tb-manual.torproject.org/about/](https://tb-manual.torproject.org/about/)
 - [https://github.com/GouveaHeitor/nipe](https://github.com/GouveaHeitor/nipe)
+- [https://2019.www.torproject.org/docs/documentation.html.en](https://2019.www.torproject.org/docs/documentation.html.en)

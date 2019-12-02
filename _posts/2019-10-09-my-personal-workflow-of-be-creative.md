@@ -5,21 +5,20 @@ description: ''
 og_image: 
 ---
 
-<br>
-
 # My personal workflow of be creative
 
-<br>
+## Introduction
 
-A while time ago I did a Tweet about the importance of the effective organization on your annotations for Bug Bounty Hunting and I was asked about how I do it and through this article, I want to share my favorite tool.
+Durante toda minha infânica sempre estive ligado diretamente a coisas/atividades que possuem algum tipo de ligação com o meio artistico,
+e talvez, o resultado disso é o fato de que me tornei uma "pessoa criativa". Ainda hoje, consigo manter alguns elementos que estão ligados 
+diretamente com arte, como por exemplo ilustração, que é algo que tento praticar inúmeras vezes durante o pouco tempo livre que eu tenho, 
+algumas pessoas no meio circulo social que atuam diretamente nessa área e outro fato é que eu consumo muito conteúdo
+sobre o assunto, mesmo não atuando diretamente com isso. E essas pequenas coisas tem um alto impacto na pessoa que sou/estou me tornando.
 
-Certainly, my favorite tool for information organization is [Swiftness.](https://github.com/ehrishirajsharma/SwiftnessX) I discovered it through my Github feed and as soon as I used it for the first time I found myself in love with all the ease and dynamics it delivers.
+Mas por que estou escrevendo sobre isso? Recentemente a incrível Leigh-Anne Galloway (https://twitter.com/L_AGalloway) escreveu um artigo com
+o título "Art as a Methodology for Security Research"(https://leigh-annegalloway.com/art-as-a-methodology-for-security-research/), neste 
+artigo ela mostra algumas semelhanças entre arte e segurança, e como ela desenvolveu uma abordagem única para a execução do seu trabalho a
+partir disso.  O artigo é incrível e no final ela ainda deixa uma mensagem bem forte que talvez até seja uma espécie de "provoção". Realmente recomendo a que você faça a leitura desse artigo.
 
-## SwiftnessX: "A cross-platform note-taking & target-tracking app for penetration testers"
-
-![Image](/files/0x01/home.png)
-
-
-Swiftness is a cross-platform (Windows, Linux, and MacOS) annotation software for Pentesters/Bug Bounty Hunters made in ElectronJS.
-
-The first feature that I want mention is the section of "Templates", with the content templates for reports, you are reusing reports that you already write in another moment, example:
+Enfim, essa "provocação" que senti quando terminei de ler esse artigo, resultou na minha vontade de entender qual era o meu "processo 
+criativo" que utilizo durante a execução dos meus trabalhos e, estou aqui para compartilhar o resultado disso, que no caso é o "workflow" ilustrado no começo desse artigo.
