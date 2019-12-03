@@ -57,47 +57,39 @@ use strict;
 use warnings;
 use IO::Socket::INET;
 
-sub main {
-    my $target = "142.93.73.149";
-    my $port   = "23112";
+my $target = "142.93.73.149";
+my $port   = "23112";
 
-    if ($target && $port) {
-        print "[ ! ] -> Target: $target:$port \n";
-        
-        my $data  = "";
-        my @chars = (
-            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-            "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+if ($target && $port) {
+    say "[ ! ] -> Target: $target:$port";
+
+    my $data  = "";
+    my @chars = 'A'..'Z';
+
+    foreach my $char (@chars) {
+        my $socket = IO::Socket::INET->new(
+            PeerAddr => $target,
+            PeerPort => $port,
+            Proto    => "tcp",
+            Timeout  => "10",
+            Reuse    => "1",
         );
 
-        foreach my $char (@chars) {
-            my $socket = IO::Socket::INET -> new (
-                PeerAddr => $target,
-                PeerPort => $port,
-                Proto    => "tcp",
-                Timeout  => "10",
-                Reuse    => "1",
-            );
-            
-            sleep (1);
+        sleep (1);
 
-            $socket -> autoflush(1);
-            $socket -> recv($data, 9216);
-            
-            if ($socket) {          
-                $socket -> send($char);
-                $socket -> recv($data, 1024);
+        $socket -> autoflush(1);
+        $socket -> recv($data, 9216);
 
-                print "[ - ] Send -> $char \t Response ->$data\n";
-            }
+        if ($socket) {
+            $socket -> send($char);
+            $socket -> recv($data, 1024);
 
-            close ($socket);
+            say "[ - ] Send -> $char \t Response ->$data";
         }
+
+        close ($socket);
     }
 }
-
-main();
-exit;
 ```
 
 What this script does is very simple: we have an array with values from A to Z, our script goes through this Array sending one character at a time to the target server and captures each response, while executing this process, we print this action on the screen.
