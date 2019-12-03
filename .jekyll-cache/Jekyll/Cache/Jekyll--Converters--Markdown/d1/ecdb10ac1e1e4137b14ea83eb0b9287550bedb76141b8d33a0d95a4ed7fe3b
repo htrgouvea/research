@@ -1,0 +1,65 @@
+I"�<h1 id="hfbr19-final---solving-login-programming-challenge">#HFBR19 Final - Solving “Login” programming challenge</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 in-class qualifiers, where each qualifier was held within Roadsec (an itinerant event that takes place in Brazil), ie each qualifier was held in a different state of Brazil, thus ensuring a finalist from each region of the country. I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November.</p>
+
+<p>The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.</p>
+
+<p>-</p>
+
+<h3 id="the-challenge">The challenge</h3>
+
+<p>Within the Hackaflag platform, when the challenge was selected, the information you obtained was as follows:</p>
+
+<p><img src="/images/publications/ctf-hfbr/the-challenge.png" alt="Image" /></p>
+
+<p>The only information we had was an IP and a port, so my first move was to use Netcat to try to discover something new, the response of the request is:</p>
+
+<p><img src="/images/publications/ctf-hfbr/server.png" alt="Image" /></p>
+
+<p>Shortly after the ASCII Art illustrated above, there is a value input field, if we do not fill it in, within seconds we receive the following timeout message:</p>
+
+<p><img src="/images/publications/ctf-hfbr/timeout.png" alt="Image" /></p>
+
+<p>Interacting a little more with this service, we can see the following behaviors, sending the value A, we receive the following response:</p>
+
+<p><img src="/images/publications/ctf-hfbr/send-A.png" alt="Image" /></p>
+
+<p>And, sending the value Z, we receive the following response:</p>
+
+<p><img src="/images/publications/ctf-hfbr/send-Z.png" alt="Image" /></p>
+
+<p>-</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env perl</span>
+
+<span class="k">use</span> <span class="mf">5.018</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">warnings</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">main</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="nv">main</span><span class="p">();</span>
+<span class="nb">exit</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>-</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>To conclude this post, I would just like to thank all <a href="https://hackaflag.com.br">Hackaflag Team</a>, and especially <a href="https://twitter.com/">Jeremias</a> for this super interesting challenge!</p>
+
+<p>-</p>
+
+<h3 id="referencies">Referencies</h3>
+
+<ul>
+  <li><a href="https://ctf.hackaflag.com.br/">ctf.hackaflag.com.br</a></li>
+  <li><a href="https://pt.wikipedia.org/wiki/ASCII">ASCII Table</a></li>
+</ul>
+:ET

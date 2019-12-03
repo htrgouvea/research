@@ -1,0 +1,33 @@
+I"J<h1 id="hfbr19-finals---solving-login-programming-challenge">#HFBR19 Finals - Solving “Login” programming challenge</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 in-class qualifiers, where each qualifier was held within Roadsec (an itinerant event that takes place in Brazil), ie each qualifier was held in a different state of Brazil, thus ensuring a finalist from each region of the country. I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November.</p>
+
+<p>The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.</p>
+
+<p>-</p>
+
+<h3 id="the-challange">The challange</h3>
+
+<p>Pydio’s main functionality is file upload and sharing. One way to upload is through the “Remote Server” feature, where Pydio makes a request to a remote server on the Internet and downloads the file.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<script src="https://gist.github.com/GouveaHeitor/0a84444b30e3f14dd0de39d3bcac8901.js"></script>
+
+<p>-</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>To conclude this post, I would just like to thank all <a href="https://hackaflag.com.br">Hackaflag Team</a>, and especially <a href="https://twitter.com/">Jeremias</a> for this super interesting challenge!</p>
+
+<p>-</p>
+
+<h3 id="referencies">Referencies</h3>
+
+<ul>
+  <li><a href="https://ctf.hackaflag.com.br/">ctf.hackaflag.com.br</a></li>
+  <li><a href="https://pt.wikipedia.org/wiki/ASCII">ASCII Table</a></li>
+</ul>
+:ET

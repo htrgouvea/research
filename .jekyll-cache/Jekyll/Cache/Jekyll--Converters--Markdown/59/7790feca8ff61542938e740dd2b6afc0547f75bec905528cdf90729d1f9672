@@ -1,7 +1,13 @@
-I"�<h2 id="bug-bounty-tips">Bug Bounty Tips:</h2>
+I"D<h2 id="bug-bounty-tips">Bug Bounty Tips:</h2>
 
 <ul>
   <li><a href="/stories/2019/06/11/organize-your-notes-bug-bounty">How to better organize your notes while hunting for bugs</a></li>
+</ul>
+
+<h2 id="write-ups">Write-Ups</h2>
+
+<ul>
+  <li><a href="/2019/03/12/hfbr19-prog-write-up">#HFBR19 Final - Solving “Login” programming challenge</a></li>
 </ul>
 
 <h2 id="security-advisories">Security Advisories:</h2>

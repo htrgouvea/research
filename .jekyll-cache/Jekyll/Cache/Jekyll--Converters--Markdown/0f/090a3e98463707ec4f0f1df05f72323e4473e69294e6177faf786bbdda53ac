@@ -1,0 +1,210 @@
+I""~<h1 id="hfbr19-final---solving-login-programming-challenge">#HFBR19 Final - Solving “Login” programming challenge</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 in-class qualifiers, where each qualifier was held within Roadsec (an itinerant event that takes place in Brazil), ie each qualifier was held in a different state of Brazil, thus ensuring a finalist from each region of the country. I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November.</p>
+
+<p>The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.</p>
+
+<p>-</p>
+
+<h3 id="the-challenge">The challenge</h3>
+
+<p>Within the Hackaflag platform, when the challenge was selected, the information you obtained was as follows:</p>
+
+<p><img src="/images/publications/ctf-hfbr/the-challenge.png" alt="Image" /></p>
+
+<p>The only information we had was an IP and a port, so my first move was to use Netcat to try to discover something new, the response of the request is:</p>
+
+<p><img src="/images/publications/ctf-hfbr/server.png" alt="Image" /></p>
+
+<p>Shortly after the ASCII Art illustrated above, there is a value input field, if we do not fill it in, within seconds we receive the following timeout message:</p>
+
+<p><img src="/images/publications/ctf-hfbr/timeout.png" alt="Image" /></p>
+
+<p>Interacting a little more with this service, we can see the following behaviors, sending the value A, we receive the following response:</p>
+
+<p><img src="/images/publications/ctf-hfbr/send-A.png" alt="Image" /></p>
+
+<p>And, sending the value Z, we receive the following response:</p>
+
+<p><img src="/images/publications/ctf-hfbr/send-Z.png" alt="Image" /></p>
+
+<p>-</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Well, with a little more time and intersections with this service, you would realize that it has only this one behavior.</p>
+
+<p>The logic I framed to solve this challenge at first was that I needed the answer always to be the “.” blue, so I decided to make a kind of brute-force, at first, with only one character.</p>
+
+<p>To make this faster, I developed a Perl script that automates all this, let’s call it: exploit.pl. This is his content at first:</p>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env perl</span>
+
+<span class="k">use</span> <span class="mf">5.018</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">IO::Socket::</span><span class="nv">INET</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">main</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$target</span> <span class="o">=</span> <span class="p">"</span><span class="s2">142.93.73.149</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$port</span>   <span class="o">=</span> <span class="p">"</span><span class="s2">23112</span><span class="p">";</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$target</span> <span class="o">&amp;&amp;</span> <span class="nv">$port</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">print</span> <span class="p">"</span><span class="s2">[ ! ] -&gt; Target: </span><span class="si">$target</span><span class="s2">:</span><span class="si">$port</span><span class="s2"> </span><span class="se">\n</span><span class="p">";</span>
+        
+        <span class="k">my</span> <span class="nv">$data</span>  <span class="o">=</span> <span class="p">"";</span>
+        <span class="k">my</span> <span class="nv">@chars</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">"</span><span class="s2">A</span><span class="p">",</span> <span class="p">"</span><span class="s2">B</span><span class="p">",</span> <span class="p">"</span><span class="s2">C</span><span class="p">",</span> <span class="p">"</span><span class="s2">D</span><span class="p">",</span> <span class="p">"</span><span class="s2">E</span><span class="p">",</span> <span class="p">"</span><span class="s2">F</span><span class="p">",</span> <span class="p">"</span><span class="s2">G</span><span class="p">",</span> <span class="p">"</span><span class="s2">H</span><span class="p">",</span> <span class="p">"</span><span class="s2">I</span><span class="p">",</span> <span class="p">"</span><span class="s2">J</span><span class="p">",</span> <span class="p">"</span><span class="s2">K</span><span class="p">",</span> <span class="p">"</span><span class="s2">L</span><span class="p">",</span> <span class="p">"</span><span class="s2">M</span><span class="p">",</span>
+            <span class="p">"</span><span class="s2">N</span><span class="p">",</span> <span class="p">"</span><span class="s2">O</span><span class="p">",</span> <span class="p">"</span><span class="s2">P</span><span class="p">",</span> <span class="p">"</span><span class="s2">Q</span><span class="p">",</span> <span class="p">"</span><span class="s2">R</span><span class="p">",</span> <span class="p">"</span><span class="s2">S</span><span class="p">",</span> <span class="p">"</span><span class="s2">T</span><span class="p">",</span> <span class="p">"</span><span class="s2">U</span><span class="p">",</span> <span class="p">"</span><span class="s2">V</span><span class="p">",</span> <span class="p">"</span><span class="s2">W</span><span class="p">",</span> <span class="p">"</span><span class="s2">X</span><span class="p">",</span> <span class="p">"</span><span class="s2">Y</span><span class="p">",</span> <span class="p">"</span><span class="s2">Z</span><span class="p">"</span>
+        <span class="p">);</span>
+
+        <span class="k">foreach</span> <span class="k">my</span> <span class="nv">$char</span> <span class="p">(</span><span class="nv">@chars</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">my</span> <span class="nv">$socket</span> <span class="o">=</span> <span class="nn">IO::Socket::</span><span class="nv">INET</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="p">(</span>
+                <span class="nv">PeerAddr</span> <span class="o">=&gt;</span> <span class="nv">$target</span><span class="p">,</span>
+                <span class="nv">PeerPort</span> <span class="o">=&gt;</span> <span class="nv">$port</span><span class="p">,</span>
+                <span class="nv">Proto</span>    <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">tcp</span><span class="p">",</span>
+                <span class="nv">Timeout</span>  <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">10</span><span class="p">",</span>
+                <span class="nv">Reuse</span>    <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">1</span><span class="p">",</span>
+            <span class="p">);</span>
+            
+            <span class="nb">sleep</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+            <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nv">autoflush</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+            <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">recv</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="mi">9216</span><span class="p">);</span>
+            
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$socket</span><span class="p">)</span> <span class="p">{</span>          
+                <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">send</span><span class="p">(</span><span class="nv">$char</span><span class="p">);</span>
+                <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">recv</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="mi">1024</span><span class="p">);</span>
+
+                <span class="k">print</span> <span class="p">"</span><span class="s2">[ - ] Send -&gt; </span><span class="si">$char</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> Response -&gt;</span><span class="si">$data</span><span class="se">\n</span><span class="p">";</span>
+            <span class="p">}</span>
+
+            <span class="nb">close</span> <span class="p">(</span><span class="nv">$socket</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">main</span><span class="p">();</span>
+<span class="nb">exit</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>What this script does is very simple: we have an array with values from A to Z, our script goes through this Array sending one character at a time to the target server and captures each response, while executing this process, we print this action on the screen.
+And this is the result obtained:</p>
+
+<p><img src="/images/publications/ctf-hfbr/first-result.png" alt="Image" /></p>
+
+<p>We can see that when we send the characters A through H, we get the blue response, which represents success, and any character sent after H, returns red, signaling that we are doing something wrong. From this behavior, we can conclude that the correct first letter is the letter H, because after that letter we only have the server error response.</p>
+
+<p>From this point, the next step is to try to capture the next letter, we can add the letter H directly to our code that will be sent, and try to capture the next letter:</p>
+
+<p><img src="/images/publications/ctf-hfbr/second-result.png" alt="Image" /></p>
+
+<p>We quickly identified that the next correct letter is A. And, doing this a few more times, we will get to the following string: “HACKAFLAG”. However, this is not our flag yet, we need to keep doing this brute-force to capture the rest of it. But we are only working with A through Z, and the flag is made up of other values, such as numbers, lowercase letters, and special characters.</p>
+
+<p>Therefore, we need to add to our character array all these values. A good way to do this is to copy this data from the ASCII table in order to avoid any other problems. In the end, the array you will use should look like this:</p>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">my</span> <span class="nv">@chars</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">"</span><span class="s2">!</span><span class="p">",</span> <span class="p">"</span><span class="se">\"</span><span class="p">",</span> <span class="p">"</span><span class="s2">#</span><span class="p">",</span> <span class="p">"</span><span class="err">\</span><span class="s2">$</span><span class="p">",</span> <span class="p">"</span><span class="s2">%</span><span class="p">",</span> <span class="p">"</span><span class="s2">&amp;</span><span class="p">",</span> <span class="p">"</span><span class="s2">'</span><span class="p">",</span> <span class="p">"</span><span class="s2">(</span><span class="p">",</span> <span class="p">"</span><span class="s2">)</span><span class="p">",</span> <span class="p">"</span><span class="s2">*</span><span class="p">",</span> <span class="p">"</span><span class="s2">+</span><span class="p">",</span> <span class="p">"</span><span class="s2">,</span><span class="p">",</span> <span class="p">"</span><span class="s2">-</span><span class="p">",</span> <span class="p">"</span><span class="s2">.</span><span class="p">",</span> <span class="p">"</span><span class="s2">/</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">0</span><span class="p">",</span> <span class="p">"</span><span class="s2">1</span><span class="p">",</span> <span class="p">"</span><span class="s2">2</span><span class="p">",</span> <span class="p">"</span><span class="s2">3</span><span class="p">",</span> <span class="p">"</span><span class="s2">4</span><span class="p">",</span> <span class="p">"</span><span class="s2">5</span><span class="p">",</span> <span class="p">"</span><span class="s2">6</span><span class="p">",</span> <span class="p">"</span><span class="s2">7</span><span class="p">",</span> <span class="p">"</span><span class="s2">8</span><span class="p">",</span> <span class="p">"</span><span class="s2">9</span><span class="p">",</span> <span class="p">"</span><span class="s2">:</span><span class="p">",</span>  <span class="p">"</span><span class="s2">;</span><span class="p">",</span> <span class="p">"</span><span class="s2">&lt;</span><span class="p">",</span> <span class="p">"</span><span class="s2">=</span><span class="p">",</span> <span class="p">"</span><span class="s2">&gt;</span><span class="p">",</span> <span class="p">"</span><span class="s2">?</span><span class="p">",</span> <span class="p">"</span><span class="s2">@</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">A</span><span class="p">",</span> <span class="p">"</span><span class="s2">B</span><span class="p">",</span> <span class="p">"</span><span class="s2">C</span><span class="p">",</span> <span class="p">"</span><span class="s2">D</span><span class="p">",</span> <span class="p">"</span><span class="s2">E</span><span class="p">",</span> <span class="p">"</span><span class="s2">F</span><span class="p">",</span> <span class="p">"</span><span class="s2">G</span><span class="p">",</span> <span class="p">"</span><span class="s2">H</span><span class="p">",</span> <span class="p">"</span><span class="s2">I</span><span class="p">",</span> <span class="p">"</span><span class="s2">J</span><span class="p">",</span> <span class="p">"</span><span class="s2">K</span><span class="p">",</span> <span class="p">"</span><span class="s2">L</span><span class="p">",</span> <span class="p">"</span><span class="s2">M</span><span class="p">",</span>  <span class="p">"</span><span class="s2">N</span><span class="p">",</span> <span class="p">"</span><span class="s2">O</span><span class="p">",</span> <span class="p">"</span><span class="s2">P</span><span class="p">",</span> <span class="p">"</span><span class="s2">Q</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">R</span><span class="p">",</span> <span class="p">"</span><span class="s2">S</span><span class="p">",</span> <span class="p">"</span><span class="s2">T</span><span class="p">",</span> <span class="p">"</span><span class="s2">U</span><span class="p">",</span> <span class="p">"</span><span class="s2">V</span><span class="p">",</span> <span class="p">"</span><span class="s2">W</span><span class="p">",</span> <span class="p">"</span><span class="s2">X</span><span class="p">",</span> <span class="p">"</span><span class="s2">Y</span><span class="p">",</span> <span class="p">"</span><span class="s2">Z</span><span class="p">",</span> <span class="p">"</span><span class="s2">[</span><span class="p">",</span> <span class="p">"</span><span class="se">\\</span><span class="p">",</span> <span class="p">"</span><span class="s2">]</span><span class="p">",</span> <span class="p">"</span><span class="s2">^</span><span class="p">",</span>  <span class="p">"</span><span class="s2">_</span><span class="p">",</span> <span class="p">"</span><span class="s2">`</span><span class="p">",</span> <span class="p">"</span><span class="s2">a</span><span class="p">",</span> <span class="p">"</span><span class="s2">b</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">c</span><span class="p">",</span> <span class="p">"</span><span class="s2">d</span><span class="p">",</span> <span class="p">"</span><span class="s2">e</span><span class="p">",</span> <span class="p">"</span><span class="s2">f</span><span class="p">",</span> <span class="p">"</span><span class="s2">g</span><span class="p">",</span> <span class="p">"</span><span class="s2">h</span><span class="p">",</span> <span class="p">"</span><span class="s2">i</span><span class="p">",</span> <span class="p">"</span><span class="s2">j</span><span class="p">",</span> <span class="p">"</span><span class="s2">k</span><span class="p">",</span> <span class="p">"</span><span class="s2">l</span><span class="p">",</span> <span class="p">"</span><span class="s2">m</span><span class="p">",</span> <span class="p">"</span><span class="s2">n</span><span class="p">",</span> <span class="p">"</span><span class="s2">o</span><span class="p">",</span> <span class="p">"</span><span class="s2">p</span><span class="p">",</span> <span class="p">"</span><span class="s2">q</span><span class="p">",</span> <span class="p">"</span><span class="s2">r</span><span class="p">",</span> <span class="p">"</span><span class="s2">s</span><span class="p">",</span> <span class="p">"</span><span class="s2">t</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">u</span><span class="p">",</span> <span class="p">"</span><span class="s2">v</span><span class="p">",</span> <span class="p">"</span><span class="s2">w</span><span class="p">",</span> <span class="p">"</span><span class="s2">x</span><span class="p">",</span> <span class="p">"</span><span class="s2">y</span><span class="p">",</span> <span class="p">"</span><span class="s2">z</span><span class="p">",</span> <span class="p">"</span><span class="s2">{</span><span class="p">",</span> <span class="p">"</span><span class="s2">|</span><span class="p">",</span> <span class="p">"</span><span class="s2">}</span><span class="p">",</span> <span class="p">"</span><span class="s2">~</span><span class="p">"</span>
+    <span class="p">);</span>
+</code></pre></div></div>
+
+<p>And then we can continue with brute-force:</p>
+
+<p><img src="/images/publications/ctf-hfbr/third-result.png" alt="Image" /></p>
+
+<p>So far, we have the following piece of the flag: “HACKAFLAG {“, so we can assume this is really working. However, if we keep running our script this way, and keep interacting the value manually, it will take a long time before we can find the flag, as well as being a rather boring activity and of course we can automate it.</p>
+
+<p>Our code, with intelligent automation of interaction and continuity would look like this:</p>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env perl</span>
+
+<span class="k">use</span> <span class="mf">5.018</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">IO::Socket::</span><span class="nv">INET</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Digest::</span><span class="nv">MD5</span> <span class="sx">qw(md5_hex)</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$target</span> <span class="o">=</span> <span class="p">"</span><span class="s2">142.93.73.149</span><span class="p">";</span>
+<span class="k">my</span> <span class="nv">$port</span>   <span class="o">=</span> <span class="p">"</span><span class="s2">23112</span><span class="p">";</span>
+<span class="k">my</span> <span class="nv">$flag</span>   <span class="o">=</span> <span class="p">"";</span>
+
+<span class="k">sub </span><span class="nf">find</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$char</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$data</span> <span class="o">=</span> <span class="p">"";</span>
+
+    <span class="k">my</span> <span class="nv">$socket</span> <span class="o">=</span> <span class="nn">IO::Socket::</span><span class="nv">INET</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="p">(</span>
+        <span class="nv">PeerAddr</span> <span class="o">=&gt;</span> <span class="nv">$target</span><span class="p">,</span>
+        <span class="nv">PeerPort</span> <span class="o">=&gt;</span> <span class="nv">$port</span><span class="p">,</span>
+        <span class="nv">Proto</span>    <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">tcp</span><span class="p">",</span>
+        <span class="nv">Timeout</span>  <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">10</span><span class="p">",</span>
+        <span class="nv">Reuse</span>    <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">1</span><span class="p">",</span>
+    <span class="p">);</span>
+            
+    <span class="nb">sleep</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+    <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nv">autoflush</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">recv</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="mi">9216</span><span class="p">);</span>
+            
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$socket</span><span class="p">)</span> <span class="p">{</span>   
+        <span class="k">my</span> <span class="nv">$payload</span> <span class="o">=</span> <span class="nv">$flag</span> <span class="o">.</span> <span class="nv">$char</span><span class="p">;</span>
+
+        <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">send</span><span class="p">(</span><span class="nv">$payload</span><span class="p">);</span>
+        <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">recv</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="mi">1024</span><span class="p">);</span>
+
+        <span class="k">print</span> <span class="p">"</span><span class="s2">[ - ] Send -&gt; </span><span class="si">$payload</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> Response -&gt;</span><span class="si">$data</span><span class="se">\n</span><span class="p">";</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">md5_hex</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="ow">eq</span> <span class="p">"</span><span class="s2">41b55689188cd3005192b7cf33c8075f</span><span class="p">")</span> <span class="p">{</span>
+            <span class="nv">$flag</span> <span class="o">=</span> <span class="nv">$payload</span><span class="p">;</span>
+            <span class="k">return</span> <span class="nv">main</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nb">close</span> <span class="p">(</span><span class="nv">$socket</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">sub </span><span class="nf">main</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">@chars</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">"</span><span class="s2">!</span><span class="p">",</span> <span class="p">"</span><span class="se">\"</span><span class="p">",</span> <span class="p">"</span><span class="s2">#</span><span class="p">",</span> <span class="p">"</span><span class="err">\</span><span class="s2">$</span><span class="p">",</span> <span class="p">"</span><span class="s2">%</span><span class="p">",</span> <span class="p">"</span><span class="s2">&amp;</span><span class="p">",</span> <span class="p">"</span><span class="s2">'</span><span class="p">",</span> <span class="p">"</span><span class="s2">(</span><span class="p">",</span> <span class="p">"</span><span class="s2">)</span><span class="p">",</span> <span class="p">"</span><span class="s2">*</span><span class="p">",</span> <span class="p">"</span><span class="s2">+</span><span class="p">",</span> <span class="p">"</span><span class="s2">,</span><span class="p">",</span> <span class="p">"</span><span class="s2">-</span><span class="p">",</span> <span class="p">"</span><span class="s2">.</span><span class="p">",</span> <span class="p">"</span><span class="s2">/</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">0</span><span class="p">",</span> <span class="p">"</span><span class="s2">1</span><span class="p">",</span> <span class="p">"</span><span class="s2">2</span><span class="p">",</span> <span class="p">"</span><span class="s2">3</span><span class="p">",</span> <span class="p">"</span><span class="s2">4</span><span class="p">",</span> <span class="p">"</span><span class="s2">5</span><span class="p">",</span> <span class="p">"</span><span class="s2">6</span><span class="p">",</span> <span class="p">"</span><span class="s2">7</span><span class="p">",</span> <span class="p">"</span><span class="s2">8</span><span class="p">",</span> <span class="p">"</span><span class="s2">9</span><span class="p">",</span> <span class="p">"</span><span class="s2">:</span><span class="p">",</span>  <span class="p">"</span><span class="s2">;</span><span class="p">",</span> <span class="p">"</span><span class="s2">&lt;</span><span class="p">",</span> <span class="p">"</span><span class="s2">=</span><span class="p">",</span> <span class="p">"</span><span class="s2">&gt;</span><span class="p">",</span> <span class="p">"</span><span class="s2">?</span><span class="p">",</span> <span class="p">"</span><span class="s2">@</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">A</span><span class="p">",</span> <span class="p">"</span><span class="s2">B</span><span class="p">",</span> <span class="p">"</span><span class="s2">C</span><span class="p">",</span> <span class="p">"</span><span class="s2">D</span><span class="p">",</span> <span class="p">"</span><span class="s2">E</span><span class="p">",</span> <span class="p">"</span><span class="s2">F</span><span class="p">",</span> <span class="p">"</span><span class="s2">G</span><span class="p">",</span> <span class="p">"</span><span class="s2">H</span><span class="p">",</span> <span class="p">"</span><span class="s2">I</span><span class="p">",</span> <span class="p">"</span><span class="s2">J</span><span class="p">",</span> <span class="p">"</span><span class="s2">K</span><span class="p">",</span> <span class="p">"</span><span class="s2">L</span><span class="p">",</span> <span class="p">"</span><span class="s2">M</span><span class="p">",</span>  <span class="p">"</span><span class="s2">N</span><span class="p">",</span> <span class="p">"</span><span class="s2">O</span><span class="p">",</span> <span class="p">"</span><span class="s2">P</span><span class="p">",</span> <span class="p">"</span><span class="s2">Q</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">R</span><span class="p">",</span> <span class="p">"</span><span class="s2">S</span><span class="p">",</span> <span class="p">"</span><span class="s2">T</span><span class="p">",</span> <span class="p">"</span><span class="s2">U</span><span class="p">",</span> <span class="p">"</span><span class="s2">V</span><span class="p">",</span> <span class="p">"</span><span class="s2">W</span><span class="p">",</span> <span class="p">"</span><span class="s2">X</span><span class="p">",</span> <span class="p">"</span><span class="s2">Y</span><span class="p">",</span> <span class="p">"</span><span class="s2">Z</span><span class="p">",</span> <span class="p">"</span><span class="s2">[</span><span class="p">",</span> <span class="p">"</span><span class="se">\\</span><span class="p">",</span> <span class="p">"</span><span class="s2">]</span><span class="p">",</span> <span class="p">"</span><span class="s2">^</span><span class="p">",</span>  <span class="p">"</span><span class="s2">_</span><span class="p">",</span> <span class="p">"</span><span class="s2">`</span><span class="p">",</span> <span class="p">"</span><span class="s2">a</span><span class="p">",</span> <span class="p">"</span><span class="s2">b</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">c</span><span class="p">",</span> <span class="p">"</span><span class="s2">d</span><span class="p">",</span> <span class="p">"</span><span class="s2">e</span><span class="p">",</span> <span class="p">"</span><span class="s2">f</span><span class="p">",</span> <span class="p">"</span><span class="s2">g</span><span class="p">",</span> <span class="p">"</span><span class="s2">h</span><span class="p">",</span> <span class="p">"</span><span class="s2">i</span><span class="p">",</span> <span class="p">"</span><span class="s2">j</span><span class="p">",</span> <span class="p">"</span><span class="s2">k</span><span class="p">",</span> <span class="p">"</span><span class="s2">l</span><span class="p">",</span> <span class="p">"</span><span class="s2">m</span><span class="p">",</span> <span class="p">"</span><span class="s2">n</span><span class="p">",</span> <span class="p">"</span><span class="s2">o</span><span class="p">",</span> <span class="p">"</span><span class="s2">p</span><span class="p">",</span> <span class="p">"</span><span class="s2">q</span><span class="p">",</span> <span class="p">"</span><span class="s2">r</span><span class="p">",</span> <span class="p">"</span><span class="s2">s</span><span class="p">",</span> <span class="p">"</span><span class="s2">t</span><span class="p">",</span>
+        <span class="p">"</span><span class="s2">u</span><span class="p">",</span> <span class="p">"</span><span class="s2">v</span><span class="p">",</span> <span class="p">"</span><span class="s2">w</span><span class="p">",</span> <span class="p">"</span><span class="s2">x</span><span class="p">",</span> <span class="p">"</span><span class="s2">y</span><span class="p">",</span> <span class="p">"</span><span class="s2">z</span><span class="p">",</span> <span class="p">"</span><span class="s2">{</span><span class="p">",</span> <span class="p">"</span><span class="s2">|</span><span class="p">",</span> <span class="p">"</span><span class="s2">}</span><span class="p">",</span> <span class="p">"</span><span class="s2">~</span><span class="p">"</span>
+    <span class="p">);</span>
+
+    <span class="k">foreach</span> <span class="k">my</span> <span class="nv">$char</span> <span class="p">(</span><span class="nb">reverse</span> <span class="nv">@chars</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">my</span> <span class="nv">$find</span> <span class="o">=</span> <span class="nv">find</span><span class="p">(</span><span class="nv">$char</span><span class="p">,</span> <span class="nv">$flag</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="nv">main</span><span class="p">();</span>
+<span class="nb">exit</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Demo:</p>
+
+<iframe src="https://www.youtube.com/embed/ZgV3UUH3DM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>-</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>To conclude this post, I would just like to thank all <a href="https://hackaflag.com.br">Hackaflag Team</a>, and especially <a href="https://twitter.com/">Jeremias</a> for this super interesting challenge!</p>
+
+<p>-</p>
+
+<h3 id="referencies">Referencies</h3>
+
+<ul>
+  <li><a href="https://ctf.hackaflag.com.br/">ctf.hackaflag.com.br</a></li>
+  <li><a href="https://pt.wikipedia.org/wiki/ASCII">ASCII Table</a></li>
+</ul>
+:ET

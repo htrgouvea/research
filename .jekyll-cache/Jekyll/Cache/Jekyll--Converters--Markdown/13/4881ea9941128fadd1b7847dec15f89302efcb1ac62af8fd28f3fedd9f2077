@@ -1,0 +1,97 @@
+I"9<h1 id="hfbr19-finals---solving-login-programming-challenge">#HFBR19 Finals - Solving “Login” programming challenge</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 in-class qualifiers, where each qualifier was held within Roadsec (an itinerant event that takes place in Brazil), ie each qualifier was held in a different state of Brazil, thus ensuring a finalist from each region of the country. I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November.</p>
+
+<p>The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.</p>
+
+<p>-</p>
+
+<h3 id="the-challenge">The challenge</h3>
+
+<p>Within the Hackaflag platform, when the challenge was selected, the information you obtained was as follows:</p>
+
+<p><img src="/images/publications/ctf-hfbr/the-challenge.png" alt="Image" /></p>
+
+<h3 id="resolution">Resolution</h3>
+
+<div class="language-perl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env perl</span>
+
+<span class="k">use</span> <span class="mf">5.018</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">IO::Socket::</span><span class="nv">INET</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">main</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$target</span> <span class="o">=</span> <span class="p">"</span><span class="s2">142.93.73.149</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$port</span>   <span class="o">=</span> <span class="p">"</span><span class="s2">23112</span><span class="p">";</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$target</span> <span class="o">&amp;&amp;</span> <span class="nv">$port</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">print</span> <span class="p">"</span><span class="s2">[ ! ] -&gt; Target: </span><span class="si">$target</span><span class="s2">:</span><span class="si">$port</span><span class="s2"> </span><span class="se">\n</span><span class="p">";</span>
+        
+        <span class="k">my</span> <span class="nv">$data</span>  <span class="o">=</span> <span class="p">"";</span>
+        <span class="k">my</span> <span class="nv">$flag</span>  <span class="o">=</span> <span class="p">"</span><span class="s2">HACKAFLAG{qu4l_s3r4_O_TAMA_H0_d3</span><span class="err">\</span><span class="si">$ZA_FL4g__</span><span class="s2">!!!c8756cdc6f19d68028d438ece710efc2</span><span class="p">";</span>
+
+        <span class="k">my</span> <span class="nv">@chars</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">"</span><span class="s2">!</span><span class="p">",</span> <span class="p">"</span><span class="se">\"</span><span class="p">",</span> <span class="p">"</span><span class="s2">#</span><span class="p">",</span> <span class="p">"</span><span class="err">\</span><span class="s2">$</span><span class="p">",</span> <span class="p">"</span><span class="s2">%</span><span class="p">",</span> <span class="p">"</span><span class="s2">&amp;</span><span class="p">",</span> <span class="p">"</span><span class="s2">'</span><span class="p">",</span> <span class="p">"</span><span class="s2">(</span><span class="p">",</span> <span class="p">"</span><span class="s2">)</span><span class="p">",</span> <span class="p">"</span><span class="s2">*</span><span class="p">",</span> <span class="p">"</span><span class="s2">+</span><span class="p">",</span> <span class="p">"</span><span class="s2">,</span><span class="p">",</span> <span class="p">"</span><span class="s2">-</span><span class="p">",</span> <span class="p">"</span><span class="s2">.</span><span class="p">",</span> <span class="p">"</span><span class="s2">/</span><span class="p">",</span>
+            <span class="p">"</span><span class="s2">0</span><span class="p">",</span> <span class="p">"</span><span class="s2">1</span><span class="p">",</span> <span class="p">"</span><span class="s2">2</span><span class="p">",</span> <span class="p">"</span><span class="s2">3</span><span class="p">",</span> <span class="p">"</span><span class="s2">4</span><span class="p">",</span> <span class="p">"</span><span class="s2">5</span><span class="p">",</span> <span class="p">"</span><span class="s2">6</span><span class="p">",</span> <span class="p">"</span><span class="s2">7</span><span class="p">",</span> <span class="p">"</span><span class="s2">8</span><span class="p">",</span> <span class="p">"</span><span class="s2">9</span><span class="p">",</span> <span class="p">"</span><span class="s2">:</span><span class="p">",</span>  <span class="p">"</span><span class="s2">;</span><span class="p">",</span> <span class="p">"</span><span class="s2">&lt;</span><span class="p">",</span> <span class="p">"</span><span class="s2">=</span><span class="p">",</span> <span class="p">"</span><span class="s2">&gt;</span><span class="p">",</span> <span class="p">"</span><span class="s2">?</span><span class="p">",</span> <span class="p">"</span><span class="s2">@</span><span class="p">",</span>
+            <span class="p">"</span><span class="s2">A</span><span class="p">",</span> <span class="p">"</span><span class="s2">B</span><span class="p">",</span> <span class="p">"</span><span class="s2">C</span><span class="p">",</span> <span class="p">"</span><span class="s2">D</span><span class="p">",</span> <span class="p">"</span><span class="s2">E</span><span class="p">",</span> <span class="p">"</span><span class="s2">F</span><span class="p">",</span> <span class="p">"</span><span class="s2">G</span><span class="p">",</span> <span class="p">"</span><span class="s2">H</span><span class="p">",</span> <span class="p">"</span><span class="s2">I</span><span class="p">",</span> <span class="p">"</span><span class="s2">J</span><span class="p">",</span> <span class="p">"</span><span class="s2">K</span><span class="p">",</span> <span class="p">"</span><span class="s2">L</span><span class="p">",</span> <span class="p">"</span><span class="s2">M</span><span class="p">",</span>  <span class="p">"</span><span class="s2">N</span><span class="p">",</span> <span class="p">"</span><span class="s2">O</span><span class="p">",</span> <span class="p">"</span><span class="s2">P</span><span class="p">",</span> <span class="p">"</span><span class="s2">Q</span><span class="p">",</span>
+            <span class="p">"</span><span class="s2">R</span><span class="p">",</span> <span class="p">"</span><span class="s2">S</span><span class="p">",</span> <span class="p">"</span><span class="s2">T</span><span class="p">",</span> <span class="p">"</span><span class="s2">U</span><span class="p">",</span> <span class="p">"</span><span class="s2">V</span><span class="p">",</span> <span class="p">"</span><span class="s2">W</span><span class="p">",</span> <span class="p">"</span><span class="s2">X</span><span class="p">",</span> <span class="p">"</span><span class="s2">Y</span><span class="p">",</span> <span class="p">"</span><span class="s2">Z</span><span class="p">",</span> <span class="p">"</span><span class="s2">[</span><span class="p">",</span> <span class="p">"</span><span class="se">\\</span><span class="p">",</span> <span class="p">"</span><span class="s2">]</span><span class="p">",</span> <span class="p">"</span><span class="s2">^</span><span class="p">",</span>  <span class="p">"</span><span class="s2">_</span><span class="p">",</span> <span class="p">"</span><span class="s2">`</span><span class="p">",</span> <span class="p">"</span><span class="s2">a</span><span class="p">",</span> <span class="p">"</span><span class="s2">b</span><span class="p">",</span>
+            <span class="p">"</span><span class="s2">c</span><span class="p">",</span> <span class="p">"</span><span class="s2">d</span><span class="p">",</span> <span class="p">"</span><span class="s2">e</span><span class="p">",</span> <span class="p">"</span><span class="s2">f</span><span class="p">",</span> <span class="p">"</span><span class="s2">g</span><span class="p">",</span> <span class="p">"</span><span class="s2">h</span><span class="p">",</span> <span class="p">"</span><span class="s2">i</span><span class="p">",</span> <span class="p">"</span><span class="s2">j</span><span class="p">",</span> <span class="p">"</span><span class="s2">k</span><span class="p">",</span> <span class="p">"</span><span class="s2">l</span><span class="p">",</span> <span class="p">"</span><span class="s2">m</span><span class="p">",</span> <span class="p">"</span><span class="s2">n</span><span class="p">",</span> <span class="p">"</span><span class="s2">o</span><span class="p">",</span> <span class="p">"</span><span class="s2">p</span><span class="p">",</span> <span class="p">"</span><span class="s2">q</span><span class="p">",</span> <span class="p">"</span><span class="s2">r</span><span class="p">",</span> <span class="p">"</span><span class="s2">s</span><span class="p">",</span> <span class="p">"</span><span class="s2">t</span><span class="p">",</span>
+            <span class="p">"</span><span class="s2">u</span><span class="p">",</span> <span class="p">"</span><span class="s2">v</span><span class="p">",</span> <span class="p">"</span><span class="s2">w</span><span class="p">",</span> <span class="p">"</span><span class="s2">x</span><span class="p">",</span> <span class="p">"</span><span class="s2">y</span><span class="p">",</span> <span class="p">"</span><span class="s2">z</span><span class="p">",</span> <span class="p">"</span><span class="s2">{</span><span class="p">",</span> <span class="p">"</span><span class="s2">|</span><span class="p">",</span> <span class="p">"</span><span class="s2">}</span><span class="p">",</span> <span class="p">"</span><span class="s2">~</span><span class="p">"</span>
+        <span class="p">);</span>
+
+        <span class="k">foreach</span> <span class="k">my</span> <span class="nv">$char</span> <span class="p">(</span><span class="nv">@chars</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">my</span> <span class="nv">$socket</span> <span class="o">=</span> <span class="nn">IO::Socket::</span><span class="nv">INET</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="p">(</span>
+                <span class="nv">PeerAddr</span> <span class="o">=&gt;</span> <span class="nv">$target</span><span class="p">,</span>
+                <span class="nv">PeerPort</span> <span class="o">=&gt;</span> <span class="nv">$port</span><span class="p">,</span>
+                <span class="nv">Proto</span>    <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">tcp</span><span class="p">",</span>
+                <span class="nv">Timeout</span>  <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">10</span><span class="p">",</span>
+                <span class="nv">Reuse</span>    <span class="o">=&gt;</span> <span class="p">"</span><span class="s2">1</span><span class="p">",</span>
+            <span class="p">);</span>
+            
+            <span class="nb">sleep</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+            <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nv">autoflush</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+            <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">recv</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="mi">9216</span><span class="p">);</span>
+            
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$socket</span><span class="p">)</span> <span class="p">{</span>  
+                <span class="k">my</span> <span class="nv">$payload</span> <span class="o">=</span> <span class="nv">$flag</span> <span class="o">.</span> <span class="nv">$char</span><span class="p">;</span>
+                     
+                <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">send</span><span class="p">(</span><span class="nv">$payload</span><span class="p">);</span>
+                <span class="nv">$socket</span> <span class="o">-&gt;</span> <span class="nb">recv</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="mi">1024</span><span class="p">);</span>
+
+                <span class="k">print</span> <span class="p">"</span><span class="s2">[ - ] Send -&gt; </span><span class="si">$payload</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> Response -&gt;</span><span class="si">$data</span><span class="se">\n</span><span class="p">";</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$data</span> <span class="o">=~</span> <span class="sr">/!/</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1"># print "here $payload[$_] \n";</span>
+                    <span class="c1"># exit;</span>
+                    <span class="c1"># push $flag, $payload;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="nb">close</span> <span class="p">(</span><span class="nv">$socket</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">main</span><span class="p">();</span>
+<span class="nb">exit</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>-</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>To conclude this post, I would just like to thank all <a href="https://hackaflag.com.br">Hackaflag Team</a>, and especially <a href="https://twitter.com/">Jeremias</a> for this super interesting challenge!</p>
+
+<p>-</p>
+
+<h3 id="referencies">Referencies</h3>
+
+<ul>
+  <li><a href="https://ctf.hackaflag.com.br/">ctf.hackaflag.com.br</a></li>
+  <li><a href="https://pt.wikipedia.org/wiki/ASCII">ASCII Table</a></li>
+</ul>
+:ET
