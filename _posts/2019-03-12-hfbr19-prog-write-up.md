@@ -1,8 +1,8 @@
 ---
 layout: default
 title: '#HFBR19 Final - Solving "Login" programming challenge'
-description: 'This vulnerability could serve as a helper for other vulnerabilities and thus is become even more critical; An example of this is brute-force attacks in an attempt to crack the password of leaked usernames by exploiting this vulnerability.'
-og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/the-challenge.png
+description: 'The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.'
+og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 ---
 
 # #HFBR19 Final - Solving "Login" programming challenge
