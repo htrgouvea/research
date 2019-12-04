@@ -10,7 +10,7 @@ og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 
 ## Introduction
 
-The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 quals, where each classification was held within an edition of Roadsec (an itinerant event that takes place in Brazil), ie each classification was held in a different state of Brazil, this ensuring a finalist from each region of the country.
+The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 quals, where each classification was held within an edition of Roadsec (an itinerant event that takes place in Brazil), each classification was held in a different state of Brazil, this ensuring a finalist from each region of the country.
 
 I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November. 
 
@@ -100,7 +100,7 @@ And this is the result obtained:
 
 ![Image](/images/publications/ctf-hfbr/first-result.png)
 
-We can see that when we send the characters A through H, we get the blue response, which represents success, and any character sent after H, returns red, signaling that we are doing something wrong. From this behavior, we can conclude that the correct first letter is the letter H, because after that letter we only have the server error response.
+We can see that when we send the characters A through H, we get the blue response, which represents "success", and any character sent after H, returns red, signaling that "we are doing something wrong".  So the logic used here is as follows: blue is below expectations and red is above. From this behavior, we can conclude that the correct first letter is the letter H, because after that letter we only have the server error response.
 
 From this point, the next step is to try to capture the next letter, we can add the letter H directly to our code that will be sent, and try to capture the next letter:
 
