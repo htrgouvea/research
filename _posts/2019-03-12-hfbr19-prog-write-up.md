@@ -1,12 +1,11 @@
 ---
 layout: default
-title: '#HFBR19 Final - "Login" programming challenge'
+title: '"Login" programming challenge - #HFBR19 Final'
 description: 'The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming could be solved.'
 og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 ---
 
 # #HFBR19 Final - Solving "Login" programming challenge
-
 
 ## Introduction
 
