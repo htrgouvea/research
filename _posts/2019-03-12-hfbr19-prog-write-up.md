@@ -1,7 +1,7 @@
 ---
 layout: default
 title: '#HFBR19 Final - Solving "Login" programming challenge'
-description: 'The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.'
+description: 'The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming could be solved.'
 og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 ---
 
@@ -10,7 +10,7 @@ og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 
 ## Introduction
 
-The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 quals, where each classification was held within an edition of Roadsec (an itinerant event that takes place in Brazil), ie each classification was held in a different state of Brazil, thus ensuring a finalist from each region of the country.
+The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 quals, where each classification was held within an edition of Roadsec (an itinerant event that takes place in Brazil), ie each classification was held in a different state of Brazil, this ensuring a finalist from each region of the country.
 
 I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November. 
 
@@ -199,6 +199,10 @@ exit;
 Demo:
 
 <iframe width="750" height="450" src="https://www.youtube.com/embed/ZgV3UUH3DM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+-
+
+And in the end, we got to Flag:
 
 -
 
