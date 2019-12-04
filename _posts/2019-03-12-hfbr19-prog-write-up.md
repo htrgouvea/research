@@ -146,26 +146,26 @@ sub find {
     my $char = shift;
     my $data = "";
 
-    my $socket = IO::Socket::INET -> new (
+    my $socket = IO::Socket::INET->new(
         PeerAddr => $target,
         PeerPort => $port,
         Proto    => "tcp",
         Timeout  => "10",
         Reuse    => "1",
     );
-            
+
     sleep (2);
 
     $socket -> autoflush(1);
     $socket -> recv($data, 9216);
-            
-    if ($socket) {   
+
+    if ($socket) {
         my $payload = $flag . $char;
 
         $socket -> send($payload);
         $socket -> recv($data, 1024);
 
-        print "[ - ] Send -> $payload \t Response ->$data\n";
+        say "[ - ] Send -> $payload \t Response ->$data";
 
         if (md5_hex($data) eq "41b55689188cd3005192b7cf33c8075f") {
             $flag = $payload;
@@ -177,23 +177,14 @@ sub find {
 }
 
 sub main {
-    my @chars = (
-        "!", "\"", "#", "\$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/",
-        "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":",  ";", "<", "=", ">", "?", "@",
-        "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",  "N", "O", "P", "Q",
-        "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\\", "]", "^",  "_", "`", "a", "b",
-        "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-        "u", "v", "w", "x", "y", "z", "{", "|", "}", "~"
-    );
+    my @chars = map { chr($_) } 33 .. 126;
 
     foreach my $char (reverse @chars) {
         my $find = find($char, $flag);
     }
-
 }
 
 main();
-exit;
 ```
 
 Demo:
