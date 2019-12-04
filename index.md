@@ -11,7 +11,7 @@ og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
 
 ## Write-Ups
 
-- [CTF #HFBR19 Final - Solving "Login" programming challenge](/2019/03/12/hfbr19-prog-write-up)
+- [CTF #HFBR19 Final - Solving "Login" programming challenge](/2019/03/12/hfbr19-login-prog-write-up)
 
 ## Security Advisories:
 
