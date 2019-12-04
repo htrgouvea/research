@@ -204,6 +204,8 @@ Demo:
 
 And in the end, we got to Flag:
 
+![Image](/images/publications/ctf-hfbr/flag.png)
+
 -
 
 ## Conclusion
