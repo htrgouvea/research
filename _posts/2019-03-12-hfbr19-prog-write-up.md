@@ -10,9 +10,11 @@ og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 
 ## Introduction
 
-The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 in-class qualifiers, where each qualifier was held within Roadsec (an itinerant event that takes place in Brazil), ie each qualifier was held in a different state of Brazil, thus ensuring a finalist from each region of the country. I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November. 
+The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 quals, where each classification was held within an edition of Roadsec (an itinerant event that takes place in Brazil), ie each classification was held in a different state of Brazil, thus ensuring a finalist from each region of the country.
 
-The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming can be solved.
+I was classified in the first quals, which took place at the beginning of the year, in the city of Campinas, interior of São Paulo, and later competed in the final that took place in November. 
+
+The final was about 4 hours long, and we had 10 challenges to solve: 8 of them were challenges related to exploiting Web vulnerabilities, and the rest were related to programming, and this publication aims to explain how the second challenge of programming could be solved.
 
 -
 
@@ -31,7 +33,7 @@ Shortly after the ASCII Art illustrated above, there is a value input field, if 
 
 ![Image](/images/publications/ctf-hfbr/timeout.png)
 
-Interacting a little more with this service, we can see the following behaviors, sending the value A, we receive the following response:
+Doing some tests in this service, we can see the following behaviors, sending the value A, we receive this response:
 
 ![Image](/images/publications/ctf-hfbr/send-A.png)
 
@@ -43,7 +45,7 @@ And, sending the value Z, we receive the following response:
 
 ### Resolution
 
-Well, with a little more time and intersections with this service, you would realize that it has only this one behavior.
+Well, spending more time with this service, you would realize that it has only this one behavior.
 
 The logic I framed to solve this challenge at first was that I needed the answer always to be the "." blue, so I decided to make a kind of brute-force, at first, with only one character.
 
@@ -202,7 +204,7 @@ Demo:
 
 ## Conclusion
 
-To conclude this post, I would just like to thank all [Hackaflag Team](https://hackaflag.com.br), and especially [Jeremias](https://twitter.com/) for this super interesting challenge!
+To conclude this post, I would just like to thank all [Hackaflag Team](https://hackaflag.com.br), and especially [Jeremias](https://twitter.com/j3r3m14s) for this super interesting challenge!
 
 -
 
