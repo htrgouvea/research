@@ -32,7 +32,7 @@ Shortly after the ASCII Art illustrated above, there is a value input field, if 
 
 ![Image](/images/publications/ctf-hfbr/timeout.png)
 
-Doing some tests in this service, we can see the following behaviors, sending the value A, we receive this response:
+Doing some tests in this service, we can see the following behavior, sending the value A, we receive this response:
 
 ![Image](/images/publications/ctf-hfbr/send-A.png)
 
@@ -68,7 +68,7 @@ if ($target && $port) {
     my @chars = 'A'..'Z';
 
     foreach my $char (@chars) {
-        my $socket = IO::Socket::INET->new(
+        my $socket = IO::Socket::INET -> new (
             PeerAddr => $target,
             PeerPort => $port,
             Proto    => "tcp",
@@ -105,7 +105,7 @@ From this point, the next step is to try to capture the next letter, we can add 
 
 ![Image](/images/publications/ctf-hfbr/second-result.png)
 
-We quickly identified that the next correct letter is A. And, doing this a few more times, we will get to the following string: "HACKAFLAG". However, this is not our flag yet, we need to keep doing this brute-force to capture the rest of it. But we are only working with A through Z, and the flag is made up of other values, such as numbers, lowercase letters, and special characters.
+We quickly identified that the next correct letter is A. And, doing this a few more times, we will get to the following string: "HACKAFLAG". However, this is not our flag yet, we need to keep doing this brute-force to capture the rest of it. But we are only working with A through Z, and the flag is made up of others values, such as numbers, lowercase letters, and special characters.
 
 Therefore, we need to add to our character array all these values. A good way to do this is to copy this data from the ASCII table in order to avoid any other problems. In the end, the array you will use should look like this:
 
@@ -124,7 +124,7 @@ And then we can continue with brute-force:
 
 ![Image](/images/publications/ctf-hfbr/third-result.png)
 
-So far, we have the following piece of the flag: "HACKAFLAG {", so we can assume this is really working. However, if we keep running our script this way, and keep interacting the value manually, it will take a long time before we can find the flag, as well as being a rather boring activity and of course we can automate it.
+So far, we have the following piece of the flag: "HACKAFLAG{", so we can assume this is really working. However, if we keep running our script this way, and keep interacting the value manually, it will take a long time before we can find the flag, as well as being a rather boring activity and of course we can automate it.
 
 Our code, with intelligent automation of interaction and continuity would look like this:
 
@@ -145,7 +145,7 @@ sub find {
     my $char = shift;
     my $data = "";
 
-    my $socket = IO::Socket::INET->new(
+    my $socket = IO::Socket::INET -> new (
         PeerAddr => $target,
         PeerPort => $port,
         Proto    => "tcp",
