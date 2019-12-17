@@ -5,13 +5,13 @@ description: I just create things I need to see exist in the world
 og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
 ---
 
+## Write-Ups:
+
+- [CTF #HFBR19 Final - Solving "Login" programming challenge](/2019/03/12/hfbr19-login-prog-write-up)
+
 ## Bug Bounty Tips:
 
 - [How to better organize your notes while hunting for bugs](/stories/2019/06/11/organize-your-notes-bug-bounty)
-
-## Write-Ups
-
-- [CTF #HFBR19 Final - Solving "Login" programming challenge](/2019/03/12/hfbr19-login-prog-write-up)
 
 ## Security Advisories:
 
