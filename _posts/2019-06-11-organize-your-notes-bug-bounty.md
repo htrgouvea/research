@@ -51,3 +51,7 @@ This for example is a Checklist based on OTGv5. You can download the same by [cl
 -
 
 Switness is an incredible tool, but it by itself is still not enough. I still use a structured folder organization for the files, Quiver for more essay notes, the option for projects in the Burp Suite, and I also try to make my API-related tests in Insomnia well organized. Maybe someday I can write a little more about this in more detail.
+
+### Referencies
+
+- [https://github.com/ehrishirajsharma/SwiftnessX](https://github.com/ehrishirajsharma/SwiftnessX)

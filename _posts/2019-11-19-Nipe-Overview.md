@@ -72,6 +72,10 @@ Currently Nipe only supports IPv4, we are working on a solution to add IPv6 supp
 
 ## Internal Engineering
 
+### A little about the code
+
+Nipe follows some specific guidelines in its code, the first of which is the code design standard, referenced by: ["Perl Style Guide"](https://github.com/GouveaHeitor/perl-style-guide). In addition, the Design Pattern adopted is [FBP - Flow-Based Programming](), together with the concept of ["Minimalist Architecture"]();
+
 ### Install
 ### Start
 ### Stop
@@ -87,6 +91,7 @@ This work is licensed under [MIT License](https://github.com/GouveaHeitor/nipe/b
 
 ### Referencies
 
-- [https://tb-manual.torproject.org/about/](https://tb-manual.torproject.org/about/)
-- [https://github.com/GouveaHeitor/nipe](https://github.com/GouveaHeitor/nipe)
-- [https://2019.www.torproject.org/docs/documentation.html.en](https://2019.www.torproject.org/docs/documentation.html.en)
+- [Nipe](https://github.com/GouveaHeitor/nipe)
+- [About TOR Browser](https://tb-manual.torproject.org/about/)
+- [TOR Documentation](https://2019.www.torproject.org/docs/documentation.html.en)
+- [Perl Style Guide](https://github.com/GouveaHeitor/perl-style-guide)
