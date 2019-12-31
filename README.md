@@ -1,7 +1,7 @@
 
 <p align="center">
   <h3 align="center">heitorgouvea.me</h3>
-  <p align="center">Just a simple web page</p>
+  <p align="center">Just a simple web blog</p>
 
   <p align="center">
     <a href="https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md">
@@ -15,16 +15,27 @@
 
 ---
 
-```
-    [+] AUTOR:        Heitor Gouvêa
-    [+] SITE:         https://heitorgouvea.me
-    [+] EMAIL:        hi@heitorgouvea.me
-    [+] GITHUB:       https://github.com/GouveaHeitor
-```
-
 #### Stack
 
 - HTML5 / CSS3 / JS / Jekyll
+
+
+#### Download and Set-up
+
+```bash
+  # Download
+  $ git clone https://github.com/GouveaHeitor/gouveaheitor.github.io
+  $ cd gouveaheitor.github.io
+    
+  # Building docker image
+  $ docker build --rm --squash -t blog-jekyll .
+  
+  # Stop container
+  $ docker stop blog-jekyll
+
+  # Remove containers
+  $ docker rm blog-jekyll
+```
 
 #### Contribution
 
