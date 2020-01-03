@@ -7,7 +7,7 @@ og_image: https://heitorgouvea.me/images/publications/ctf-hfbr/timeout.png
 
 # #HFBR19 Final - Solving "Login" programming challenge
 
-## Introduction
+### Introduction
 
 The #HFBR19 is a Brazilian CTF that took place throughout 2019, organized by the Hackaflag team. This CTF had 12 quals, where each classification was held within an edition of Roadsec (an itinerant event that takes place in Brazil), each classification was held in a different state of Brazil, this ensuring a finalist from each region of the country.
 
@@ -198,7 +198,7 @@ And in the end, we got to Flag:
 
 -
 
-## Conclusion
+### Conclusion
 
 To conclude this post, I would just like to thank all [Hackaflag Team](https://hackaflag.com.br), and especially [Jeremias](https://twitter.com/j3r3m14s) for this super interesting challenge!
 

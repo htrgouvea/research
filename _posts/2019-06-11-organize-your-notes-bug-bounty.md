@@ -20,7 +20,7 @@ og_image: https://heitorgouvea.me/images/publications/swiftness/home.png
 
 A while time ago I did a Tweet about the importance of the effective organization on your annotations for Bug Bounty Hunting and I was asked about how I do it and through this article, I want to share my favorite tool.
 
-## SwiftnessX: "A cross-platform note-taking & target-tracking app for penetration testers"
+### SwiftnessX: "A cross-platform note-taking & target-tracking app for penetration testers"
 
 ![Image](/images/publications/swiftness/home.png)
 
