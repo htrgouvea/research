@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 'From an Open Redirect in a Brazillian Bank to Session Token Leak'
-description: 'Through a vulnerability on the financial institution's website it was possible leak the users session token and realize a account takeover.'
+description: 'Through a vulnerability on the financial institution website it was possible leak the users session token and realize a account takeover'
 og_image: https://heitorgouvea.me/images/publications/caixa-disclosure/email.png
 ---
 
