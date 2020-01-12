@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Heitor Gouvêa - Independent Researcher
-description: I just create things I need to see exist in the world
+description: I work with amazing companies on projects that help people, organizations, and companies take control of their own information.
 og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
 ---
 
