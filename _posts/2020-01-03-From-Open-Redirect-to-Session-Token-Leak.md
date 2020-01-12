@@ -162,7 +162,7 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 ### Time line
 
 ```bash
-    - PoC performed: 01/02/2020
+    - PoC performed: 01/01/2020
     - Reported Vulnerability: 07/01/2020
     - Confirmed Vulnerability: 07/01/2020
     - Vulnerability fix: 10/01/2020
