@@ -15,7 +15,7 @@ In the end of 2014, I started studying programming independently and by the end 
 
 In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects. 
 
-Some time after working as a Trainee, I worked as an Information Security Analyst in a Red Team with some amazing Brazilian Security Companies of Consulting, like: OGASEC, Deloitte Brazil and CIPHER; and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with my purpose. 
+Some time after working as a Trainee, I worked as an Information Security Analyst in a Red Team with some amazing Brazilian Security Companies of Consulting, like: OGASEC, Deloitte Brazil and CIPHER; and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with my purpose. You can see my curriculum [clicking here.](/files/resume.pdf)
 
 I am fascinated by the area of ​​offensive security, so I spend many hours studying this segment. In the past I won some prizes: first place in the CTF of Bsides São Paulo 16th, the qualification of Hackaflag in 2019 and first place in Hackathon of the City of Campinas in 2017. In the past, I reported some vulnerabilities in the following Brazilian Banks and FinTechs: Digio, Smart Bank, C6 Bank and Caixa Econômica Federal.
 
