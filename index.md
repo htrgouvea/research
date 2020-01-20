@@ -8,6 +8,7 @@ og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
 ## Publications:
 
 - [From an Open Redirect in a Brazilian Bank to Session Token Leak](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak)
+- [How to use Docker during your research and pentesting](0)
 
 ## Security Advisories:
 

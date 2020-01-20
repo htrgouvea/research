@@ -1,0 +1,25 @@
+I"V<h2 id="publications">Publications:</h2>
+
+<ul>
+  <li><a href="/2020/01/03/From-Open-Redirect-to-Session-Token-Leak">From an Open Redirect in a Brazilian Bank to Session Token Leak</a></li>
+  <li>[How to use Docker during your research and pentesting]</li>
+</ul>
+
+<h2 id="security-advisories">Security Advisories:</h2>
+
+<ul>
+  <li>Pydio Community Vulnerabilities: <a href="/2019/09/17/CVE-2019-15032">CVE-2019-15032</a> / <a href="2019/09/17/CVE-2019-15033">CVE-2019-15033</a></li>
+</ul>
+
+<h2 id="write-ups">Write-Ups:</h2>
+
+<ul>
+  <li><a href="/2019/03/12/hfbr19-login-prog-write-up">CTF #HFBR19 Final - Solving “Login” programming challenge</a></li>
+</ul>
+
+<h2 id="bug-bounty-tips">Bug Bounty Tips:</h2>
+
+<ul>
+  <li><a href="/stories/2019/06/11/organize-your-notes-bug-bounty">How to better organize your notes while hunting for bugs</a></li>
+</ul>
+:ET
