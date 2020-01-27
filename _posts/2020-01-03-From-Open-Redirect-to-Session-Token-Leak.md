@@ -55,6 +55,7 @@ This content in the **“?code=”** parameter aroused my curiosity. Understandi
 As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token. Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
 
 Determined to create a proof of concept from this theory, I wrote the following code:
+
 -
 ```perl
 #!/usr/bin/env perl
