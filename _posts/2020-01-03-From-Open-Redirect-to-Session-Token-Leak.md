@@ -13,7 +13,7 @@ Recently I started to test the security of Web and Mobile Applications of some B
 
 From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
 
-In this post I want to share with you an [“Open Redirect”](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
+In this post I want to share with you an [“Open Redirect”](https://portswigger.net/kb/issues/00500100_open-redirection-reflected) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
@@ -154,6 +154,8 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 
 ### Referencies
 
+[**https://portswigger.net/kb/issues/00500100_open-redirection-reflected**](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
+
 [**https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html**](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
 
 [**https://www.owasp.org/index.php/Session_hijacking_attack**](https://www.owasp.org/index.php/Session_hijacking_attack)
@@ -164,10 +166,10 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 
 ```bash
     - PoC performed: 01/01/2020
-    - Reported Vulnerability: 07/01/2020
+    - Reported Vulnerability: 05/01/2020
     - Confirmed Vulnerability: 07/01/2020
     - Vulnerability fix: 10/01/2020
-    - Publication of the article: 10/01/2020
+    - Publication of this article: 10/01/2020
 ```
 
 

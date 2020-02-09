@@ -1,10 +1,9 @@
 _site
 *._
+._*
 .sass-cache
 .asset-cache
 .jekyll_cache/
 .jekyll_cache
 .idea
-resumecard.iml
-/*.iml
 *.DS_Store
