@@ -1,21 +1,20 @@
 title: Heitor Gouvêa
-url: "https://heitorgouvea.me"
-baseurl: ""
-og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
-twitter_username: '@GouveaHeitor'
+description: >
+    I work with amazing companies on projects that help people, organizations, and companies take control of their own information.
+author: Heitor Gouvêa
+email: hi@heitorgouvea.me
+baseurl: "" 
+url: "https://heitorgouvea.me" 
+twitter_username: GouveaHeitor
+github_username:  GouveaHeitor
+include: [_pages]
 markdown: kramdown
-description: "I work with amazing companies on projects that help people, organizations, and companies take control of their own information."
-author: "@GouveaHeitor"
-tracking_id: UA-105655736-1
-
-footer: yes
-footer_url: "https://heitorgouvea.me"
-footer_text: "© 2020 Heitor Gouvêa. All rights reserved."
-
+permalink: /:year/:month/:day/:title
 sass:
     style: compressed
-    sass_dir: _sass
 
-nav:
- - name: "About"
-   link: "/about"
+gems:
+  - jemoji
+  - jekyll-sitemap
+
+google_analytics: UA-105655736-1

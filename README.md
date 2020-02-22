@@ -1,6 +1,6 @@
 
 <p align="center">
-  <h3 align="center">heitorgouvea.me</h3>
+  <h3 align="center">gouveaheitor.github.io</h3>
   <p align="center">Just a simple web blog</p>
 
   <p align="center">
@@ -17,8 +17,7 @@
 
 #### Stack
 
-- HTML5 / CSS3 / JS / Jekyll
-
+- HTML5 / CSS3 / SASS / JS / Jekyll
 
 #### Download and Set-up
 
@@ -39,9 +38,8 @@
 
 #### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [**See here the contribution guidelines.**](/.github/CONTRIBUTING.md) Please, report bugs via [**issues page.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues) See here the [**security policy.**](./github/SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [**See here the contribution guidelines.**](/.github/CONTRIBUTING.md) Please, report bugs via [**issues page.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues) See here the [**security policy.**](./SECURITY.md) (✿ ◕‿◕) 
 
 #### License
 
-- This work is licensed under [**MIT License.**](https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md)
-
+- This work is licensed under [**MIT License.**](./LICENSE.md)

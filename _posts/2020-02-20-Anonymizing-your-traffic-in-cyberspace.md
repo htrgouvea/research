@@ -1,13 +1,13 @@
 ---
-layout: default
-title: '[DRAFT] - A technical overview about the Nipe'
+layout: content
+title: 'Anonymizing your traffic in cyberspace: a approach about TOR Network'
+
+
 description: 'TOR enables users to surf the internet, chat and send instant messages anonymously,  and is used by a wide variety of people for both licit and illicit purposes. TOR has, for example, been used by criminals enterprises, hacktivism groups, and law enforcement  agencies at cross purposes, sometimes simultaneously.'
-og_image: https://heitorgouvea.me/images/publications/nipe-overview/thumb.png
+og_image: https://heitorgouvea.me/images/publications/nipe-research/thumb.png
 ---
 
-# [DRAFT] A technical overview about the Nipe
-
-![Image](/images/publications/nipe-overview/logo.png){:height="230px" width="180px"}
+![Image](/images/publications/nipe-research/logo.png){:height="230px" width="180px"}
 
 ## WARNING
 

@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Heitor Gouvêa - Independent Researcher
-description: I just create things I need to see exist in the world
-og_image: https://heitorgouvea.me/images/photos/heitor-gouvea.png
+layout: page
+title: About
+permalink: /about
 ---
 
 ## About me
@@ -21,10 +20,6 @@ I am fascinated by the area of ​​offensive security, so I spend many hours s
 
 I audited high-profile sites for security vulnerabilities and worked on teams of software developers and computer scientists, providing high-security architectures. My work is focused on understanding threat models, analyzing existing applications, and building smart tools to combat the current and future security risk for individuals or groups.
 
-Security Advisories: [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](2019/09/17/CVE-2019-15033);
+* Security Advisories: [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](/2019/09/17/CVE-2019-15033);
 
-## Contact
-
-* Email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
-* Twitter: [/GouveaHeitor](https://twitter.com/GouveaHeitor)
-* Github: [/GouveaHeitor](https://github.com/GouveaHeitor)
+* My personal e-mail: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
