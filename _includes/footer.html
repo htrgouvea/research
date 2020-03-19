@@ -10,4 +10,13 @@
 		{% endif %}
 	</p>
 </footer>
+
+<script>
+	var host = "heitorgouvea.me"
+
+	if (window.location.host == host && window.location.protocol != "https:") {
+		window.location.protocol = "https:"
+	}
+</script>
+
 {% include googleanalytics.html %}
