@@ -6,7 +6,7 @@ permalink: /about
 
 ## About me
 
-My name is Heitor "D3LET" Gouvêa and I just create things I need to see exist in the world; I am currently working on projects that help people, organizations, and companies take control of their own information.
+My name is Heitor "D3LET" Gouvêa and I just create things that put my soul; I am always working on projects that make security democratization possible.
 
 ### My way here
 
