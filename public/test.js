@@ -1,3 +1,1 @@
-<script>
-    alert(localStorage.currentUser);
-</script>
+alert(localStorage.currentUser);
