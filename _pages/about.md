@@ -21,6 +21,6 @@ I am fascinated by the area of ​​offensive security, so I spend many hours s
 I audited high-profile sites for security vulnerabilities and worked on teams of software developers and computer scientists, providing high-security architectures. My work is focused on understanding threat models, analyzing existing applications, and building smart tools to combat the current and future security risk for individuals or groups.
 
 * Security Advisories: 
-    - [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](/2019/09/17/CVE-2019-15033) / CVE-2020-9376 / CVE-2020-9377
+    - [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](/2019/09/17/CVE-2019-15033) / [CVE-2020-9376](/2020/03/04/CVE-2020-9376) / [CVE-2020-9377](/2020/03/04/CVE-2020-9377)
 
 * My personal e-mail: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
