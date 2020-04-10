@@ -24,7 +24,6 @@ permalink: /projects/uranus
 
 ---
 
-
 ### How it works
 
 ```
@@ -34,6 +33,8 @@ permalink: /projects/uranus
 ```
 
 ![Image](/images/projects/uranus/architecture.png)
+
+---
 
 ### Download and setup:
 
@@ -61,9 +62,13 @@ permalink: /projects/uranus
   $ docker run
 ```
 
+---
+
 ### Contribution
 
 - Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/uranus/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/uranus/issues) See here the [security policy.](https://github.com/GouveaHeitor/uranus/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+
+---
 
 ### License
 

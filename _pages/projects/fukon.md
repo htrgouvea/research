@@ -27,6 +27,9 @@ permalink: /projects/fukon
     $ cd fukon
     $ cpan install Getopt::Long LWP::UserAgent HTTP::Request
 ```
+
+---
+
 ### How to use
 
 ```bash
@@ -54,9 +57,13 @@ permalink: /projects/fukon
     ...
 ```
 
+---
+
 ### Contribution
 
 - Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/fukon/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/fukon/issues) See here the [security policy.](https://github.com/GouveaHeitor/fukon/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+
+---
 
 ### License
 
