@@ -33,7 +33,7 @@ permalink: /projects/uranus
   exposed sensitive files and data exfiltration attempts.
 ```
 
-![Image](https://i.imgur.com/VRXVgt3.png)
+![Image](/images/projects/uranus/architecture.png)
 
 ### Download and setup:
 
@@ -63,8 +63,8 @@ permalink: /projects/uranus
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/uranus/issues) See here the [security policy.](./github/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://github.com/GouveaHeitor/perl-style-guide).
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/uranus/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/uranus/issues) See here the [security policy.](https://github.com/GouveaHeitor/uranus/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
 
 ### License
 
-- This work is licensed under [MIT License.](/LICENSE.md)
+- This work is licensed under [MIT License.](https://github.com/GouveaHeitor/uranus/blob/master/LICENSE.md)

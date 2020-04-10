@@ -6,7 +6,7 @@ permalink: /projects/nipe
 ---
 
 <p align="center">
-  <img src="/images/publications/nipe-research/logo.png">
+  <img src="/images/projects/nipe/logo.png">
   <p align="center">A engine to make Tor Network your default gateway.</p>
 
   <p align="center">
@@ -71,8 +71,7 @@ permalink: /projects/nipe
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/nipe/issues) See here the [security policy.](./github/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://github.com/GouveaHeitor/perl-style-guide).
-
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/nipe/blob/master/.github/CONTRIBUTING.md)) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/nipe/issues) See here the [security policy.](https://github.com/GouveaHeitor/nipe/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
 
 ### License
 

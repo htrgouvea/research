@@ -54,21 +54,9 @@ permalink: /projects/fukon
     ...
 ```
 
-### To do
-
-  - Customize a header
-  - Customize verbs http
-  - Fuzzing parameters
-  - Fuzzing content-type
-  - Implement multithread
-  - Improve return/exclude filters
-  - Create a option for output in json format supported by postman
-  - Create a Dockerfile
-  - Fuzzing recursive
-
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/fukon/issues) See here the [security policy.](./github/SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/fukon/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/fukon/issues) See here the [security policy.](https://github.com/GouveaHeitor/fukon/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
 
 ### License
 

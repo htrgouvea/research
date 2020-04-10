@@ -72,7 +72,7 @@ sub my_method {
 
 #### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/perl-style-guide/issues) See here the [security policy.](./github/SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/perl-style-guide/issues) See here the [security policy.](https://github.com/GouveaHeitor/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕) 
 
 #### License
 

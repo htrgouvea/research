@@ -38,12 +38,12 @@ permalink: /projects/security-spellbook
 
   Tool |  Category | Description | Link
   ---- | ---- | ---- | ----
-  verbshttp.pl | Fuzzing | A tool to fuzzing all HTTP verbs | [View]()
-  hunter.pl | Recon | Extract all e-mails collected by hunter.io | [View](/recon/hunter.pl)
+  verbshttp.pl | Fuzzing | A tool to fuzzing all HTTP verbs | [View](https://github.com/GouveaHeitor/security-spellbook/blob/master/fuzzing/verbshttp.pl)
+  hunter.pl | Recon | Extract all e-mails collected by hunter.io | [View](https://github.com/GouveaHeitor/security-spellbook/blob/master/recon/hunter.pl)
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/security-spellbook/issues) See here the [security policy.](./SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://github.com/GouveaHeitor/perl-style-guide).
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/security-spellbook/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/security-spellbook/issues) See here the [security policy.](https://github.com/GouveaHeitor/security-spellbook/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
  
 ### License
 
