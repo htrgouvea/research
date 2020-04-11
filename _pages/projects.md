@@ -2,6 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects
+description: During my independent research and personal projects I end up creating some tools of my own to solve a problem that I believe is recurring, and on this page you can check out some of these projects that are currently open-source
 ---
 
 ## My projects
