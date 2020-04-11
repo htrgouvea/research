@@ -20,7 +20,6 @@ permalink: /projects/nipe
 
 ---
 
-
 ### How it works
 
 The Tor project allows users to surf the Internet, chat and send instant messages anonymously through its own mechanism. It is used by a wide variety of people, companies and organizations, both for lawful activities and for other illicit purposes. Tor is already gone and is used for example by criminal companies, hacking groups, intelligence agencies and even ordinary users who care about privacy in the digital world. 

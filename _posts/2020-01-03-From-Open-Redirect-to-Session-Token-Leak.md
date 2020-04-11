@@ -2,7 +2,7 @@
 layout: content
 title: 'From an Open Redirect in a Brazilian Bank to Session Token Leak'
 description: 'Through a vulnerability on the financial institution website it was possible leak the users session token and realize a account takeover'
-og_image: https://heitorgouvea.me/images/publications/caixa-disclosure/email.png
+og_image: /images/publications/caixa/email-poc.png
 ---
 
 ### Introduction:
@@ -15,13 +15,13 @@ In this post I want to share with you an [“Open Redirect”](https://portswigg
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
--
+---
 
 ### The vulnerability
 
 While browsing the web pages of the Caixa Federal systems, I came across an authentication screen where access credentials were requested:
 
-![](/images/publications/caixa-disclosure/home.png)
+![Caixa Federal Home Page Website](/images/publications/caixa/home-page.png)
 
 -
 
@@ -52,9 +52,12 @@ This content in the **“?code=”** parameter aroused my curiosity. Understandi
 
 As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token. Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
 
-Determined to create a proof of concept from this theory, I wrote the following code:
+---
 
--
+### Proof Of Concept
+
+Determined to create a PoC from this theory, I wrote the following code:
+
 ```perl
 #!/usr/bin/env perl
 # Use: perl catcher.pl daemon -m production -l http://*:80
@@ -92,7 +95,6 @@ And this was the result:
 
 <iframe width="700" height="612" src="https://www.youtube.com/embed/l2ZpggLSz_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
-
 --
 
 The PoC performed was relatively simple, capturing only the Session Token, but other information could be captured, such as, but not limited to: User IP, Browser UserAgent. This way we could know your browser, operating system, screen size and other even more critical information - such information could be used for example to make a fingerprint of the user.
@@ -107,7 +109,7 @@ On the same page, there is a function to request the password change, in the but
 
 Asking for a new password from the malicious URL, the email content will be as follows:
 
-![](/images/publications/caixa-disclosure/email.png)
+![Caixa Federal Email Forgot Password](/images/publications/caixa/email-poc.png)
 
 -
 
@@ -117,30 +119,29 @@ I accessed the link, filled in the password reset and again the redirection work
 
 This way, I can use this mechanism to send emails requesting a password reset on behalf of Caixa Econômica Federal, creating greater reliability for the user to access my malicious link, and this attack can be performed on a large scale, since I only need the target's CPF (Social Security Number).
 
--
+---
+
+### Impact
 
 If an attacker exploits these vulnerabilities, he will be able to view some confidential user information, below I will leave some examples:
 
--
-
-![](/images/publications/caixa-disclosure/confidential-data-user.png)
+![Caixa Federal Confidential Data User](/images/publications/caixa/confidential-data-user.png)
 
 - Full Name, CPF (Social Security Number), Last Access Date & Time
 
 -
 
-![](/images/publications/caixa-disclosure/confidential-data-fgts.png)
+![Caixa Federal Confidential Data FGTS](/images/publications/caixa/confidential-data-fgts.png)
 
 - Full Name, PIS Number, Contracting Company, Work Card Number, FGTS Account, Admission Date, Total Account Balance and also the amount deposited each month during the period worked at the Company
 
 -
 
-![](/images/publications/caixa-disclosure/confidential-data-andress.png)
+![Caixa Federal Confidential User Andress](/images/publications/caixa/confidential-user-andress.png)
 
 - User's full address (You can change this data, password is not required)
 
--
-
+---
 
 ### Conclusion:
 
@@ -150,6 +151,8 @@ The effort to perform this exploration is relatively small and simple, but the r
 
 I strongly believe that this vulnerability was being exploited by malicious people to perform some types of scams by redirecting the user to phishing and related pages. I hope the Caixa Federal recognizes this scenario and conducts a survey to measure the real internal impact of this vulnerability and whether it was actually used by criminals.
 
+---
+
 ### Referencies
 
 [**https://portswigger.net/kb/issues/00500100_open-redirection-reflected**](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
@@ -158,7 +161,7 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 
 [**https://www.owasp.org/index.php/Session_hijacking_attack**](https://www.owasp.org/index.php/Session_hijacking_attack)
 
---
+---
 
 ### Time line
 
@@ -169,8 +172,3 @@ I strongly believe that this vulnerability was being exploited by malicious peop
     - Vulnerability fix: 10/01/2020
     - Publication of this article: 10/01/2020
 ```
-
-
-     
-     
-     
