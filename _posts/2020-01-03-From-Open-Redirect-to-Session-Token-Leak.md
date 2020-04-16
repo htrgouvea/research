@@ -5,7 +5,7 @@ description: 'Through a vulnerability on the financial institution website it wa
 og_image: https://heitorgouvea.me/images/publications/caixa/email-poc.png
 ---
 
-### Introduction:
+### Introduction
 
 Recently I started to test the security of Web and Mobile Applications of some Brazilian Banks, I am not sure why this initiative really made me, maybe it's just the feeling of wanting to find more restricted vulnerabilities than common ones.
 
@@ -143,7 +143,7 @@ If an attacker exploits these vulnerabilities, he will be able to view some conf
 
 ---
 
-### Conclusion:
+### Conclusion
 
 A particular attacker could easily exploit the vulnerabilities mentioned above and thus violate the confidentiality of various legitimate user accounts by accessing confidential information and in some cases also violating the integrity of some specific information.
 
