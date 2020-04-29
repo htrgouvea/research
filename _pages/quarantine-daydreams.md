@@ -2,11 +2,12 @@
 layout: page
 title: Quarantine Daydreams 2k20
 permalink: /quarantine-daydreams
+og_image: https://heitorgouvea.me/images/publications/quarantine-daysdreams/section.jpg
 ---
 
 ## QUARANTINE DAYDREAMS 2K20_
 
-![Image](/images/publications/quarantine-dreams-days/section.jpg)
+![Image](/images/publications/quarantine-daysdreams/section.jpg)
 
 Experimentação sempre foi uma das minhas habilidades mais fortes e isso sempre demonstrou muito valor para meus projetos pessoas e profissionais. Acho que isso vem da minha falta de medo em errar, pois sei que enquanto eu estiver errando, estarei aprendendo.
 
