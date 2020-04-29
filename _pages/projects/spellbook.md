@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Security Spellbook
+title: Spellbook
 description: 'My collection of custom scripts, plugins, exploits and others small things'
-permalink: /projects/security-spellbook
+permalink: /projects/spellbook
 ---
 
 <p align="center">
-  <h3 align="center">Security Spellbook</h3>
+  <img src="/images/projects/spellbook/logo.png" width="150px" height="150px">
+  <h2 align="center">Spellbook</h2>
   <p align="center">My collection of custom scripts, plugins, exploits and others small things</p>
   <p align="center">
     <a href="https://github.com/GouveaHeitor/security-spellbook/blob/master/LICENSE.md">

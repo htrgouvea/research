@@ -15,6 +15,6 @@ During my independent research and personal projects I end up creating some tool
 
 * [Uranus](/projects/uranus): an ecosystem of crawlers for detecting: leaks, sensitive data exposure and attempts exfiltration of data;
 
-* [Security Spellbook](/projects/security-spellbook): my collection of custom scripts, plugins, exploits and others small things;
+* [Spellbook](/projects/spellbook): my collection of custom scripts, plugins, exploits and others small things;
 
 * [Perl Style Guide](/projects/perl-style-guide): a starting point for Perl development teams to provide consistency through good practices;
