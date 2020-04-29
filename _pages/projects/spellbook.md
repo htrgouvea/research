@@ -10,10 +10,10 @@ permalink: /projects/spellbook
   <h2 align="center">Spellbook</h2>
   <p align="center">My collection of custom scripts, plugins, exploits and others small things</p>
   <p align="center">
-    <a href="https://github.com/GouveaHeitor/security-spellbook/blob/master/LICENSE.md">
+    <a href="https://github.com/GouveaHeitor/spellbook/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/GouveaHeitor/security-spellbook/releases">
+    <a href="https://github.com/GouveaHeitor/spellbook/releases">
       <img src="https://img.shields.io/badge/version-0.1.3-blue.svg">
     </a>
   </p>
@@ -24,8 +24,8 @@ permalink: /projects/spellbook
 ### Download & Install
 
 ```bash 
-    git clone https://github.com/GouveaHeitor/security-spellbook
-    cd security-spellbook
+    git clone https://github.com/GouveaHeitor/spellbook
+    cd spellbook
 
     # Building image
     $ docker build --rm --squash -t kali .
@@ -39,17 +39,17 @@ permalink: /projects/spellbook
 
   Tool |  Category | Description | Link
   ---- | ---- | ---- | ----
-  verbshttp.pl | Fuzzing | A tool to fuzzing all HTTP verbs | [View](https://github.com/GouveaHeitor/security-spellbook/blob/master/fuzzing/verbshttp.pl)
-  hunter.pl | Recon | Extract all e-mails collected by hunter.io | [View](https://github.com/GouveaHeitor/security-spellbook/blob/master/recon/hunter.pl)
+  verbshttp.pl | Fuzzing | A tool to fuzzing all HTTP verbs | [View](https://github.com/GouveaHeitor/spellbook/blob/master/fuzzing/verbshttp.pl)
+  hunter.pl | Recon | Extract all e-mails collected by hunter.io | [View](https://github.com/GouveaHeitor/spellbook/blob/master/recon/hunter.pl)
 
 ---
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/security-spellbook/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/security-spellbook/issues) See here the [security policy.](https://github.com/GouveaHeitor/security-spellbook/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/spellbook/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/spellbook/issues) See here the [security policy.](https://github.com/GouveaHeitor/spellbook/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
 
 ---
  
 ### License
 
-- This work is licensed under [MIT License.](https://github.com/GouveaHeitor/security-spellbook/blob/master/LICENSE.md)
+- This work is licensed under [MIT License.](https://github.com/GouveaHeitor/spellbook/blob/master/LICENSE.md)
