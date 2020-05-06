@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Nozaki
-description: 'A simple and complete HTTP fuzzer engine security oriented'
+description: 'A HTTP fuzzer engine security oriented'
 permalink: /projects/nozaki
 ---
 
 <p align="center">
   <h3 align="center"><b>Nozaki</b></h3>
-  <p align="center">A simple and complete HTTP fuzzer engine security oriented</p>
+  <p align="center">A HTTP fuzzer engine security oriented</p>
   <p align="center">
     <a href="https://github.com/GouveaHeitor/nozaki/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -23,8 +23,7 @@ permalink: /projects/nozaki
 ### Download & Install
 
 ```bash 
-    $ git clone https://github.com/GouveaHeitor/nozaki
-    $ cd nozaki
+    $ git clone https://github.com/GouveaHeitor/nozaki && cd nozaki
     $ cpan install Getopt::Long LWP::UserAgent HTTP::Request
 ```
 
