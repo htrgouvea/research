@@ -11,7 +11,7 @@ During my independent research and personal projects I end up creating some tool
 
 * [Nipe:](/projects/nipe) a engine to make Tor Network your default gateway;
 
-* [Nozaki](/projects/nozaki): a simple and complete HTTP fuzzer engine security oriented;
+* [Nozaki](/projects/nozaki): a HTTP fuzzer engine security oriented;
 
 * [Uranus](/projects/uranus): an ecosystem of crawlers for detecting: leaks, sensitive data exposure and attempts exfiltration of data;
 
