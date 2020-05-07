@@ -5,7 +5,7 @@ description: 'Through a vulnerability on the financial institution website it wa
 og_image: https://heitorgouvea.me/images/publications/write-ups/caixa/email-poc.png
 ---
 
-### Introduction
+### Summary
 
 Recently I started to test the security of Web and Mobile Applications of some Brazilian Banks, I am not sure why this initiative really made me, maybe it's just the feeling of wanting to find more restricted vulnerabilities than common ones.
 
@@ -17,7 +17,7 @@ It is worth clarifying that during all tests the only account used was mine and 
 
 ---
 
-### The vulnerability
+### Description
 
 While browsing the web pages of the Caixa Federal systems, I came across an authentication screen where access credentials were requested:
 
