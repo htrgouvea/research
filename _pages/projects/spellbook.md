@@ -53,6 +53,15 @@ Here you will find a "spellbook" with my personal scripts, exploits and other sm
   github.pl | Recon | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/recon/github.pl)
   pastebin.pl | Recon | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/recon/pastebin.pl)
   zoomeye.pl | Recon | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/recon/zoomeye.pl)
+  ---------- | Fuzzing | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/fuzzing/---.pl)
+  wp_username_leak.pl | Exploit | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/exploits/wp_username_leak.pl)
+  apk_sing.pl | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/apk_sing.pl)
+  catcher.pl | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/catcher.pl)
+  exifs.pl | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/exifs.pl)
+  firebase.py | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/firebase.py)
+  gen_favicon_hash.py | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/gen_favicon_hash.py)
+  getip.py | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/getip.py)
+  resolv.py | Misc | ------ | [View](https://github.com/GouveaHeitor/spellbook/blob/master/misc/resolv.py)
 
 ---
 
