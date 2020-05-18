@@ -9,11 +9,11 @@ permalink: /projects/perl-style-guide
   <h3 align="center">Perl Style Guide</h3>
   <p align="center">A starting point for Perl development teams to provide consistency through good practices </p>
   <p align="center">
-    <a href="https://github.com/GouveaHeitor/perl-style-guide/blob/master/LICENSE.md">
+    <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
     <a href="https://github.com/GouveaHeitor/perl-style-guide/releases">
-      <img src="https://img.shields.io/badge/version-0.1.1-blue.svg">
+      <img src="https://img.shields.io/badge/version-0.1.3-blue.svg">
     </a>
   </p>
 </p>
@@ -41,35 +41,58 @@ This project is just one of several other coding style guides, there is no inten
 - Try to limit your code to 72-78 column lines...
   - But don't stress over it. Real world code often has very long sentences, and trying to force them to be below 78 columns leads to tight, but ugly code. In a nutshell: <= 72 is perfect, <= 78 is great, > 78 is not as bad as some folks might try to make you believe.
   
----
+- Use two spaces per indentation level. The main advantage being that it makes it a bit more difficult for undisciplined coders to insert tabs all over the place. Decreasing the level of indentation also helps in keeping a maximum of 78 column lines.
 
+- Do not use tabs. It makes code difficult to browse in some hosts (where 8 spaces per tab is the standard) and only works when indenting by blocks.
+
+---
+  
 #### Good practices  
 
 ```perl
-  # Don't do this:
-  my $string =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua.";
+# Don't do this:
+my $string =
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua.";
 
-  # Do this instead:
-  my $string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua."
+# Do this instead:
+my $string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua."
 
-  my $fn = sub {$_[0] + 1};              # Bad
-  my $fn = sub { $_[0] + 1 };            # Good
+my $fn = sub {$_[0] + 1};              # Bad
+my $fn = sub { $_[0] + 1 };            # Good
+```
+
+* Don't cuddle an else.
+
+```perl
+## Good
+if (condition) {
+  ...
+}
+else {
+  ...
+}
+
+## Bad.
+if (condition) {
+  ...
+} else {
+  ...
+}
 ```
 
 ```perl
-  # Bad
-  sub my_method {
-    my $self = shift;
-    my %params = @_;
-    ...
-  }
+# Bad
+sub my_method {
+  my $self = shift;
+  my %params = @_;
+  ...
+}
 
-  # Good
-  sub my_method {
-    my ($self, %params) = @_;
-    ...
-  }
+# Good
+sub my_method {
+  my ($self, %params) = @_;
+  ...
+}
 ```
 
 ---
