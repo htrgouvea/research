@@ -19,6 +19,8 @@
 
 - HTML5 / CSS3 / SASS / JS / Jekyll
 
+---
+
 #### Download and Set-up
 
 ```bash
@@ -36,9 +38,13 @@
   $ docker rm blog-jekyll
 ```
 
+---
+
 #### Contribution
 
 - Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues) See here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
+
+---
 
 #### License
 
