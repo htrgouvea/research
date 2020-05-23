@@ -12,7 +12,7 @@ My name is Heitor "D3LET" Gouvêa and I just create things that put my soul; I a
 
 In the end of 2014, I started studying programming independently and by the end of 2015 I was already fascinated by the world of offensive information security.
 
-In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects. 
+In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects.
 
 Some time after working as a Trainee, I worked as an Information Security Analyst in a Red Team with some amazing Brazilian Security Companies of Consulting, like: OGASEC, Deloitte Brazil and CIPHER; and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with my purpose.
 

@@ -30,7 +30,6 @@
         color: $text-color;
         line-height: $base-line-height;
 
-        // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-left: 20px;
         }
@@ -81,11 +80,6 @@
     }
 }
 
-
-
-/**
- * Site footer
- */
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
