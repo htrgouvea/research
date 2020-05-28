@@ -6,60 +6,49 @@ permalink: /projects/uranus
 ---
 
 <p align="center">
-  <img src="/images/projects/uranus/logo.jpg" height="200px" width="200px">
-  <p align="center">"if i reach out my hands, they touch your privacy"</p>
   <h1 align="center">Uranus</h1>
   <p align="center">
     An ecosystem of crawlers for detecting: leaks, sensitive data exposure and attempts exfiltration of data
   </p>
   <p align="center">
-    <a href="https://github.com/GouveaHeitor/uranus/blob/master/LICENSE.md">
+    <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
     <a href="https://github.com/GouveaHeitor/uranus/releases">
-      <img src="https://img.shields.io/badge/version-0.1.1-blue.svg">
+      <img src="https://img.shields.io/badge/version-0.1.3-blue.svg">
     </a>
   </p>
 </p>
 
+⚠️ __Warning:__ Uranus is currently in __development__, you've been warned :) and please consider [contributing!](/.github/CONTRIBUTING.md)
+
 ---
 
-### How it works
+### Summary
 
-```
-  This project is summarized in several crawlers that constitute a single ecosystem, that monitor certain
-  channels such as: Github, Bing, Pastebin and iHaveBeenPwned? in order to perform data leak detection,
-  exposed sensitive files and data exfiltration attempts.
-```
+This project is summarized in several crawlers that constitute a single ecosystem, that monitor certain channels such as: Github, Bing, Pastebin and iHaveBeenPwned? in order to perform data leak detection, exposed sensitive files and data exfiltration attempts.
 
 ![Image](/images/projects/uranus/architecture.png)
 
 ---
 
-### Download and setup:
+### Download and setup
 
 ```bash
   # Download
-  $ git clone https://github.com/GouveaHeitor/uranus
-  $ cd uranus
+  $ git clone https://github.com/GouveaHeitor/uranus && cd uranus
 
-  # Building MariaDB Database
-  $ docker build --rm --squash -t uranus-database ./database/
+  # Building and starting MariaDB Database
+  $ docker build --rm --squash -t uranus-database ./rest-server/migrations/
+  $ docker run -d -p 3306:3306 --name database -e MARIADB_ROOT_PASSWORD=mypassword uranus-database
 
-  # Starting MariaDB container
-  $ docker run -d -p 3306:3306 --name maria -e MARIADB_ROOT_PASSWORD=mypassword uranus-database
-
-  # Building all crawlers containers
-  $ docker build --rm --squash -t uranus-pastebin-crawler ./crawlers/pastebin/
-  $ docker build --rm --squash -t uranus-bing-crawler ./crawlers/bing/
-  $ docker build --rm --squast -t uranus-github-crawler ./crawlers/github/
-  $ docker build --rm --squash -t uranus-ihavebeenpwned-crawler ./crawlers/ihavebeenpwned
+  # Building all crawlers and workers containers
+  $ docker build --rm --squash -t bing-crawler ./crawlers/bing/
+  $ docker build --rm --squash -t email-notify ./workers/email-notify
 
   # Running all crawlers
-  $ docker run 
-  $ docker run
-  $ docker run
-  $ docker run
+  $ docker run -d --name bing bing-crawler
+  $ docker run -d --name email-notify email-notify
 ```
 
 ---

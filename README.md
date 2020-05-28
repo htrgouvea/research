@@ -25,17 +25,11 @@
 
 ```bash
   # Download
-  $ git clone https://github.com/GouveaHeitor/gouveaheitor.github.io
-  $ cd gouveaheitor.github.io
+  $ git clone https://github.com/GouveaHeitor/gouveaheitor.github.io && cd gouveaheitor.github.io
     
-  # Building docker image
+  # Building and running docker image
   $ docker build --rm --squash -t blog-jekyll .
-  
-  # Stop container
-  $ docker stop blog-jekyll
-
-  # Remove containers
-  $ docker rm blog-jekyll
+  $ docker run -d -p 4000:4000 --name heitorgouvea.me blog-jekyll
 ```
 
 ---
