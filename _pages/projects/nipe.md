@@ -14,7 +14,7 @@ permalink: /projects/nipe
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
     <a href="https://github.com/GouveaHeitor/nipe/releases">
-      <img src="https://img.shields.io/badge/version-0.9.3-blue.svg">
+      <img src="https://img.shields.io/badge/version-0.9.4-blue.svg">
     </a>
   </p>
 </p>
@@ -41,12 +41,12 @@ All non-local UDP/ICMP traffic is also blocked by the Tor project.
   $ git clone https://github.com/GouveaHeitor/nipe && cd nipe
     
   # Install libs and dependencies
-  $ sudo cpan install Config::Simple JSON
+  $ sudo cpan install Try::Tiny Config::Simple JSON
   $ perl nipe.pl install
 ```
 ---
 
-### Commands:
+### Commands
 ```bash
   COMMAND          FUNCTION
   install          Install dependencies
@@ -64,6 +64,11 @@ All non-local UDP/ICMP traffic is also blocked by the Tor project.
   perl nipe.pl status
 ```
 ---
+
+### Demo
+
+![Image](/images/projects/nipe/demo.gif)
+
 
 ### Contribution
 
