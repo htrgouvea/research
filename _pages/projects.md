@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Projects
+title: Projects - Heitor Gouvêa
 permalink: /projects
-description: During my independent research and personal projects I end up creating some tools of my own to solve a problem that I believe is recurring, and on this page you can check out some of these projects that are currently open-source
+description: During my independent research I end up creating some tools of my own to solve some problems that I believe is recurring, and on this page, you can check out some of these projects that are currently open-source
 ---
 
-## My projects
+## My research projects
 
-During my independent research and personal projects I end up creating some tools of my own to solve a problem that I believe is recurring, and on this page you can check out some of these projects that are currently open-source:
+During my independent research, I developed some research projects in order to solve some types of recurring problems or validate a theory discovered during some of my research and, on this page, you can check out some of these currently open source projects:
 
 * [Nipe:](/projects/nipe) a engine to make Tor Network your default gateway;
 
@@ -15,6 +15,6 @@ During my independent research and personal projects I end up creating some tool
 
 * [Uranus](/projects/uranus): an ecosystem of crawlers for detecting: leaks, sensitive data exposure and attempts exfiltration of data;
 
-* [Spellbook](/projects/spellbook): my collection of custom scripts, plugins, exploits and others small things;
+* [Spellbook](/projects/spellbook): a micro-framework for rapid development of reusable security tools;
 
 * [Perl Style Guide](/projects/perl-style-guide): a starting point for Perl development teams to provide consistency through good practices;
