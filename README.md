@@ -15,9 +15,11 @@
 
 ---
 
-#### Stack
+#### Summary
 
-- HTML5 / CSS3 / SASS / JS / Jekyll
+This repository stores all the structure, code and files of my personal website ([https://heitorgouvea.me](https://heitorgouvea.me)).
+
+My website was developed using Jekyll. Its basic structure revolves around this and some HTML5, CSS3 (with sass) and JavaScript files.
 
 ---
 
