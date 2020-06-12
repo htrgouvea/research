@@ -20,5 +20,5 @@ jobs:
         
     - name: Run Insider
       run: |
-        ./insider-linux-amd64 -tech javascript -target gouveaheitor.github.io/
+        ./insider-linux-amd64 -tech javascript -target .
         cat results/report.json
