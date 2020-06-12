@@ -14,8 +14,12 @@ jobs:
       run: |
         wget https://github.com/insidersec/insider/releases/download/1.0.1/insider-linux-amd64
         chmod +x insider-linux-amd64
-
+        
+    - name: Download the source code
+      run: |
+        git clone https://github.com/GouveaHeitor/gouveaheitor.github.io
+        
     - name: Run Insider
       run: |
-        ./insider-linux-amd64 -tech javascript -target .
+        ./insider-linux-amd64 -tech javascript -target gouveaheitor.github.io/
         cat results/report.json
