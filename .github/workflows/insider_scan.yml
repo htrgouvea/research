@@ -13,7 +13,9 @@ jobs:
     - name: Get Insider
       run: |
         wget https://github.com/insidersec/insider/releases/download/1.0.1/insider-linux-amd64
+        chmod +x insider-linux-amd64
 
     - name: Run Insider
       run: |
         ./insider-linux-amd64 -tech javascript -target .
+        cat results/report.json
