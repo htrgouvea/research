@@ -9,15 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-
+    - name: Download the source code
+      run: |
+        git clone https://github.com/GouveaHeitor/gouveaheitor.github.io
+        
     - name: Get Insider
       run: |
         wget https://github.com/insidersec/insider/releases/download/1.0.1/insider-linux-amd64
         chmod +x insider-linux-amd64
-        
-    - name: Download the source code
-      run: |
-        git clone https://github.com/GouveaHeitor/gouveaheitor.github.io
         
     - name: Run Insider
       run: |
