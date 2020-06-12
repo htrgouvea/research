@@ -15,7 +15,7 @@
 
 ---
 
-#### Summary
+### Summary
 
 This repository stores all the structure, code and files of my personal website ([https://heitorgouvea.me](https://heitorgouvea.me)).
 
@@ -23,7 +23,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ---
 
-#### Download and Set-up
+### Download and Set-up
 
 ```bash
   # Download
@@ -36,12 +36,12 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ---
 
-#### Contribution
+### Contribution
 
 - Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues) See here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
 ---
 
-#### License
+### License
 
 - This work is licensed under [MIT License.](./LICENSE.md)
