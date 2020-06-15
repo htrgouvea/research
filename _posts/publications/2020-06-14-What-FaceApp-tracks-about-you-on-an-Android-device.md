@@ -7,7 +7,7 @@ og_image: https://heitorgouvea.me/images/publications/research/faceapp/table-fac
 
 ### Summary
 
-I recently noticed that many people have returned to using the FaceApp app - "a mobile app that generates highly realistic transformations of human faces in photographs using neural networks based on artificial intelligence" - and along with this has arisen a debate about how this app can use your information commercially, with this scenario in mind, I decided to perform an analysis of the application and see what information it actually collects and how it can be used for commercial purposes. This publication aims to show how the analysis took place, in a clear and accessible way for the greatest number of people, therefore, some slightly more complex techniques were outside the scope of this publication and furthermore, this publication is not intended to evaluate the application security.
+Browsing Twitter I was noticed that FaceApp is back in fashion - "a mobile app that generates highly realistic transformations of human faces in photographs using neural networks based on artificial intelligence" - and along with this has arisen a debate about how this app can use your information commercially, with this scenario in mind, I decided to perform an analysis of the application and see what information it actually collects and how it can be used for commercial purposes. This publication aims on showing how the analysis took place, in a clear and accessible way for the greatest number of people, therefore, some slightly more complex techniques were outside the scope of this publication and furthermore, this publication is not intended to evaluate the application security.
 
 *If you prefer, there is a Portuguese version of this publication, accessible by [clicking here](/2020/06/14/O-que-o-FaceApp-rastreia-sobre-você-em-um-dispositivo-Android).*
 
@@ -41,7 +41,7 @@ Analyzing the *AndroidManifest.xml* of the application in question, it is possib
 
 In short, the permissions he asks for are: to have access to the Internet, the state of the network, camera, writing and reading on sdcard, preventing the processor from "sleeping" or letting the screen go dark, among others. Well, so far, comparing the app's permissions with its features, we have nothing strange.
 
-Later, I continued to take a look at the source code of the application and found that it does not have any type of [anti-debugging technique](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering) applied... What surprised me a lot because in my opinion this App would have several controls of its kind and that was one of the reasons that made me want to analyze it. In order to verify this, I decided to start the dynamic analysis at once and installed the application on my emulator and really, the application did not prevent me from running it on an emulator/device with root permissions:
+Later, I continued to take a look at the source code of the application and found that it does not have any type of [anti-debugging technique](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering) applied... What surprised me a lot because in my opinion this App would have several controls of it kind and that was one of the reasons that made me want to analyze it. In order to verify this, I decided to start the dynamic analysis at once and installed the application on my emulator and really, the application did not prevent me from running it on an emulator/device with root permissions:
 
 ![Image](/images/publications/research/faceapp/first-app-open.png)
 
@@ -61,7 +61,7 @@ Using the application a little more, I decided to look at the files it was gener
 
 ![Image](/images/publications/research/faceapp/logs-android.png)
 
-As the directory name indicates, such files are used to store log information, some of the information contained in these files is:
+As the directory name indicates, such files are used to store log information, some of the information contained in these files are:
 
 ![Image](/images/publications/research/faceapp/first-log.png)
 
@@ -85,7 +85,7 @@ This type of scenario can be exploited by Malware, and there are also other meth
 
 ### Conclusion
 
-We can say that at least for the scope covered in this publication, FaceApp really complies with its privacy terms, and the information it collects is enough to: generate a unique identification of each of its users and map how those users use the application (which resources they access, times, which apps they share the photos on, how they move within the App, and more), and it’s also not possible to guarantee that the photos used in the app are really accessible only to the device they were on generated.
+We can say that at least for the scope covered in this publication, FaceApp really complies with his privacy terms, and the information it collects is enough to: generate a unique identification of each of its users and map how those users use the application (which resources they access, times, which apps they share the photos on, how they move within the App, and more), and it’s also not possible to guarantee that the photos used in the app are really accessible only to the device they were on generated.
 
 In this scenario, malware is able to collect the information that FaceApp stores locally on my device and use it as it sees fit and in my opinion, this may be the biggest risk when using this application.
 
