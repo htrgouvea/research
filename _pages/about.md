@@ -23,7 +23,7 @@ I am fascinated by the area of offensive security, so I spend many hours studyin
 
 ### Research
 
-Aligning my life purpose (Create technologies that help people and groups take control of their own information) with my work, I decided to cover the subjects below as the main areas of my research:
+Aligning my life purpose (create technologies that help people and groups take control of their own information) with my work, I decided to cover the subjects below as the main areas of my research:
 
 - Application Security
 - Privacy/anonymity algorithms
