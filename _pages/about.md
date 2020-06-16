@@ -1,26 +1,37 @@
 ---
 layout: page
-title: About
+title: About | Heitor Gouvêa - Independent Researcher
+og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /about
 ---
 
-## About me
+### Bio
 
-My name is Heitor "D3LET" Gouvêa and I just create things that put my soul; I am always working on projects that make security democratization possible.
+Born and raised in a city in the interior of Brazil, I wrote my first lines of code at the age of 14, after that I found myself falling in love with the computing universe and the offensive security area. When I finished high school, I moved to greater São Paulo to start my career so far in software development and, two years later, I finally managed to fulfill my dream and work with Information Security.
 
-### My way here
+---
 
-In the end of 2014, I started studying programming independently and by the end of 2015 I was already fascinated by the world of offensive information security.
+### About
 
-In early 2016 I participated in a Hackathon and later I was hired to work in the Brazilian government in the area of ​​Information Technology - I worked in several teams, such as: development, architecture, information security and assistance in the management of large projects.
+![Image](/images/photos/profile.jpeg){:height=600px" width="360px" style="float:right; padding:10px"}
 
-Some time after working as a Trainee, I worked as an Information Security Analyst in a Red Team with some amazing Brazilian Security Companies of Consulting, like: OGASEC, Deloitte Brazil and CIPHER; and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with my purpose.
+After two years working in the software development area in the Brazilian government, I worked as an Information Security Analyst in a Red Team with some amazing Brazilian Security Companies of Consulting, like: OGASEC, Deloitte Brazil and CIPHER; and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with my purpose.
 
-I am fascinated by the area of ​​offensive security, so I spend many hours studying this segment. In the past I won some prizes: first place in the CTF of Bsides São Paulo 16th, the qualification of Hackaflag in 2019 and first place in Hackathon of the City of Campinas in 2017. In the past, I reported some vulnerabilities in the following Brazilian Banks and FinTechs: Caixa Econômica Federal, C6 Bank and Mercado Pago.
+I am fascinated by the area of offensive security, so I spend many hours studying this segment. In the past, I won some prizes: first place at Bsides São Paulo 16 CTF, Hackaflag qualification in 2019 and first place at Campinas Hackathon in 2017 and in addition, I reported some vulnerabilities in the following Brazilian fintechs/banks: Caixa Econômica Federal, C6 Bank and Mercado Pago.
 
-I audited high-profile sites for security vulnerabilities and worked on teams of software developers and computer scientists, providing high-security architectures. My work is focused on understanding threat models, analyzing existing applications, and building smart tools to combat the current and future security risk for individuals or groups.
+---
 
-* Security Advisories: 
-    - [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](/2019/09/17/CVE-2019-15033) / [CVE-2020-9376](/2020/03/04/CVE-2020-9376) / [CVE-2020-9377](/2020/03/04/CVE-2020-9377)
+### Research
 
-* My personal e-mail: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
+Aligning my life purpose (making information security an increasingly democratized issue) with my work, I decided to cover the subjects below as the main areas of my research:
+
+- Application Security
+- Privacy/anonymity algorithms
+- Construction of security tools
+
+And during that research time (until then short) I was able to build some Open Source tools that are available on my [Github](https://github.com/GouveaHeitor) in addition I audited some applications/software that earned me some security adivisories:
+
+- [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](/2019/09/17/CVE-2019-15033) / [CVE-2020-9376](/2020/03/04/CVE-2020-9376) / [CVE-2020-9377](/2020/03/04/CVE-2020-9377)
+
+
+If you want to contact me, here is my email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)
