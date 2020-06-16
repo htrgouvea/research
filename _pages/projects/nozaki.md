@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Nozaki
-description: 'A HTTP fuzzer engine security oriented'
+description: 'HTTP fuzzer engine security oriented'
 permalink: /projects/nozaki
 ---
 
 <p align="center">
   <h3 align="center"><b>Nozaki</b></h3>
-  <p align="center">A HTTP engine fuzzer security oriented</p>
+  <p align="center">HTTP engine fuzzer security oriented</p>
   <p align="center">
     <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -21,6 +21,8 @@ permalink: /projects/nozaki
 ---
 
 ⚠️ __Warning:__ Nozaki is currently in __development__, you've been warned :) and please consider [contributing!](./github/CONTRIBUTING.md)
+
+---
 
 ### Download & Install
 
@@ -36,7 +38,7 @@ permalink: /projects/nozaki
 ```bash
 $ perl nozaki.pl --help
 
-Nozaki v0.0.2
+Nozaki v0.0.5
 Core Commands
 ==============
 	Command       Description
@@ -44,14 +46,14 @@ Core Commands
 	--url         Define a target
 	--wordlist    Define wordlist of paths
 	--method      Define methods HTTP to use during fuzzing, separeted by ","
-  --timeout     Define the timeout
+        --timeout     Define the timeout
 	--delay       Define a seconds of delay between requests
 	--help        See this screen
 
 Copyright Nozaki (c) 2020 | Heitor Gouvêa
 
 # Example
-$ perl nozaki.pl -X GET -u http://lab.nozaki.io:8002/\?read\= -w wordlists/payloads/ssrf.txt | grep "574"
+$ perl nozaki.pl -m GET -u http://lab.nozaki.io:8002/\?read\= -w wordlists/payloads/ssrf.txt | grep "574"
 
 [-] -> [200] | http://lab.nozaki.io:8002/?read=http://2852039166/           [GET] - OK | Length: 574
 [-] -> [200] | http://lab.nozaki.io:8002/?read=http://0xA9FEA9FE/           [GET] - OK | Length: 574

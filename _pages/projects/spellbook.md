@@ -8,7 +8,7 @@ permalink: /projects/spellbook
 <p align="center">
   <img src="/images/projects/spellbook/logo.png" width="150px" height="150px">
   <h2 align="center">Spellbook</h2>
-  <p align="center">A micro-framework for rapid development of reusable security tools</p>
+  <p align="center"> Micro-framework for rapid development of reusable security tools </p>
   <p align="center">
     <a href="https://github.com/GouveaHeitor/spellbook/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
