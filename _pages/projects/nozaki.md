@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nozaki
+title: Nozaki - HTTP fuzzer engine security oriented
 description: 'HTTP fuzzer engine security oriented'
 permalink: /projects/nozaki
 ---

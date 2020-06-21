@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Nipe
-description: 'A engine to make TOR Network your default gateway'
+title: Nipe - An engine to make TOR Network your default gateway
+description: 'An engine to make TOR Network your default gateway'
 permalink: /projects/nipe
+og_image: https://heitorgouvea.me/images/projects/nipe/nipe-cover.png
 ---
 
 <p align="center">
