@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spellbook
-description: 'A micro-framework for rapid development of reusable security tools '
+description: 'Micro-framework for rapid development of reusable security tools '
 permalink: /projects/spellbook
 ---
 
