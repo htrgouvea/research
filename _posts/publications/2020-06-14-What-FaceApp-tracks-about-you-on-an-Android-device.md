@@ -9,8 +9,6 @@ og_image: https://heitorgouvea.me/images/publications/research/faceapp/table-fac
 
 Browsing Twitter I was noticed that FaceApp is back in fashion - "a mobile app that generates highly realistic transformations of human faces in photographs using neural networks based on artificial intelligence" - and along with this has arisen a debate about how this app can use your information commercially, with this scenario in mind, I decided to perform an analysis of the application and see what information it actually collects and how it can be used for commercial purposes. This publication aims on showing how the analysis took place, in a clear and accessible way for the greatest number of people, therefore, some slightly more complex techniques were outside the scope of this publication and furthermore, this publication is not intended to evaluate the application security.
 
-*If you prefer, there is a Portuguese version of this publication, accessible by [clicking here](/2020/06/14/O-que-o-FaceApp-rastreia-sobre-você-em-um-dispositivo-Android).*
-
 ---
 
 ### Description
@@ -45,7 +43,7 @@ Later, I continued to take a look at the source code of the application and foun
 
 ![Image](/images/publications/research/faceapp/first-app-open.png)
 
-Well, now I already had the application running and probably several things were happening on my device, so I decided to analyze if some kind of request for external servers was happening and so I came across using [*certificate pinning](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning)* through the App, but this was easily bypassed using [Frida](https://frida.re/). And then, right away, the first request that the application made as soon as it was opened, was the following:
+Well, now I already had the application running and probably several things were happening on my device, so I decided to analyze if some kind of request for external servers was happening and so I came across using [*certificate pinning*](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning) through the App, but this was easily bypassed using [Frida](https://frida.re/). And then, right away, the first request that the application made as soon as it was opened, was the following:
 
 ![Image](/images/publications/research/faceapp/request-sending-device-datas.png)
 
