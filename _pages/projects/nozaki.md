@@ -46,7 +46,7 @@ Core Commands
 	--url         Define a target
 	--wordlist    Define wordlist of paths
 	--method      Define methods HTTP to use during fuzzing, separeted by ","
-        --timeout     Define the timeout
+  --timeout     Define the timeout
 	--delay       Define a seconds of delay between requests
 	--help        See this screen
 

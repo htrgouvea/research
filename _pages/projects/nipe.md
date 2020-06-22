@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Nipe - An engine to make TOR Network your default gateway
-description: 'An engine to make TOR Network your default gateway'
+description: 'Nipe can route the traffic from your machine to the Internet through Tor network, so you can surf the Internet having a more formidable stance on privacy and anonymity in cyberspace'
 permalink: /projects/nipe
 og_image: https://heitorgouvea.me/images/projects/nipe/nipe-cover.png
 ---

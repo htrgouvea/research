@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects - Heitor Gouvêa
+title: Projects | Heitor Gouvêa - Independent Researcher
 permalink: /projects
 description: During my independent research I end up creating some tools of my own to solve some problems that I believe is recurring, and on this page, you can check out some of these projects that are currently open-source
 ---
