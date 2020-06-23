@@ -1,13 +1,13 @@
 ---
 layout: content
 title: 'A little case about scraping personal data exposure in the web'
-description: 'Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed ... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.'
+description: 'Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.'
 og_image: https://heitorgouvea.me/images/publications/research/nubank/google-dorks.png
 ---
 
 ### Summary
 
-Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed ... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.
+Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.
 
 ---
 
@@ -43,7 +43,7 @@ Surprised by the fact that Nubank allowed Google and other search engines to ind
 
 ![](/images/publications/research/nubank/twitter-links.png)
 
-And these are just some of the results, on Twitter you could see that some people use this functionality to receive donations and others use it in very general ways ...
+And these are just some of the results, on Twitter you could see that some people use this functionality to receive donations and others use it in very general ways...
 
 ---
 
