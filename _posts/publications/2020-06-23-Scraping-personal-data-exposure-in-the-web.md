@@ -146,7 +146,7 @@ exit;
 
 And this was the result:
 
-![](/images/publications/research/nubank/collect-with-names-cpfs.png
+![](/images/publications/research/nubank/collect-with-names-cpfs.png)
 
 CPF, Full name, account number and branch of more than 100 people, in just a few minutes and a few lines of code.
 
