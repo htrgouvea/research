@@ -104,5 +104,3 @@ In this scenario, malware is able to collect the information that FaceApp stores
 [**https://developer.android.com/training/articles/user-data-ids**](https://developer.android.com/training/articles/user-data-ids?hl=pt-br)
 
 [**https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering**](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering)
-
----
