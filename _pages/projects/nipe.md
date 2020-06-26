@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nipe - An engine to make TOR Network your default gateway
+title: Nipe - An engine to make Tor Network your default gateway.
 description: 'Nipe can route the traffic from your machine to the Internet through Tor network, so you can surf the Internet having a more formidable stance on privacy and anonymity in cyberspace'
 permalink: /projects/nipe
 og_image: https://heitorgouvea.me/images/projects/nipe/nipe-cover.png
@@ -8,7 +8,7 @@ og_image: https://heitorgouvea.me/images/projects/nipe/nipe-cover.png
 
 <p align="center">
   <img src="/images/projects/nipe/logo.png">
-  <p align="center">A engine to make Tor Network your default gateway.</p>
+  <p align="center">An engine to make Tor Network your default gateway.</p>
 
   <p align="center">
     <a href="/LICENSE.md">
@@ -37,7 +37,7 @@ All non-local UDP/ICMP traffic is also blocked by the Tor project.
 
 ### Download and install
 
-```bash
+```
   # Download
   $ git clone https://github.com/GouveaHeitor/nipe && cd nipe
     
@@ -47,6 +47,7 @@ All non-local UDP/ICMP traffic is also blocked by the Tor project.
   # Nipe must be run as root
   $ perl nipe.pl install
 ```
+
 ---
 
 ### Commands:
