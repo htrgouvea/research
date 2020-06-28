@@ -14,7 +14,8 @@ jobs:
       run: |
         wget https://github.com/insidersec/insider/releases/download/2.0.0/insider-linux-amd64
         chmod +x insider-linux-amd64
+        echo $GITHUB_WORKSPACE
     - name: Run Insider
       run: |
-        ./insider-linux-amd64 -tech javascript -target . -no-banner -no-html
+        ./insider-linux-amd64 -tech javascript -target $GITHUB_WORKSPACE -no-banner -no-html
         cat *.json
