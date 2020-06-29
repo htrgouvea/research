@@ -59,6 +59,7 @@ use strict;
 use warnings;
 use WWW::Mechanize;
 use Mojo::Util qw( url_escape);
+# use Mojo::UserAgent;
 
 sub main {
     my $dork = $ARGV[0];
@@ -66,12 +67,11 @@ sub main {
     if ($dork) {
         my $mech = WWW::Mechanize -> new();
         my %seen = ();
-        my @urls = ();
 
         $dork = url_escape($dork);
 
-        for (my $page = 0; $page <= 10; $page++) {
-            my $url = "http://www.bing.com/search?q=" . $dork . "&first=" . $page . "0";
+        for my $page (0 .. 10) {
+            my $url = "http://www.bing.com/search?q=${dork}&first=${page}0";
             $mech -> get($url);
             my @links = $mech -> links();
                         
