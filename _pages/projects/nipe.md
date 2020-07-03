@@ -8,8 +8,7 @@ og_image: https://heitorgouvea.me/images/projects/nipe/nipe-cover.png
 
 <p align="center">
   <img src="/images/projects/nipe/logo.png">
-  <p align="center">An engine to make Tor Network your default gateway.</p>
-
+  <p align="center">An engine to make Tor Network your default gateway</p>
   <p align="center">
     <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -74,6 +73,7 @@ All non-local UDP/ICMP traffic is also blocked by the Tor project.
 
 ![Image](/images/projects/nipe/demo.gif)
 
+---
 
 ### Contribution
 
