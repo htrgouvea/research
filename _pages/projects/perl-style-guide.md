@@ -1,26 +1,26 @@
 ---
 layout: page
-title: Perl Style Guide
-description: 'A starting point for Perl development teams to provide consistency through good practices'
+title: Perl Style Guide - A starting point for Perl development teams to provide consistency through good practices
+description: 'This paper is summarized in some good practice guidelines for Perl coding using "post-modern" practices. This work is in progress and any suggestions/contributions are welcome. This project is just one of several other coding style guides, there is no intention of setting a pattern from it. Please do not take this as absolute truth. The most important thing here is that you and your team feel comfortable with a certain guideline and make use of it.'
 permalink: /projects/perl-style-guide
 ---
 
 <p align="center">
   <h3 align="center">Perl Style Guide</h3>
-  <p align="center">A starting point for Perl development teams to provide consistency through good practices </p>
+  <p align="center">A starting point for Perl development teams to provide consistency through good practices</p>
   <p align="center">
     <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
     <a href="https://github.com/GouveaHeitor/perl-style-guide/releases">
-      <img src="https://img.shields.io/badge/version-0.1.3-blue.svg">
+      <img src="https://img.shields.io/badge/version-0.1.5-blue.svg">
     </a>
   </p>
 </p>
 
 ---
 
-#### Disclaimer
+#### Summary
 
 This paper is summarized in some good practice guidelines for Perl coding using "post-modern" practices. This work is in progress and any suggestions/contributions are welcome.
 
@@ -57,8 +57,8 @@ my $string =
 # Do this instead:
 my $string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua."
 
-my $fn = sub {$_[0] + 1};              # Bad
-my $fn = sub { $_[0] + 1 };            # Good
+my $fn = sub {$_[0] + 1};     # Bad
+my $fn = sub { $_[0] + 1 };   # Good
 ```
 
 * Don't cuddle an else.
@@ -99,7 +99,7 @@ sub my_method {
 
 #### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/perl-style-guide/issues) See here the [security policy.](https://github.com/GouveaHeitor/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/perl-style-guide/issues)  and for security issues see here the [security policy.](https://github.com/GouveaHeitor/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕) 
 
 ---
 
