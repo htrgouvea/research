@@ -9,11 +9,7 @@ og_image: https://heitorgouvea.me/images/publications/research/nubank/google-dor
 
 Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.
 
----
-
-### Disclaimer
-
-The responsible company was informed about all details contained in this publication in the shortest possible time and it positioned itself in an ethical and transparent manner, demonstrating due attention and commitment. During all tests, no system was invaded or breached, in addition, the company performed all necessary actions/modifications to minimize any undue action that explores the context covered in this publication.
+*Disclaimer: The responsible company was informed about all details contained in this publication in the shortest possible time and it positioned itself in an ethical and transparent manner, demonstrating due attention and commitment. During all tests, no system was invaded or breached, in addition, the company performed all necessary actions/modifications to minimize any undue action that explores the context covered in this publication.*
 
 ---
 
@@ -163,8 +159,8 @@ Through this analysis it is possible to affirm that a convinced person could imp
 
 ### References
 
-[**https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure**](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure)
+- [https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure)
 
-[**https://en.wikipedia.org/wiki/Google_hacking**](https://en.wikipedia.org/wiki/Google_hacking)
+- [https://en.wikipedia.org/wiki/Google_hacking](https://en.wikipedia.org/wiki/Google_hacking)
 
-[**https://en.wikipedia.org/wiki/Web_scraping**](https://en.wikipedia.org/wiki/Web_scraping)
+- [https://en.wikipedia.org/wiki/Web_scraping](https://en.wikipedia.org/wiki/Web_scraping)

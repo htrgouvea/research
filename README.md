@@ -1,7 +1,7 @@
 
 <p align="center">
-  <h3 align="center">gouveaheitor.github.io</h3>
-  <p align="center">Just a simple web blog</p>
+  <h3 align="center">heitorgouvea.me</h3>
+  <p align="center">Just my simple/personal website</p>
 
   <p align="center">
     <a href="https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md">
@@ -38,7 +38,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues) See here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues)  and for security issues see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
 ---
 

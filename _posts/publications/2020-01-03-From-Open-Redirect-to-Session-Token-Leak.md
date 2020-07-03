@@ -157,11 +157,11 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 
 ### Referencies
 
-[**https://portswigger.net/kb/issues/00500100_open-redirection-reflected**](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
+- [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
 
-[**https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html**](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
 
-[**https://www.owasp.org/index.php/Session_hijacking_attack**](https://www.owasp.org/index.php/Session_hijacking_attack)
+- [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
 
 ---
 
