@@ -25,11 +25,11 @@ I am fascinated by the area of offensive security, so I spend many hours studyin
 
 Aligning my life purpose (create technologies that help people and groups take control of their own information) with my work, I decided to cover the subjects below as the main areas of my research:
 
-- Application Security
-- Privacy/anonymity algorithms
-- Construction of security tools
+- Application Security;
+- Privacy/anonymity algorithms;
+- Construction of security tools;
 
-And during that research time (until then short) I was able to build some Open Source tools that are available on my [Github](https://github.com/GouveaHeitor) in addition I audited some applications/software that earned me some security adivisories:
+And during that research time (until then short) I was able to build some Open Source tools that are available on my [Github](https://github.com/GouveaHeitor){:target="_blank"} in addition I audited some applications/software that earned me some security adivisories:
 
 - [CVE-2019-15032](/2019/09/17/CVE-2019-15032) / [CVE-2019-15033](/2019/09/17/CVE-2019-15033) / [CVE-2020-9376](/2020/03/04/CVE-2020-9376) / [CVE-2020-9377](/2020/03/04/CVE-2020-9377)
 
