@@ -1,4 +1,4 @@
-name: Insider Code Audit
+name: Insider OSS
 
 on: 
   push:
@@ -6,16 +6,16 @@ on:
       - develop
 
 jobs:
-  build:
-    name: Audit code
+  insider:
     runs-on: ubuntu-latest
     steps:
-    - name: Get Insider
-      run: |
-        wget https://github.com/insidersec/insider/releases/download/2.0.0/insider-linux-amd64
-        chmod +x insider-linux-amd64
-        echo $GITHUB_WORKSPACE
-    - name: Run Insider
-      run: |
-        ./insider-linux-amd64 -tech javascript -target $GITHUB_WORKSPACE -no-banner -no-html
-        cat *.json
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Run Insider
+        uses: insidersec/insider-action@v0
+        with:
+            technology: javascript
+            target: $GITHUB_WORKSPACE
