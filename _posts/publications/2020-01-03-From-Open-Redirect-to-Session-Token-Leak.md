@@ -2,7 +2,7 @@
 layout: content
 title: 'From an Open Redirect in a Brazilian Bank to Session Token Leak'
 description: 'Through a vulnerability on the financial institution website it was possible leak the users session token and realize a account takeover'
-og_image: https://heitorgouvea.me/images/publications/write-ups/caixa/email-poc.png
+og_image: https://heitorgouvea.me/images/publications/caixa/email-poc.png
 ---
 
 ---
@@ -23,7 +23,7 @@ It is worth clarifying that during all tests the only account used was mine and 
 
 While browsing the web pages of the Caixa Federal systems, I came across an authentication screen where access credentials were requested:
 
-![Caixa Federal Home Page Website](/images/publications/write-ups/caixa/home-page.png)
+![Caixa Federal Home Page Website](/images/publications/caixa/home-page.png)
 
 -
 
@@ -111,7 +111,7 @@ On the same page, there is a function to request the password change, in the but
 
 Asking for a new password from the malicious URL, the email content will be as follows:
 
-![Caixa Federal Email Forgot Password](/images/publications/write-ups/caixa/email-poc.png)
+![Caixa Federal Email Forgot Password](/images/publications/caixa/email-poc.png)
 
 -
 
@@ -127,19 +127,19 @@ This way, I can use this mechanism to send emails requesting a password reset on
 
 If an attacker exploits these vulnerabilities, he will be able to view some confidential user information, below I will leave some examples:
 
-![Caixa Federal Confidential Data User](/images/publications/write-ups/caixa/confidential-data-user.png)
+![Caixa Federal Confidential Data User](/images/publications/caixa/confidential-data-user.png)
 
 - Full Name, CPF (Social Security Number), Last Access Date & Time
 
 -
 
-![Caixa Federal Confidential Data FGTS](/images/publications/write-ups/caixa/confidential-data-fgts.png)
+![Caixa Federal Confidential Data FGTS](/images/publications/caixa/confidential-data-fgts.png)
 
 - Full Name, PIS Number, Contracting Company, Work Card Number, FGTS Account, Admission Date, Total Account Balance and also the amount deposited each month during the period worked at the Company
 
 -
 
-![Caixa Federal Confidential User Andress](/images/publications/write-ups/caixa/confidential-user-andress.png)
+![Caixa Federal Confidential User Andress](/images/publications/caixa/confidential-user-andress.png)
 
 - User's full address (You can change this data, password is not required)
 

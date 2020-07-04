@@ -2,7 +2,7 @@
 layout: content
 title: 'O que o FaceApp rastreia sobre você em um dispositivo Android'
 description: 'O FaceApp pode gerar uma identificação exclusiva de cada um de seus usuários e mapear como esses usuários usam o aplicativo (quais recursos acessam, horários, quais aplicativos compartilham as fotos, como se movem no aplicativo e muito mais), e também não é possível garantir que as fotos usadas no aplicativo sejam realmente acessíveis apenas ao dispositivo em que foram geradas'
-og_image: https://heitorgouvea.me/images/publications/research/faceapp/table-faceapp-privacy.png
+og_image: https://heitorgouvea.me/images/publications/faceapp/table-faceapp-privacy.png
 ---
 
 ### Sumário
@@ -19,7 +19,7 @@ Essa página pode ser acessada neste link: [https://www.faceapp.com/privacy-en.h
 
 De forma resumida essa tabela ilustra bem tudo que é coletado e como é usado:
 
-![Image](/images/publications/research/faceapp/table-faceapp-privacy.png)
+![Image](/images/publications/faceapp/table-faceapp-privacy.png)
 
 Além disso, o aplicativo fornecesse uma opção para que o usuário solicite a exclusão de todos os seus dados presentes nos servidores do FaceApp.
 
@@ -31,21 +31,21 @@ Para a execução dessa análise decidi seguir um escopo bem específico, onde v
 
 Para começar essa análise fiz download do aplicativo através da loja oficial do Android, a Play Store ([https://play.google.com/store/apps/details?id=io.faceapp](https://play.google.com/store/apps/details?id=io.faceapp&hl=pt_BR)) e posteriormente iniciei a análise estática do artefato. 
 
-![Image](/images/publications/research/faceapp/check-md5-faceapp.png)
+![Image](/images/publications/faceapp/check-md5-faceapp.png)
 
 Analisando o *AndroidManifest.xml* do aplicativo em questão, é possível notar que ele solicita permissão para acessar inúmeros recursos do dispositivo:
 
-![Image](/images/publications/research/faceapp/androidmanifest.png)
+![Image](/images/publications/faceapp/androidmanifest.png)
 
 Em resumo, as permissões que ele solicita são para: ter acesso a Internet, ao estado da rede, câmera, escrita e leitura no *sdcard,* impedir o processador de "dormir" ou deixar a tela escurecer, entre outras. Bom, até o momento, comparando as permissões do aplicativo com suas funcionalidades, não temos nada de estranho.
 
 Posteriormente continuei dando uma olhada no código fonte do aplicativo e descobri que o mesmo não possuí nenhum tipo de [técnica anti-debugging](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering) aplicada... O que me surpreendeu bastante pois na minha opinião esse App iria ter diversos controles do gênero e esse foi um dos motivos que me fez querer analisa-lo. Afim de verificar de fato isso, decidi começar a análise dinâmica de uma vez e instalei o aplicativo no meu emulador e realmente, o aplicativo não me impediu de executa-lo em um dispositivo emulador/com permissões de root:
 
-![Image](/images/publications/research/faceapp/first-app-open.png)
+![Image](/images/publications/faceapp/first-app-open.png)
 
 Bom, agora eu já estava com o aplicativo em execução e provavelmente diversas coisas estavam acontecendo no meu dispositivo, partindo  adiante decidi analisar se algum tipo de requisição para servidores externos estava acontecendo e assim me deparei com  uso de [*certificate pinning](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning)* pelo App, mas isso foi facilmente contornado utilizando o [Frida](https://frida.re/). E então, logo de cara, a primeira requisição que o aplicativo realizava assim que era aberto, era a seguinte:
 
-![Image](/images/publications/research/faceapp/request-sending-device-datas.png)
+![Image](/images/publications/faceapp/request-sending-device-datas.png)
 
 E aí estava o começo do monitoramento que o App realiza em todos seus usuários, uma única requisição que envia para um servidor as informações sobre seu dispositivo como:  versão do aplicativo utilizada naquela momento, DeviceID, Modelo do dispositivo, idioma utilizado, RegistrationID e versão do sistema operacional (Ah, e não se esqueça que seu IP também está atrelado a esses informações).
 
@@ -57,13 +57,13 @@ Através da combinação dessas duas informações e as demais ilustradas anteri
 
 Utilizando mais um pouco o aplicativo, decidi olhar os arquivos que ele estava gerando no meu dispositivo já que mais nenhuma outra requisição chamou minha atenção e acabei encontrando uma pasta chamada "*logs*":
 
-![Image](/images/publications/research/faceapp/logs-android.png)
+![Image](/images/publications/faceapp/logs-android.png)
 
 Assim como o próprio nome do diretório indica, tais arquivos são utilizados para guardar informações de log, algumas informações contidas nesses arquivos são:
 
-![Image](/images/publications/research/faceapp/first-log.png)
+![Image](/images/publications/faceapp/first-log.png)
 
-![Image](/images/publications/research/faceapp/second-log.png)
+![Image](/images/publications/faceapp/second-log.png)
 
 Informações sobre permissões que o aplicativo possuí no meu dispositivo, endpoints que foram acessados durante o uso, versão de API, quantidade de fotos na minha galeria, o que eu fiz dentro do aplicativo, horário de utilização, se eu estava usando Wi-Fi ou não e por aí vai... Esses arquivos são enviados para um servidor externo de tempos em tempos (não me atentei em marcar qual quantidade específica de horas). 
 
@@ -75,7 +75,7 @@ Além dessas informações, o App só envia para o servidor as fotos que eu deci
 
 Na política de privacidade o FaceApp diz que a imagem não é compartilhada com terceiros e que ela só fica hospedada em seus servidores por 48hrs e para reforçar a confiabilidade desse ação eles dizem que adotam um mecanismo de criptografia para cada fotografia enviada utilizando o aplicativo e a chave que é utilizada fica armazenada localmente no seu dispositivo (isso é uma medida para que somente o seu dispositivo possa visualizar a foto), no entanto o arquivo que possuí essa chave pode ser acessado por terceiros, já que aplicativo pode ser utilizado por um dispositivo que possuí o usuário root "habilitado":
 
-![Image](/images/publications/research/faceapp/photo-key.png)
+![Image](/images/publications/faceapp/photo-key.png)
 
 Esse tipo de cenário pode ser explorado por um Malware, e também existem outros métodos para acessar esses dados além de ser root no dispositivo.
 
