@@ -18,4 +18,4 @@ jobs:
         uses: insidersec/insider-action@v0
         with:
             technology: javascript
-            target: $GITHUB_WORKSPACE
+            target: ${{ GITHUB_WORKSPACE }}
