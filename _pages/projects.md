@@ -2,7 +2,7 @@
 layout: page
 title: Projects | Heitor Gouvêa - Independent Researcher
 permalink: /projects
-description: During my independent research I end up creating some tools of my own to solve some problems that I believe is recurring, and on this page, you can check out some of these projects that are currently open-source
+description: During my independent research, I developed some research projects in order to solve some types of recurring problems or validate a theory discovered during some of my research and, on this page, you can check out some of these currently open source projects
 ---
 
 ## My research projects

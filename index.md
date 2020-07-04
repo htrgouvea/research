@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Heitor Gouvêa - Independent Researcher
+title: Home | Heitor Gouvêa - Independent Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
 ---
