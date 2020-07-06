@@ -55,7 +55,6 @@ use strict;
 use warnings;
 use WWW::Mechanize;
 use Mojo::Util qw( url_escape);
-# use Mojo::UserAgent;
 
 sub main {
     my $dork = $ARGV[0];

@@ -2,7 +2,7 @@
 layout: content
 title: 'What FaceApp tracks about you on an Android device'
 description: 'FaceApp can generate a unique identification of each of its users and map how those users use the application (which resources they access, times, which apps they share the photos on, how they move within the App, and more), and it’s also not possible to guarantee that the photos used in the app are really accessible only to the device they were on generated.'
-og_image: https://heitorgouvea.me/images/publications/faceapp/table-faceapp-privacy.png
+og_image: https://heitorgouvea.me/images/publications/faceapp-analysis/table-faceapp-privacy.png
 ---
 
 ### Summary
@@ -19,7 +19,7 @@ This page can be accessed at this link: [https://www.faceapp.com/privacy-en.html
 
 In summary, this table illustrates well everything that is collected and how it is used:
 
-![Image](/images/publications/faceapp/table-faceapp-privacy.png)
+![Image](/images/publications/faceapp-analysis/table-faceapp-privacy.png)
 
 In addition, the application provides an option for the user to request the deletion of all their data present on the FaceApp servers.
 
@@ -31,21 +31,21 @@ For the execution of this analysis I decided to follow a very specific scope, wh
 
 To start this analysis I downloaded the app through the official Android store, the [Play Store](https://play.google.com/store/apps/details?id=io.faceapp&hl=pt_BR) and later I started the static analysis of the artifact.
 
-![Image](/images/publications/faceapp/check-md5-faceapp.png)
+![Image](/images/publications/faceapp-analysis/check-md5-faceapp.png)
 
 Analyzing the *AndroidManifest.xml* of the application in question, it is possible to notice that it requests permission to access numerous features of the device:
 
-![Image](/images/publications/faceapp/androidmanifest.png)
+![Image](/images/publications/faceapp-analysis/androidmanifest.png)
 
 In short, the permissions he asks for are: to have access to the Internet, the state of the network, camera, writing and reading on sdcard, preventing the processor from "sleeping" or letting the screen go dark, among others. Well, so far, comparing the app's permissions with its features, we have nothing strange.
 
 Later, I continued to take a look at the source code of the application and found that it does not have any type of [anti-debugging technique](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering) applied... What surprised me a lot because in my opinion this App would have several controls of it kind and that was one of the reasons that made me want to analyze it. In order to verify this, I decided to start the dynamic analysis at once and installed the application on my emulator and really, the application did not prevent me from running it on an emulator/device with root permissions:
 
-![Image](/images/publications/faceapp/first-app-open.png)
+![Image](/images/publications/faceapp-analysis/first-app-open.png)
 
 Well, now I already had the application running and probably several things were happening on my device, so I decided to analyze if some kind of request for external servers was happening and so I came across using [*certificate pinning*](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning) through the App, but this was easily bypassed using [Frida](https://frida.re/). And then, right away, the first request that the application made as soon as it was opened, was the following:
 
-![Image](/images/publications/faceapp/request-sending-device-datas.png)
+![Image](/images/publications/faceapp-analysis/request-sending-device-datas.png)
 
 And there was the beginning of the monitoring that the App performs on all its users, a single request that sends information about your device to a server such as: version of the application used at that time, DeviceID, Device model, language used, RegistrationID and version of the operating system (Oh, and don't forget that your IP is also linked to this information).
 
@@ -57,13 +57,13 @@ Through the combination of these two pieces of information and the others illust
 
 Using the application a little more, I decided to look at the files it was generating on my device since no other requests caught my attention and I ended up finding a folder called "*logs*":
 
-![Image](/images/publications/faceapp/logs-android.png)
+![Image](/images/publications/faceapp-analysis/logs-android.png)
 
 As the directory name indicates, such files are used to store log information, some of the information contained in these files are:
 
-![Image](/images/publications/faceapp/first-log.png)
+![Image](/images/publications/faceapp-analysis/first-log.png)
 
-![Image](/images/publications/faceapp/second-log.png)
+![Image](/images/publications/faceapp-analysis/second-log.png)
 
 Information about permissions that the application has on my device, endpoints that were accessed during use, API version, number of photos in my gallery, what I did inside the application, time of use, whether I was using Wi-Fi or no and so on ... These files are sent to an external server from time to time (I did not pay attention to setting the specific number of hours). 
 
@@ -75,7 +75,7 @@ In addition to this information, the App only sends the photos to the server tha
 
 In the privacy policy FaceApp says that the image is not shared with third parties and that it is only hosted on their servers for 48 hours and to reinforce the reliability of this action they say that they adopt an encryption mechanism for each photo sent using the application and the the key that is used is stored locally on your device (this is a measure so that only your device can view the photo), however the file that has this key can be accessed by third parties, since the application can be used by a device who has the "enabled" root user:
 
-![Image](/images/publications/faceapp/photo-key.png)
+![Image](/images/publications/faceapp-analysis/photo-key.png)
 
 This type of scenario can be exploited by Malware, and there are also other methods to access this data besides being root on the device.
 
