@@ -2,7 +2,7 @@
 layout: content
 title: 'A little case about scraping personal data exposure in the web'
 description: 'Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.'
-og_image: https://heitorgouvea.me/images/publications/nubank/google-dorks.png
+og_image: https://heitorgouvea.me/images/publications/nubank-scraping/google-dorks.png
 ---
 
 ### Summary
@@ -17,15 +17,15 @@ Between the use and some tests that I always end up running on the applications 
 
 Within the Nubank mobile application, there is a feature called "Charge", this feature comes down to you filling in a value of your desire (if you want) and clicking confirm:
 
-![](/images/publications/nubank/creating-a-link.png)
+![](/images/publications/nubank-scraping/creating-a-link.png)
 
 After that, a QR Code is generated and you have the option to share it or send the bill through another application, such as WhatsApp:
 
-![](/images/publications/nubank/whatsapp-shared-link.png)
+![](/images/publications/nubank-scraping/whatsapp-shared-link.png)
 
 When I came across this link (the content of the QR Code is also the link), I decided to open it in the browser to take a look and this was the result:
 
-![](/images/publications/nubank/personal-infos.png)
+![](/images/publications/nubank-scraping/personal-infos.png)
 
 I came across my full name, CPF, my bank account number and branch exposed without any kind of control, the only requirement to get my information through Nubank was to have such a URL.
 
@@ -33,11 +33,11 @@ Such URL is generated exclusively by the client in your application and it is al
 
 Convinced to analyse whether this was really possible, I decided to create a *dork* to try to find more of these URLs, this time exposed on the Internet and this was the result:
 
-![](/images/publications/nubank/google-dorks.png)
+![](/images/publications/nubank-scraping/google-dorks.png)
 
 Surprised by the fact that Nubank allowed Google and other search engines to index these pages, I decided to validate that such URLs were being published on other channels, and the first channel I decided to validate was Twitter:
 
-![](/images/publications/nubank/twitter-links.png)
+![](/images/publications/nubank-scraping/twitter-links.png)
 
 And these are just some of the results, on Twitter you could see that some people use this functionality to receive donations and others use it in very general ways...
 
@@ -88,7 +88,7 @@ exit;
 
 From that code, I was able to collect 100 valid URLs:
 
-![](/images/publications/nubank/file-with-the-urls.png)
+![](/images/publications/nubank-scraping/file-with-the-urls.png)
 
 After having all these URLs in a .txt, I had to build another *scraper* that scraped data on the Nubank page:
 
@@ -138,7 +138,7 @@ exit;
 
 And this was the result:
 
-![](/images/publications/nubank/collect-with-names-cpfs.png)
+![](/images/publications/nubank-scraping/collect-with-names-cpfs.png)
 
 CPF, Full name, account number and branch of more than 100 people, in just a few minutes and a few lines of code.
 
