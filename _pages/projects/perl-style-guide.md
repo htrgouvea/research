@@ -13,7 +13,7 @@ permalink: /projects/perl-style-guide
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
     <a href="https://github.com/GouveaHeitor/perl-style-guide/releases">
-      <img src="https://img.shields.io/badge/version-0.1.5-blue.svg">
+      <img src="https://img.shields.io/badge/version-0.1.7-blue.svg">
     </a>
   </p>
 </p>
@@ -25,6 +25,8 @@ permalink: /projects/perl-style-guide
 This paper is summarized in some good practice guidelines for Perl coding using "post-modern" practices. This work is in progress and any suggestions/contributions are welcome.
 
 This project is just one of several other coding style guides, there is no intention of setting a pattern from it. Please do not take this as absolute truth. The most important thing here is that you and your team feel comfortable with a certain guideline and make use of it.
+
+This paper is a fork of the paper written by [Eric Lorenzana](https://github.com/chusqui/perl-style-guide), with only a few changes in the sense of organization of the material and some adjustments to current market practices. 
 
 ---
 
@@ -57,28 +59,50 @@ my $string =
 # Do this instead:
 my $string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua."
 
-my $fn = sub {$_[0] + 1};     # Bad
-my $fn = sub { $_[0] + 1 };   # Good
+my $fn = sub {$_[0] + 1};              # Bad
+my $fn = sub { $_[0] + 1 };            # Good
 ```
 
 * Don't cuddle an else.
 
 ```perl
-## Good
+# Good
 if (condition) {
   ...
 }
+
 else {
   ...
 }
 
-## Bad.
+# Bad
 if (condition) {
   ...
 } else {
   ...
 }
 ```
+
+```perl
+# Good
+sub function {
+  if (test) {
+    ...
+  }
+}
+
+# Bad
+sub function
+{
+  if (test)
+  {
+    ...
+  }
+}
+```
+
+- Always unpack the stack first.
+- Do not, ever, modify the stack. Unless necessary.
 
 ```perl
 # Bad
@@ -93,6 +117,56 @@ sub my_method {
   my ($self, %params) = @_;
   ...
 }
+```
+
+- Do not put spaces between spaces, braces and brackets. That is, arrays, hashes, array and hash references, string and command line delimiters.
+
+```perl
+my ( $self, $who, @params ) = @_;      # Bad
+my ($self, $who, @params) = @_;        # Good
+
+my $self = { name => "Eric", age => 26 };  # Bad
+my $self = {name => "Eric", age => 26};    # Good
+
+my @files = qx| ls $str |;             # Bad
+my @files = qx|ls $str|;               # Good
+```
+
+- Please keep in mind that this does not apply to operators.
+
+```perl
+my $fn = sub {$_[0] + 1};              # Bad
+my $fn = sub { $_[0] + 1 };            # Good
+
+my @items = map {do_something_to $_} @_;    # Bad
+my @items = map { do_something_to $_ } @_;  # Good
+```
+
+- Use whitespace between operators.
+
+```perl
+# Good
+my $area = $pi * ($radius ^ 2);
+
+# Bad
+my $area = $pi*($radius^2);
+```
+
+- Associate hash key and values by using fat comma.
+
+```perl
+
+# Correct, but bad style
+my %hash = (key1, 'val1',
+            key2, 'val2',
+            key3, 'val3');
+
+# Good
+my %hash = (
+              key1 => 'val1',
+              key2 => 'val2',
+              key3 => 'val3'
+           );
 ```
 
 ---
