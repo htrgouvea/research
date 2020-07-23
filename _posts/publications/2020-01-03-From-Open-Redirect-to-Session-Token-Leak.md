@@ -17,6 +17,8 @@ In this post I want to share with you an [“Open Redirect”](https://portswigg
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
+*Disclaimer:* the proof of concept of this vulnerability was made on January 01; The vulnerability was reported on january 05 and confirmation was made on january 07; On January 10, this vulnerability was corrected and on the same day this article was published.
+
 ---
 
 ### Description
@@ -162,15 +164,3 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 - [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
 
 - [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
-
----
-
-### Time line
-
-```bash
-    - PoC performed: 01/01/2020
-    - Reported Vulnerability: 05/01/2020
-    - Confirmed Vulnerability: 07/01/2020
-    - Vulnerability fix: 10/01/2020
-    - Publication of this article: 10/01/2020
-```
