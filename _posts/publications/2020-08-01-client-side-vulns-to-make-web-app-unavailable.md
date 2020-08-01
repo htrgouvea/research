@@ -8,6 +8,7 @@ og_image: https://heitorgouvea.me/images/publications/easynvest-cookie-bomb/view
 ### Summary
 
 Through analysis on the web application of the broker of which I am a client (easynvenst.com.br) I was able to notice certain behaviors that led me to discover two client-side vulnerabilities that, if exploited by an attacker, could expose the legitimate users of the application to various risks, one of which is a kind of “unavailability”.
+
 ---
 
 ### Description
