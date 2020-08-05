@@ -6,7 +6,8 @@ permalink: /projects/nozaki
 ---
 
 <p align="center">
-  <h3 align="center"><b>Nozaki</b></h3>
+  <img src="/images/projects/nozaki/logo.png" width="180px" height="180px">
+  <h1 align="center"><b>Nozaki</b></h1>
   <p align="center">HTTP engine fuzzer security oriented</p>
   <p align="center">
     <a href="/LICENSE.md">
