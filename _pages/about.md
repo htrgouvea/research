@@ -7,7 +7,7 @@ permalink: /about
 
 ### Bio
 
-Born and raised in a city in the interior of Brazil, I wrote my first lines of code at the age of 14, after that I found myself falling in love with the computing universe and the offensive security area. When I finished high school, I moved to greater São Paulo to start my career so far in software development and, two years later, I finally managed to fulfill my dream and work with Information Security.
+Born and raised in a city in the interior of Brazil, I wrote my first lines of code at the age of 14, after that I fell in love with the universe of computing and the offensive area of security. When I finished high school, I moved to Greater São Paulo to start my career so far in software engineering and, two years later, I finally managed to fulfill my dream and work with Information Security.
 
 ---
 
@@ -15,9 +15,9 @@ Born and raised in a city in the interior of Brazil, I wrote my first lines of c
 
 ![Image](/images/photos/profile.jpg){:height=600px" width="360px" style="float:right; padding:10px"}
 
-After two years working in the software development area in the Brazilian government, I worked as an Information Security Analyst in a Red Team with some amazing Brazilian Security Companies of Consulting, like: OGASEC, Deloitte Brazil and CIPHER; and after this I decided to start a career as an Independent Researcher so that I could concentrate on things that really made sense to with my purpose.
+After two years working in the area of software engineering in the Brazilian government, I worked as an Information Security Analyst inside some Red Teams alongside some Brazilian security consulting companies, such as OGASEC, Deloitte Brasil, and CIPHER; and after that, I decided to start a career as an Independent Researcher so I could focus on the things that really made sense for my purpose.
 
-I am fascinated by the area of offensive security, so I spend many hours studying this segment. In the past, I won some prizes: first place at Bsides São Paulo 16th CTF and Hackaflag qualification in 2019 and first place at Campinas Hackathon in 2017 and in addition, I reported some vulnerabilities in the following Brazilian fintechs/banks: Caixa Econômica Federal, Warren Brazil and some others.
+As an Independent Researcher I have already found flaws in incredible companies such as: Activision Blizzard, Caixa Econômica Federal, Warren Brazil and others not so famous but equally incredible. And in parallel to this I have also won some awards in the past: first place at Bsides São Paulo 16th CTF and Hackaflag qualification in 2019 and first place at Campinas Hackathon in 2017.
 
 ---
 
@@ -25,9 +25,9 @@ I am fascinated by the area of offensive security, so I spend many hours studyin
 
 Aligning my life purpose (create technologies that help people and groups take control of their own information) with my work, I decided to cover the subjects below as the main areas of my research:
 
-- Application Security;
+- Security Vulnerabilities;
 - Privacy/anonymity algorithms;
-- Construction of security tools;
+- Automation of security actions;
 
 And during that research time (until then short) I was able to build some Open Source tools that are available on my [Github](https://github.com/GouveaHeitor){:target="_blank"} in addition I audited some applications/software that earned me some security adivisories:
 
