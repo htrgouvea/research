@@ -13,7 +13,7 @@ Born and raised in a city in the interior of Brazil, I wrote my first lines of c
 
 ### About
 
-![Image](/images/photos/profile.jpg){:height=600px" width="360px" style="float:right; padding:10px"}
+<!-- ![Image](/images/photos/profile.jpg){:height=600px" width="360px" style="float:right; padding:10px"} -->
 
 After two years working in the area of software engineering in the Brazilian government, I worked as an Information Security Analyst inside some Red Teams alongside some Brazilian security consulting companies, such as OGASEC, Deloitte Brasil, and CIPHER; and after that, I decided to start a career as an Independent Researcher so I could focus on the things that really made sense for my purpose.
 
