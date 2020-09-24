@@ -98,11 +98,10 @@ User identification using Tor on MacOS:
 
 User identification using Tor on Windows: 
 
-![](/images/publications/tor-detect-platform/tor-browser-macos.jpeg)
+![](/images/publications/tor-detect-platform/tor-browser-windows.jpeg)
 
 There is a margin of error in this technique, as a user can install fonts that are not the default for an operating system, but an attacker can make use of even more esoteric fonts...
 
-User identification using Tor on Windows: 
 
 ---
 
