@@ -2,7 +2,7 @@
 layout: content
 title: 'Detecting Tor Browser platform based on exclusive fonts rendering'
 description: ''
-og_image: https://heitorgouvea.me/images/publications/tor-detect-platform/tor-browser-macos-figerprint.png
+og_image: https://heitorgouvea.me/images/publications/tor-detect-platform/tor-browser-macos.png
 ---
 
 ### Summary
@@ -93,14 +93,16 @@ Exploit:
 
 User identification using Tor on MacOS:
 
-![](/images/publications/tor-detect-platform/tor-browser-macos-figerprint.png)
+![](/images/publications/tor-detect-platform/tor-browser-macos.png)
 
 
-User identification using Tor outside MacOS: 
+User identification using Tor on Windows: 
 
-![](/images/publications/tor-detect-platform/tor-browser-without-macos.jpeg)
+![](/images/publications/tor-detect-platform/tor-browser-macos.jpeg)
 
 There is a margin of error in this technique, as a user can install fonts that are not the default for an operating system, but an attacker can make use of even more esoteric fonts...
+
+User identification using Tor on Windows: 
 
 ---
 
