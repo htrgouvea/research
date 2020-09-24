@@ -19,8 +19,6 @@ However, it is possible to find out the operating system of a person using Tor v
 
 For example, the font “Lucida Grande” is one of them, which by default is only installed on MacOS, so when an HTML page tries to render it and is successful it can be concluded that that user is using “Tor on a MacOS”, already an example to identify users “Tor on Windows” would be the font “Comic Sans MS” among many other examples.
 
-There is a margin of error in this technique, as a user can install fonts that are not the default for an operating system, but an attacker can make use of even more esoteric fonts...
-
 After reporting this problem, I was told that the Tor Project is already aware of all of this, and some implementations are already present in the current version of Tor to reduce the impact of this vulnerability and there are also plans for the future so that it ceases to exist for complete.
 
 ---
@@ -99,6 +97,8 @@ User identification using Tor on MacOS:
 User identification using Tor outside MacOS: 
 
 ![](/images/publications/tor-detect-platform/tor-browser-without-macos.jpeg)
+
+There is a margin of error in this technique, as a user can install fonts that are not the default for an operating system, but an attacker can make use of even more esoteric fonts...
 
 ---
 
