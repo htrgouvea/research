@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'Detecting Tor Browser platform based on exclusive fonts rendering'
-description: ''
+description: 'Through the rendering of some specific Fonts, I discovered that it is possible to identify a user's operating system behind Tor and after reporting this to the Tor Project I was aware that they were already aware of the problem and there are already some implementations to minimize the impact of this vulnerability.'
 og_image: https://heitorgouvea.me/images/publications/tor-detect-platform/tor-browser-macos.png
 ---
 
