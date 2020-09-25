@@ -1,19 +1,19 @@
 ---
 layout: content
 title: 'Detecting Tor Browser platform based on exclusive fonts rendering'
-description: 'Through the rendering of some specific Fonts, I discovered that it is possible to identify a users operating system behind Tor and after reporting this to the Tor Project I was aware that they were already aware of the problem and there are already some implementations to minimize the impact of this vulnerability.'
+description: 'Through the rendering of some specific Fonts, I discovered that it is possible to identify a users operating system behind Tor and after reporting this to the Tor Project I was told that they were already aware of the problem and there are already some implementations to minimize the impact of this vulnerability.'
 og_image: https://heitorgouvea.me/images/publications/tor-detect-platform/tor-browser-macos.png
 ---
 
 ### Summary
 
-Through the rendering of some specific Fonts, I discovered that it is possible to identify a user's operating system behind Tor and after reporting this to the Tor Project I was aware that they were already aware of the problem and there are already some implementations to minimize the impact of this vulnerability.
+Through the rendering of some specific Fonts, I discovered that it is possible to identify a user's operating system behind Tor and after reporting this to the Tor Project I was told that they were already aware of the problem and there are already some implementations to minimize the impact of this vulnerability.
 
 ---
 
 ### Description
 
-The Tor browser is based on Firefox, with its peculiarities and digital privacy/anonymity promises, in addition to all its engineering to hide the IP from its user, Tor also promises to combat identifications that are linked to a person’s operating system, such for example: techniques that use JavaScript to capture the screen size and identify a unique feature of it.
+The Tor browser is based on Firefox, with its peculiarities and privacy/anonymity digital promises, in addition to all its engineering to hide the IP from its user, Tor also promises to combat identifications that are linked to a person’s operating system, such for example: techniques that use JavaScript to capture the screen size and identify a unique feature of it.
 
 However, it is possible to find out the operating system of a person using Tor via a technique that makes use of Fonts "exclusive" to some operating systems.
 
