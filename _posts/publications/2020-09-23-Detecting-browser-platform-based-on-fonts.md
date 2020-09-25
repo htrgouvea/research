@@ -21,6 +21,8 @@ For example, the font “Lucida Grande” is one of them, which by default is on
 
 After reporting this problem, I was told that the Tor Project is already aware of all of this, and some implementations are already present in the current version of Tor to reduce the impact of this vulnerability and there are also plans for the future so that it ceases to exist for complete.
 
+More information about this can be found at: [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)
+
 ---
 
 ### Proof of Concept
