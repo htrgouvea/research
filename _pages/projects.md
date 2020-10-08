@@ -6,7 +6,7 @@ permalink: /projects
 description: During my independent research, I developed some projects in order to solve some types of recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects.
 ---
 
-## My research projects
+## Research projects
 
 During my independent research, I developed some projects in order to solve some recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects:
 
