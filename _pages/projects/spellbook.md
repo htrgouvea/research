@@ -8,12 +8,12 @@ permalink: /projects/spellbook
 <p align="center">
   <img src="/images/projects/spellbook/logo.png" width="150px" height="150px">
   <h2 align="center">Spellbook</h2>
-  <p align="center"> Micro-framework for rapid development of reusable security tools </p>
+  <p align="center"> Micro-framework for rapid development of reusable security tools</p>
   <p align="center">
-    <a href="https://github.com/GouveaHeitor/spellbook/blob/master/LICENSE.md">
+    <a href="https://github.com/x86scale/spellbook/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/GouveaHeitor/spellbook/releases">
+    <a href="https://github.com/x86scale/spellbook/releases">
       <img src="https://img.shields.io/badge/version-0.0.2-blue.svg">
     </a>
   </p>
@@ -32,7 +32,7 @@ The main focus of this "micro-framework" is to keep my personal scripts organize
 ### Download and install
 
 ```
-  $ git clone https://github.com/GouveaHeitor/spellbook && cd spellbook
+  $ git clone https://github.com/x86scale/spellbook && cd spellbook
   $ cpan install Getopt::Long Mojo::File Mojo::JSON
 ```
 
@@ -108,10 +108,12 @@ The only premise is that your module receives a main entry point and returns the
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/spellbook/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/GouveaHeitor/spellbook/issues) and for security issues, see here the [security policy.](https://github.com/GouveaHeitor/spellbook/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/x86scale/spellbook/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/x86scale/spellbook/issues) and for security issues, see here the [security policy.](https://github.com/x86scale/spellbook/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+
+- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/x86scale) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
 
 ---
  
 ### License
 
-- This work is licensed under [MIT License.](https://github.com/GouveaHeitor/spellbook/blob/master/LICENSE.md)
+- This work is licensed under [MIT License.](https://github.com/x86scale/spellbook/blob/master/LICENSE.md)

@@ -14,7 +14,7 @@ permalink: /projects/uranus
     <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/GouveaHeitor/uranus/releases">
+    <a href="https://github.com/x86scale/uranus/releases">
       <img src="https://img.shields.io/badge/version-0.1.3-blue.svg">
     </a>
   </p>
@@ -36,7 +36,7 @@ This project is summarized in several crawlers that constitute a single ecosyste
 
 ```bash
   # Download
-  $ git clone https://github.com/GouveaHeitor/uranus && cd uranus
+  $ git clone https://github.com/x86scale/uranus && cd uranus
 
   # Building and starting MariaDB Database
   $ docker build --rm --squash -t uranus-database ./rest-server/migrations/
@@ -55,10 +55,12 @@ This project is summarized in several crawlers that constitute a single ecosyste
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/GouveaHeitor/uranus/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/GouveaHeitor/uranus/issues) See here the [security policy.](https://github.com/GouveaHeitor/uranus/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/x86scale/uranus/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/x86scale/uranus/issues) See here the [security policy.](https://github.com/x86scale/uranus/blob/master/SECURITY.md) (✿ ◕‿◕) This project follows the best practices defined by this [style guide](https://heitorgouvea.me/projects/perl-style-guide).
+
+- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/x86scale) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
 
 ---
 
 ### License
 
-- This work is licensed under [MIT License.](https://github.com/GouveaHeitor/uranus/blob/master/LICENSE.md)
+- This work is licensed under [MIT License.](https://github.com/x86scale/uranus/blob/master/LICENSE.md)

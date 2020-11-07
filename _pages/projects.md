@@ -16,4 +16,6 @@ During my research, I developed some projects in order to solve some recurring p
 
 * [Uranus](/projects/uranus): an ecosystem of crawlers for detecting: leaks, sensitive data exposure and attempts exfiltration of data;
 
-* [Spellbook](/projects/spellbook): micro-framework for rapid development of security audit workflows;
+* [Spellbook](/projects/spellbook): micro-framework for rapid development of security audit tools;
+
+* [Perl Style Guide](/projects/perl-style-guide): A starting point for Perl development teams to provide consistency through good practices;
