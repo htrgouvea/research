@@ -4,10 +4,10 @@
   <p align="center">Just my simple/personal website</p>
 
   <p align="center">
-    <a href="https://github.com/GouveaHeitor/gouveaheitor.github.io/blob/master/LICENSE.md">
+    <a href="https://github.com/x86scale/x86scale.github.io/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/GouveaHeitor/gouveaheitor.github.io/releases">
+    <a href="https://github.com/x86scale/x86scale.github.io/releases">
       <img src="https://img.shields.io/badge/version-1.0-blue.svg">
     </a>
   </p>
@@ -27,7 +27,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ```bash
   # Download
-  $ git clone https://github.com/GouveaHeitor/gouveaheitor.github.io && cd gouveaheitor.github.io
+  $ git clone https://github.com/x86scale/x86scale.github.io && cd x86scale.github.io
     
   # Building and running docker image
   $ docker build --rm --squash -t blog-jekyll .
@@ -38,9 +38,9 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/GouveaHeitor/gouveaheitor.github.io/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/x86scale/x86scale.github.io/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
-- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/offgouvea) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
+- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/x86scale) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
 
 ---
 
