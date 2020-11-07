@@ -7,8 +7,8 @@ email: hi@heitorgouvea.me
 baseurl: "" 
 url: "https://heitorgouvea.me" 
 
-twitter_username: GouveaHeitor
-github_username:  GouveaHeitor
+twitter_username: x86scale
+github_username:  x86scale
 
 include: [_pages]
 exclude: ["README.md", "SECURITY.md", "LICENSE.md", "Gemfile", "Dockerfile"]
