@@ -1,7 +1,7 @@
 
 <p align="center">
   <h3 align="center">heitorgouvea.me</h3>
-  <p align="center">Just my simple/personal website</p>
+  <p align="center">My past public researches are archived here</p>
 
   <p align="center">
     <a href="https://github.com/x86scale/x86scale.github.io/blob/master/LICENSE.md">
@@ -30,7 +30,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
   $ git clone https://github.com/x86scale/x86scale.github.io && cd x86scale.github.io
     
   # Building and running docker image
-  $ docker build --rm --squash -t blog-jekyll .
+  $ docker build -t blog-jekyll .
   $ docker run -d -p 4000:4000 --name heitorgouvea.me blog-jekyll
 ```
 
