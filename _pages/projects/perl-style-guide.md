@@ -12,7 +12,7 @@ permalink: /projects/perl-style-guide
     <a href="/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/x86scale/perl-style-guide/releases">
+    <a href="https://github.com/htrgouvea/perl-style-guide/releases">
       <img src="https://img.shields.io/badge/version-0.1.7-blue.svg">
     </a>
   </p>
@@ -173,12 +173,12 @@ my %hash = (
 
 #### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/x86scale/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/x86scale/perl-style-guide/issues)  and for security issues see here the [security policy.](https://github.com/x86scale/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/htrgouvea/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/htrgouvea/perl-style-guide/issues)  and for security issues see here the [security policy.](https://github.com/htrgouvea/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕) 
 
-- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/x86scale) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
+- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/hgouvea) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
 
 ---
 
 #### License
 
-- This work is licensed under [MIT License.](https://github.com/x86scale/perl-style-guide/blob/master/LICENSE.md)
+- This work is licensed under [MIT License.](https://github.com/htrgouvea/perl-style-guide/blob/master/LICENSE.md)

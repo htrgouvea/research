@@ -119,8 +119,8 @@ This vulnerability can be combined with others to develop a profile unique enoug
 
 ### References
 
-* [https://www.torproject.org/](https://www.torproject.org/)
-* [https://en.wikipedia.org/wiki/Tor_(anonymity_network)](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
-* [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)
-* [https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097)
-* [https://www.samclarke.com/javascript-is-font-available/](https://www.samclarke.com/javascript-is-font-available/)
+- [1] [https://www.torproject.org/](https://www.torproject.org/)
+- [2] [https://en.wikipedia.org/wiki/Tor_(anonymity_network)](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
+- [3] [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)
+- [4] [https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097)
+- [5] [https://www.samclarke.com/javascript-is-font-available/](https://www.samclarke.com/javascript-is-font-available/)

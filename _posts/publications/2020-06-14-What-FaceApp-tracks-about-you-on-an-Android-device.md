@@ -91,16 +91,10 @@ In this scenario, malware is able to collect the information that FaceApp stores
 
 ### Refererences
 
-- [https://en.wikipedia.org/wiki/FaceApp](https://en.wikipedia.org/wiki/FaceApp)
-
-- [https://play.google.com/store/apps/details?id=io.faceapp](https://play.google.com/store/apps/details?id=io.faceapp)
-
-- [https://developer.android.com/reference/android/Manifest.permission](https://developer.android.com/reference/android/Manifest.permission)
-
-- [https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning)
-
-- [https://frida.re](https://frida.re/)
-
-- [https://developer.android.com/training/articles/user-data-ids](https://developer.android.com/training/articles/user-data-ids?hl=pt-br)
-
-- [https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering)
+- [1] [https://en.wikipedia.org/wiki/FaceApp](https://en.wikipedia.org/wiki/FaceApp)
+- [2] [https://play.google.com/store/apps/details?id=io.faceapp](https://play.google.com/store/apps/details?id=io.faceapp)
+- [3] [https://developer.android.com/reference/android/Manifest.permission](https://developer.android.com/reference/android/Manifest.permission)
+- [4] [https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning)
+- [5] [https://frida.re](https://frida.re/)
+- [6] [https://developer.android.com/training/articles/user-data-ids](https://developer.android.com/training/articles/user-data-ids?hl=pt-br)
+- [7] [https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05j-testing-resiliency-against-reverse-engineering)

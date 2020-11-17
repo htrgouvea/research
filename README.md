@@ -4,10 +4,10 @@
   <p align="center">My past public researches are archived here</p>
 
   <p align="center">
-    <a href="https://github.com/x86scale/x86scale.github.io/blob/master/LICENSE.md">
+    <a href="https://github.com/htrgouvea/htrgouvea.github.io/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/x86scale/x86scale.github.io/releases">
+    <a href="https://github.com/htrgouvea/htrgouvea.github.io/releases">
       <img src="https://img.shields.io/badge/version-1.0-blue.svg">
     </a>
   </p>
@@ -27,7 +27,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ```bash
   # Download
-  $ git clone https://github.com/x86scale/x86scale.github.io && cd x86scale.github.io
+  $ git clone https://github.com/htrgouvea/htrgouvea.github.io && cd htrgouvea.github.io
     
   # Building and running docker image
   $ docker build -t blog-jekyll .
@@ -38,9 +38,9 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/x86scale/x86scale.github.io/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/htrgouvea.github.io/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
-- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/x86scale) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
+- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/htrgouvea) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
 
 ---
 
