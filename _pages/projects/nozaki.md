@@ -72,9 +72,7 @@ $ perl nozaki.pl -m GET -u http://lab.nozaki.io:8002/\?read\= -w wordlists/paylo
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/htrgouvea/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/htrgouvea/perl-style-guide/issues)  and for security issues see here the [security policy.](https://github.com/htrgouvea/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕) 
-
-- If you want to contribute financially to this project, an alternative is to become my ["Patreon"](https://patreon.com/hgouvea) or make a donation via [Paypal.](https://www.paypal.com/donate?hosted_button_id=4283L7ZNWN3M6)
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](https://github.com/htrgouvea/perl-style-guide/blob/master/.github/CONTRIBUTING.md) Please, report bugs via [issues page.](https://github.com/htrgouvea/perl-style-guide/issues)  and for security issues see here the [security policy.](https://github.com/htrgouvea/perl-style-guide/blob/master/SECURITY.md) (✿ ◕‿◕)
 
 ---
 
