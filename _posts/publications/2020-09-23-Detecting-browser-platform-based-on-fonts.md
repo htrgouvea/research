@@ -19,7 +19,7 @@ However, it's possible to find out the operating system of a person using Tor vi
 
 For example, the font “Lucida Grande” is one of them, which by default is only installed on MacOS, so when an HTML page tries to render it and is successful it can be concluded that that user is using “Tor on a MacOS”, already an example to identify users using “Tor on Windows” would be the font “MS Gothic” among many other examples.
 
-After reporting this problem, I was told that the Tor Project is already aware[³](#references) of all of this, and some implementations are already present in the current version of Tor to reduce the impact of this vulnerability and there are also plans for the future so that it ceases to exist for complete. More information about this can be found at: [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)[⁴](#references)
+After reporting this problem, I was told that the Tor Project is already aware[³](#references) of all of this, and some implementations are already present in the current version of Tor to reduce the impact of this vulnerability and there are also plans for the future so that it ceases to exist for complete. More information about this can be found at: [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/) [⁴](#references)
 
 ---
 
@@ -119,8 +119,8 @@ This vulnerability can be combined with others to develop a profile unique enoug
 
 ### References
 
-1. [https://www.torproject.org/](https://www.torproject.org/)
-2. [https://en.wikipedia.org/wiki/Tor_(anonymity_network)](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
-3. [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)
-4. [https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097)
-5. [https://www.samclarke.com/javascript-is-font-available/](https://www.samclarke.com/javascript-is-font-available/)
+- 1. [https://www.torproject.org/](https://www.torproject.org/)
+- 2. [https://en.wikipedia.org/wiki/Tor_(anonymity_network)](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
+- 3. [https://2019.www.torproject.org/projects/torbrowser/design/](https://2019.www.torproject.org/projects/torbrowser/design/)
+- 4. [https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18097)
+- 5. [https://www.samclarke.com/javascript-is-font-available/](https://www.samclarke.com/javascript-is-font-available/)
