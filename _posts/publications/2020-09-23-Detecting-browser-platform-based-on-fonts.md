@@ -91,9 +91,7 @@ Exploit:
 </html>
 ```
 
-If you prefer, you can see a live demo [clicking here](https://heitorgouvea.me/public/payloads/tor-browser-fonts-exploit.html)
-
-User identification using Tor on MacOS:
+If you prefer, you can see a live demo [clicking here.](https://heitorgouvea.me/public/payloads/tor-browser-fonts-exploit.html) User identification using Tor on MacOS:
 
 ![](/images/publications/tor-detect-platform/tor-browser-macos.png)
 
