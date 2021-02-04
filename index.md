@@ -14,3 +14,4 @@ permalink: /
 * [A little case about scraping personal data exposure in the web](/2020/06/23/Scraping-personal-data-exposure-in-the-web)
 * [Detecting Tor Browser platform based on exclusive fonts rendering](/2020/09/23/Detecting-browser-platform-based-on-fonts)
 * [CVE-2020-28043 - Server Side Request Forgery on MISP](/2020/11/03/CVE-2020-28043)
+* [Working with others hackers on the same targets/bounty](/2021/01/03/working-with-others-hackers)
