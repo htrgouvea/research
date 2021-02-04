@@ -45,7 +45,7 @@ In a Pentest/Bug Bounty where more than 3 or 4 people are collaborating, it is v
 
 To illustrate a little better, I will use an Adobe repository (public program) that I worked on recently. At the beginning we created a simple folder structure to organize the information and then we left to do the recognition. At the beginning our repository looked something like this:
 
-![](/images/publications/collab-methology/first-repo.png)
+![](/images/publications/collab-methology/tree.png)
 
 We identified some hosts that were in scope, active web service ports, we used waybackurls to find URLs and during this process it was possible to learn more about the environment, making it possible to identify an Open Redirect and a PII leak. (Obviously it didn't happen in 5 minutes)
 
@@ -61,11 +61,16 @@ Unfortunately, I can't use better examples of discussions because I want to avoi
 
 Another positive point is the power of file synchronization through "git pull":
 
+![](/images/publications/collab-methology/github-feed.png)
+
 ![](/images/publications/collab-methology/git-pull.png)
 
-It is also possible to use the MarkDown resources of Github to write the reports collaboratively before sending it on the actual platform.
+Other benefits:
+  - Is also possible to use the MarkDown resources of Github to write the reports collaboratively;
+  - Your repository on gihtub ends up becoming a backup;
+  - If a new person is going to participate in this collab, through the repository on github they will have the entire history of the project;
 
-Anyway, I don't want to go into this topic of Git / Github, but show that you can use this tool as a means of collaboration.
+Anyway, I don't want to go into this topic of Git/Github, but show that you can use this tool as a means of collaboration.
 
 ---
 
