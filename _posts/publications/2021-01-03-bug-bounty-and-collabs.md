@@ -82,7 +82,7 @@ The practices reflected in this article work for my reality, but they may not be
 
 ### References
 
-- [https://slack.com](https://slack.com/)
-- [https://en.wikipedia.org/wiki/Syntax_highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting)
-- [https://meet.google.com](https://meet.google.com/)
-- [https://github.com/Static-Flow/BurpSuite-Team-Extension](https://github.com/Static-Flow/BurpSuite-Team-Extension)
+- [1] [https://slack.com](https://slack.com/)
+- [2] [https://en.wikipedia.org/wiki/Syntax_highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting)
+- [3] [https://meet.google.com](https://meet.google.com/)
+- [4] [https://github.com/Static-Flow/BurpSuite-Team-Extension](https://github.com/Static-Flow/BurpSuite-Team-Extension)
