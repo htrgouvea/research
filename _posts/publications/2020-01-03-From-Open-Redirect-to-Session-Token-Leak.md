@@ -9,7 +9,7 @@ og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/ema
 
 I recently started to test the security of Web and Mobile Applications of some Brazilian banks that I use, I'm not sure why this initiative, maybe it's just the feeling of wanting to find more restricted vulnerabilities than the common ones. From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
 
-In this post I want to share, an Open Redirect vulnerability [¹](#references) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
+In this post I want to share, an Open Redirect vulnerability [[1]](#references) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
