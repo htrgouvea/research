@@ -9,7 +9,7 @@ og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/ema
 
 I recently started to test the security of Web and Mobile Applications of some Brazilian banks that I use, I'm not sure why this initiative, maybe it's just the feeling of wanting to find more restricted vulnerabilities than the common ones. From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
 
-In this post I want to share, an [“open redirect¹”](#references) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
+In this post I want to share, an Open Redirect vulnerability [¹](#references) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
@@ -46,7 +46,7 @@ Well, here we have the Open Redirect vulnerability. To my surprise, however, I w
 
 This content in the **“?code=”** parameter aroused my curiosity. Understanding a little more of the original request, I was able to conclude that the value of this parameter is a Session Token.
 
-As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token. Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
+As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token [²](#references). Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
 
 ---
 
@@ -147,8 +147,6 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 
 ### Referencies
 
-- 1. [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
-
-- 2. [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
-
-- 3. [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
+- [1] [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
+- [2] [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
+- [3] [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
