@@ -41,7 +41,7 @@ I met this extension at the end of 2020 and I simply found the experience magnif
 
 ### Git and Github?! WTF?!
 
-In a Pentest/Bug Bounty where more than 3 or 4 people are collaborating, it is very common to have rework and non-sharing of information. The way I found to get around these problems was to create a private repository on Github dedicated to the Bug Bounty program, so that everyone involved in the process can synchronize with the information obtained in recon, exploits that have been developed, past reports, new identifications and everything else.
+In a Pentest/Bug Bounty where more than 3 or 4 people are collaborating, it is very common to have rework and non-sharing of information. The way I found to get around these problems was to create a private repository on Github dedicated to the Bug Bounty program, so that everyone involved in the process can synchronize with the information obtained during the recon process, exploits that have been developed, past reports, new identifications and everything else.
 
 To illustrate a little better, I will use an Adobe repository (public program) that I worked on recently. At the beginning we created a simple folder structure to organize the information and then we left to do the recognition. At the beginning our repository looked something like this:
 
