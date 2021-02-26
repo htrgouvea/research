@@ -9,6 +9,8 @@ og_image: https://heitorgouvea.me/images/publications/faceapp-analysis/table-fac
 
 Browsing Twitter I was noticed that FaceApp is back in fashion - "a mobile app that generates highly realistic transformations of human faces in photographs using neural networks based on artificial intelligence" - and along with this has arisen a debate about how this app can use your information commercially, with this scenario in mind, I decided to perform an analysis of the application and see what information it actually collects and how it can be used for commercial purposes. This publication aims on showing how the analysis took place, in a clear and accessible way for the greatest number of people, therefore, some slightly more complex techniques were outside the scope of this publication and furthermore, this publication is not intended to evaluate the application security.
 
+Below is an analysis that was written based on what I looked at home for about a day because I couldn't go anywhere because of the covid-19 pandemic. I didn't spend a lot of time, so I didn't look deeply, so please see for reference only :)
+
 ---
 
 ### Description
