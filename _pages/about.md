@@ -3,7 +3,7 @@ layout: page
 title: About | Heitor Gouvêa - Independent Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /about
-description: During my work as an Independent Researcher my focus is to help people, organizations and companies take control of their own information. I combine a technical skillset with business experience to help companies understand the threats they face and build intelligent tools to combat risk and future security for both individuals and groups.
+description: During my work as an Independent Researcher my focus is to help people and organizations take control of their own information. I combine a technical skillset with business experience to help companies understand the threats they face and build intelligent tools to combat risk and future security for both individuals and groups.
 ---
 
 ## About
