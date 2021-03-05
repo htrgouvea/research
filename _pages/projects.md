@@ -10,7 +10,7 @@ description: During my research, I developed some projects in order to solve som
 
 During my research, I developed some projects in order to solve some recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects:
 
-### [Nipe:](https://github.com/htrgouvea/nipe) an engine to make Tor Network your default gateway;
+### [Nipe:](https://github.com/htrgouvea/nipe) an engine to make Tor Network your default gateway
 
 The Tor project allows users to surf the Internet, chat and send instant messages anonymously through its own mechanism. 
 It is used by a wide variety of people, companies and organizations, both for lawful activities and for other illicit purposes. Tor has been largely used by intelligence agencies, hacking groups, criminal activities and even ordinary users who care about their privacy in the digital world.
@@ -29,13 +29,13 @@ Link: [https://github.com/htrgouvea/nipe](https://github.com/htrgouvea/nipe)
 
 The idea is that this solution is complete enough to cover the entire fuzzing process in a web application (be it a monolith, a REST API, or even a GraphQL API) being fully parameterized, piped with other tools and with amazing filters.
 
-Link: [https://github.com/htrgouvea/nipe](https://github.com/htrgouvea/nipe)
+Link: [https://github.com/htrgouvea/nozaki](https://github.com/htrgouvea/nozaki)
 
 ### [Uranus](https://github.com/htrgouvea/uranus): an ecosystem of crawlers for detecting: leaks, sensitive data exposure and attempts exfiltration of data
 
 This project is summarized in several crawlers that constitute a single ecosystem, that monitor certain channels such as: Github, Bing, Pastebin and iHaveBeenPwned? in order to perform data leak detection, exposed sensitive files and data exfiltration attempts.
 
-Link: [https://github.com/htrgouvea/nipe](https://github.com/htrgouvea/nipe)
+Link: [https://github.com/htrgouvea/nozaki](https://github.com/htrgouvea/nozaki)
 
 ### [Spellbook](https://github.com/htrgouvea/spellbook): micro-framework for rapid development of security tools
 
