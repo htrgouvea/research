@@ -8,7 +8,7 @@ description: During my research, I developed some projects in order to solve som
 
 ## Research projects
 
-During my research, I developed some projects in order to solve some recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects:
+I developed some projects in order to solve some recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects:
 
 ### [Nipe:](https://github.com/htrgouvea/nipe) an engine to make Tor Network your default gateway
 
