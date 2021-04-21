@@ -13,7 +13,15 @@ In this post I want to share, an Open Redirect vulnerability [[1]](#references) 
 
 It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
 
-*Disclaimer:* the proof of concept of this vulnerability was made on January 01; The vulnerability was reported on january 05 and confirmation was made on january 07; On January 10, this vulnerability was corrected and on the same day  I publicated this article.
+```
+Timeline:
+
+01/01/2020: Find of this vulnerability and made the proof of concept; 
+05/01/2020: The vulnerability was reported;
+07/01/2020: Confirmation from Caixa Economica Federal;
+10/01/2020: This vulnerability was fixed;
+10/01/2020: Full disclousure;
+```
 
 ---
 
@@ -46,7 +54,7 @@ Well, here we have the Open Redirect vulnerability. To my surprise, however, I w
 
 This content in the **“?code=”** parameter aroused my curiosity. Understanding a little more of the original request, I was able to conclude that the value of this parameter is a Session Token.
 
-As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token [²](#references). Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
+As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token[2](#references). Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
 
 ---
 
