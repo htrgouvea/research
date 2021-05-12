@@ -8,7 +8,6 @@ description: During my work as an Independent Researcher my focus is to help peo
 
 ## About
 
-I'm an Independent Researcher based in São Paulo with Software Development background and 5 years of experience in the offensive security industry. My research focus is privacy/anonymity algorithms and vulnerability discovery in applications/services.
-I have fun bypassing modern defenses, exploring systems and playing with new technologies and in parallel: sharing some of my research notes on [my blog](/); During this journey I try to specialize in vulnerability discovery and exploit development.
+I'm an Independent Researcher based in São Paulo with Software Development background and 5 years of experience in the offensive security industry. My research focus is privacy/anonymity algorithms and vulnerability discovery in applications/services. I have fun bypassing modern defenses, exploring systems and playing with new technologies and in parallel: sharing some of my research notes on [my blog](/); During this journey I try to specialize in vulnerability discovery and exploit development.
 
 If you want to contact me, here is my email: [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me)

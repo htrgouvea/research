@@ -3,7 +3,7 @@ layout: page
 title: Projects | Heitor Gouvêa - Independent Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /projects
-description: During my research, I developed some projects in order to solve some types of recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects.
+description: I developed some projects in order to solve some types of recurring problems or validate a theory discovered and on this page, you can check out some of these currently open source projects.
 ---
 
 ## Research projects
