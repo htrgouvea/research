@@ -49,4 +49,4 @@ Link: [https://github.com/htrgouvea/nozaki](https://github.com/htrgouvea/nozaki)
 
 This project is summarized in several crawlers that constitute a single ecosystem, that monitor certain channels such as: Github, Bing, Pastebin and iHaveBeenPwned? in order to perform data leak detection, exposed sensitive files and data exfiltration attempts.
 
-Link: [https://github.com/htrgouvea/nozaki](https://github.com/htrgouvea/nozaki)
+Link: [https://github.com/htrgouvea/uranus](https://github.com/htrgouvea/uranus)
