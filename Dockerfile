@@ -9,4 +9,4 @@ WORKDIR /site
 RUN gem install bundler:1.17.2
 RUN bundle install 
 
-CMD ["bundle", "exec", "jekyll", "serve", "-H", "0.0.0.0"]
+CMD ["jekyll", "serve"]

@@ -1,8 +1,6 @@
-
 <p align="center">
   <h3 align="center">heitorgouvea.me</h3>
   <p align="center">My past public researches are archived here</p>
-
   <p align="center">
     <a href="https://github.com/htrgouvea/htrgouvea.github.io/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
