@@ -7,7 +7,7 @@ permalink: /
 
 ## Publications
 
-[!image](/images/section.jpeg)
+![image](/images/section.jpeg)
 
 * [From an Open Redirect in a Brazilian Bank to Account Takeover](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak)
 * [A little case about scraping personal data exposure in the web](/2020/06/23/Scraping-personal-data-exposure-in-the-web)
