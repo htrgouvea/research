@@ -82,118 +82,16 @@ Example of output of fuzzer:
 
 Quite frankly, it will be difficult for you to interact directly with an API written in Perl, the chances are greater that these APIs are internal, consumed by another backend, and that's a good thing, as it opens up scope for exploring JSON contexts. Interoperability [5]. As there are many modules in Perl to handle this type of information, the attack margin ends up being quite large. Here we will cover the 4 most used modules based on CPAN;
 
-| Lib | CPAN Link |
-| ---| --- |
-| JSON | [https://metacpan.org/pod/JSON](https://metacpan.org/pod/JSON) |
-| JSON::ON | [https://metacpan.org/pod/JSON::ON](https://metacpan.org/pod/JSON::ON) |
-| JSON::Parse | [https://metacpan.org/pod/JSON::Parse](https://metacpan.org/pod/JSON::Parse) |
-| Mojo::JSON | [https://metacpan.org/pod/Mojo::JSON](https://metacpan.org/pod/Mojo::JSON) |
+![image](/images/publications/perl-lib-fuzz/json-libs.png)
 
 In this case, 8 different JSON entries were provided, taken from Bishop Fox's research on the topic [5]. To better illustrate, I'll leave a table below with all the detailed view of the outputs:
 
-|  | JSON Lib | JSON::ON | JSON::Parse | Mojo::JSON |
-| ---| ---| ---| ---| --- |
-| Duplicate Key Precedence with number | Last value | Last value | Last value | Last value |
-| Duplicate Key Precedence with string | Last value | Last value | Last value | Last value |
-| Type Representation with Infinity | NaN | NaN | Inf | Return Inf |
-| Large number representation | 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 | 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 | 1e+96 | 1e+96 |
-| Char truncate | Parsing Error | Parsing Error | Parsing Error | Parsing Error |
+![image](/images/publications/perl-lib-fuzz/json-output.png)
 
 
 Based on this output, a small challenge came to my mind that a co-worker (https://twitter.com/rick2600) showed me some time ago:
 
-```perl
-#!/usr/bin/env perl
-
-use 5.018;
-use strict;
-use warnings;
-
-my %account = (
-    name => "", 
-    money => 1000
-);
-
-sub buy_items {
-    print "\n\n";
-    
-    my @items = (
-        {name => "web hacking book", price => 100, id => 1},
-        {name => "severino license", price => 50, id => 2},
-        {name => "home made hacking tool", price => 200, id => 3},
-        {name => "shell", price => 100000, id => 4}
-    );
-    
-    foreach my $item (@items) {
-        print "ID: @$item{id}\n";
-        print "Product: @$item{name}\n";
-        print "Price: @$item{price}\n\n";
-    }
-
-    print "\nItem ID? ";
-    chomp (my $itemid = <STDIN>);
-
-    if ($itemid > 0 && $itemid < 5) {
-        print "\nHow many? ";
-        chomp (my $many = <STDIN>);
-
-        my $total = $items[$itemid - 1 ] -> {price} * $many;
-        print "[+] TOTAL ===> $total\n";
-
-        if ($many <= 0) {
-            print ":/\n";
-        }
-
-        else {
-            if ($total > $account{money}) {
-                print "You do not have enough money :(\n";
-            }
-
-            else {
-                $account{money} -= $total;
-                print "You buy item",  $items[$itemid - 1 ] -> {name}, "\n";
-
-                if ($items[$itemid] -> {name} eq "shell") {
-                    system ("/bin/sh");
-                }
-            }
-        }
-    }
-
-    else {
-        print "Invalid!\n";
-        exit();
-    }
-}
-
-sub show_account_info {
-    print "\n[-] Account info:\n[+] Name: $account{name} \n[+] Money: $account{money}\n";
-}
-
-sub main {
-    print "\nWhat is your name? ";
-    chomp ($account{"name"} = <STDIN>);
-
-    while (1) {
-        print "\n0. buy items \n1. show account info\n2. exit\n? ";
-        chomp (my $choice = <STDIN>);
-        
-        if ($choice == 0) {
-            buy_items();
-        }
-
-        elsif ($choice == 1) {
-            show_account_info();
-        }
-
-        elsif ($choice == 2) {
-            exit();
-        }
-    }
-}
-
-exit main();
-```
+![image](/images/publications/perl-lib-fuzz/source-code-chall.png)
 
 This small piece of code is a simple implementation of a mechanism to buy some items, as the user enters his name at the beginning of the journey and has a starting balance of 10000.
 
@@ -201,10 +99,11 @@ This small piece of code is a simple implementation of a mechanism to buy some i
 
 Reading the code, we can see that our user can use his starting balance to buy almost all the products, except item 4. If he could do that, he could get a shell on the machine hosting the application because after this feat a system function is called .
 
-- We have 3 entry-points here:
-- When we inform our name;
-- When we say which item we want to buy;
-- How much do we want to buy;
+We have 3 entry-points here:
+
+1. When we inform our name;
+2. When we say which item we want to buy;
+3. How much do we want to buy;
 
 The fact of the name can be discarded, as this information is not used for the logic of the algorithm. The implementation regarding which item we want to buy would also not lead us to be able to acquire item 4.
 
@@ -230,14 +129,7 @@ The idea of using this little challenge, is to exemplify that through an API we 
 
 In Perl, we still have a wide variety of modules for URL parsing and also for requests, which can be used as a complement to each other. Therefore, I also adopted the differential fuzzing solution for the most common libs at the time of this research:
 
-| Lib | CPAN Link |
-| ---| --- |
-| Simple::URI | [https://metacpan.org/pod/URI::Simple](https://metacpan.org/pod/URI::Simple) |
-| Mojo::URL | [https://metacpan.org/pod/Mojo::URL](https://metacpan.org/pod/Mojo::URL) |
-| WWW::Mechanize | [https://metacpan.org/pod/WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) |
-| Furl | [https://metacpan.org/pod/Furl](https://metacpan.org/pod/Furl) |
-| Tiny::HTTP | [https://metacpan.org/pod/HTTP::Tiny](https://metacpan.org/pod/HTTP::Tiny) |
-| Mojo::UserAgent | [https://metacpan.org/pod/Mojo::UserAgent](https://metacpan.org/pod/Mojo::UserAgent) |
+![image](/images/publications/perl-lib-fuzz/urls-libs.png)
 
 
 ---
