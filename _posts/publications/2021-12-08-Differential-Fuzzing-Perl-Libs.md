@@ -60,74 +60,17 @@ This project is available on my Github and is easy to use: fuzz.pm [9].
 
 We need to write a test case in YML with the libs that will be audited and which seed file(s) will be used:
 
-```yml
-test:
-    seeds:
-        - seeds/urls-radamsa.txt
-    libs:
-        - Mojo_URI
-        - Tiny_HTTP
-        - Mojo_UA
-        - Mechanize
-        - Lib_Furl
-        - Simple_URI
-```
+![image](/images/publications/perl-lib-fuzz/test-case.png)
 
 Still, we just need to create packages for each module, like our fuzz target, referencing the nomenclature listed above, this way our fuzzer doesn't need details to know which method will be used or the like, examples:
 
 1:
 
-```perl
-package Mojo_URI {
-    use strict;
-    use warnings;
-    use Try::Tiny;
-    use Mojo::URL;
-
-    sub new {
-        my ($self, $payload) = @_;
-
-        try {
-            my $url = Mojo::URL -> new($payload);
-            
-            return $url -> host;
-        }
-
-        catch {
-            return undef;
-        }
-    }
-}
-
-1;
-```
+![image](/images/publications/perl-lib-fuzz/1-fuzz-target.png)
 
 2:
 
-```perl
-package Tiny_HTTP {
-    use strict;
-    use warnings;
-    use Try::Tiny;
-    use HTTP::Tiny;
-
-    sub new {
-        my ($self, $payload) = @_;
-
-        try {
-            my $tiny = HTTP::Tiny -> new() -> get ($payload);
-            
-            return $tiny -> {url};
-        }
-
-        catch {
-            return undef;
-        }
-    }
-}
-
-1;
-```
+![image](/images/publications/perl-lib-fuzz/2-fuzz-target.png)
 
 Example of output of fuzzer:
 
