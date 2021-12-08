@@ -89,7 +89,7 @@ In this case, 8 different JSON entries were provided, taken from Bishop Fox's re
 ![image](/images/publications/perl-lib-fuzz/json-output.png)
 
 
-Based on this output, a small challenge came to my mind that a co-worker (https://twitter.com/rick2600) showed me some time ago:
+Based on this output, a small challenge came to my mind that a co-worker [rick2600](https://twitter.com/rick2600) showed me some time ago:
 
 ![image](/images/publications/perl-lib-fuzz/source-code-chall.png)
 
@@ -119,7 +119,7 @@ Inform NaN or a representation thereof:
 
 ![image](/images/publications/perl-lib-fuzz/nan-demo.png)
 
-Original script in Python: https://gist.github.com/rick2600/1a815905cf2dd8bca5e4a98e27144e6d
+Original script in Python: [https://gist.github.com/rick2600/1a815905cf2dd8bca5e4a98e27144e6d](https://gist.github.com/rick2600/1a815905cf2dd8bca5e4a98e27144e6d)
 
 The idea of using this little challenge, is to exemplify that through an API we could use this interpretation of some Perl modules that results in NaN to exploit a logical bug.
 
@@ -131,6 +131,9 @@ In Perl, we still have a wide variety of modules for URL parsing and also for re
 
 ![image](/images/publications/perl-lib-fuzz/urls-libs.png)
 
+From the research produced by Orange Tsai, I made the same implementation in a larger amount of libs, I used the same samples but with the use of ramdasa to generate just a few more tests and again it was possible to see many divergences, unfortunately I didn't find anything exploitable in a real context so far:
+
+![image](/images/publications/perl-lib-fuzz/urls-demo.png)
 
 ---
 
