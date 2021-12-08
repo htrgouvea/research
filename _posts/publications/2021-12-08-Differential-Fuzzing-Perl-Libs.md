@@ -19,7 +19,8 @@ This publication aims to illustrate how the differential fuzzing approach can he
 
 ### Introduction to Perl
 
-Before we get into the topics of this publication itself, we need to have some contexts about the Perl language: it is a high-level, interpreted and dynamically typed language. It supports several programming paradigms, it was mainly developed for handling large amounts of strings and with a high performance.
+Before we get into the topics of this publication itself, we need to have some contexts about the Perl language: it is a high-level, interpreted and dynamically typed language. It supports several programming paradigms, it was developed by Larry Wall back in 1986, originally for high-performance processing of large volumes of strings.
+
 
 As in other languages, Perl allows the use of codes built by other users, called modules. They are distributed on the CPAN (Comprehensive Perl Archive Network): a repository where Perl software modules and their respective documentation are stored. CPAN also has a program that allows the automatic and simple installation of modules for Perl. [1]
 
@@ -32,7 +33,7 @@ If you're looking for code examples to familiarize yourself with the language be
 
 ### Issue: Automated Security Analysis
 
-Depending on your goal, performing manual analytics may turn out to be unfeasible, you may need a large scale and shallow depth at the moment and to solve this, automated analytics tools can help a lot - or even give you a direction or understanding of the code to conduct a manual analysis. Unfortunately we have few options related to this topic in Perl.
+Depending on your goal, performing manual analytics may turn out to be unfeasible, you may need a large scale and shallow depth at the moment and to solve this, automated analytics tools can help a lot - or even give you a direction or understanding of the code to conduct a manual analysis. Unfortunately, in relation to Perl, we have very few options avaiable to aid us on this task.
 
 - **Perl::Critic**: is the most popular solution when it comes to static analysis, its main focus is on code quality but still there are some pointers related to code security.
 
@@ -166,7 +167,7 @@ As applications written in Perl are not something you see every day, it is commo
 - **cpanfile**: it's like a package.json or requirements.txt, this file specifies which modules the application uses, this can help your understanding of the app or even identify a module with public vulnerabilities;
 - **app.conf** or **app.psgi**: naming commonly used for configuration files of an application written in Perl;
 - **.perlcriticrc**: Perl Critic configuration file, a module that does static code analysis and points out best practices in the language;
-mojo.log: debug file created by Mojo framework;
+- **mojo.log**: debug file created by Mojo framework;
 
 ---
 
