@@ -7,13 +7,13 @@ og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/fuzzer-outpu
 
 ### Introduction
 
-Applications have been using the Perl language in their backends for decades, unfortunately the use has been decreasing over time, a consequence of this is the low amount of material on how to make these applications secure, more specifically in modern contexts, but often we can see that some researchers find bugs in software used on a large scale that use this language, such as:
+Applications have been using the Perl language in their backends for decades, unfortunately the use has been decreasing over time, a consequence of this is the low amount of material on how to make these applications secure, more specifically in modern contexts,  but often we can see that some researchers find bugs in softwares used on a large scale, and these software use this language, such as:
 
 - [RCE in Gitlab's Bug Bounty program](https://hackerone.com/reports/1154542) using [CVE-2021-22204](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22204) which is an issue in [Exiftool](https://github.com/exiftool/exiftool), tool written in Perl, found by [vakzz](https://twitter.com/wcbowling);
 - [CVE-2019-11539](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11539): RCE on PulseSecure VPN by [Orange Tsai](https://twitter.com/orange_8361);
 - URL parsing divergences in Perl libraries, also by Orange Tsai;
 
-This publication aims to illustrate how the differential fuzzing approach can help in this journey, especially on a large scale, introducing some basic concepts about the language and its functioning and later how I made an implementation, tips, lessons and recommendations from this journey.
+This publication aims to illustrate how the differential fuzzing approach can help in this journey, especially on a large scale, introducing some basic concepts about the language and its functionality and later how I made an implementation, tips, lessons and recommendations from this journey.
 
 ---
 
@@ -49,7 +49,7 @@ In addition to the few options, some are commercial solutions and all have sever
 
 ### Differential Fuzzing to hunt logic bugs 
 
-A technique that can help us strongly on this journey is fuzzing, more specifically the Differential Fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification that in some contexts could be a security vulnerability.
+A technique that can help us strongly on this journey is fuzzing, more specifically the Differential Fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification, and in some contexts could be a security vulnerability.
 
 Differential Fuzzing: in this approach we have our seeds being sent to two or more inputs, where they are consumed and must produce the same output. At the end of the tests, these outputs are analyzed, in case of divergences, the fuzzer will signal a possible failure. [7]
 
