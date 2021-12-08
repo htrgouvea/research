@@ -1,8 +1,8 @@
 ---
 layout: content
 title: 'Scaling Perl Libs security analysis with Differential Fuzzing'
-description: ''
-og_image: https://heitorgouvea.me/images/publications/
+description: 'A technique that can help us strongly on this journey is fuzzing, more specifically the Differential Fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification that in some contexts could be a security vulnerability.'
+og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/fuzzer-output.png
 ---
 
 ### Introduction
@@ -34,13 +34,13 @@ If you're looking for code examples to familiarize yourself with the language be
 
 Depending on your goal, performing manual analytics may turn out to be unfeasible, you may need a large scale and shallow depth at the moment and to solve this, automated analytics tools can help a lot - or even give you a direction or understanding of the code to conduct a manual analysis. Unfortunately we have few options related to this topic in Perl.
 
-- Perl::Critic: is the most popular solution when it comes to static analysis, its main focus is on code quality but still there are some pointers related to code security.
+- **Perl::Critic**: is the most popular solution when it comes to static analysis, its main focus is on code quality but still there are some pointers related to code security.
 
-- SAST with AppScan: is a commercial solution, its free version is extremely limited and with few details. I did some tests, with 4 different projects and had a total of 40 findings, but all were false positives;
+- **SAST with AppScan**: is a commercial solution, its free version is extremely limited and with few details. I did some tests, with 4 different projects and had a total of 40 findings, but all were false positives;
 
-- SCA with ActiveState: another commercial and limited SCA solution in Perl, its CVE's database doesn't seem to be updated but anyway it seems to be the best solution available at the moment;
+- **SCA with ActiveState**: another commercial and limited SCA solution in Perl, its CVE's database doesn't seem to be updated but anyway it seems to be the best solution available at the moment;
 
-- Semgrep & CodeQL: unfortunately neither of these two wonderful solutions has native Perl support at this point, maybe in the future we will see some implementation;
+- **Semgrep & CodeQL**: unfortunately neither of these two wonderful solutions has native Perl support at this point, maybe in the future we will see some implementation;
 
 In addition to the few options, some are commercial solutions and all have several technical limitations.
 
@@ -320,14 +320,14 @@ Through the discrepancies found, you can use your knowledge of code auditing to 
 
 After you've found some divergences, it's likely that you're doing a white-box analysis, two modules that might make your job easier are:
 
-- Data::Dumper: can help you understand how a dataset is being presented in some part of the flow, whether it is a string, array, hash and also what the hierarchy of attributes is;
-- Devel::StackTrace: is an object representation of Stack Trace, it can bring you a lot of information about the program flow;
+- **Data::Dumper**: can help you understand how a dataset is being presented in some part of the flow, whether it is a string, array, hash and also what the hierarchy of attributes is;
+- **Devel::StackTrace**: is an object representation of Stack Trace, it can bring you a lot of information about the program flow;
 
 As applications written in Perl are not something you see every day, it is common that standard wordlists do not have paths that these applications normally use, so a first step is to include the following values ​​in your wordlist:
 
-- cpanfile: it's like a package.json or requirements.txt, this file specifies which modules the application uses, this can help your understanding of the app or even identify a module with public vulnerabilities;
-- app.conf or app.psgi: naming commonly used for configuration files of an application written in Perl;
-- .perlcriticrc: Perl Critic configuration file, a module that does static code analysis and points out best practices in the language;
+- **cpanfile**: it's like a package.json or requirements.txt, this file specifies which modules the application uses, this can help your understanding of the app or even identify a module with public vulnerabilities;
+- **app.conf** or **app.psgi**: naming commonly used for configuration files of an application written in Perl;
+- **.perlcriticrc**: Perl Critic configuration file, a module that does static code analysis and points out best practices in the language;
 mojo.log: debug file created by Mojo framework;
 
 ---
