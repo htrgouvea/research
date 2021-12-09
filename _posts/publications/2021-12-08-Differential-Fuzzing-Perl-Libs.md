@@ -77,6 +77,11 @@ Example of output of fuzzer:
 
 ![image](/images/publications/perl-lib-fuzz/fuzzer-output.png)
 
+In this publication, I preferred to focus on differential fuzzing applied to specific modules for two reasons:
+
+- ease of implementation;
+- usually vulnerabilities are identified in project dependencies and not in the target itself;
+
 ---
 
 ### JSON Interoperability
