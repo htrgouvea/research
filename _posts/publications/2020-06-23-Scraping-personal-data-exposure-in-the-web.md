@@ -27,11 +27,11 @@ When I came across this link (the content of the QR Code is also the link), I de
 
 ![](/images/publications/nubank-scraping/personal-infos.png)
 
-I came across my full name, CPF, my bank account number and branch exposed without any kind of control, the only requirement to get my information through Nubank was to have such a URL.
+I came across my full name, CPF, my bank account number and branch exposed without any kind of control, the only requirement to get my information through Nubank was to have such a URL. [[1]](#references)
 
 Such URL is generated exclusively by the client in your application and it is also up to the client to define how and with whom to share each generated URL.
 
-Convinced to analyse whether this was really possible, I decided to create a *dork* to try to find more of these URLs, this time exposed on the Internet and this was the result:
+Convinced to analyse whether this was really possible, I decided to create a *dork* [[2]](#references) to try to find more of these URLs, this time exposed on the Internet and this was the result:
 
 ![](/images/publications/nubank-scraping/google-dorks.png)
 
@@ -45,7 +45,7 @@ And these are just some of the results, on Twitter you could see that some peopl
 
 ### Proof of Concept
 
-Convinced to demonstrate an impact of the abuse of this functionality, I decided to create a proof of concept. The first part of this PoC boiled down to building code that would be able to use a search engine to collect as many URLs as possible, so I did a simple *scraper* for Bing:
+Convinced to demonstrate an impact of the abuse of this functionality, I decided to create a proof of concept. The first part of this PoC boiled down to building code that would be able to use a search engine to collect as many URLs as possible, so I did a simple *scraper* [[3]](#references) for Bing:
 
 ![](/images/publications/nubank-scraping/bing-scraper.png)
 
