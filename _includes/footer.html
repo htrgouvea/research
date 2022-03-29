@@ -1,6 +1,9 @@
 <footer class="c-page__footer">
 	<hr>
 	<p>
+		{% if site.donate %}
+			<a target="_blank" href="https://heitorgouvea.me/{{ donate }}">Github</a>
+		{% endif %}
 		{% if site.twitter_username %}
 			<a target="_blank" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
 		{% endif %}
