@@ -8,6 +8,7 @@ url: "https://heitorgouvea.me"
 
 twitter_username: htrgouvea
 github_username:  htrgouvea
+donate: donate
 
 include: [_pages]
 exclude: ["README.md", "SECURITY.md", "LICENSE.md", "Gemfile", "Dockerfile"]
@@ -17,7 +18,7 @@ permalink: /:year/:month/:day/:title
 
 sass:
     style: compressed
-gems:
+plugins:
   - jemoji
   - jekyll-sitemap
 
