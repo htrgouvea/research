@@ -5,7 +5,7 @@ og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
 ---
 
-<!-- ![image](/images/banner.jpeg) -->
+![image](/images/banner.jpeg)
 
 ## Publications
 
