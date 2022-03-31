@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Home | Heitor Gouvêa - Independent Researcher
+title: Home | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
 ---
 
-![image](/images/banner.jpeg){:height="285px" width="100%"}
+![image](/images/photos/banner.jpeg){:height="285px" width="100%"}
 
 ## Publications
 

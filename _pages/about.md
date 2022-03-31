@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About | Heitor Gouvêa - Independent Researcher
+title: About | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /about
 description: Research focus of Gouvêa is vulnerability discovery in applications/services and exploit development
