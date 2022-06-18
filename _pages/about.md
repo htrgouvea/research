@@ -8,7 +8,7 @@ description: Research focus of Gouvêa is vulnerability discovery in application
 
 ## About
 
-![Image](/images/photos/profile.jpeg){:height=600px" width="360px" style="float:right; padding:10px"}
+![Image](/images/photos/perfil.jpeg){:height=600px" width="360px" style="float:right; padding:10px"}
 
 Security Researcher based in São Paulo with background in Software Engineering and 5 years of experience in the offensive security industry. Research focus of Gouvêa is vulnerability discovery in applications/services and exploit development - I have fun bypassing modern defenses, exploring systems and playing with new technologies and in parallel: sharing some of my research notes on [my blog](/);
 
