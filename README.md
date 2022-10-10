@@ -1,11 +1,11 @@
 <p align="center">
   <h3 align="center">heitorgouvea.me</h3>
-  <p align="center">My past public researches are archived here</p>
+  <p align="center">Some notes, analysis and proof-of-concepts about my vulnerability research journey</p>
   <p align="center">
-    <a href="https://github.com/htrgouvea/htrgouvea.github.io/blob/master/LICENSE.md">
+    <a href="https://github.com/htrgouvea/research/blob/master/LICENSE.md">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
     </a>
-    <a href="https://github.com/htrgouvea/htrgouvea.github.io/releases">
+    <a href="https://github.com/htrgouvea/research/releases">
       <img src="https://img.shields.io/badge/version-1.0-blue.svg">
     </a>
   </p>
@@ -15,9 +15,10 @@
 
 ### Summary
 
-This repository stores all the structure, code and files of my personal website ([https://heitorgouvea.me](https://heitorgouvea.me)).
+My research focus is vulnerability discovery in applications/services and exploit devlopment, I have fun bypassing modern defenses, exploring systems and playing with new technologies and in parallel: sharing some of my research notes on [my blog](https://heitorgouvea.me); Here, you can find some of my experiments, advisories and analysis of advisories from others researchers.
 
-My website was developed using Jekyll. Its basic structure revolves around this and some HTML5, CSS3 (with sass) and JavaScript files.
+
+This repository stores all the structure, code and files of my personal website ([https://heitorgouvea.me](https://heitorgouvea.me)). My website was developed using Jekyll. Its basic structure revolves around this and some HTML5, CSS3 (with sass) and JavaScript files.
 
 ---
 
@@ -25,7 +26,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ```bash
   # Download
-  $ git clone https://github.com/htrgouvea/htrgouvea.github.io && cd htrgouvea.github.io
+  $ git clone https://github.com/htrgouvea/research && cd research
     
   # Building and running docker image
   $ docker build -t blog-jekyll .
@@ -36,7 +37,7 @@ My website was developed using Jekyll. Its basic structure revolves around this 
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/htrgouvea.github.io/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
+- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
 - If you are interested in providing financial support to this project, please visit: [heitorgouvea.me/donate](https://heitorgouvea.me/donate)
 
