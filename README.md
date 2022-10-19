@@ -22,6 +22,18 @@ This repository stores all the structure, code and files of my personal website 
 
 ---
 
+### Research
+
+| Name      | Description | Category |
+| ----------- | ----------- | ----------- |
+| [Open Redirect at a ](/experiments/puppet/) | Puppeter module to find client-side vulns | Experiment |
+| [CVE-2020-9376 & CVE-2020-9377 ](/) | 0-day authentication bypass + RCE on D-LINK 610 | Advisories |
+| [Fuzz.PM](/experiments/fuzz.pm) | Differential fuzzing to find logic bugs on Perl Modules | Experiment |
+| [CVE-2021-22204](/analysis/CVE-2021-22204) | N-Day for RCE on Exiftool | Analysis |
+| [CVE-2021-41773](/analysis/CVE-2021-41773) | RCE & LFI on feature to path normalization in Apache HTTP Server| Analysis |
+
+---
+
 ### Download and Set-up
 
 ```bash
@@ -32,13 +44,6 @@ This repository stores all the structure, code and files of my personal website 
   $ docker build -t blog-jekyll .
   $ docker run -d -p 4000:4000 --name heitorgouvea.me blog-jekyll
 ```
-
----
-
-### Research
-
-
-
 
 ---
 

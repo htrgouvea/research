@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "jsdom": "^19.0.0",
-    "puppeteer": "^17.0.0"
-  }
-}
