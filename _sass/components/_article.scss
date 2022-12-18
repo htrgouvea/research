@@ -43,6 +43,7 @@
 
     > * {
         margin-bottom: 1.8rem; // 18px
+        // margin-bottom: 5rem; // 50px
     }
 
     h2 {
@@ -77,4 +78,24 @@
     ol {
         margin-left: 1.1rem;
     } 
+
+    p {
+        @media screen and (min-width: $bp__sm) {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: baseline;
+            -webkit-align-items: baseline;
+                -ms-flex-align: baseline;
+                    align-items: baseline;
+        }
+    }
 }

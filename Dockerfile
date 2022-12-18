@@ -6,7 +6,7 @@ EXPOSE 4000
 COPY . /site
 WORKDIR /site
 
-RUN gem install bundler:1.17.2
-RUN bundle install 
+RUN gem install bundler:2.3.0
+RUN bundle install
 
 CMD ["jekyll", "serve"]
