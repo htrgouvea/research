@@ -35,7 +35,7 @@ Github repositorie: [https://github.com/Static-Flow/BurpSuite-Team-Extension](ht
 
 I met this extension at the end of 2020 and I simply found the experience magnificent, since then I always use it when I'm in a collab. I recommend that you watch Tanner's talk to understand the dynamics of the extension:
 
-<iframe width="708" height="398" src="https://www.youtube.com/embed/OvMdwRQSSe0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="398" src="https://www.youtube.com/embed/OvMdwRQSSe0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
