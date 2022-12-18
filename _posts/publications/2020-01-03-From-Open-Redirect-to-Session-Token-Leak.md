@@ -37,14 +37,17 @@ This page is the authentication screen for access to the citizen portal panel an
 
 The URL in question was as follows:
 
-[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login)
-
+```html
+https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=
+code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=
+https://acessoseguro.sso.caixa.gov.br/portal/login
+```
 
 The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**; The value entered in the parameter references to which URL the user will be redirected to when the user finishes the activity in question, which in this case is the login.
 
 In order to validate this theory, I changed the value of the **&redirect_uri=** parameter in the original URL to the Google homepage address, filled in my credentials, logged in, and the result was as follows:
 
-<iframe width="700" height="612" src="https://www.youtube.com/embed/d6EXPMQPcZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/d6EXPMQPcZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
 -
 
@@ -72,7 +75,7 @@ This code is responsible for capturing and storing Session Tokens what are sent 
 
 And this was the result:
 
-<iframe width="700" height="612" src="https://www.youtube.com/embed/l2ZpggLSz_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+<iframe width="100%" height="612" src="https://www.youtube.com/embed/l2ZpggLSz_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
 --
 
