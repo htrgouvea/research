@@ -5,6 +5,14 @@ description: 'Through a vulnerability on the financial institution website it wa
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
 
+Table of contents:
+- [Summary](#summary)
+- [Description](#description)
+- [Prooft of Concept](#proof-of-concept)
+- [Impact](#impact)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ### Summary
 
 I recently started to test the security of Web and Mobile Applications of some Brazilian banks that I use, I'm not sure why this initiative, maybe it's just the feeling of wanting to find more restricted vulnerabilities than the common ones. From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
