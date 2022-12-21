@@ -2,7 +2,7 @@
 layout: content
 title: 'Chaining client-side vulnerabilities to make a web app unavailable'
 description: 'Two client-side vulnerabilities that, if exploited by an attacker, could expose the legitimate users of the application to various risks, one of which is a kind of "unavailability"'
-og_image: 
+og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
 
 Table of contents:
