@@ -5,6 +5,13 @@ description: 'A technique that can help us strongly on this journey is fuzzing, 
 og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/fuzzer-output.png
 ---
 
+
+Table of contents:
+- [Summary](#introduction)
+- [Content](#introduction-to-perl)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ### Introduction
 
 Applications have been using the Perl language in their backends for decades, unfortunately the use has been decreasing over time, a consequence of this is the low amount of material on how to make these applications secure, more specifically in modern contexts,  but often we can see that some researchers find bugs in softwares used on a large scale, and these software use this language, such as:

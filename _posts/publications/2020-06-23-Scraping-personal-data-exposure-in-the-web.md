@@ -5,6 +5,14 @@ description: 'Between the use and some tests that I always end up running on the
 og_image: https://heitorgouvea.me/images/publications/nubank-scraping/google-dorks.png
 ---
 
+Table of contents:
+- [Summary](#summary)
+- [Description](#description)
+- [Prooft of Concept](#proof-of-concept)
+- [Impact](#impact)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ### Summary
 
 Between the use and some tests that I always end up running on the applications I have installed on my Smartphone, I ended up bumping into a very interesting feature of Nubank, which allows the user to create a "billing link" and send that link to one or more people to charge. I found the functionality very useful, but when I saw up close how it worked, I was a little uncomfortable in view of the number of scenarios that that implementation could be exposed... With this intrinsic dissatisfaction, I decided to generate some proof of concepts and share them with the company so that they could re-evaluate the design of the functionality and it turned out that in this quick and simple demonstration I was able to map some personal data (CPF, Full Name, Account Number and Agency) of more than 100 customers.

