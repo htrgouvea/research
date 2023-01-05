@@ -161,18 +161,18 @@ URL-Encoded Confusion:
 [-] Seed         ->  https://ⓖⓞⓞⓖⓛⓔ.com
 [+] Mojo_URI     ->  ⓖⓞⓞⓖⓛⓔ.com
 [+] Tiny_HTTP    ->  https://www.google.com/
-[+] Mojo_UA      ->   ⓖⓞⓞⓖⓛⓔ.com
+[+] Mojo_UA      ->  ⓖⓞⓞⓖⓛⓔ.com
 [+] Simple_URI   ->  xn--taaaaaahkd5c2ab29fcacccc.com
 ```
 
 Scheme Confusion:
 
 ```
-[-] Seed 	    ->  https://foo@evil.com:80@google.com
+[-] Seed        ->  https://foo@evil.com:80@google.com
 [+] Mojo_URI 	->  evil.com:80@google.com
 [+] Tiny_HTTP   ->  https://foo@evil.com:80@google.com
 [+] Mojo_UA     ->  evil.com:80@google.com
-[+] Simple_URI  ->	  google.com
+[+] Simple_URI  ->  google.com
 ```
 
 A practical example of how an application could become vulnerable to one of these attacks would be the use of these different libraries, one for Passing the URL and the other for the request itself, such as:
@@ -199,10 +199,9 @@ get "/" => sub ($request) {
                 my $getContent = HTTP::Tiny -> new() -> get($endpoint);
 
                 if ($getContent -> {success}) {
-                    
                     return ($request -> render (
                         text => "ok"
-                    )); 
+                    ));
                 }
             }
 
