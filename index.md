@@ -15,7 +15,7 @@ permalink: /
     - [21/12/2022] [Chaining client-side vulnerabilities to make a web app unavailable](/2022/12/21/Chaining-vulnerabilities-to-make-web-unavailable)
 
 2. __Helping to keep the Perl Programming Language secure:__
-    - [08/12/2021] [Scaling Perl Libs security analysis with Differential Fuzzing](2021/12/08/Differential-Fuzzing-Perl-Libs)
+    - [08/12/2021] [ Scaling Libs security analysis with Differential Fuzzing](2021/12/08/Differential-Fuzzing-Perl-Libs)
 
 3. __Vulnerability research notes:__
     - [23/09/2020] [Detecting Tor Browser platform based on exclusive font rendering](/2020/09/23/Detecting-browser-platform-based-on-fonts)
