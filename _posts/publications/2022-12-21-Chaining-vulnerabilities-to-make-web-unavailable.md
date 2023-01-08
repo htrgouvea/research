@@ -89,7 +89,7 @@ In practice the exploit would look like this:
     -
     ![Imagem](/images/publications/nuinvest/cookie-bomb-js.png)
     
-    Hosted on: https://heitorgouvea.me/public/payloads/bomb.js
+    * Hosted on: [https://heitorgouvea.me/public/payloads/bomb.js](https://heitorgouvea.me/public/payloads/bomb.js)
     
     -
 
