@@ -2,7 +2,7 @@
 layout: content
 title: 'Scaling Libs security analysis with Differential Fuzzing'
 description: 'A technique that can help us strongly on this journey is fuzzing, more specifically the Differential Fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification that in some contexts could be a security vulnerability.'
-og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/fuzzer-output.png
+og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/example-diff-fuzz.png
 ---
 
 Table of contents:
@@ -60,13 +60,16 @@ Given the background, this publication aims to demonstrate how we can use the di
 
 ### Differential Fuzzing
 
-A technique that can strongly help us on this journey is fuzzing, more specifically using the Differential Fuzzing approach due to its ease of implementation and speed, below is illustrated how this approach can be used to identify divergences in some modules, which can lead to the identification of logical bugs that in some contexts can be a security vulnerability.
+A technique that can strongly help us on this journey is fuzzing: "is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program. The program is then monitored for exceptions such as crashes, failing built-in code assertions, or potential memory leaks." [[1]](#references).
 
-Differential Fuzzing: in this approach we have our seeds being sent to two or more inputs, where they are consumed and should produce the same output. At the end of the test these outputs are compared, in case of divergence the fuzzer will signal a possible failure. [[7]](#references)
+
+More specifically using the Differential Fuzzing approach due to its ease of implementation and speed, below is illustrated how this approach can be used to identify divergences in some modules, which can lead to the identification of logical bugs that in some contexts can be a security vulnerability.
+
+Differential Fuzzing: in this approach we have our seeds being sent to two or more inputs, where they are consumed and should produce the same output. At the end of the test these outputs are compared, in case of divergence the fuzzer will signal a possible failure. [[2]](#references)
 
 ![](/images/publications/perl-lib-fuzz/fuzz-diagram.png)
 
-To apply the proposed model, the FuzzPM [[1]](#references) tool was developed, available in an open-source form under the MIT license.
+To apply the proposed model, the FuzzPM [[3]](#references) tool was developed, available in an open-source form under the MIT license.
 
 This project allows us to create cases and fuzzing targets using little effort, using multi-threads during the execution of the tests so that the visualization of the results happens as soon as possible. In the next sections we will see more about using FuzzPM.
 
@@ -150,7 +153,7 @@ In modern times, practically every application or software deals with URLs at so
 
 To support this reality, developers invested energy in the development of some parsing and request libraries for the language, currently there are more than a dozen in this category alone.
 
-As already demonstrated in previous research, such as that of Orange Tsai [[3]](#references) (cited at the beginning of this text) and also by the Claroty team [[7]](#references), it is common for these components to diverge, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
+As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to diverge, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
 
 Through the seeds evidenced during the research produced by Orange Tsai, replicating them but looking at the divergences with the libraries mentioned above, it was possible to find two security issues that are possible to exemplify in real scenarios.
 
@@ -225,7 +228,7 @@ To enable the process of communication between different applications, it was ne
 
 As a consequence of this fact, the creation of libraries to parse these objects was necessary and several people realized this, generating a large number of different libraries.
 
-Quite frankly, it will be difficult for you to interact directly with an API written in Perl, the chances are greater that these APIs are internal, consumed by another back-end and this is good, as it opens up room for exploring JSON Interoperability contexts [[5]](#references), making room for techniques of “Attacking Secondary Contexts in Web Applications” [[8]](#references).
+Quite frankly, it will be difficult for you to interact directly with an API written in Perl, the chances are greater that these APIs are internal, consumed by another back-end and this is good, as it opens up room for exploring JSON Interoperability contexts [[4]](#references), making room for techniques of “Attacking Secondary Contexts in Web Applications” [[9]](#references).
 
 As there are many modules in Perl to handle this type of information, the margin of attack ends up being quite large. Here we will cover the 4 most used modules based on CPAN; In this case, 8 different JSON inputs were provided, taken from Bishop Fox's research on the subject [[5]](#references). To better illustrate, I will leave a table below with all the detailed view of the outputs:
 
@@ -234,7 +237,7 @@ As there are many modules in Perl to handle this type of information, the margin
 
 We can notice that there are two divergences, being in: Type Representation with Infinity and Large number representation;
 
-These divergences can be used to exploit NaN Injection [[9]], a technique that has low popularity at the moment but can be used to exploit logic vulnerabilities or even denial of service in some languages such as Python, Ruby, Perl, PHP and others.
+These divergences can be used to exploit NaN Injection [[10]], a technique that has low popularity at the moment but can be used to exploit logic vulnerabilities or even denial of service in some languages such as Python, Ruby, Perl, PHP and others.
 
 For educational purposes, let's illustrate a possible exploit case:
 
@@ -357,12 +360,13 @@ Through the implementation of the differential fuzzing technique in the FuzzPM p
 
 ### References
 
-- [1] [https://github.com/htrgouvea/fuzzpm](https://github.com/htrgouvea/fuzzpm)
-- [2] [https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities](https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities)
-- [3] [https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
-- [4] [https://en.wikipedia.org/wiki/Differential_testing](https://en.wikipedia.org/wiki/Differential_testing)
-- [5] [https://defparam.medium.com/finding-issues-in-regular-expression-logic-using-differential-fuzzing-30d78d4cb1d5](https://defparam.medium.com/finding-issues-in-regular-expression-logic-using-differential-fuzzing-30d78d4cb1d5)
-- [6] [https://github.com/orangetw/Tiny-URL-Fuzzer](https://github.com/orangetw/Tiny-URL-Fuzzer)
-- [7] [Exploiting URL Parsers: the good, bad, and inconsistent by CLAROTY](https://claroty.com/wp-content/uploads/2022/01/Exploiting-URL-Parsing-Confusion.pdf)
-- [8] [Attacking Secondary Contexts in Web Applications by Sam Curry](https://www.youtube.com/watch?v=hWmXEAi9z5w)
-- [9] [https://www.tenable.com/blog/python-nan-injection](https://www.tenable.com/blog/python-nan-injection)
+- [1] [https://en.wikipedia.org/wiki/Fuzzing](https://en.wikipedia.org/wiki/Fuzzing)
+- [2] [https://en.wikipedia.org/wiki/Differential_testing](https://en.wikipedia.org/wiki/Differential_testing)
+- [3] [https://github.com/htrgouvea/fuzzpm](https://github.com/htrgouvea/fuzzpm)
+- [4] [https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities](https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities)
+- [5] [https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
+- [6] [https://defparam.medium.com/finding-issues-in-regular-expression-logic-using-differential-fuzzing-30d78d4cb1d5](https://defparam.medium.com/finding-issues-in-regular-expression-logic-using-differential-fuzzing-30d78d4cb1d5)
+- [7] [https://github.com/orangetw/Tiny-URL-Fuzzer](https://github.com/orangetw/Tiny-URL-Fuzzer)
+- [8] [Exploiting URL Parsers: the good, bad, and inconsistent by CLAROTY](https://claroty.com/wp-content/uploads/2022/01/Exploiting-URL-Parsing-Confusion.pdf)
+- [9] [Attacking Secondary Contexts in Web Applications by Sam Curry](https://www.youtube.com/watch?v=hWmXEAi9z5w)
+- [10] [https://www.tenable.com/blog/python-nan-injection](https://www.tenable.com/blog/python-nan-injection)
