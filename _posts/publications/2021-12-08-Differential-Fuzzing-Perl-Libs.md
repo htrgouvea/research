@@ -20,7 +20,7 @@ Table of contents:
 
 ### Introduction
 
-There have been applications using the Perl language for decades in their back-end's and platform systems, however the use has been decreasing over time, a consequence of which is the low amount of material on how to make these applications safe, more specifically in modern contexts, another aggravating point related to this is that: we can often see some researchers finding bugs in software used on a large scale that use this language in some of its components, such as:
+There have been applications using the Perl language for decades in their back-end's and platform systems, however the use has been decreasing over time, one consequence of which is the low amount of material on how to make these applications secure, more specifically in modern contexts, another aggravating point related to this is that: we can often see some researchers finding bugs in software used on a large scale that use this language in some of its components, such as:
 
 * [RCE in Gitlab's](https://hackerone.com/reports/1154542) Bug Bounty program using [CVE-2021-22204](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22204) which is an issue in [Exiftool](https://github.com/exiftool/exiftool), a tool written in Perl, found by [vakzz](https://twitter.com/wcbowling);
 * RCE on PulseSecure VPN [(CVE-2019-11539)](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11539) by [Orange Tsai](https://twitter.com/orange_8361);
@@ -39,14 +39,14 @@ Although our scope is limited to libraries used by applications built in the Per
 When we think of safe software development, performing manual analyzes can end up being unfeasible at times, you may need to cover a large attack surface and little depth in one of the stages of your development cycle and to solve this, automated analysis tools can help a lot - or even give you a direction or understanding of the code to conduct a manual analysis, without a doubt the role played by these tools is of great value, saving us time and providing rich information. Unfortunately we have few options related to this topic in Perl.
 
 - __*Static analysis*__:
-     - __*Perl::Critic*__: is the most popular solution when it comes to static analysis, its focus is on code quality but there are still some notes related to code security, but severely limited.
+     - __*Perl::Critic*__: is the most popular solution when it comes to static analysis, its focus is on code quality but there are still some policies related to code security, but severely limited.
 
      - __*AppScan*__: it is a commercial solution, its free version is extremely limited and with few details. I did some tests, with 4 different projects and I had a total of 40 findings, but all of them were false positives;
 
      - __*Semgrep & CodeQL*__: unfortunately neither of these two wonderful solutions have native Perl support at the moment, maybe in the future we will see some implementation;
 
 - __*Software Composition Analysis*__:
-    - __*ActiveState*__: another commercial and limited solution of SCA in Perl, its database of CVE's doesn't seem to be updated but anyway it seems to be the best solution available at the moment;
+    - __*ActiveState*__: another commercial and limited solution of SCA in Perl, although its CVE database is outdated, it still seems to be the best solution currently available;
 
 - __*Dynamic analysis*__: at the time this post was written, no product or tool for this purpose was found.
 
@@ -351,7 +351,7 @@ As we can see in the table, we could use two cases of divergence to generate an 
 
 ### Conclusion
 
-Through the implementation of the differential fuzzing technique in the FuzzPM project, we can detect some divergences in URL Passing libraries and JSON objects, divergences that have a good possibility of exploitation in real applications as demonstrated in each of the sections.
+Through the implementation of the differential fuzzing technique in the FuzzPM project, we can detect some divergences in URL Passing libraries and JSON objects, divergences that have a good possibility of exploitation in real applications as demonstrated in each of the sections and if this is done, the impact can be critical.
 
 ---
 
@@ -364,5 +364,5 @@ Through the implementation of the differential fuzzing technique in the FuzzPM p
 - [5] [https://defparam.medium.com/finding-issues-in-regular-expression-logic-using-differential-fuzzing-30d78d4cb1d5](https://defparam.medium.com/finding-issues-in-regular-expression-logic-using-differential-fuzzing-30d78d4cb1d5)
 - [6] [https://github.com/orangetw/Tiny-URL-Fuzzer](https://github.com/orangetw/Tiny-URL-Fuzzer)
 - [7] [Exploiting URL Parsers: the good, bad, and inconsistent by CLAROTY](https://claroty.com/wp-content/uploads/2022/01/Exploiting-URL-Parsing-Confusion.pdf)
-- [8] [Attacking Secondary Contexts in Web Applications](https://www.youtube.com/watch?v=hWmXEAi9z5w)
+- [8] [Attacking Secondary Contexts in Web Applications by Sam Curry](https://www.youtube.com/watch?v=hWmXEAi9z5w)
 - [9] [https://www.tenable.com/blog/python-nan-injection](https://www.tenable.com/blog/python-nan-injection)
