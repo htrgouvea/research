@@ -147,11 +147,11 @@ Here we can already see some of the advantages of this approach, such as ease of
 
 #### Abusing URL Parsers
 
-In modern times, practically every application or software deals with URLs at some point, this is because we have had a great advance in relation to the capacity of the internet, from its reach to its performance, so dealing with third parties is no longer a bottleneck and has become a feature of modern applications because that way it is possible to share responsibility with more resources, making access to components faster and more distributed.
+In modern times, practically every application or software deals with URLs at some point, this is because we have had a great advance in relation to the capacity of the internet, from its reach to its performance, so dealing with third parties applications is no longer a bottleneck and has become a feature of modern applications because that way it is possible to share responsibility with more resources, making access to components faster and more distributed.
 
-To support this reality, developers invested energy in the development of some parsing and request libraries for the language, currently there are more than a dozen in this category alone.
+To support this reality, developers invested energy in the development of some URI parsing and HTTP engines libraries for the language, currently there are more than a dozen in this category alone when us talk about Perl Libs.
 
-As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to diverge, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
+As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to have divergences between, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
 
 Through the seeds evidenced during the research produced by Orange Tsai, replicating them but looking at the divergences with the libraries mentioned above, it was possible to find two security issues that are possible to exemplify in real scenarios.
 
@@ -176,7 +176,7 @@ Scheme Confusion:
 [+] Simple_URI  ->  google.com
 ```
 
-A practical example of how an application could become vulnerable to one of these attacks would be the use of these different libraries, one for Passing the URL and the other for the request itself, such as:
+A practical example of how an application could become vulnerable to one of these attacks would be the use of these different libraries, one for Passing the URL and verification, other for the request itself, such as:
 
 ```perl
 #!/usr/bin/env perl
@@ -217,6 +217,12 @@ get "/" => sub ($request) {
 
 app -> start(); # perl app.pl daemon -m production -l http://\*:8080
 ```
+
+What would happen here is that, an attacker requesting the application with the following payload:
+
+[https://target.com/?endpoint=https://ⓖⓞⓞⓖⓛⓔ.com](#)
+
+It would be able to bypass the check based on the blocklist, later the app would make the request for the google.com domain. We could take advantage of these divergences in SSRF scenarios.
 
 ---
 
