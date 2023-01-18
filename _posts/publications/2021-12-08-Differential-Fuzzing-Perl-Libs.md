@@ -85,36 +85,7 @@ For each of these sections, we will use the following samples from different lib
   
  - Parsers of URL’s and URI’s: [URI::Simple](https://metacpan.org/pod/URI::Simple), [Mojo::URL](https://metacpan.org/pod/Mojo::URL), [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize), [HTTP::Tiny](https://metacpan.org/pod/HTTP::Tiny), [Mojo::UserAgent](https://metacpan.org/pod/Mojo::UserAgent).
 
-
-To create fuzzing cases, it is necessary to create a YAML file with the following structure:
-
-```yaml
-test:
-    seeds:
-        - path/to/seeds-file.txt
-    libs:
-        - First_Target
-        - Second_Target
-        - Third_Target
-```
-
-For example, for our first case, the following YAML file was constructed and is supplied to the fuzzer via the parameter
-“--case”:
-
-```yaml
-test:
-    seeds:
-        - seeds/urls-radamsa.txt
-    libs:
-        - Mojo_URI
-        - Tiny_HTTP
-        - Mojo_UA
-        - Mechanize
-        - Lib_Furl
-        - Simple_URI
-```
-
-After the creation of the case, it is necessary to create all the targets initially set, using the same nomenclature contained in the YAML file. Below is an example using the Mojo::URI library:
+To create your entire fuzzing case, you first need to create your target library as a package, for example:
 
 ```perl
 package Mojo_URI {
@@ -139,6 +110,33 @@ package Mojo_URI {
 }
 ```
 
+So, you need store your seeds as a file at: ./seeds/your-seeds.txt. And the last part is your case as a YAML file, follow this structure:
+
+```yaml
+test:
+    seeds:
+        - path/to/seeds-file.txt
+    libs:
+        - First_Target
+        - Second_Target
+        - Third_Target
+```
+
+For example, for our first case, the following YAML file was constructed and is supplied to the fuzzer via the parameter “–case”:
+
+```yaml
+test:
+    seeds:
+        - seeds/urls-radamsa.txt
+    libs:
+        - Mojo_URI
+        - Tiny_HTTP
+        - Mojo_UA
+        - Mechanize
+        - Lib_Furl
+        - Simple_URI
+```
+
 The output of the fuzzing process is similar to the following example:
 
 ![](/images/publications/perl-lib-fuzz/example-diff-fuzz.png)
@@ -149,11 +147,11 @@ Here we can already see some of the advantages of this approach, such as ease of
 
 #### Abusing URL Parsers
 
-In modern times, practically every application or software deals with URLs at some point, this is because we have had a great advance in relation to the capacity of the internet, from its reach to its performance, so dealing with third parties is no longer a bottleneck and has become a feature of modern applications because that way it is possible to share responsibility with more resources, making access to components faster and more distributed.
+In modern times, practically every application or software deals with URLs at some point, this is because we have had a great advance in relation to the capacity of the internet, from its reach to its performance, so dealing with third parties applications is no longer a bottleneck and has become a feature of modern applications because that way it is possible to share responsibility with more resources, making access to components faster and more distributed.
 
-To support this reality, developers invested energy in the development of some parsing and request libraries for the language, currently there are more than a dozen in this category alone.
+To support this reality, developers invested energy in the development of some URI parsing and HTTP engines libraries for the language, currently there are more than a dozen in this category alone when us talk about Perl Libs.
 
-As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to diverge, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
+As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to have divergences between, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
 
 Through the seeds evidenced during the research produced by Orange Tsai, replicating them but looking at the divergences with the libraries mentioned above, it was possible to find two security issues that are possible to exemplify in real scenarios.
 
@@ -178,7 +176,7 @@ Scheme Confusion:
 [+] Simple_URI  ->  google.com
 ```
 
-A practical example of how an application could become vulnerable to one of these attacks would be the use of these different libraries, one for Passing the URL and the other for the request itself, such as:
+A practical example of how an application could become vulnerable to one of these attacks would be the use of these different libraries, one for Passing the URL and verification, other for the request itself, such as:
 
 ```perl
 #!/usr/bin/env perl
@@ -219,6 +217,12 @@ get "/" => sub ($request) {
 
 app -> start(); # perl app.pl daemon -m production -l http://\*:8080
 ```
+
+What would happen here is that, an attacker requesting the application with the following payload:
+
+[https://target.com/?endpoint=https://ⓖⓞⓞⓖⓛⓔ.com](#)
+
+It would be able to bypass the check based on the blocklist, later the app would make the request for the google.com domain. We could take advantage of these divergences in SSRF scenarios.
 
 ---
 
