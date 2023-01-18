@@ -85,36 +85,7 @@ For each of these sections, we will use the following samples from different lib
   
  - Parsers of URL’s and URI’s: [URI::Simple](https://metacpan.org/pod/URI::Simple), [Mojo::URL](https://metacpan.org/pod/Mojo::URL), [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize), [HTTP::Tiny](https://metacpan.org/pod/HTTP::Tiny), [Mojo::UserAgent](https://metacpan.org/pod/Mojo::UserAgent).
 
-
-To create fuzzing cases, it is necessary to create a YAML file with the following structure:
-
-```yaml
-test:
-    seeds:
-        - path/to/seeds-file.txt
-    libs:
-        - First_Target
-        - Second_Target
-        - Third_Target
-```
-
-For example, for our first case, the following YAML file was constructed and is supplied to the fuzzer via the parameter
-“--case”:
-
-```yaml
-test:
-    seeds:
-        - seeds/urls-radamsa.txt
-    libs:
-        - Mojo_URI
-        - Tiny_HTTP
-        - Mojo_UA
-        - Mechanize
-        - Lib_Furl
-        - Simple_URI
-```
-
-After the creation of the case, it is necessary to create all the targets initially set, using the same nomenclature contained in the YAML file. Below is an example using the Mojo::URI library:
+To create your entire fuzzing case, you first need to create your target library as a package, for example:
 
 ```perl
 package Mojo_URI {
@@ -137,6 +108,33 @@ package Mojo_URI {
         }
     }
 }
+```
+
+So, you need store your seeds as a file at: ./seeds/your-seeds.txt. And the last part is your case as a YAML file, follow this structure:
+
+```yaml
+test:
+    seeds:
+        - path/to/seeds-file.txt
+    libs:
+        - First_Target
+        - Second_Target
+        - Third_Target
+```
+
+For example, for our first case, the following YAML file was constructed and is supplied to the fuzzer via the parameter “–case”:
+
+```yaml
+test:
+    seeds:
+        - seeds/urls-radamsa.txt
+    libs:
+        - Mojo_URI
+        - Tiny_HTTP
+        - Mojo_UA
+        - Mechanize
+        - Lib_Furl
+        - Simple_URI
 ```
 
 The output of the fuzzing process is similar to the following example:
