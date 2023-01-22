@@ -258,8 +258,6 @@ my %account = (
 );
 
 sub buy_items {
-    print "\n\n";
-    
     my @items = (
         {name => "web hacking book", price => 100, id => 1},
         {name => "severino license", price => 50, id => 2},
@@ -283,7 +281,9 @@ sub buy_items {
         my $total = $items[$itemid - 1 ] -> {price} * $many;
         print "[+] TOTAL ===> $total\n";
 
-        if ($many <= 0) { print ":/\n"; }
+        if ($many <= 0) { 
+            print ":/\n";
+        }
 
         else {
             if ($total > $account{money}) {
@@ -292,6 +292,7 @@ sub buy_items {
 
             else {
                 $account{money} -= $total;
+                
                 print "You buy item",  $items[$itemid - 1 ] -> {name}, "\n";
 
                 if ($items[$itemid] -> {name} eq "shell") {
@@ -338,14 +339,14 @@ main();
 
 This small piece of code is a simple implementation of a mechanism for purchasing some items, given that the user enters his name at the beginning of the journey and has an initial balance of “10000”.
 
-Reading the code, we can see that our user is able to use his initial balance to buy almost all products, except item 4. If he managed to do this, he could obtain a shell on the machine that hosts the application, since after this feat a system function is called .
+Reading the code, we can see that our user can use their initial balance to buy almost all products except item 4 because it costs "10,000". If he could do this, he could get a shell on the machine that hosts the application, because after this one made a system function is called (this behavior is only for educational purposes).
 
 We have 3 entry-points here:
 * When we inform our name;
 * When we say which item we want to buy;
 * How much we want to buy;
 
-The fact of the name can be discarded, as this information is not used for the logic of the algorithm. The implementation regarding which item we want to buy would also not lead us to be able to acquire item 4.
+The name as a possible entrypoint can be discarded, as this information is not used for the logic of the algorithm. The implementation regarding which item we want to buy would also not lead us to be able to acquire item 4.
 
 The entrypoint related to the quantity of the item allows us to do this in two ways. The first possibility being:
 
