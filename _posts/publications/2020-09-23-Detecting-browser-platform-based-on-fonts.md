@@ -13,6 +13,8 @@ Table of contents:
 - [Conclusion](#conclusion)
 - [References](#references)
 
+---
+
 ### Summary
 
 Through the rendering of some specific Fonts, I discovered that it is possible to identify operating system from a user behind Tor and after reporting this to the Tor Project I was told that they were already aware of the problem and there are already some implementations to minimize the impact of this vulnerability.

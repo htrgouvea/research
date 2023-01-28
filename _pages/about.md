@@ -8,4 +8,6 @@ description: Research focus of Gouvêa is vulnerability discovery in application
 
 ## About
 
-Security Researcher based in São Paulo (BRA) with Software Engineering background and 5 years of experience in the offensive security industry. Research focus of Gouvêa is vulnerability discovery in applications/services and exploit development - was reported vulnerabilities to incurable companies like Activision, Nubank, Oracle, D-Link and other companies not as famous, but as incredible as. During this journey, Gouvêa share some of research notes [on your blog;](/)
+Security Researcher based in São Paulo (BR) with Software Engineering background and 5+ years of experience in the offensive security industry. Research focus of Gouvêa is vulnerability discovery in applications/services and exploit development - was reported vulnerabilities to incurable companies like Activision, Nubank, Oracle, D-Link and other companies not as famous, but as incredible as.
+
+During this journey, Gouvêa share some of research notes [on your blog;](/)
