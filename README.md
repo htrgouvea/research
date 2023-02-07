@@ -42,6 +42,22 @@ This repository stores all the structure, code and files of my personal website 
 
 ---
 
+### Pipeline
+
+Security:
+
+- Software Composition Analsys (SCA): https://github.com/htrgouvea/research/blob/main/.github/dependabot.yml
+- Static Analsysis Security Testing (SAST): https://github.com/htrgouvea/research/blob/main/.github/workflows/semgrep.yml
+- Dynamic Analysis Security Testing (DAST): https://github.com/htrgouvea/research/blob/main/.github/workflows/owasp-zap.yml
+
+Quality:
+  - 
+  - 
+
+https://github.com/htrgouvea/research/blob/main/.github/workflows/codeql.yml
+
+---
+
 ### Contribution
 
 - Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
