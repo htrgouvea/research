@@ -6,8 +6,6 @@ on:
     - master
     paths:
     - .github/workflows/semgrep.yml
-  schedule:
-  - cron: 53 3 * * *
 name: Semgrep
 jobs:
   semgrep:

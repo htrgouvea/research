@@ -1,6 +1,9 @@
 on:
-  schedule:
-  - cron: 53 3 * * *
+ push:
+    branches:
+    - main
+  # schedule:
+  # - cron: 53 3 * * *
 
 jobs:
   zap_scan:
