@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'A lightweight static security analysis tool for modern Perl Apps'
-description: ''
+description: 'Through the use of static analysis tools, it is possible to identify many security issues quickly and in large and complex code base. But doing this efficiently is hard.'
 og_image: 
 ---
 
@@ -19,7 +19,7 @@ Table of contents:
 
 ### Summary
 
-Through the use of static analysis tools, it is possible to identify many security issues quickly and in large and complex code base. But doing this efficiently is laborious, as the complexity of using the tool can be high, there can also be many false positives and if that happens, the user experience will be bad and probably the use of a SAST in your development cycle will be discarded. In this publication we have a case study that proposes to solve these open points for applications that use the Perl language.
+Through the use of static analysis tools, it is possible to identify many security issues quickly and in large and complex code base. But doing this efficiently is hard, as the complexity of using the tool can be high, there can also be many false positives and if that happens, the user experience will be bad and probably the use of a SAST in your development cycle will be discarded. In this publication we have a case study that proposes to solve these open points for applications that use the Perl language.
 
 ---
 
@@ -27,7 +27,7 @@ Through the use of static analysis tools, it is possible to identify many securi
 
 Today, software engineers who propose to do their work using the Perl language and are concerned about the security of their codes, quickly encounter a problem: the absence of security technologies that support modern software development processes.
 
-Options are extremely low, mostly commercial. Therefore, it is difficult to contribute to the improvement of its efficiency.
+The quantity of options are extremely low, mostly commercial. Therefore, it is difficult to contribute to the improvement of its efficiency.
 
 This same topic is also discussed in the publication: “Scaling Libs security analysis with Differential Fuzzing” [1], where a dynamic analysis solution is presented to identify vulnerabilities in modules/libraries.
 
@@ -36,14 +36,6 @@ This same topic is also discussed in the publication: “Scaling Libs security a
 ### Objective
 
 In order to make the expected success tangible when using a tool focused on static analysis, the expectation is created that such an artifact meets at least the following requirements:
-
-* Be fast to execute: in case of delay, this can be considered a friction for the development cycle;
-* The user must be able to write his own rules: this is how we place them with co-creators of the technology;
-* Low false-positive rate: we have limited resources so it is necessary to invest them where it really makes sense;
-
-In addition to the basic requirements of the solution, such as: being able to say which source code will be analyzed, paths that the solution should ignore, which rules to use, among others.
-
-Thus, this text will illustrate how a SAST tool for Perl applications can behave, what is its internal engineering. From there, its key results and limitations will be described. In order to make the expected success tangible when using a tool focused on static analysis, the expectation is created that such an artifact meets at least the following requirements:
 
 * Be fast to execute: in case of delay, this can be considered a friction for the development cycle;
 * The user must be able to write his own rules: this is how we place them with co-creators of the technology;
@@ -83,17 +75,15 @@ Other than these points, rules usually only describe the use of dangerous functi
 
 ZARN [12], a lightweight static security analysis tool for modern Perl Apps, seeks to resolve these points by adopting the following strategies:
 
-To work around all these mentioned points, we have some extremely efficient approaches and the first one is that we only need to analyze the files that will be interpreted. In the Perl language, these will normally be files with the following extensions: .pl, .pm, .t. Also, if we know of files that will always be ignored, like for example the entire .git directory, we can set this as a default in order to optimize resources.
-
-Example of this implementation: https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/Files.pm
+To work around all these mentioned points, we have some extremely efficient approaches and the first one is that we only need to analyze the files that will be interpreted. In the Perl language, these will normally be files with the following extensions: .pl, .pm, .t. Also, if we know of files that will always be ignored, like for example the entire .git directory, we can set this as a default in order to optimize resources. Example of this implementation: [/zarn/lib/Zarn/Files.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/Files.pm).
 
 With this we will already notice a performance gain and also the number of false positives will be reduced, but it is still not enough. We also need a smarter implementation to parse the code that will be parsed, we can't treat it like regular text.
 
 Therefore, we can adopt the use of Abstract Syntax Tree (AST) [11], for our solution to parse only the tokens that relate to what we are looking for with the rules, without the need to parse strings or anything else when it doesn't make sense. .
 
-Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [12]. If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: "Perlinterp - An overview of the Perl interpreter". [two]
+Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [12]. If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: "Perlinterp - An overview of the Perl interpreter"[2].
 
-Using AST (https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/AST.pm) we ensure that only dangerous functions are identified and we enable the use of context, further reducing the false positive rate and improving performance.
+Using AST ([zarn/lib/Zarn/AST.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/AST.pm)) we ensure that only dangerous functions are identified and we enable the use of context, further reducing the false positive rate and improving performance.
 
 The last point that needs to be worked on is identifying whether or not such a function is achieved by user input. This process is called “Source to sink” [3].
 
@@ -107,7 +97,7 @@ For this last stage of variable manipulation identification, we adopted the Tain
 
 An example in which we can understand in a practical way everything that has been presented so far would be the attempt to write a rule to try to identify a Remote Code Execution (RCE) vulnerability in a simple piece of code.
 
-There are numerous ways for code to be considered vulnerable to RCE, but here we will focus on trying to identify cases where the following functions are used in a user-exploitable way: system, eval, and exec.
+There are numerous ways for code to be considered vulnerable to RCE, but here we will focus on trying to identify cases where the following functions are used in a user-exploitable way: **system**, **eval**, and **exec**.
 
 Following the syntax used in ZARN, our rule would look like this:
 
@@ -169,7 +159,7 @@ Result:
 
 Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, we plan to implement a call graph analysis [14] to identify vulnerabilities that are not directly related to the file being analyzed.
 
-Currently, it is already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
+It's already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
 
 ---
 
