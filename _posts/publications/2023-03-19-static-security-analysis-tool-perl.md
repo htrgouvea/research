@@ -2,7 +2,7 @@
 layout: content
 title: 'A lightweight static security analysis tool for modern Perl Apps'
 description: 'Through the use of static analysis tools, it is possible to identify many security issues quickly and in large and complex code base. But doing this efficiently is hard.'
-og_image: 
+og_image: https://heitorgouvea.me/images/publications/zarn/zarn.png
 ---
 
 Table of contents:
