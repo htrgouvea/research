@@ -10,8 +10,7 @@ Table of contents:
 - [Background](#background)
 - [Objective](#objective)
 - [Static Analysis](#static-analysis)
-- [ZARN](#zarn)
-- [Basic demo](#basic-demo)
+- [Introduction to ZARN](#introduction-to-zarn)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -25,11 +24,11 @@ Through the use of static analysis tools, it is possible to identify many securi
 
 ### Background
 
-Today, software engineers who propose to do their work using the Perl language and are concerned about the security of their codes, quickly encounter a problem: the absence of security technologies that support modern software development processes.
+Today, software engineers who propose to do their work using the Perl language and are concerned about the security of their codes, quickly encounter a problem: the absence of security technologies that support modern software development processes. 
 
 The quantity of options are extremely low, mostly commercial. Therefore, it is difficult to contribute to the improvement of its efficiency.
 
-This same topic is also discussed in the publication: “Scaling Libs security analysis with Differential Fuzzing” [1], where a dynamic analysis solution is presented to identify vulnerabilities in modules/libraries.
+This same topic is also discussed in the publication: [“Scaling Libs security analysis with Differential Fuzzing”](https://heitorgouvea.me/2021/12/08/Differential-Fuzzing-Perl-Libs) [[1]](#references), where a dynamic analysis solution is presented to identify vulnerabilities in modules/libraries.
 
 ---
 
@@ -68,28 +67,28 @@ Other than these points, rules usually only describe the use of dangerous functi
 
 ---
 
-### ZARN
+### Introduction to ZARN
 
 ![](/images/publications/zarn/zarn.png)￼
 
 
-ZARN [12], a lightweight static security analysis tool for modern Perl Apps, seeks to resolve these points by adopting the following strategies:
+ZARN [[12]](#references), a lightweight static security analysis tool for modern Perl Apps, seeks to resolve these points by adopting the following strategies:
 
 To work around all these mentioned points, we have some extremely efficient approaches and the first one is that we only need to analyze the files that will be interpreted. In the Perl language, these will normally be files with the following extensions: .pl, .pm, .t. Also, if we know of files that will always be ignored, like for example the entire .git directory, we can set this as a default in order to optimize resources. Example of this implementation: [/zarn/lib/Zarn/Files.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/Files.pm).
 
-With this we will already notice a performance gain and also the number of false positives will be reduced, but it is still not enough. We also need a smarter implementation to parse the code that will be parsed, we can't treat it like regular text.
+With this we will already notice a performance gain and also the number of false positives will be reduced, but it is still not enough. We also need a smarter implementation to parse the code, we can’t treat it like regular text.
 
-Therefore, we can adopt the use of Abstract Syntax Tree (AST) [11], for our solution to parse only the tokens that relate to what we are looking for with the rules, without the need to parse strings or anything else when it doesn't make sense. .
+Therefore, we can adopt the use of Abstract Syntax Tree (AST) [[11]](#references), for our solution to parse only the tokens that relate to what we are looking for with the rules, without the need to parse strings or anything else when it doesn't make sense.
 
-Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [12]. If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: "Perlinterp - An overview of the Perl interpreter"[2].
+Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [[12]](#references). If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: ["Perlinterp - An overview of the Perl interpreter"](https://docs.mojolicious.org/perlinterp) [[2]](#references).
 
 Using AST ([zarn/lib/Zarn/AST.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/AST.pm)) we ensure that only dangerous functions are identified and we enable the use of context, further reducing the false positive rate and improving performance.
 
-The last point that needs to be worked on is identifying whether or not such a function is achieved by user input. This process is called “Source to sink” [3].
+The last point that needs to be worked out is to identify whether or not such a function is achieved by user input. This process is basically divided into the identification of "sources" and "sinks" and the correlation between them. [[3]](#references).
 
 In this way, when a dangerous function is identified, it is necessary to continue the analysis of the tokens in order to identify if there is a variable within that context, if it does not exist, we can discard the possibility of being a vulnerability, but if so, it is still necessary to identify whether this variable can be manipulated by the user or not.
 
-For this last stage of variable manipulation identification, we adopted the Taint Tracking technique [10].
+For this last stage of variable manipulation identification, we adopted the Taint Tracking technique [[10]](#references).
 
 ---
 
