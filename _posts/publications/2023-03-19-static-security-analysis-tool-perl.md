@@ -130,7 +130,7 @@ sub main {
 exit main();
 ```
 
-No vulnerability will be pointed out, although we have a system function, which has an external value being inserted, this value is not manipulated by the user. But if the $name variable is changeable by the user, it will flag the vulnerability:
+Zero vulnerabilities will be reported, although we have a system function, which has an external value being inserted, this value is not manipulated by the user. But if the $name variable is changeable by the user, it will flag the vulnerability:
 
 ```perl
 #!/usr/bin/perl
@@ -140,7 +140,7 @@ use strict;
 use warnings;
 
 sub main {
-    my $name = $ARGV;
+    my $name = $ARGV[0];
 
     system ("echo Hello World! $name");
 }
@@ -156,9 +156,9 @@ Result:
 
 ### Future Work
 
-Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, we plan to implement a call graph analysis [14] to identify vulnerabilities that are not directly related to the file being analyzed.
+Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, exist a plan to implement a call graph analysis [[14]](#references) to identify vulnerabilities that are not directly related to the file being analyzed.
 
-It's already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
+It’s already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
 
 ---
 
