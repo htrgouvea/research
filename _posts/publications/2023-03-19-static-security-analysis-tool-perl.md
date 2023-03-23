@@ -35,10 +35,11 @@ This same topic is also discussed in the publication: [“Scaling Libs security 
 ### Objective
 
 In order to make the expected success tangible when using a tool focused on static analysis, the expectation is created that such an artifact meets at least the following requirements:
+In order to make the expected success tangible when using a tool focused on static analysis, the expectation is created that such an artifact meets at least the following requirements:
 
-* Be fast to execute: in case of delay, this can be considered a friction for the development cycle;
-* The user must be able to write his own rules: this is how we place them with co-creators of the technology;
-* Low false-positive rate: we have limited resources so it is necessary to invest them where it really makes sense;
+* __Be fast to execute__: in case of delay, this can be considered a friction for the development cycle;
+* __The user must be able to write his own rules__: this is how we place them as co-creators of the technology;
+* __Low false-positive rate__: we have limited resources so it is necessary to invest them where it really makes sense;
 
 In addition to the basic requirements of the solution, such as: being able to say which source code will be analyzed, paths that the solution should ignore, which rules to use, among others.
 
@@ -48,20 +49,22 @@ Thus, this text will illustrate how a SAST tool for Perl applications can behave
 
 ### Static Analysis
 
-When we think about the basic functioning of a static analysis tool, focused on security, the simplest logic that is structured is something similar to:
+When we think about a simple and basic static analysis tool, focused on security, the general algorithm is something similar to:
 
 1. The SAST tool will receive a list of files to analyze;
-2. From that list of files, it will read line by line;
-3. Each line will compare with another list of rules that have a pre-mapping of possible vulnerabilities;
-4. If the check returns true, we understand it as a possible vulnerability;
+2. From that list of files, it will read the content line by line;
+3. Each line will be compared against a set of patterns (rules that have a pre-mapping of possible vulnerabilities);
+4. If any of these patterns exist in the line, the tool marks the line as potential vulnerable.
 
-And in fact, there are numerous SAST tools that have a behavior identical to the one described. But this is not ideal, there are several gaps and this results in a bad experience due to little flexibility and a high rate of false positives.
+And in fact, there are numerous SAST tools that have a behavior identical to the one described. The problem with this approach is the fact that it doesn't take into account the code structure or context, there are several gaps and this results in a bad experience due to little flexibility and a high rate of false positives.
 
-The first point is that the first SAST tools (which some vendors still use this technology), made these comparisons listed in points 2 and 3 in a really direct way, a string comparison in the code file with another string in the rule, the famous “grep”. This generates an extremely high false positive rate as we can point out a vulnerability that will be false positive:
+The first point is that the first SAST tools (which some vendors still use this technology), made these comparisons listed in points 2 and 3 in a really direct way, a string comparison in the code file with another string in the rule, the famous “grep”. 
 
-- Based on a comment that exists in the code;
-- A string constant that is printed and has the same name as a dangerous function;
-- Several files that are not necessarily interpreted/compiled are analyzed, such as MarkDown and SVG, spending more time and resources;
+This generates an extremely high false positive rate as we can point out a vulnerability that will be false positive:
+
+* Based on a comment that exists in the code;
+* A string constant that is printed and has the same name as a dangerous function;
+* Several files that are not necessarily interpreted/compiled are analyzed, such as MarkDown and SVG, spending more time and resources;
 
 Other than these points, rules usually only describe the use of dangerous functions, which do not necessarily reflect a vulnerability. For it to be considered a vulnerability, it needs to be exploitable, that is, an agent needs to have a control point to be able to act arbitrarily.
 
@@ -71,20 +74,22 @@ Other than these points, rules usually only describe the use of dangerous functi
 
 ![](/images/publications/zarn/zarn.png)￼
 
-
 ZARN [[12]](#references), a lightweight static security analysis tool for modern Perl Apps, seeks to resolve these points by adopting the following strategies:
 
-To work around all these mentioned points, we have some extremely efficient approaches and the first one is that we only need to analyze the files that will be interpreted. In the Perl language, these will normally be files with the following extensions: .pl, .pm, .t. Also, if we know of files that will always be ignored, like for example the entire .git directory, we can set this as a default in order to optimize resources. Example of this implementation: [/zarn/lib/Zarn/Files.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/Files.pm).
+To work around all these mentioned points, we have some extremely efficient approaches and the first one is that we only need to analyze the files that will be interpreted. In the Perl language, these will normally be files with the following extensions: .pl, .pm, .t. Also, if we know of files that will always be ignored, like for example the entire .git directory, we can set this as a default in order to optimize resources. 
+
+Example of this implementation: [/zarn/lib/Zarn/Files.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/Files.pm).
 
 With this we will already notice a performance gain and also the number of false positives will be reduced, but it is still not enough. We also need a smarter implementation to parse the code, we can’t treat it like regular text.
 
-Therefore, we can adopt the use of Abstract Syntax Tree (AST) [[11]](#references), for our solution to parse only the tokens that relate to what we are looking for with the rules, without the need to parse strings or anything else when it doesn't make sense.
+With this we will already notice a performance gain and also the number of false positives will be reduced, but it is still not enough. We also need a smarter implementation to parse the code, we can’t treat it like regular text.
 
-Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [[12]](#references). If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: ["Perlinterp - An overview of the Perl interpreter"](https://docs.mojolicious.org/perlinterp) [[2]](#references).
+Therefore, we can adopt the use of Abstract Syntax Tree (AST) [[11]](#references), for our solution to parse only the tokens that relate to what we are looking for with the rules, without the need to parse strings or anything else when it doesn’t make sense.
+Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [[12]](#references). If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: ["Perlinterp - An overview of the Perl interpreter"](https://docs.mojolicious.org/perlinterp) [[2]](#references)..
 
 Using AST ([zarn/lib/Zarn/AST.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/AST.pm)) we ensure that only dangerous functions are identified and we enable the use of context, further reducing the false positive rate and improving performance.
 
-The last point that needs to be worked out is to identify whether or not such a function is achieved by user input. This process is basically divided into the identification of "sources" and "sinks" and the correlation between them. [[3]](#references).
+The last point that needs to be worked out is to identify whether or not such a function is achieved by user input. This process is basically divided into the identification of “sources” and “sinks” and the correlation between them. [[3]](#references).
 
 In this way, when a dangerous function is identified, it is necessary to continue the analysis of the tokens in order to identify if there is a variable within that context, if it does not exist, we can discard the possibility of being a vulnerability, but if so, it is still necessary to identify whether this variable can be manipulated by the user or not.
 
@@ -156,7 +161,7 @@ Result:
 
 ### Future Work
 
-Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, exist a plan to implement a call graph analysis [[14]](#references) to identify vulnerabilities that are not directly related to the file being analyzed.
+Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, we plan to implement a call graph analysis [14] to identify vulnerabilities that are not directly related to the file being analyzed.
 
 It’s already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
 
@@ -168,7 +173,7 @@ In order to collect clear evidence of the efficiency of the solution proposed he
 
 During this review process, 11 findings were found using an initial set of 5 simple rules. 87% of these findings proved to be exploitable.
 
-In the future, this same publication will be updated and will describe some of these cases with the aim of illustrating and facilitating the reader's understanding.
+__*In the future, this same publication will be updated and will describe some of these cases with the aim of illustrating and facilitating the reader’s understanding.*__
 
 ---
 
