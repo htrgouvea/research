@@ -161,7 +161,7 @@ Result:
 
 ### Future Work
 
-Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, we plan to implement a call graph analysis [14] to identify vulnerabilities that are not directly related to the file being analyzed.
+Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, exist a plan to implement a call graph analysis [[14]](#references) to identify vulnerabilities that are not directly related to the file being analyzed.
 
 It’s already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
 
