@@ -161,7 +161,7 @@ Result:
 
 ### Future Work
 
-Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, exist a plan to implement a call graph analysis [[14]](#references) to identify vulnerabilities that are not directly related to the file being analyzed.
+Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, exist a plan to implement a call graph analysis [[6]](#references) to identify vulnerabilities that are not directly related to the file being analyzed.
 
 It’s already possible to use it in CI/CD pipelines, but the result is displayed as execution output. A possible improvement is to have the result being inserted into code repositories as annotations, improving the experience for users.
 
@@ -184,7 +184,7 @@ __*In the future, this same publication will be updated and will describe some o
 - [3] [Sources and sinks](https://www.youtube.com/watch?v=ZaOtY4i5w_U)
 - [4] [About Perl Tokens ignored by the interpreter](https://www.perl.com/article/24/2013/5/11/Perl-tokens-you-should-know/)
 - [5] [Taint Analysis](https://en.wikipedia.org/wiki/Taint_checking)
-- [6] [https://perldoc.perl.org/perlsec](https://perldoc.perl.org/perlsec)
+- [6] [https://en.wikipedia.org/wiki/Call_graph](https://en.wikipedia.org/wiki/Call_graph)
 - [7] [http://ods.com.ua/win/eng/program/Perl5Unleashed/ch11.phtml](http://ods.com.ua/win/eng/program/Perl5Unleashed/ch11.phtml)
 - [8] [https://www.cgisecurity.com/lib/sips.html](https://www.cgisecurity.com/lib/sips.html)
 - [9] [https://perldoc.perl.org/perlsec#Laundering-and-Detecting-Tainted-Data](https://perldoc.perl.org/perlsec#Laundering-and-Detecting-Tainted-Data)
@@ -192,4 +192,3 @@ __*In the future, this same publication will be updated and will describe some o
 - [11] [https://en.wikipedia.org/wiki/Abstract_syntax_tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 - [12] [https://github.com/htrgouvea/zarn/](https://github.com/htrgouvea/zarn/)
 - [13] [https://perldoc.perl.org/perlpod](https://perldoc.perl.org/perlpod)
-- [14] [https://en.wikipedia.org/wiki/Call_graph](https://en.wikipedia.org/wiki/Call_graph)
