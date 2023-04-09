@@ -27,6 +27,7 @@ This repository stores all the structure, code and files of my personal website 
 | Name      | Description | Category |
 | ----------- | ----------- | ----------- |
 | [CVE-2021-41773](_posts/analysis/CVE-2021-41773) | RCE & LFI on feature to path normalization in Apache HTTP Server| Analysis |
+| [CVE-2021-22204](_posts/analysis/CVE-2021-22204/) | N-Day exploit RCE on Exiftool | Analysis |
 ---
 
 ### Download and Set-up
@@ -44,28 +45,16 @@ This repository stores all the structure, code and files of my personal website 
 
 ### Pipeline
 
-Security:
-
-- Software Composition Analsys (SCA): https://github.com/htrgouvea/research/blob/main/.github/dependabot.yml
-- Static Analsysis Security Testing (SAST): https://github.com/htrgouvea/research/blob/main/.github/workflows/semgrep.yml
-- Dynamic Analysis Security Testing (DAST): https://github.com/htrgouvea/research/blob/main/.github/workflows/owasp-zap.yml
-
-Quality:
-  - 
-  - 
-
-https://github.com/htrgouvea/research/blob/main/.github/workflows/codeql.yml
+This Blog uses some Github Actions workflows, for example to deploy itself and some others in the security aspect, such as: [Dependa bot as a Software Composition Analsys (SCA)](https://github.com/htrgouvea/research/blob/main/.github/dependabot.yml), [Semgrep as a Static Analsysis Security Testing (SAST)](https://github.com/htrgouvea/research/blob/main/.github/workflows/semgrep.yml) and [OWASP ZAP as a Dynamic Analysis Security Testing (DAST)](https://github.com/htrgouvea/research/blob/main/.github/workflows/owasp-zap.yml).
 
 ---
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
-
-- If you are interested in providing financial support to this project, please visit: [heitorgouvea.me/donate](https://heitorgouvea.me/donate)
+Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
 ---
 
 ### License
 
-- This work is licensed under [MIT License.](./LICENSE.md)
+This work is licensed under [MIT License.](./LICENSE.md)
