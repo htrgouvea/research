@@ -27,6 +27,7 @@ This repository stores all the structure, code and files of my personal website 
 | Name      | Description | Category |
 | ----------- | ----------- | ----------- |
 | [CVE-2021-41773](_posts/analysis/CVE-2021-41773) | RCE & LFI on feature to path normalization in Apache HTTP Server| Analysis |
+| [CVE-2021-22204](_posts/analysis/CVE-2021-22204/) | N-Day exploit RCE on Exiftool | Analysis |
 ---
 
 ### Download and Set-up
@@ -50,12 +51,10 @@ This Blog uses some Github Actions workflows, for example to deploy itself and s
 
 ### Contribution
 
-- Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
-
-- If you are interested in providing financial support to this project, please visit: [heitorgouvea.me/donate](https://heitorgouvea.me/donate)
+Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
 
 ---
 
 ### License
 
-- This work is licensed under [MIT License.](./LICENSE.md)
+This work is licensed under [MIT License.](./LICENSE.md)
