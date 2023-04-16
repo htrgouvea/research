@@ -10,7 +10,7 @@ description:
 
 Things I want to do before I turn 30. Please let me know if you have any recommendations.
 
-Progress updated on: 12, April, 2023.
+Progress updated on: 13, April, 2023.
 
 1. ✗ Learn the history of my family;
 2. ✗ Drink vodka in Russia;
@@ -27,9 +27,9 @@ Progress updated on: 12, April, 2023.
 13. ✗ Go to the Defcon Conference;
 14. ✗ Go to the CCC;
 15. ✗ Go to the OffensiveConf;
-16. ✗ Read 100 books;
+16. ~ Read 100 books;
 17. ✗ Skateboarding in New York;
-18. ✗ Visit all states in Brazil (visited: SP, RJ, MG, PR, GO, SC, RS);
+18. ~ Visit all states in Brazil (visited: SP, RJ, MG, PR, GO, SC, RS);
 19. ✗ Do high performance exercises for 30 days;
 20. ✗ Live in another country (London, UK);
 21. ✗ Fly in a helicopter;
@@ -38,7 +38,10 @@ Progress updated on: 12, April, 2023.
 24. ✗ Stay 30 days without buy any material things;
 25. ✗ Find a critical zero-day in Chrome Browser (Maybe Firefox too?);
 26. ✓ Start a company (Failed two times);
-27. ✗ Learn a new language;
+27. ~ Learn a new language;
 28. ~
 29. ~
 30. ~
+
+
+- Total: (04/30);
