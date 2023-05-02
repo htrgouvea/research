@@ -5,8 +5,6 @@ og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
 ---
 
-![image](/images/photos/banner.jpeg){:height="550em" width="40%" style="float:left; margin-right: 5em;"}
-
 ## Publications
 
 1. __Playing with brazilian financial apps for fun and profit:__
