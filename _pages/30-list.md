@@ -27,7 +27,7 @@ Progress updated on: 13, April, 2023.
 13. ✗ Go to the Defcon Conference;
 14. ✗ Go to the CCC;
 15. ✗ Go to the OffensiveConf;
-16. ~ Read 100 books;
+16. ~ Read 100 books (06/100);
 17. ✗ Skateboarding in New York;
 18. ~ Visit all states in Brazil (visited: SP, RJ, MG, PR, GO, SC, RS);
 19. ✗ Do high performance exercises for 30 days;
@@ -45,3 +45,14 @@ Progress updated on: 13, April, 2023.
 
 
 - Total: (04/30);
+
+---
+
+### Progress Updates
+
+
+In the year 2022, I created this list but basically I only managed to do 3 things, I would say that it was simply a matter of prioritization and next year I intend to change that:
+
+- [x] 1. I improved my physical condition, lost weight, exercised and literally managed to walk up a mountain; After I did it once, I started hiking whenever the opportunity arose and I was privileged to discover amazing places like that. With that, I learned that I really need to improve my physical health through habits, changing what I'm ingesting and also through physical exercises, preventing my muscles from becoming atrophied as this gives me an intangible ability to experience incredible experiences.
+
+- [x] 2. I had the opportunity to visit Buenos Aires and participate in the Eko Party Conference; It was my first trip outside Brazil, it made me want to visit other countries in South America.
