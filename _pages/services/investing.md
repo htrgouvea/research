@@ -8,6 +8,4 @@ description:
 
 ## Angel Investing
 
-My primary investment interest areas are security, developer tooling, platforms, and engineering productivity.
-
-If you are a founder looking for investments, feel free to contact me.
+My primary investment interest areas are security, developer tooling, platforms, and engineering productivity. If you are a founder looking for investments, feel free to contact me.
