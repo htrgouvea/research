@@ -26,7 +26,7 @@ How I can help:
 
 ---
 
-- __Technical Due Diligence__: leveraging his years of experience in the security industry, I can perform technical due diligence for your organization, whether you are an investor, an acquirer, or a company seeking an unbiased assessment of your technology assets. I can evaluate the technical/security maturity, scalability, and maintainability of systems, helping you make informed decisions and mitigate risks.
+- __Technical Due Diligence__: leveraging his years of experience in the security industry, I can perform technical due diligence for your organization, whether you are an investor, an acquirer, or a company seeking an unbiased assessment of your technology assets. I can evaluate the technical/security maturity, scalability, and maintainability of systems, helping you make informed decisions and mitigate risks. As an independent researcher, with no ties to companies or investors, he is neutral in the evaluation of security product manufacturers and with no commercial interests, to ensure that audits focus on quality and deliver results that exceed expectations.
 
 ---
 
