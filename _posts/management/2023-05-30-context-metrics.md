@@ -7,11 +7,11 @@ og_image: https://heitorgouvea.me/images/photos/section.jpg
 
 When assuming a leadership position, particularly as a manager, you will quickly understand the value and need for metrics. Therefore, concentrating part of your effort on this practice, I dare say that the first metrics you will work on are the famous KPIs, key performance indicators.
 
-But allow me to give you a tip. However, they are important, but try not to have tunnel vision as there is another category of metrics that will definitely help you.
+However allow me to give you a tip: they are important, but try not to have tunnel vision as there is another category of metrics that will definitely help you.
 
 KPIs are indicators that will help you understand if something has changed, if things are going well or not, but just looking at them is not enough to make a decision. You will feel the need for context metrics that will help you diagnose the situation, and thus you will have a better chance of making the right decision.
 
-To illustrate a little better, let's use an example: an engineering team that uses DORA Metrics to measure its software delivery speed.
+To illustrate a little better, let's use an example: an engineering team that uses DORA Metrics to measure the software delivery speed.
 
 Let's say that in the last two months, the "Time to deploy" has been falling. From that, you should create a list of questions that need to be answered promptly with support/context metrics, such as:
 
@@ -25,4 +25,4 @@ Let's say that in the last two months, the "Time to deploy" has been falling. Fr
 
 Anyway, I brought here some support metrics more inclined towards Human Resources teams, but we can certainly think of others focused on the support team, sales, etc.
 
-The final conclusion is: don't just look at your metrics, be a good match for other leaders and contribute, whether by consuming, charging, or simply giving visibility to your team's situation.
+The final conclusion is: don't just look at your metrics, be a good match for other leaders and contribute, whether by consuming, charging or simply giving visibility to your team's situation.
