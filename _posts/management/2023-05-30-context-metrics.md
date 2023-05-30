@@ -1,7 +1,8 @@
 ---
 layout: content
 title: 'The importance of context metrics'
-description: ''
+description: 'KPIs are indicators that will help you understand if something has changed, if things are going well or not, but just looking at them is not enough to make a decision.'
+og_image: https://heitorgouvea.me/images/photos/section.jpg
 ---
 
 When assuming a leadership position, particularly as a manager, you will quickly understand the value and need for metrics. Therefore, concentrating part of your effort on this practice, I dare say that the first metrics you will work on are the famous KPIs, key performance indicators.
