@@ -19,6 +19,6 @@ permalink: /
 3. __Vulnerability research notes:__
     - [23/09/2020] [Detecting Tor Browser platform based on exclusive font rendering](/2020/09/23/Detecting-browser-platform-based-on-fonts);
 
-4. __Management Notes:__
+4. __Building high-performance Technical Teams:__
     - [30/05/2023] [The importante of context metrics](/2023/05/30/context-metrics);
-    -  [30/05/2023] [Historical metrics VS Tracking metrics](2023/05/30/historical-metrics-vs-tracking);
+    - [30/05/2023] [Historical metrics VS Tracking metrics](2023/05/30/historical-metrics-vs-tracking);
