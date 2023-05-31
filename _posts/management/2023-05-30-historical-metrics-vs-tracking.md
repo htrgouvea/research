@@ -7,9 +7,9 @@ og_image: https://heitorgouvea.me/images/photos/section.jpg
 
 Continuing the discussion on metrics, another point worth considering and categorizing is the distinction between historical metrics and tracking metrics. Making proper use of these metrics can be a differentiating factor. Let me explain:
 
-- Historical metrics: They serve to portray past events, illustrating through numbers what has already happened. They are useful for developing medium and long-term plans.
+- Historical metrics: these serve to portray past events, illustrating through numbers what has already happened. They are useful for developing medium and long-term plans.
 
-- Tracking metrics: Their objective is to provide real-time insights into ongoing events, allowing for the creation of short-term tactics.
+- Tracking metrics: these objective is to provide real-time insights into ongoing events, allowing for the creation of short-term tactics.
 
 To illustrate this, let's use a basic and didactic example:
 
