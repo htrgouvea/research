@@ -10,11 +10,15 @@ description:
 
 I advise a select few companies where I either go back with key people at the company and/or I am excited about their approach. If you are looking for advice (especially in the security space), feel free to contact me.
 
-How I can help:
+Here are some services I often offer:
 
 ---
 
 - __Security Program Development__: if you need help to structure ou managment your Security Program, I can lead or collaborate with your team in designing and building high-security solutions that meet your unique requirements and enable your business to thrive.
+
+---
+
+-__Pentesting/Security Audit__: if you are looking for a partner to help you discover vulnerabilities, whether in the scope of web applications, network, code review, you can count on me! In the last decade, this was the area that I worked constantly and with big brands. It's my passion.
 
 ---
 
@@ -30,6 +34,4 @@ How I can help:
 
 ---
 
-Send me an email to [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) with the subject "Security Advisor" and let's set up a chat!
-
-If what you are looking for is not listed among these items but you still think I can help you, contact me and let's talk!
+Send me an email to [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) with the subject "Security Advisor" and let's set up a chat! If what you are looking for is not listed among these items but you still think I can help you, contact me and let's talk!
