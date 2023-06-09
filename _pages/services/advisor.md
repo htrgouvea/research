@@ -18,7 +18,7 @@ Here are some services I often offer:
 
 ---
 
--__Pentesting/Security Audit__: if you are looking for a partner to help you discover vulnerabilities, whether in the scope of web applications, network, code review, you can count on me! In the last decade, this was the area that I worked constantly and with big brands. It's my passion.
+- __Pentesting/Security Audit__: if you are looking for a partner to help you discover vulnerabilities, whether in the scope of web applications, network, code review, you can count on me! In the last decade, this was the area that I worked constantly and with big brands. It's my passion.
 
 ---
 
