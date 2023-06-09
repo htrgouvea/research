@@ -14,7 +14,7 @@ Here are some services I often offer:
 
 ---
 
-- __Security Program Development__: if you need help to structure ou managment your Security Program, I can lead or collaborate with your team in designing and building high-security solutions that meet your unique requirements and enable your business to thrive.
+- __Security Program Development__: if you need help to structure or managment your Security Program, I can lead or collaborate with your team in designing and building high-security solutions that meet your unique requirements and enable your business to thrive.
 
 ---
 
