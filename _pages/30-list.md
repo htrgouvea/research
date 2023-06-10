@@ -10,7 +10,7 @@ description: This is my personal and public list of things/goals I want to do be
 
 Things I want to do before I turn 30. Please let me know if you have any recommendations.
 
-Progress updated on: 13, April, 2023.
+Progress updated on: 10 June, 2023.
 
 1. ✗ Learn the history of my family;
 2. ✗ Drink vodka in Russia;
@@ -53,8 +53,8 @@ Progress updated on: 13, April, 2023.
 
 In the year 2022, I created this list but basically I only managed to do 3 things, I would say that it was simply a matter of prioritization and next year I intend to change that:
 
-- [x] 1. I improved my physical condition, lost weight, exercised and literally managed to walk up a mountain; After I did it once, I started hiking whenever the opportunity arose and I was privileged to discover amazing places like that. With that, I learned that I really need to improve my physical health through habits, changing what I'm ingesting and also through physical exercises, preventing my muscles from becoming atrophied as this gives me an intangible ability to experience incredible experiences.
+- [x] 1. [04/11/2021] I improved my physical condition, lost weight, exercised and literally managed to walk up a mountain; After I did it once, I started hiking whenever the opportunity arose and I was privileged to discover amazing places like that. With that, I learned that I really need to improve my physical health through habits, changing what I'm ingesting and also through physical exercises, preventing my muscles from becoming atrophied as this gives me an intangible ability to experience incredible experiences.
 
-- [x] 2. I had the opportunity to visit Buenos Aires and participate in the Eko Party Conference; It was my first trip outside Brazil, it made me want to visit other countries in South America.
+- [x] 2. [02/11/2022] I had the opportunity to visit Buenos Aires and participate in the Eko Party Conference; It was my first trip outside Brazil, it made me want to visit other countries in South America.
 
-- [x] 3. I'm currently training for my first Marathon. I'm not sure if I'll be able to run the Boston Marathon, but I'm sure I'll be able to run a marathon in 2023. This month (June) i will be running my first 10k.
+- [x] 3. [10/06/2023] I'm currently training for my first Marathon. I'm not sure if I'll be able to run the Boston Marathon, but I'm sure I'll be able to run a marathon in 2023. This month (June) i will be running my first 10k.
