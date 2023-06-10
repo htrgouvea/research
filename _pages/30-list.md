@@ -3,7 +3,7 @@ layout: page
 title: The 30 list | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /30-list
-description: 
+description: This is my personal and public list of things/goals I want to do before I turn 30.
 ---
 
 ## 30 under 30
@@ -23,7 +23,7 @@ Progress updated on: 13, April, 2023.
 9. ✗ Visit Silicon Valley;
 10. ✗ Take a trip alone;
 11. ✗ Go alone to the cinema;
-12. ✗ Run the Boston Marathon;
+12. ~ Run the Boston Marathon;
 13. ✗ Go to the Defcon Conference;
 14. ✗ Go to the CCC;
 15. ✗ Go to the OffensiveConf;
@@ -56,3 +56,5 @@ In the year 2022, I created this list but basically I only managed to do 3 thing
 - [x] 1. I improved my physical condition, lost weight, exercised and literally managed to walk up a mountain; After I did it once, I started hiking whenever the opportunity arose and I was privileged to discover amazing places like that. With that, I learned that I really need to improve my physical health through habits, changing what I'm ingesting and also through physical exercises, preventing my muscles from becoming atrophied as this gives me an intangible ability to experience incredible experiences.
 
 - [x] 2. I had the opportunity to visit Buenos Aires and participate in the Eko Party Conference; It was my first trip outside Brazil, it made me want to visit other countries in South America.
+
+- [x] 3. I'm currently training for my first Marathon. I'm not sure if I'll be able to run the Boston Marathon, but I'm sure I'll be able to run a marathon in 2023. This month (June) i will be running my first 10k.
