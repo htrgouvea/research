@@ -8,7 +8,7 @@ description:
 
 ## Technical Mentorship
 
-In the last years, I have led Offensive Security, AppSec Operation and Engineering teams. I mentored more than 100 engineers and security analysts, contributed to their performance, career and studies plans. Consequently learned a lot during this journey.
+In the last years, I have led Offensive Security, AppSec Operation and Engineering teams. I mentored more than 50 professional, contributed to their performance, career and studies plans. Consequently learned a lot during this journey.
 
 So, I offer coaching sessions focused on technical roles, and how to get there and perform beyond expectations.
 
@@ -18,8 +18,8 @@ So, I offer coaching sessions focused on technical roles, and how to get there a
 
 I have covered a vast breadth of various topics that accelerated each person's own journey. Some example scenarios include:
 
+- The best approaches to successfully building high-performing teams;
 - Building and follow-up Individual Development Plan (where to invest for the most impact on personal growth);
-- The best approaches to successfully building high-performing (security) teams;
 - Influencing non-technical stakeholders;
 - Discussing trade-offs in making complex and wide-reaching decisions;
 
@@ -33,7 +33,7 @@ All prep & follow up work before and after each session (usually 30-45 mins of t
 - Unlimited support (email and text messages apps like WhatsApp/Telegram) in-between sessions;
 - Access to a dedicated coaching portal (on Notion);
 - Access to a curated list of resources to support you on your journey;
-- Relevant introductions to Heitor connections and network, as required;
+- Relevant introductions to connections and network, as required;
 - CV and interview support, as required;
 
 Each session lasts an average of 1 hour and happens on a monthly basis.
@@ -42,4 +42,4 @@ Each session lasts an average of 1 hour and happens on a monthly basis.
 
 ### Want to know more?
 
-Send me an email to [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) with the subject "Technical Mentorship" and let's set up a chat! Currently, I only offer this service in Portuguese.
+Send me an email to [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) with the subject "Technical Mentorship" and let's set up a chat!
