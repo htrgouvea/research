@@ -83,7 +83,7 @@ Example of this implementation: [/zarn/lib/Zarn/Files.pm](https://github.com/htr
 With this we will already notice a performance gain and also the number of false positives will be reduced, but it is still not enough. We also need a smarter implementation to parse the code, we can’t treat it like regular text.
 
 Therefore, we can adopt the use of Abstract Syntax Tree (AST) [[11]](#references), for our solution to parse only the tokens that relate to what we are looking for with the rules, without the need to parse strings or anything else when it doesn’t make sense.
-Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [[12]](#references). If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: ["Perlinterp - An overview of the Perl interpreter"](https://docs.mojolicious.org/perlinterp) [[2]](#references)..
+Here we make use of the PPI package, reading all tokens, ignoring comments and “PODs” [[12]](#references). If for some reason you are interested in understanding a little more about how the Perl Interpreter works, a good reading recommendation is: ["Perlinterp - An overview of the Perl interpreter"](https://docs.mojolicious.org/perlinterp) [[2]](#references).
 
 Using AST ([zarn/lib/Zarn/AST.pm](https://github.com/htrgouvea/zarn/blob/main/lib/Zarn/AST.pm)) we ensure that only dangerous functions are identified and we enable the use of context, further reducing the false positive rate and improving performance.
 
