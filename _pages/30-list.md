@@ -21,7 +21,7 @@ Progress updated on: 10 June, 2023.
 7. ✗ Skateboarding in Barcelona;
 8. ✓ Go to a secret party;
 9. ✗ Visit Silicon Valley;
-10. ✗ Take a trip alone;
+10. ✓ Take a trip alone;
 11. ✗ Go alone to the cinema;
 12. ~ Run the Boston Marathon;
 13. ✗ Go to the Defcon Conference;
