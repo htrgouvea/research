@@ -23,4 +23,4 @@ description: Security Researcher based in São Paulo (🇧🇷) with Software En
 4. __Building high-performance Technical Teams:__
     - [30/05/2023] [The importante of context metrics](/2023/05/30/context-metrics);
     - [30/05/2023] [Historical metrics VS Tracking metrics](2023/05/30/historical-metrics-vs-tracking);
-    - [05/09/2023] [The direction is more important than velocity](2023/09/05/direction-and-velocity);
+    - [05/09/2023] [Direction is more important than velocity](2023/09/05/direction-and-velocity);

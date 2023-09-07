@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'The direction is more important than velocity'
+title: 'Direction is more important than velocity'
 description: 'In the last 12 months (2022 ~ 2023) I was in an engineering team that according to the other teams in the company (an external perception) was that this team was not winning the game due to the low speed in software delivery.'
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 ---
