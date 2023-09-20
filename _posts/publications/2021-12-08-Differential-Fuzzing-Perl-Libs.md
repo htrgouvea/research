@@ -2,7 +2,7 @@
 layout: content
 title: 'Scaling Libs security analysis with Differential Fuzzing'
 description: 'A technique that can help us strongly on this journey is fuzzing, more specifically the Differential Fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification that in some contexts could be a security vulnerability.'
-og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/example-diff-fuzz.png
+og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/diff-fuzz-meme.jpeg
 ---
 
 Table of contents:
