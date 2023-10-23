@@ -17,6 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.2.0
+        uses: zaproxy/action-full-scan@v0.7.0
         with:
           target: 'https://heitorgouvea.me/'
