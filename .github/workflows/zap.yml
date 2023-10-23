@@ -15,7 +15,7 @@ jobs:
     name: Scaneando a aplicação
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.7.0
         with:
