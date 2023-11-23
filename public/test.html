@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Full Screen</title>
+    <link href="https://fonts.cdnfonts.com/css/lucida-sans" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Lucida', monospace;
+        }
+
+        video {
+            display: none;
+        }
+
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            transform: scaleX(-1);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #overlayText {
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var video = document.createElement('video');
+                video.srcObject = stream;
+                video.play();
+                document.body.appendChild(video);
+
+                var canvas = document.createElement('canvas');
+                var ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                document.body.appendChild(canvas);
+
+                var overlayText = document.createElement('h1');
+                overlayText.id = 'overlayText';
+                document.body.appendChild(overlayText);
+
+                var phrases = [
+                    'Aposte em você e depois, dobre.',
+                    'Enquanto estudo sobre a Arte, encontro respostas sobre a vida.',
+                    'O foda é que toda segunda acho que posso salvar o mundo.',
+                    'Que minha história seja contada como a de um artista.',
+                    'feeling like my mind is in the middle of a poem',
+                    'you should try and be yourself, the rest is harder to be',
+                    'you\'re art too'
+                ];
+
+                function updatePhrase() {
+                    var randomIndex = Math.floor(Math.random() * phrases.length);
+                    overlayText.textContent = phrases[randomIndex];
+                }
+
+                setInterval(updatePhrase, 5000);
+
+                function processVideo() {
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    var data = imageData.data;
+
+                    for (var i = 0; i < data.length; i += 4) {
+                        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                        data[i] = avg;
+                        data[i + 1] = avg;
+                        data[i + 2] = avg;
+                    }
+
+                    ctx.putImageData(imageData, 0, 0);
+                    requestAnimationFrame(processVideo);
+                }
+
+                processVideo();
+            })
+            .catch(function (error) {
+                console.log('Erro ao acessar a câmera:', error);
+            });
+    </script>
+</body>
+</html>
