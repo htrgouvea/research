@@ -43,6 +43,18 @@
 </head>
 <body>
     <script>
+        function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+
+  document.addEventListener('dblclick', toggleFullScreen);
+  
         navigator.mediaDevices.getUserMedia({ video: true })
             .then(function (stream) {
                 var video = document.createElement('video');
