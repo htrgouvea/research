@@ -2,7 +2,7 @@
 layout: page
 title: Podcasts | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
-permalink: /
+permalink: /links
 description: 
 ---
 
