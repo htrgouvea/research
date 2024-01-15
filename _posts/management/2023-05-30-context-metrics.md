@@ -29,4 +29,4 @@ The final conclusion is: don't just look at your metrics, be a good match for ot
 
 -
 
-*This publication is disponible also in: [Spanhish](/2023/05/30/las-metricas-de-contexto) and [Portuguese](/2023/05/30/importancia-metricas-contexto);*
+* This publication is also disponible in: [Spanish](/2023/05/30/las-metricas-de-contexto) and [Portuguese](/2023/05/30/importancia-metricas-contexto);
