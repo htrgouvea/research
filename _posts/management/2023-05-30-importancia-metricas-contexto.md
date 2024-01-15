@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'A importância das métricas de contexto'
-description: ''
+description: 'KPIs são indicadores que vão te ajudar a entender se algo mudou, se as coisas estão indo bem ou não, mas apenas olhar para eles não é suficiente para tomar uma decisão.'
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'La importancia de las métricas de contexto'
-description: ''
+description: 'Los KPI son indicadores de que te ayudaremos a entender si algo está mal, ya sea que las cosas estén bien o no, pero apenas si no es suficiente para tomar una decisión.'
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 ---
 
