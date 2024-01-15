@@ -26,3 +26,7 @@ Let's say that in the last two months, the "Time to deploy" has been falling. Fr
 Anyway, I brought here some support metrics more inclined towards Human Resources teams, but we can certainly think of others focused on the support team, sales, etc.
 
 The final conclusion is: don't just look at your metrics, be a good match for other leaders and contribute, whether by consuming, charging or simply giving visibility to your team's situation.
+
+-
+
+*This publication is disponible also in: [Spanhish](/2023/05/30/las-metricas-de-contexto) and [Portuguese](/2023/05/30/importancia-metricas-contexto);*
