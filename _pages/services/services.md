@@ -34,4 +34,4 @@ Here are some services I often offer:
 
 ---
 
-Send me an email to [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) with the subject "Security Advisor" and let's set up a chat! If what you are looking for is not listed among these items but you still think I can help you, contact me and let's talk!
+Send me an email to [services@heitorgouvea.me](mailto:services@heitorgouvea.me) with the subject "Security Advisor" and let's set up a chat! If what you are looking for is not listed among these items but you still think I can help you, contact me and let's talk!

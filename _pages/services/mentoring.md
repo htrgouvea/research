@@ -42,4 +42,4 @@ Each session lasts an average of 1 hour and happens on a monthly basis.
 
 ### Want to know more?
 
-Send me an email to [hi@heitorgouvea.me](mailto:hi@heitorgouvea.me) with the subject "Technical Mentorship" and let's set up a chat!
+Send me an email to [mentoring@heitorgouvea.me](mailto:mentoring@heitorgouvea.me) with the subject "Technical Mentorship" and let's set up a chat!

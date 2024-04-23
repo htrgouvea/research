@@ -1,5 +1,5 @@
 FROM jekyll/jekyll:latest
-LABEL maintainer="Heitor Gouvêa <hi@heitorgouvea.me>"
+LABEL maintainer="Heitor Gouvêa <contact@heitorgouvea.me>"
 
 COPY . /site
 WORKDIR /site
