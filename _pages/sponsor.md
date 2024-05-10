@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Donate
+title: Sponsor
 og_image: https://heitorgouvea.me/images/photos/section.jpg
-permalink: /donate
+permalink: /sponsor
 ---
 
 <script>window.location.href="https://github.com/sponsors/htrgouvea/";</script>
