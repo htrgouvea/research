@@ -24,10 +24,10 @@ This repository stores all the structure, code and files of my personal website 
 
 ### Research
 
-| Name      | Description | Category |
+| Title       | Description | Category |
 | ----------- | ----------- | ----------- |
-| [CVE-2021-41773](_posts/analysis/CVE-2021-41773) | RCE & LFI on feature to path normalization in Apache HTTP Server| Analysis |
-| [CVE-2021-22204](_posts/analysis/CVE-2021-22204/) | N-Day exploit RCE on Exiftool | Analysis |
+| [](_posts/) | |  |
+| [](_posts/) | |  |
 ---
 
 ### Download and Set-up
