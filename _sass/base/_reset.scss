@@ -1,11 +1,3 @@
-/* ==========================================================================
-   Reset
-   ========================================================================== */
-
-/* Reset Modified from Normalize.css */
-
-/* Base Reset */
-
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +10,7 @@ html {
     min-height: 100%;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-size: 62.5%; // Make it easy to calculate rems to px
+    font-size: 62.5%;
 }
 
 body {
@@ -51,8 +43,6 @@ h6 {
     color: $c-base__02;
 }
 
-
-/* Media */
 audio, canvas, progress, video {
     display: inline-block;
     vertical-align: baseline;
@@ -62,8 +52,6 @@ audio:not([controls]) {
     display: none;
     height: 0;
 }
-
-/* Images */
 
 [hidden], template { display: none; }
 
@@ -81,9 +69,6 @@ svg {
     max-height: 100%
 }
 
-
-/* Links */
-
 a {
     background-color: transparent;
     text-decoration: none;
@@ -92,13 +77,9 @@ a {
 
 a:active, a:hover { outline: 0; }
 
-/* Text Selectors */
-
 abbr[title] { border-bottom: 1px dotted; }
 b, strong   { font-weight: bold; }
 i, em       { font-weight: italic; }
-
-/* Content */
 
 figure {
     margin: 0;
@@ -113,8 +94,6 @@ hr {
     border: 0;
     background: #EFF1F3;
 }
-
-/* Code Blocks */
 
 pre { overflow: auto; }
 
