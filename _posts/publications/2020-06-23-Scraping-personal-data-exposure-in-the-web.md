@@ -57,7 +57,48 @@ And these are just some of the results, on Twitter you could see that some peopl
 
 Convinced to demonstrate an impact of the abuse of this functionality, I decided to create a proof of concept. The first part of this PoC boiled down to building code that would be able to use a search engine to collect as many URLs as possible, so I did a simple *scraper* [[3]](#references) for Bing:
 
-![](/images/publications/nubank-scraping/bing-scraper.png)
+```perl
+#!/usr/bin/env perl
+
+use 5.030;
+use strict;
+use warnings;
+use WWW::Mechanize;
+use Mojo::Util qw(url_escape);
+
+sub main {
+    my $dork = $ARGV[0];
+
+    if ($dork) {
+        $dork = url_escape($dork);
+
+        my %seen  = ();
+        my $mech = WWW::Mechanize -> new();
+
+        $mech -> ssl_opts (verify_hostname => 0);
+
+        for my $page (0 .. 10) {
+            my $url = "https://wwww.bing.com/search?q=${dork}&first=${page}0";
+
+            $mech -> get($url);
+
+            my @links = $mech -> links();
+
+            foreach my $link (@links) {
+                $url = $link -> url();
+
+                next if $seen{$url}++;
+
+                if ($url =~ m/^https?/ && $url !~ m/bing|live|microsoft|msn/) {
+                    print $url, "\n";
+                }
+            }
+        }
+    }
+}
+
+exit main();
+```
 
 From that code, I was able to collect 100 valid URLs:
 
