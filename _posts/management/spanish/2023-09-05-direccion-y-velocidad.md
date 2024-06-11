@@ -21,4 +21,4 @@ Estas palabras resonaron fuertemente para mí. Me di cuenta de que, para alcanza
 
 -
 
-* Esta publicación también está disponible en [Portugués](/2023/05/09/direcao-e-velocidade) y [Inglés](/2023/05/09/direction-and-velocity).
+* Esta publicación también está disponible en [Portugués](/2023/09/05/direcao-e-velocidade) y [Inglés](/2023/09/05/direction-and-velocity).

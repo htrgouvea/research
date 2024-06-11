@@ -21,4 +21,4 @@ These words resonated strongly with me. I realized that to achieve true success,
 
 -
 
-* This publication is also disponible in: [Spanish](/2023/05/09/direccion-y-velocidad) and [Portuguese](/2023/05/09/direcao-e-velocidade);
+* This publication is also disponible in: [Spanish](/2023/09/05/direccion-y-velocidad) and [Portuguese](/2023/09/05/direcao-e-velocidade);

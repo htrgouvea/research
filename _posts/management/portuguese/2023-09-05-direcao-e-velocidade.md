@@ -21,4 +21,4 @@ Essas palavras ressoaram fortemente para mim. Percebi que, para alcançar o verd
 
 -
 
-* Essa publicação também está dispoível em: [Espanhol](/2023/05/09/direccion-y-velocidad) e [Inglês](/2023/05/09/direction-and-velocity);
+* Essa publicação também está dispoível em: [Espanhol](/2023/09/05/direccion-y-velocidad) e [Inglês](/2023/09/05/direction-and-velocity);
