@@ -106,7 +106,53 @@ From that code, I was able to collect 100 valid URLs:
 
 After having all these URLs in a .txt, I had to build another *scraper* that scraped data on the Nubank page:
 
-![](/images/publications/nubank-scraping/nubank-scraper.png)
+```perl
+#!/usr/bin/env perl
+
+use 5.030;
+use strict;
+use warnings;
+use Mojo::DOM;
+use Mojo::UserAgent;
+
+binmode(STDOUT, ":encoding(UTF-8)");
+
+sub main {
+    my $urls_file = $ARGV[0];
+
+    if ($urls_file) {
+        my $userAgent = Mojo::UserAgent -> new (
+            agent => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
+        );
+        
+        open my $urls_filehandle, "<", $urls_file or die $!;
+
+        while (<$urls_filehandle>) {
+            chomp ($_);
+            
+            my $request = $userAgent -> get($_) -> result();
+
+            if ($request -> is_success()) {
+                my $account = $request -> dom -> find("tr td") -> map("text") -> join(",");
+
+                $account =~ s/Nome,//
+                && $account =~ s/CPF,//
+                && $account =~ s/Banco,//
+                && $account =~ s/Tipo da conta,//
+                && $account =~ s/Agência,//
+                && $account =~ s/Conta,//
+                && $account =~ s/Agência Métodos,//;
+
+                say $account;
+            }
+        }
+
+        close ($urls_filehandle);
+    }
+}
+
+exit main();
+```
 
 And this was the result:
 
