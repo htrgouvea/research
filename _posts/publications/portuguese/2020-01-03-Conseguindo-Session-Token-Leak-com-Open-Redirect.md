@@ -17,7 +17,7 @@ Tabela de conteúdo:
 
 ### Sumário
 
-Essa publicação visa compartilhar uma vulnerabilidade de Open Redirect[1] encontrada no site da Caixa Econômica Federal, por meio da qual foi possível expor Tokens de Sessão de usuários.
+Essa publicação visa compartilhar uma vulnerabilidade de Open Redirect[[1]](#referências) encontrada no site da Caixa Econômica Federal, por meio da qual foi possível expor Tokens de Sessão de usuários.
 
 Deve ser esclarecido que durante todos os testes, a única conta utilizada foi aquela para a qual se tinha autorização do titular e nenhuma outra conta ou informação de outros usuários foi acessada ou violada durante o desenvolvimento desta pesquisa e prova de conceito.
 
@@ -30,6 +30,8 @@ Linha do tempo:
 01/10/2020: Correção da vulnerabilidade;
 01/10/2020: Divulgação deste artigo técnico;
 ```
+
+* Essa publicação também está dispoível em: [Espanhol](/2020/01/03/Obteniendo-un-Session-Token-Leak) e [Inglês](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak);
 
 ---
 

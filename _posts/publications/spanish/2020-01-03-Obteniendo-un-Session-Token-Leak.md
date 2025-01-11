@@ -31,6 +31,8 @@ Línea de tiempo:
 01/10/2020: Publicación de este artículo técnico;
 ```
 
+* Esta publicación también está disponible en [portugués](/2020/01/03/Conseguindo-Session-Token-Leak-com-Open-Redirect) e [inglés](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak).
+
 ---
 
 ### Las vulnerabilidades
