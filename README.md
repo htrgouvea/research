@@ -43,12 +43,6 @@ This repository stores all the structure, code and files of my personal website 
 
 ---
 
-### Pipeline
-
-This Blog uses some Github Actions workflows, for example to deploy itself and some others in the security aspect, such as: [Dependa bot as a Software Composition Analsys (SCA)](https://github.com/htrgouvea/research/blob/main/.github/dependabot.yml), [Semgrep as a Static Analsysis Security Testing (SAST)](https://github.com/htrgouvea/research/blob/main/.github/workflows/semgrep.yml) and [OWASP ZAP as a Dynamic Analysis Security Testing (DAST)](https://github.com/htrgouvea/research/blob/main/.github/workflows/owasp-zap.yml).
-
----
-
 ### Contribution
 
 Your contributions and suggestions are heartily ♥ welcome. [See here the contribution guidelines.](/.github/CONTRIBUTING.md) Please, report bugs via [issues page](https://github.com/htrgouvea/research/issues) and for security issues, see here the [security policy.](./SECURITY.md) (✿ ◕‿◕) 
