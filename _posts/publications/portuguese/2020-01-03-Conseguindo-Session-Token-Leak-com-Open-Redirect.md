@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Conseguindo um Session Token Leak a partir de um Open Redirect'
+title: 'Explorando um Open Redirect para Vazamento de Session Tokens'
 description: ''
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
@@ -23,7 +23,7 @@ Deve ser esclarecido que durante todos os testes, a única conta utilizada foi a
 
 Linha do tempo:
 
-```
+```plaintext
 01/01/2020: Descoberta da vulnerabilidade e criação da prova de conceito;
 01/05/2020: A vulnerabilidade foi reportada;
 01/07/2020: Confirmação da vulnerabilidade pela Caixa Econômica Federal;
@@ -86,7 +86,9 @@ get "/" => sub ($catcher) {
     close ($logs);
 
     return ($catcher -> render (
-        text => "<script>window.location='https://acessoseguro.sso.caixa.gov.br/portal/login/?code=$code'</script>"
+        text => "
+            <script>window.location='https://acessoseguro.sso.caixa.gov.br/portal/login/?code=$code'</script>
+        "
     ));
 
 };
@@ -155,9 +157,6 @@ Foi aconselhado à Caixa Econômica Federal conduzir uma investigação para val
 ---
 
 ### Referências
-
-
----
 
 - [1] [https://portswigger.net/kb/issues/00500100_open-redirection-reflected](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
 - [2] [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
