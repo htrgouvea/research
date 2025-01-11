@@ -29,4 +29,4 @@ En resumen, al considerar tanto las métricas históricas como las de seguimient
 
 -
 
-* Esta publicación también está disponible en [Portugués](/2023/05/30/metricas-historicas-vs-acompanhamento) y [Inglés](/2023/05/30/historical-metrics-vs-tracking).
+* Esta publicación también está disponible en [portugués](/2023/05/30/metricas-historicas-vs-acompanhamento) e [inglés](/2023/05/30/historical-metrics-vs-tracking).

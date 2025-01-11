@@ -26,4 +26,4 @@ La conclusión final es: no te limites a mirar solo tus métricas, sé un buen �
 
 -
 
-* Esta publicación también está disponible en [Portugués](/2023/05/30/importancia-metricas-contexto) y [Inglés](/2023/05/30/context-metrics).
+* Esta publicación también está disponible en [portugués](/2023/05/30/importancia-metricas-contexto) e [inglés](/2023/05/30/context-metrics).
