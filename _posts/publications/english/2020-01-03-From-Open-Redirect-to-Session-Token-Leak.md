@@ -31,7 +31,7 @@ Timeline:
 01/10/2020: Technical article published;
 ```
 
-* This publication is also disponible in: [Spanish]() and [Portuguese](/2020/01/03/Conseguindo-Session-Token-Leak-com-Open-Redirec);
+* This publication is also disponible in: [Spanish](/2020/01/03/Obteniendo-un-Session-Token-Leak) and [Portuguese](/2020/01/03/Conseguindo-Session-Token-Leak-com-Open-Redirect);
 
 ---
 
