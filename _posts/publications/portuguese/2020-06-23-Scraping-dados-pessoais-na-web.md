@@ -18,11 +18,7 @@ Tabela de conteúdo:
 Durante a realização de testes em aplicações mobile, foi identificado um recurso no aplicativo do Nubank que permite a criação e o envio de "links de cobrança" para múltiplos destinatários. Embora essa funcionalidade apresente utilidade prática, sua implementação pode estar suscetível a diversos cenários que demandam análise detalhada. Com o intuito de avaliar possíveis implicações, foram desenvolvidas provas de conceito e compartilhadas com a empresa para revisão do design da funcionalidade. A partir dessa análise, constatou-se a possibilidade de mapear dados pessoais, como CPF, nome completo, número e agência da conta vários clientes.
 
 
-```text
-DISCLAIMER
-
-A empresa responsável foi informada sobre todos os detalhes dessa pesquisa no menor tempo possível e respondeu de maneira ética e transparente, demonstrando atenção e comprometimento com a segurança da funcionalidade. Durante os testes realizados, não houve invasão ou violação de sistemas. Além disso, a empresa implementou algumas medidas corretivas para reduzir potenciais riscos associados ao problema relatado. Recomendações adicionais foram fornecidas para mitigar a vulnerabilidade, porém a empresa optou por não implementá-las integralmente.
-```
+**DISCLAIMER**: A empresa responsável foi informada sobre todos os detalhes dessa pesquisa no menor tempo possível e respondeu de maneira ética e transparente, demonstrando atenção e comprometimento com a segurança da funcionalidade. Durante os testes realizados, não houve invasão ou violação de sistemas. Além disso, a empresa implementou algumas medidas corretivas para reduzir potenciais riscos associados ao problema relatado. Recomendações adicionais foram fornecidas para mitigar a vulnerabilidade, porém a empresa optou por não implementá-las integralmente.
 
 ---
 
