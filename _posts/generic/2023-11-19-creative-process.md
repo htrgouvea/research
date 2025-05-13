@@ -13,6 +13,9 @@ Essa reflexão evoca a citação de William O'Brien: **“A qualidade de uma int
 
 “Pois criatividade não se trata de uma inspiração mágica ou de uma genialidade inata. Ela vem depois que acumulamos muito conhecimento por nossas experiências, mas nos recusamos a simplesmente repetir a produzir o que sempre nos demandam. Nós tomamos um tempo em quietude, para que deste vazio da atividade possamos elaborar algo novo a partir de nossas influências anteriores, algo criativo e inesperado. Sem tempo e quietude não há a chamada originalidade.” - Livro: “A Filosofia do Vazio”
 
+
+"El tiempo de la obra de arte es el de la espera". - Pablo Gianera, Buenos Aires - 1971 
+
 <!-- “Coisas de qualidade não possuem medo do tempo.”
 
 Qualquer criação, seja uma arte, um software ou uma ideia: se for genuinamente de qualidade, não precisa temer o fator do tempo. Pois na verdade, esse será um fator que irá servir como aliado para comprovar o quão genuína é essa criação;

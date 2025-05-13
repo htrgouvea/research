@@ -1,36 +1,15 @@
 ---
 layout: content
-title: 'Combinando vulnerabilidades do lado do cliente para tornar uma aplicação indisponível'
+title: 'Combinando vulnerabilidades client-side para hacer que una aplicación no esté disponible'
 description: ''
-og_image: 
+og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
 
-### Sumário
-
-
----
-
-### Descrição
-
+### Resumen
 
 ---
 
-### Prova de conceito
-
-
----
-
-### Impacto
-
-
----
-
-### Conclusão
-
-
----
-
-### Referências
+### Referencias
 
 - [1] [https://portswigger.net/web-security/cross-site-scripting](https://portswigger.net/web-security/cross-site-scripting)
 - [2] [https://owasp.org/www-community/attacks/xss/](https://owasp.org/www-community/attacks/xss/)
