@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'Um pequeno caso de scraping de dados pessoais expostos na web'
-description: 'Durante a realização de testes em aplicações mobile, foi identificado um recurso no aplicativo do Nubank que permite a criação e o envio de "links de cobrança" para múltiplos destinatários. Embora essa funcionalidade apresente utilidade prática, sua implementação pode estar suscetível a diversos cenários que demandam análise detalhada. Com o intuito de avaliar possíveis implicações, foram desenvolvidas provas de conceito e compartilhadas com a empresa para revisão do design da funcionalidade. A partir dessa análise, constatou-se a possibilidade de mapear dados pessoais, como CPF, nome completo, número e agência da conta vários clientes.'
+description: 'Durante a realização de uma pesquisa de segurança em aplicações mobile, foi identificado um recurso no aplicativo do Nubank que permite a criação e o envio de "links de cobrança" para múltiplos destinatários. Foi identificada uma vulnerabilidade nessa funcionalidade que  possibilitou mapear dados pessoais, como CPF, nome completo, número e agência da conta vários clientes.'
 og_image: https://heitorgouvea.me/images/publications/nubank-scraping/google-dorks.png
 ---
 
@@ -15,10 +15,11 @@ Tabela de conteúdo:
 
 ### Sumário
 
-Durante a realização de testes em aplicações mobile, foi identificado um recurso no aplicativo do Nubank que permite a criação e o envio de "links de cobrança" para múltiplos destinatários. Embora essa funcionalidade apresente utilidade prática, sua implementação pode estar suscetível a diversos cenários que demandam análise detalhada. Com o intuito de avaliar possíveis implicações, foram desenvolvidas provas de conceito e compartilhadas com a empresa para revisão do design da funcionalidade. A partir dessa análise, constatou-se a possibilidade de mapear dados pessoais, como CPF, nome completo, número e agência da conta vários clientes.
-
+Durante a realização de uma pesquisa de segurança em aplicações mobile, foi identificado um recurso no aplicativo do Nubank que permite a criação e o envio de "links de cobrança" para múltiplos destinatários. Foi identificada uma vulnerabilidade nessa funcionalidade que  possibilitou mapear dados pessoais, como CPF, nome completo, número e agência da conta vários clientes.
 
 **DISCLAIMER**: A empresa responsável foi informada sobre todos os detalhes dessa pesquisa no menor tempo possível e respondeu de maneira ética e transparente, demonstrando atenção e comprometimento com a segurança da funcionalidade. Durante os testes realizados, não houve invasão ou violação de sistemas. Além disso, a empresa implementou algumas medidas corretivas para reduzir potenciais riscos associados ao problema relatado. Recomendações adicionais foram fornecidas para mitigar a vulnerabilidade, porém a empresa optou por não implementá-las integralmente.
+
+- Essa publicação também está dispoível em: [Espanhol](/2020/06/23/caso-de-scraping-de-dados-personales) e [Inglês](/2020/06/23/Scraping-personal-data-exposure-in-the-web);
 
 ---
 
@@ -51,7 +52,7 @@ Resultado:
 
 ![](/images/publications/nubank-scraping/google-dorks.png)
 
-Além disso, observamos que alguns usuários estavam publicando essas URLs em outros canais, como o Twitter. Um uso comum da funcionalidade seria para receber doações.
+Além disso, foi possível observar que alguns usuários estavam publicando essas URLs em outros canais, como o Twitter. Um uso comum da funcionalidade seria para receber doações.
 
 ![](/images/publications/nubank-scraping/twitter-links.png)
 
@@ -168,13 +169,13 @@ CPF, nome completo, número da conta e agência de 100 pessoas, em apenas alguns
 
 ### Impacto
 
-A possibilidade de um atacante abusar dessa funcionalidade disponível nos sistemas da Nubank é alta devida a sua facildade de exploração. Podendo então expor  diversos usuários, vazando informações sensíveis como ilustrado anteriormente. Além disso, um atacante que tenha essas informações em mãos pode usá-las para desenvolver uma abordagem de engenharia social muito bem direcionada.
+A possibilidade de um atacante abusar dessa funcionalidade disponível nos sistemas da Nubank é alta devida a sua facildade de exploração. Podendo então expor diversos usuários, vazando informações sensíveis como ilustrado anteriormente. Além disso, um atacante que tenha essas informações em mãos pode usá-las para desenvolver uma abordagem de engenharia social muito bem direcionada.
 
 ---
 
 ### Conclusão
 
-Através dessa análise, é possível afirmar que uma agente malicioso poderia implementar diversos scrapers para mapear as URLs de cobrança do Nubank e, posteriormente, coletar as informações pessoais presentes nelas. Este artigo apresentou uma PoC como uma dessas implementações, utilizando um motor de busca, mas ainda há espaço para outros canais, como redes sociais (Twitter, Facebook e outras). Esses canais poderiam ser usados para levar essas pessoas a cenários de exposição ou risco, como se tornarem vítimas de spear phishing/engenharia social.
+Através dessa análise, é possível afirmar que um agente malicioso poderia implementar scrapers para mapear as URLs de cobrança do Nubank e, posteriormente, coletar as informações pessoais presentes nelas. Este artigo apresentou uma PoC como uma dessas implementações, utilizando um motor de busca, mas ainda há espaço para outros canais, como redes sociais (Twitter, Facebook e outras). Esse cenário poderia ser usado para tornar clientes do Nubank em vítimas de ataques de spear phishing/engenharia social.
 
 ---
 
