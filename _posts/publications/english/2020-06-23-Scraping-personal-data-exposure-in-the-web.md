@@ -21,7 +21,7 @@ Between the use and some tests that I always end up running on the applications 
 
 *Disclaimer:* the responsible company was informed about all details contained in this publication in the shortest possible time and it positioned itself in an ethical and transparent manner, demonstrating due attention and commitment. During all tests, no system was invaded or breached, in addition, the company performed some of the necessary actions/modifications to minimize any undue action that explores the context covered in this publication. Other recommendations to mitigate the vulnerabilities were made by me, however the company did not think it necessary to apply them.
 
-This publication is avaible also in: [Portuguese](/2020/06/23/Scraping-dados-pessoais-na-web) and [Spanish](/2020/06/23/caso-de-scraping-de-dados-personales);
+This publication is avaible also in: [Portuguese](/2020/06/23/Scraping-dados-pessoais-na-web) and [Spanish](/2020/06/23/caso-de-scraping-de-datos-personales);
 
 ---
 
