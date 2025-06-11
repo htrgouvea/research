@@ -23,7 +23,7 @@ Esta publicación también está disponible en: [Portugués](/2020/06/23/Scrapin
 
 ---
 
-### Descrición
+### Descripción
 
 Dentro de la aplicación de Nubank, existe una funcionalidad llamada "Cobrar". Su funcionamiento consiste en: 1) ingresar un valor si se desea, 2) hacer clic en confirmar y 3) se genera un código QR, con la opción de compartirlo o enviarlo a través de otra aplicación, como WhatsApp:
 
