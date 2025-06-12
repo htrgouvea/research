@@ -35,3 +35,6 @@ Qualquer criação, seja uma arte, um software ou uma ideia: se for genuinamente
   <source src="/images/publications/creative/people.mp4" type="video/mp4">
 </video>
 </center>
+
+
+* Essa publicação também está disponível em: [Inglês](/2025/06/11/creative-process) e [Espanhol](/2025/06/11/creative-process-es).

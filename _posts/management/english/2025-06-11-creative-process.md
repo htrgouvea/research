@@ -40,3 +40,5 @@ Any creation—whether art, software, or an idea—if it is truly of quality, do
   <source src="/images/publications/creative/people.mp4" type="video/mp4">
 </video>
 </center>
+
+This publication is also available in: [Portuguese](/2025/06/11/creative-process-ptbr) and [Spanish](/2025/06/11/creative-process-es).
