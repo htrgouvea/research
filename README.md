@@ -30,12 +30,18 @@ This repository stores all the structure, code and files of my personal website 
 | [](_posts/) | |  |
 ---
 
-### Download and Set-up
+### Download and set-up
 
 ```bash
   # Download
   $ git clone https://github.com/htrgouvea/research && cd research
-    
+
+  # install dependencies
+  $ bundle install
+
+  # Run Jekyll server
+  $ bundle exec jekyll serve
+
   # Building and running docker image
   $ docker build -t blog-jekyll .
   $ docker run -d -p 4000:4000 --name heitorgouvea.me blog-jekyll
