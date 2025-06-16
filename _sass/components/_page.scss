@@ -3,10 +3,10 @@
 }
 
 .c-page__header {
-    margin-bottom: 3rem; // 100px
+    margin-bottom: 3rem;
 
     h1 {
-        margin-bottom: 1.5rem; // 25px
+        margin-bottom: 1.5rem;
         @include fs--heading-2;
         color: $c-base__02;
     }

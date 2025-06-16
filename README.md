@@ -24,28 +24,28 @@ This repository stores all the structure, code and files of my personal website 
 
 ### Research
 
-| Name      | Description | Category |
+| Title       | Description | Category |
 | ----------- | ----------- | ----------- |
-| [CVE-2021-41773](_posts/analysis/CVE-2021-41773) | RCE & LFI on feature to path normalization in Apache HTTP Server| Analysis |
-| [CVE-2021-22204](_posts/analysis/CVE-2021-22204/) | N-Day exploit RCE on Exiftool | Analysis |
+| [](_posts/) | |  |
+| [](_posts/) | |  |
 ---
 
-### Download and Set-up
+### Download and set-up
 
 ```bash
   # Download
   $ git clone https://github.com/htrgouvea/research && cd research
-    
+
+  # install dependencies
+  $ bundle install
+
+  # Run Jekyll server
+  $ bundle exec jekyll serve
+
   # Building and running docker image
   $ docker build -t blog-jekyll .
   $ docker run -d -p 4000:4000 --name heitorgouvea.me blog-jekyll
 ```
-
----
-
-### Pipeline
-
-This Blog uses some Github Actions workflows, for example to deploy itself and some others in the security aspect, such as: [Dependa bot as a Software Composition Analsys (SCA)](https://github.com/htrgouvea/research/blob/main/.github/dependabot.yml), [Semgrep as a Static Analsysis Security Testing (SAST)](https://github.com/htrgouvea/research/blob/main/.github/workflows/semgrep.yml) and [OWASP ZAP as a Dynamic Analysis Security Testing (DAST)](https://github.com/htrgouvea/research/blob/main/.github/workflows/owasp-zap.yml).
 
 ---
 

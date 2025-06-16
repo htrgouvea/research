@@ -7,8 +7,6 @@
     <link rel="icon" href="/images/favicon.ico"/>
     <meta name="description" content="{% if page.excerpt %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" content="{{site.keywords}}">
-
-    <link href="//fonts.cdnfonts.com/css/lucida-sans" rel="stylesheet" integrity="sha384-YOeniPTId5EXAp8FBVLhggRZiBN74eFTVAgcWt+hXPX+wDQsB/+np/Kiw8z28VR8" crossorigin="anonymous">
                 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

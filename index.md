@@ -3,7 +3,7 @@ layout: page
 title: Home | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
-description: Security Researcher based in São Paulo (🇧🇷) with Software Engineering background and 7+ years of experience in the offensive security industry.
+description: Security Researcher based in São Paulo (🇧🇷) with Software Engineering background and 8+ years of experience in the offensive security industry.
 ---
 
 ## Publications
