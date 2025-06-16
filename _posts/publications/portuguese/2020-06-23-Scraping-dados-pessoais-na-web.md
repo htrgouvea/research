@@ -172,7 +172,7 @@ CPF, nome completo, número da conta e agência de 100 pessoas, em apenas alguns
 
 ### Impacto
 
-A possibilidade de um atacante abusar dessa funcionalidade disponível nos sistemas do Nubank é alta devido à facildade de exploração. Isso pode expor diversos usuários, vazando informações sensíveis, como demonstrado anteriormente. Além disso, um atacante qcom posse desses dados pode utilizá-los para aplicar golpes por meio de abordagens de engenharia social extremamente direcionadas.
+A possibilidade de um atacante abusar dessa funcionalidade disponível nos sistemas do Nubank é alta devido à facildade de exploração. Isso pode expor diversos usuários, vazando informações sensíveis, como demonstrado anteriormente. Além disso, um atacante com posse desses dados pode utilizá-los para aplicar golpes por meio de abordagens de engenharia social extremamente direcionadas.
 
 ---
 
