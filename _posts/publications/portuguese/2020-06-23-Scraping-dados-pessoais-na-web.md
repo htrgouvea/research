@@ -178,7 +178,7 @@ A possibilidade de um atacante abusar dessa funcionalidade disponível nos siste
 
 ### Conclusão
 
-Esta análise, demosntra que um agente malicioso poderia implementar scrapers para mapear URLs de cobrança do Nubank e, posteriormente, coletar as informações pessoais presentes nessas páginas. O artigo apresentou uma PoC utilizando um motor de busca, mas há espaço para outras possibilidades, como a exploração de dados publicados em redes sociais (Twitter, Facebook, etc.). Esse cenário representa um risco real, podendo tornar clientes do Nubank em alvos de ataques de spear phishing e engenharia social.
+Esta análise, demonstra que um agente malicioso poderia implementar scrapers para mapear URLs de cobrança do Nubank e, posteriormente, coletar as informações pessoais presentes nessas páginas. O artigo apresentou uma PoC utilizando um motor de busca, mas há espaço para outras possibilidades, como a exploração de dados publicados em redes sociais (Twitter, Facebook, etc.). Esse cenário representa um risco real, podendo tornar clientes do Nubank em alvos de ataques de spear phishing e engenharia social.
 
 ---
 
