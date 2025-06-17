@@ -5,8 +5,6 @@ description: ''
 og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
 
-Encadeamento de vulnerabilidades client-side para geração de Indisponibilidade em aplicação web
-
 Tabela de conteúdo:
 * [Resumo](#resumo)
 * [Descrição](#descrição)
