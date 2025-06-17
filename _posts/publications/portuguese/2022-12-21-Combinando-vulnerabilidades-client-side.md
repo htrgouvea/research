@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'Encadeamento de vulnerabilidades client-side para geração de Indisponibilidade em aplicação web'
-description: ''
+description: 'Durante uma análise na aplicação web da corretora easynvest.com.br (adquirida pelo Nubank), foram identificadas duas vulnerabilidades client-side que, quando exploradas em conjunto, podem colocar em risco a disponibilidade do serviço para usuários legítimos. Especificamente, observou-se a possibilidade de provocar uma condição de negação de serviço (DoS) a partir da combinação dessas falhas.'
 og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
 
