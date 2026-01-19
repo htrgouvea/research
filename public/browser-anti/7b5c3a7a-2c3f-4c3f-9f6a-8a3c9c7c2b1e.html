@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Single-Access Lock (PoC)</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .card {
+      border: 1px solid rgba(127,127,127,.25);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.10);
+      background: rgba(255,255,255,.06);
+    }
+    .title { margin: 0 0 10px; font-size: 20px; }
+    .muted { opacity: .85; line-height: 1.45; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 700;
+    }
+    button.secondary { background: rgba(127,127,127,.25); }
+    button.primary { background: rgba(59,130,246,.9); color: #fff; }
+    #app { display: none; }
+    #blocked { display: none; min-height: 100vh; }
+  </style>
+</head>
+<body>
+  <main id="app">
+    <div class="wrap">
+      <div class="card">
+        <h1 class="title">Protected Content</h1>
+        <p class="muted">
+          If you can see this, you are the first access on this browser profile.
+          Any subsequent access (new tab, refresh, or browser restart) will be blocked.
+        </p>
+        <p class="muted">
+          This is a client-only proof of concept. Clearing site data will remove the lock.
+        </p>
+        <div class="actions">
+          <button id="dev-reset" class="secondary" type="button">Reset (dev)</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <main id="blocked">
+    <div class="wrap">
+      <div class="card">
+        <h1 class="title">Access blocked</h1>
+        <p class="muted">
+          This page can be opened only once on this browser profile.
+          Please close other tabs or use a different profile/device.
+        </p>
+        <div class="actions">
+          <button id="try-again" class="primary" type="button">Try again</button>
+          <button id="blocked-reset" class="secondary" type="button">Reset (dev)</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const KEY = "SINGLE_ACCESS_LOCK_V1";
+      const app = document.getElementById("app");
+      const blocked = document.getElementById("blocked");
+      const devReset1 = document.getElementById("dev-reset");
+      const devReset2 = document.getElementById("blocked-reset");
+      const tryAgain = document.getElementById("try-again");
+
+      function uuid() {
+        return (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)) + "-" + Date.now();
+      }
+
+      function getLock() {
+        return localStorage.getItem(KEY);
+      }
+
+      function setLock() {
+        localStorage.setItem(KEY, uuid());
+      }
+
+      function showBlocked() {
+        app.style.display = "none";
+        blocked.style.display = "block";
+      }
+
+      function showApp() {
+        blocked.style.display = "none";
+        app.style.display = "block";
+      }
+
+      function init() {
+        if (getLock()) {
+          showBlocked();
+        } else {
+          setLock();
+          showApp();
+        }
+      }
+
+      function reset() {
+        localStorage.removeItem(KEY);
+        location.reload();
+      }
+
+      devReset1.addEventListener("click", reset);
+      devReset2.addEventListener("click", reset);
+      tryAgain.addEventListener("click", init);
+
+      init();
+    })();
+  </script>
+</body>
+</html>
+
