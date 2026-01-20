@@ -23,6 +23,13 @@ module SiteTestSupport
     YAML.safe_load(match[1], permitted_classes: [Date])
   end
 
+  def extract_body_content(file_path)
+    content = File.read(file_path)
+    match = content.match(/\A---\s*\n.*?\n---\s*\n(.*)\z/m)
+    assert match, "Missing body content in #{file_path}"
+    match[1]
+  end
+
   def build_site(output_directory)
     destination = Shellwords.escape(output_directory)
     command = "bundle exec jekyll build --destination #{destination}"
