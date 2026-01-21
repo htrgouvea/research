@@ -17,29 +17,29 @@ Table of contents:
 
 ### Summary
 
-During routine analysis and informal security testing of mobile applications, a feature in the Nubank mobile app was identified that enables users to generate and share "billing links" with others. While the feature serves its intended purpose well, its design raised concerns about potential misuse and data exposure. A proof of concept was developed to assess the extent of this exposure, revealing that sensitive personal information — including CPF, full name, bank account number, and agency — could be extracted from publicly accessible billing URLs. Over 100 customer records were mapped using simple automation in a matter of minutes.
+During routine analysis and informal security testing of mobile applications, a feature in the Nubank app was identified that enables users to generate and share "billing links" with others. While the feature serves its intended purpose, its design raised concerns about potential misuse and data exposure. A proof of concept was developed to assess the extent of this exposure, revealing that sensitive personal information — including CPF, full name, bank account number, and agency — could be extracted from publicly accessible billing URLs. Over 100 customer records were mapped using basic automation in a matter of minutes.
 
-*Disclaimer:* the responsible company was informed about all details contained in this publication in the shortest possible time and it positioned itself in an ethical and transparent manner, demonstrating due attention and commitment. During all tests, no system was invaded or breached, in addition, the company performed some of the necessary actions/modifications to minimize any undue action that explores the context covered in this publication. Other recommendations to mitigate the vulnerabilities were made by me, however the company did not think it necessary to apply them.
+*Disclaimer:* The responsible company was informed of all the details contained in this publication as quickly as possible. It  responded ethically and transparently, demonstrating appropriate attention and commitment. No systems were breached or compromised during testing. Additionaly, the company implemented some of the necessary changes to reduce the risk of misuse as described in this publication. Further recommendations to mitigate the vulnerabilities were provided, though the company did not deem them necessary to implement.
 
-This publication is avaible also in: [Portuguese](/2020/06/23/Scraping-dados-pessoais-na-web) and [Spanish](/2020/06/23/caso-de-scraping-de-datos-personales);
+This publication is also available in: [Portuguese](/2020/06/23/Scraping-dados-pessoais-na-web) and [Spanish](/2020/06/23/caso-de-scraping-de-datos-personales).
 
 ---
 
 ### Description
 
-The Nubank mobile application includes a feature referred to as “Cobrar” (or “Charge”), which allows users to generate a payment request. Once a value is optionally defined and the request is confirmed, a QR Code is created, accompanied by a corresponding URL. This URL can be shared directly through messaging platforms such as WhatsApp:
+The Nubank mobile application includes a feature called “Cobrar” (or “Charge”), which allows users to generate a payment request. Once an amount is optionally entered and the request is confirmed, a QR Code is created along with a corresponding URL. This URL can be shared directly through messaging platforms such as WhatsApp:
 
 ![](/images/publications/nubank-scraping/creating-a-link.png)
 
 ![](/images/publications/nubank-scraping/whatsapp-shared-link.png)
 
-The content embedded in the QR Code is equivalent to the URL itself, which, when accessed via a web browser, reveals a summary of the payment request. However, the page also displays personally identifiable information (PII) belonging to the user who generated the link — including their full name, CPF (Brazilian national ID number), bank agency, and account number — without requiring authentication or any form of access control:
+The QR Code encodes the same information as the URL, which, when accessed via a browser, reveals a summary of the payment request. Crucially, the page also displays personally identifiable information (PII) of the user who generated the link — including their full name, CPF (Brazilian national ID number), bank agency, and account number — without requiring authentication or any form of access control:
 
 ![](/images/publications/nubank-scraping/personal-infos.png)
 
-The generation and distribution of these URLs are entirely user-driven. The URLs are created within the app and shared at the user’s discretion, yet the lack of protection over the content made them publicly accessible to anyone in possession of the link. [1]
+These URLs are entirely user-generated and shared at the user’s discretion. However, the lack of protection over the content meant they were accessible to anyone with the link. [1]
 
-Further analysis revealed that many of these links were indexed by search engines. A simple crafted query (Google Dork) [2] — targeting URLs with the /pagar/ pattern on Nubank’s official domain — returned multiple publicly accessible billing pages:
+Further investigation revealed that many of these links had been indexed by search engines. A simple crafted query (Google Dork) [2] — targeting URLs with the `/pagar/` pattern on Nubank’s domain — returned numerous publicly accessible billing pages:
 
 ```text
 site:nubank.com.br inurl:/pagar/ -blog
@@ -47,19 +47,19 @@ site:nubank.com.br inurl:/pagar/ -blog
 
 ![](/images/publications/nubank-scraping/google-dorks.png)
 
-In addition to being indexed, several of these URLs were found being actively shared on public platforms such as Twitter. In these cases, users appeared to be using the feature to receive donations or for general informal transactions:
+Beyond search engine indexing, several of these URLs were also being actively shared on public platforms such as Twitter, where users appeared to use the feature for receiving donations or conducting informal transactions:
 
 ![](/images/publications/nubank-scraping/twitter-links.png)
 
-These findings highlighted a broader surface of exposure — not limited to search engines, but also extended to social networks and user-driven channels where sensitive financial metadata was being inadvertently disclosed.
+These findings indicated a broader exposure surface — not limited to search engines, but also extending to social media and other public channels where sensitive financial metadata was being inadvertently disclosed.
 
 ---
 
 ### Proof of Concept
 
-To evaluate the practical impact of this exposure, a proof of concept (PoC) was developed to demonstrate how sensitive information could be collected at scale by leveraging publicly accessible URLs.
+To evaluate the real-world impact of this exposure, a proof of concept (PoC) was developed to demonstrate how sensitive information could be collected at scale from publicly accessible URLs.
 
-The first step consisted in identifying as many valid billing URLs as possible. For this purpose, a simple script was implemented to programmatically query a search engine using a crafted dork [3], extract result links, and filter only the relevant ones. The script iterates through multiple result pages and collects unique URLs pointing to Nubank's payment endpoints:
+The first step involved identifying as many valid billing URLs as possible. A simple script was written to query a search engine programmatically using a crafted dork [3], extract result links, and filter for relevant matches. The script iterates through multiple result pages, collecting unique URLs pointing to Nubank's payment endpoints:
 
 ```perl
 #!/usr/bin/env perl
@@ -104,11 +104,11 @@ sub main {
 exit main();
 ```
 
-Using this method, 100 valid billing URLs were collected. This limit was set to contain the scope of the demonstration:
+Using this approach, 100 valid billing URLs were collected. This limit was set intentionally to contain the scope of the demonstration:
 
 ![](/images/publications/nubank-scraping/file-with-the-urls.png)
 
-With these URLs stored in a text file, a second script was created to access each URL, parse the HTML response, and extract the personal data presented on the page. This included full name, CPF, bank account number, and agency:
+A second script was then used to access each URL, parse the HTML response, and extract the personal information displayed on the page. This included full name, CPF, bank, account number, and agency:
 
 ```perl
 #!/usr/bin/env perl
@@ -158,23 +158,23 @@ sub main {
 exit main();
 ```
 
-The output confirmed that sensitive user information could be retrieved in bulk from these URLs:
+The output confirmed that sensitive user data could be harvested in bulk from these links:
 
 ![](/images/publications/nubank-scraping/collect-with-names-cpfs.png)
 
-In total, full names, CPF numbers, bank account numbers, and branch details of over 100 individuals were collected using basic automation in just a few minutes. This result highlights how a seemingly innocuous functionality can lead to serious privacy implications when exposed to public indexing without proper safeguards.
+In total, full names, CPF numbers, bank account numbers, and branch details for over 100 individuals were collected using basic automation within minutes. This result demonstrates how a seemingly helpful feature become a significant privacy concern when left unprotected and indexable by search engines.
 
 ---
 
 ### Impact
 
-The ability to access sensitive user information by merely collecting public URLs — without authentication or authorization — presents a clear security risk. These exposed details can be used in social engineering or spear phishing campaigns, significantly increasing the likelihood of successful attacks against affected individuals.
+The ability to access sensitive user data via public URLs — without authentication or authorization — presents a serious security risk. These exposed details could be exploited for social engineering or spear phishing campaigns, significantly increasing the vulnerability of affected individuals.
 
 ---
 
 ### Conclusion
 
-The analysis demonstrates that attackers could implement automated tools to discover Nubank billing URLs and collect sensitive personal data. While this proof of concept leveraged a search engine, similar results could be obtained through monitoring social media or other public forums. This scenario places customers at increased risk of privacy violations and targeted attacks.
+This analysis demonstrates how attackers could automate the discovery of Nubank billing URLs and extract personal data at scale. While this proof of concept relied on search engines, similar outcomes could be achieved by monitoring social media and other public forums. Such exposure puts users at increased risk of privacy violations and targeted fraud.
 
 ---
 
