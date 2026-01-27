@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'A brief essay on technical mentorship'
-description: 'technical leadership doesn’t start with titles. This essay explores mentorship as a function of seniority, judgment, and real engineering decisions.'
+description: 'Technical leadership doesn’t start with titles. This essay explores mentorship as a function of seniority, judgment, and real engineering decisions.'
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 ---
 
@@ -29,3 +29,11 @@ Over time, this process makes growth visible. Development stops being abstract a
 Technical mentorship, therefore, is neither an event nor an exclusive attribute of formal roles. It is born from seniority and strengthened through everyday practice: in conversations, in difficult decisions, and in the willingness to help others think more clearly about complex systems. Titles expand this influence, but they do not create it.
 
 In complex technical environments, sustainable development depends less on rigid structures and more on clear intent, continuous reflection, and openness to revisiting agreements over time. Systems evolve, contexts change, and people mature. What ultimately sustains technical leadership is enough clarity for growth to happen with autonomy, responsibility, and recognition.
+
+-
+
+### References
+
+- [1] [How to be effectively managed?](https://medium.com/quintoandar-tech-blog/how-to-be-effectively-managed-345375b0d986)
+- [2] [An effective manager is like a good software](https://medium.com/building-inventa/an-effective-manager-is-like-a-good-software-ebe429851612)
+- [3] [The manager's path: a guide for tech leaders navigating growth and change](https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897/)
