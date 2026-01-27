@@ -3,7 +3,7 @@ layout: page
 title: Home | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
-description: Security Researcher based in São Paulo (🇧🇷) with Software Engineering background and 8+ years of experience in the offensive security industry.
+description: Security Researcher based in São Paulo (🇧🇷) with Software Engineering background and 9+ years of experience in the offensive security industry.
 ---
 
 ## Publications
@@ -24,3 +24,4 @@ description: Security Researcher based in São Paulo (🇧🇷) with Software En
     - [30/05/2023] [The importante of context metrics](/2023/05/30/context-metrics);
     - [30/05/2023] [Historical metrics VS Tracking metrics](2023/05/30/historical-metrics-vs-tracking);
     - [05/09/2023] [Direction is more important than velocity](2023/09/05/direction-and-velocity);
+    - [27/01/2026] [A brief essay on technical mentorship](2026/01/27/technical-mentorship);
