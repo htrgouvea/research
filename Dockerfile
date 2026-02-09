@@ -1,4 +1,4 @@
-FROM ruby:3.3-slim AS build
+FROM ruby:4.0-slim AS build
 WORKDIR /site
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -14,7 +14,7 @@ RUN gem install bundler:2.3.0 \
 
 COPY . .
 
-FROM ruby:3.3-slim
+FROM ruby:4.0-slim
 WORKDIR /site
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
