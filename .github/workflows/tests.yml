@@ -20,4 +20,4 @@ jobs:
           ruby-version: "3.2"
           bundler-cache: true
       - name: Run tests
-        run: bundle exec ruby -I test -e "Dir.glob('test/**/*_test.rb').sort.each { |test_file| require test_file }"
+        run: bundle exec ruby -e "Dir.glob('test/**/*_test.rb').sort.each { |test_file| load File.expand_path(test_file) }"
