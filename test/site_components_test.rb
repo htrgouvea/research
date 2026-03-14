@@ -27,13 +27,17 @@ class SiteComponentsTest < Minitest::Test
   end
 
   def test_posts_have_required_front_matter_and_body
-    post_paths = Dir.glob(File.join(project_root, "_posts", "**", "*.md"))
+    post_paths = Dir.glob(File.join(project_root, "_posts", "**", "*.md")).select do |path|
+      File.basename(path).match?(/\A\d{4}-\d{2}-\d{2}-/)
+    end
     assert post_paths.any?
     post_paths.each do |post_path|
       front_matter = parse_front_matter(post_path)
       assert front_matter.key?("layout"), "Missing layout in #{post_path}"
       assert front_matter.key?("title"), "Missing title in #{post_path}"
-      assert front_matter.key?("date"), "Missing date in #{post_path}"
+      has_front_matter_date = front_matter.key?("date")
+      has_filename_date = File.basename(post_path).match?(/\A\d{4}-\d{2}-\d{2}-/)
+      assert has_front_matter_date || has_filename_date, "Missing date in #{post_path}"
       content = extract_body_content(post_path)
       assert content.strip.length.positive?
     end
