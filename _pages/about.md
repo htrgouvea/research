@@ -11,3 +11,5 @@ description: Research focus of Gouvêa is vulnerability discovery in application
 Security Researcher at [LESIS](https://lesis.lat){:target="_blank" rel="noopener noreferrer"}, based in São Paulo (🇧🇷) with Software Engineering background and 9+ years of experience in the offensive security industry. Research focus of Gouvêa is vulnerability discovery in applications/services and exploit development - was reported vulnerabilities to amazing companies like Activision, Nubank, Oracle, D-Link and other companies not as famous, but as incredible as.
 
 During this journey, Gouvêa share some of research notes [on your blog;](/)
+
+Sometims [i wrote poems](/poems), in portuguese (my native language)
