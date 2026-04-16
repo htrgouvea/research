@@ -12,4 +12,4 @@ Security Researcher at [LESIS](https://lesis.lat){:target="_blank" rel="noopener
 
 During this journey, Gouvêa share some of research notes [on your blog;](/)
 
-Sometims [i wrote poems](/poems), in portuguese (my native language)
+Random stuffs: sometimes [i write poems](/poems) in my native language, Portuguese. I also take photos in an old-school way and do some painting.
