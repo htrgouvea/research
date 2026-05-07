@@ -115,7 +115,7 @@ Ao longo da carreira, atuou em empresas nacionais relevantes, como Globo e Nuban
 
 ## Investimento
 
-Esta primeira turma será oferecida gratuitamente, com vagas limitadas a um grupo reduzido de 6 a 8 alunos.
+Esta primeira turma será oferecida gratuitamente, com vagas limitadas a um grupo reduzido de 6 a 8 participantes.
 
 A proposta desta edição inicial é validar o conteúdo em sala, observar a dinâmica dos exercícios e realizar ajustes finos antes da abertura de futuras turmas com contrapartida financeira.
 
@@ -123,7 +123,7 @@ A proposta desta edição inicial é validar o conteúdo em sala, observar a din
 
 As inscrições devem ser realizadas pelo formulário: [https://forms.gle/RoqRXgbC2g4L83Dx9](https://forms.gle/RoqRXgbC2g4L83Dx9){:target="_blank" rel="noopener noreferrer"}
 
-**Importante:** o preenchimento do formulário não garante a inscrição. Como as vagas são limitadas, nem todos os inscritos serão confirmados. Os alunos selecionados receberão a confirmação por mensagem ou e-mail.
+**Importante:** o preenchimento do formulário não garante a inscrição. Como as vagas são limitadas, nem todos os inscritos serão confirmados. Os participantes selecionados receberão a confirmação por mensagem ou e-mail.
 
 ## Carga horária
 
@@ -135,4 +135,4 @@ As inscrições devem ser realizadas pelo formulário: [https://forms.gle/RoqRXg
 
 ## Local
 
-Zona Sul do Rio de Janeiro. A localização exata será disponibilizada apenas para os alunos.
+Zona Sul do Rio de Janeiro. A localização exata será disponibilizada apenas para os participantes.
