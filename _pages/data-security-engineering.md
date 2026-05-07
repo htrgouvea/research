@@ -6,7 +6,7 @@ og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /data-security-engineering
 ---
 
-Um workshop presencial intensivo para profissionais que trabalham com pipelines de dados e querem compreender, discutir e implementar práticas modernas de privacidade e segurança em ambientes reais de engenharia.
+Um workshop presencial intensivo sobre segurança e privacidade aplicadas a sistemas, pipelines e plataformas de dados.
 
 ## Público-alvo
 
@@ -17,13 +17,11 @@ Um workshop presencial intensivo para profissionais que trabalham com pipelines 
 - Engenheiros de segurança;
 - Profissionais de tecnologia que trabalham com pipelines de dados.
 
-O workshop é voltado a profissionais que desejam aplicar práticas modernas de privacidade e segurança em ambientes reais de engenharia.
-
 ## Objetivo
 
-Capacitar profissionais a implementar práticas de segurança e privacidade em pipelines de dados, apresentando técnicas modernas para proteção de dados sensíveis e casos práticos de aplicação na indústria.
+Apresentar fundamentos, técnicas e critérios de decisão para lidar com dados sensíveis em sistemas reais, conectando conceitos de segurança, privacidade e engenharia de software.
 
-Considerando a carga horária limitada e a amplitude dos temas abordados, o workshop não tem como objetivo esgotar cada técnica em profundidade. A proposta é construir repertório, apresentar critérios de decisão e introduzir práticas iniciais que ajudem os participantes a avaliar riscos, escolher abordagens adequadas e aprofundar os estudos com mais clareza após os encontros.
+Considerando a carga horária limitada e a amplitude dos temas abordados, a proposta não é esgotar cada técnica em profundidade. O foco é construir repertório, introduzir práticas iniciais e ajudar os participantes a avaliar riscos, escolher abordagens adequadas e aprofundar os estudos com mais clareza após os encontros.
 
 ## Conteúdo programático
 
@@ -100,11 +98,11 @@ Considerando a carga horária limitada e a amplitude dos temas abordados, o work
 - Familiaridade com pipelines de processamento;
 - Conhecimento em ao menos uma linguagem de programação: Python, PHP, JavaScript, Rust ou similar.
 
-O conteúdo será ajustado ao nível da turma durante os encontros, aprofundando os temas conforme a experiência dos participantes e mantendo os exercícios próximos dos problemas reais de engenharia.
+O conteúdo será ajustado ao nível da turma durante os encontros, aprofundando os temas conforme a experiência dos participantes e mantendo os exercícios próximos de situações reais.
 
 ## Sobre o instrutor
 
-Heitor Gouvêa é pesquisador de Segurança da Informação com background em Engenharia de Software. Há quase uma década, trabalha em contextos que envolvem proteção de dados, como segurança de aplicações, passando por temas como modelagem de ameaças, identificação de vulnerabilidades, criação de ferramentas de segurança e desenvolvimento de práticas para redução de risco em sistemas reais.
+Heitor Gouvêa é pesquisador de Segurança da Informação com background em Engenharia de Software. Há quase uma década, trabalha em contextos que envolvem proteção de dados e segurança de aplicações, passando por temas como modelagem de ameaças, identificação de vulnerabilidades, criação de ferramentas de segurança e desenvolvimento de práticas para redução de risco.
 
 Ao longo da carreira, atuou em empresas nacionais relevantes, como Globo e Nubank, além de ter trabalhado com fornecedores de segurança e pesquisa aplicada. Como pesquisador, já reportou vulnerabilidades para empresas e projetos como Activision, MISP, D-Link, Oracle e outros.
 
