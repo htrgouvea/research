@@ -23,6 +23,8 @@ O workshop é voltado a profissionais que desejam aplicar práticas modernas de 
 
 Capacitar profissionais a implementar práticas de segurança e privacidade em pipelines de dados, apresentando técnicas modernas para proteção de dados sensíveis e casos práticos de aplicação na indústria.
 
+Considerando a carga horária limitada e a amplitude dos temas abordados, o workshop não tem como objetivo esgotar cada técnica em profundidade. A proposta é construir repertório, apresentar critérios de decisão e introduzir práticas iniciais que ajudem os participantes a avaliar riscos, escolher abordagens adequadas e aprofundar os estudos com mais clareza após os encontros.
+
 ## Conteúdo programático
 
 ### Encontro 1: 18/07/2026, das 13h00 às 18h00
