@@ -36,13 +36,13 @@ Considerando a carga horária limitada e a amplitude dos temas abordados, a prop
 #### 2. Métodos para compartilhamento de identificadores - 1h00
 
 - Identificadores diretos e indiretos;
-- Caso prático: compartilhamento seguro de dados via hash;
+- Caso prático: compartilhamento seguro de dados;
 - Vulnerabilidades comuns em estratégias de pareamento de dados.
 
 #### 3. Mascaramento e ofuscação de dados - 1h20
 
 - Padrões e técnicas de mascaramento;
-- Caso prático: vulnerabilidades por ausência de padrões;
+- Caso prático: demonstração de vulnerabilidades;
 - Implementação de políticas de mascaramento.
 
 #### 4. Synthetic Data - 1h00
