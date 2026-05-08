@@ -7,4 +7,4 @@ _site
 .jekyll_cache
 .idea
 *.DS_Store
-*node_modules/
+*node_modules/.claude/

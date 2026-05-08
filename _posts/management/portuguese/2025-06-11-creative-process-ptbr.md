@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Anotações sobre o processo criativo'
+title: 'Sobre o processo criativo'
 description: 'Enquanto estudo sobre a arte, encontro respostas sobre a vida.'
 og_image: https://heitorgouvea.me/images/publications/creative-proccess-pt.png
 ---
