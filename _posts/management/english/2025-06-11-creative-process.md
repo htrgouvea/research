@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Notes on the creative process'
+title: 'On the creative process'
 description: 'As I study art, I find answers about life.'
 og_image: https://heitorgouvea.me/images/publications/creative-proccess-pt.png
 ---
