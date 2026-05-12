@@ -37,3 +37,5 @@ In complex technical environments, sustainable development depends less on rigid
 - [1] [How to be effectively managed?](https://medium.com/quintoandar-tech-blog/how-to-be-effectively-managed-345375b0d986)
 - [2] [An effective manager is like a good software](https://medium.com/building-inventa/an-effective-manager-is-like-a-good-software-ebe429851612)
 - [3] [The manager's path: a guide for tech leaders navigating growth and change](https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897/)
+
+This publication is also available in: [Portuguese](/2026/01/27/mentoria-tecnica) and [Spanish](/2026/01/27/mentoria-tecnica-es).

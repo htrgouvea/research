@@ -3,6 +3,7 @@ layout: content
 title: 'Um breve ensaio sobre mentoria técnica'
 description: 'Liderança técnica não começa com cargos. Este ensaio explora a mentoria como uma função da senioridade, do julgamento e de decisões reais de engenharia.'
 og_image: https://heitorgouvea.me/images/photos/section.jpg
+permalink: /2026/01/27/mentoria-tecnica
 ---
 
 Ao longo da minha atuação como Technical Lead e, posteriormente, como Engineering Manager em times de Segurança Ofensiva e Engenharia de Segurança, a mentoria técnica deixou de ser uma prática pontual e passou a ocupar um papel central na forma como compreendo liderança. Não como um conjunto de técnicas formais, mas como um processo contínuo de desenvolvimento, leitura de contexto e construção de impacto ao longo do tempo.
@@ -28,3 +29,5 @@ Com o tempo, esse processo torna o crescimento visível. O desenvolvimento deixa
 Mentoria técnica, portanto, não é um evento nem uma atribuição exclusiva de cargos formais. Ela nasce da senioridade e se fortalece na prática cotidiana: nas conversas, nas decisões difíceis e na disposição de ajudar outras pessoas a pensar melhor sobre sistemas complexos. Cargos ampliam essa influência, mas não a criam.
 
 Em ambientes técnicos complexos, desenvolvimento sustentável depende menos de estruturas rígidas e mais de intenção clara, reflexão contínua e abertura para revisitar acordos ao longo do tempo. Sistemas evoluem, contextos mudam e pessoas amadurecem. O que sustenta a liderança técnica, nesse cenário, é a clareza necessária para que o crescimento aconteça com autonomia, responsabilidade e reconhecimento.
+
+* Essa publicação também está disponível em: [Inglês](/2026/01/27/technical-mentorship) e [Espanhol](/2026/01/27/mentoria-tecnica-es).
