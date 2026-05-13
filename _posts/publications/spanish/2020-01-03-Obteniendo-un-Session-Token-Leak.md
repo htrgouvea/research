@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Obteniendo un Session Token Leak con un Open Redirect'
+title: 'Obteniendo un session token leak con un open redirect'
 description: ''
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
@@ -17,7 +17,7 @@ Tabla de contenido:
 
 ### Resumen
 
-Esta publicación tiene como objetivo compartir como una vulnerabilidad de Open Redirect[1](#referencias) encontrada en el sitio web de la Caixa Econômica Federal, mediante la cual fue posible exponer los Tokens de Sesión de los usuarios.
+Esta publicación tiene como objetivo compartir como una vulnerabilidad de open redirect[1](#referencias) encontrada en el sitio web de la Caixa Econômica Federal, mediante la cual fue posible exponer los tokens de sesión de los usuarios.
 
 Es importante aclarar que durante todas las pruebas realizadas, se utilizó únicamente la cuenta para la cual se contaba con la autorización del titular, y no se accedió ni se violó información de otras cuentas o usuarios durante el desarrollo de esta investigación y prueba de concepto.
 
@@ -47,7 +47,7 @@ La URL:
 
 [http://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://acessoseguro.sso.caixa.gov.br]()
 
-El último parámetro de la URL presenta una posible vulnerabilidad de Open Redirect: `&redirect_uri=`. El valor insertado en este parámetro indica a qué URL será redirigido el usuario al finalizar la actividad en cuestión, en este caso, el inicio de sesión.
+El último parámetro de la URL presenta una posible vulnerabilidad de open redirect: `&redirect_uri=`. El valor insertado en este parámetro indica a qué URL será redirigido el usuario al finalizar la actividad en cuestión, en este caso, el inicio de sesión.
 
 Para validar esta posibilidad, se alteró el valor del parámetro `&redirect_uri=` en la URL original al link de la página principal de Google. Finalmente, al llenar las credenciales válidas e iniciar sesión, se obtuvo el siguiente resultado:
 
@@ -55,7 +55,7 @@ Para validar esta posibilidad, se alteró el valor del parámetro `&redirect_uri
 
 -
 
-Como se muestra, la aplicación contiene una vulnerabilidad de Open Redirect. Sin embargo, hay otro detalle: durante el redireccionamiento, se envió un parámetro adicional, como se puede observar en la URL:
+Como se muestra, la aplicación contiene una vulnerabilidad de open redirect. Sin embargo, hay otro detalle: durante el redireccionamiento, se envió un parámetro adicional, como se puede observar en la URL:
 
 [https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
 

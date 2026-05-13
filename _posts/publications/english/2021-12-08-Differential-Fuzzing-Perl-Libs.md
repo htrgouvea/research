@@ -1,7 +1,7 @@
 ---
 layout: content
-title: 'Scaling Libs security analysis with Differential Fuzzing'
-description: 'A technique that can help us strongly on this journey is fuzzing, more specifically the Differential Fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification that in some contexts could be a security vulnerability.'
+title: 'Scaling libs security analysis with differential fuzzing'
+description: 'A technique that can help us strongly on this journey is fuzzing, more specifically the differential fuzzing approach due to its ease of implementation and speed. I will illustrate how I have used this approach in some widely used modules to identify divergences, which can lead to bug identification that in some contexts could be a security vulnerability.'
 og_image: https://heitorgouvea.me/images/publications/perl-lib-fuzz/example-diff-fuzz.png
 ---
 
@@ -9,10 +9,10 @@ Table of contents:
 - [Introduction](#introduction)
 - [Background](#background)
 - [Objective](#objective)
-- [Differential Fuzzing](#differential-fuzzing)
+- [Differential fuzzing](#differential-fuzzing)
 - [Hunting for logic bugs](#hunting-for-logic-bugs)
-    - [Abusing URL Parsers](#abusing-url-parsers)
-    - [JSON Interoperability](#json-interoperability)
+    - [Abusing URL parsers](#abusing-url-parsers)
+    - [JSON interoperability](#json-interoperability)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -58,14 +58,14 @@ Given the background, this publication aims to demonstrate how we can use the di
 
 ---
 
-### Differential Fuzzing
+### Differential fuzzing
 
 A technique that can strongly help us on this journey is fuzzing: "is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program. The program is then monitored for exceptions such as crashes, failing built-in code assertions, or potential memory leaks." [[1]](#references).
 
 
-More specifically using the Differential Fuzzing approach due to its ease of implementation and speed, below is illustrated how this approach can be used to identify divergences in some modules, which can lead to the identification of logical bugs that in some contexts can be a security vulnerability.
+More specifically using the differential fuzzing approach due to its ease of implementation and speed, below is illustrated how this approach can be used to identify divergences in some modules, which can lead to the identification of logical bugs that in some contexts can be a security vulnerability.
 
-Differential Fuzzing: in this approach we have our seeds being sent to two or more inputs, where they are consumed and should produce the same output. At the end of the test these outputs are compared, in case of divergence the fuzzer will signal a possible failure. [[2]](#references)
+Differential fuzzing: in this approach we have our seeds being sent to two or more inputs, where they are consumed and should produce the same output. At the end of the test these outputs are compared, in case of divergence the fuzzer will signal a possible failure. [[2]](#references)
 
 ![](/images/publications/perl-lib-fuzz/fuzz-diagram.png)
 
@@ -145,13 +145,13 @@ Here we can already see some of the advantages of this approach, such as ease of
 
 ---
 
-#### Abusing URL Parsers
+#### Abusing URL parsers
 
 In modern times, practically every application or software deals with URLs at some point, this is because we have had a great advance in relation to the capacity of the internet, from its reach to its performance, so dealing with third parties applications is no longer a bottleneck and has become a feature of modern applications because that way it is possible to share responsibility with more resources, making access to components faster and more distributed.
 
 To support this reality, developers invested energy in the development of some URI parsing and HTTP engines libraries for the language, currently there are more than a dozen in this category alone when us talk about Perl Libs.
 
-As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to have divergences between, which can be explored during the cases of vulnerabilities such as SSRF, CFRL Injection and Open Redirect.
+As already demonstrated in previous research, such as that of Orange Tsai [[5]](#references) (cited at the beginning of this text) and also by the Claroty team [[8]](#references), it is common for these components to have divergences between, which can be explored during the cases of vulnerabilities such as SSRF, CFRL injection and open redirect.
 
 Through the seeds evidenced during the research produced by Orange Tsai, replicating them but looking at the divergences with the libraries mentioned above, it was possible to find two security issues that are possible to exemplify in real scenarios.
 
@@ -226,13 +226,13 @@ It would be able to bypass the check based on the blocklist, later the app would
 
 ---
 
-#### JSON Interoperability
+#### JSON interoperability
 
 To enable the process of communication between different applications, it was necessary to create some standards for transporting objects, among the most famous are XML and JSON. The first was widely used after its release in 1996, after that JSON was released in 2002 and gained a lot of popularity, I dare say that it is the standard adopted on a large scale today.
 
 As a consequence of this fact, the creation of libraries to parse these objects was necessary and several people realized this, generating a large number of different libraries.
 
-Quite frankly, it will be difficult for you to interact directly with an API written in Perl, the chances are greater that these APIs are internal, consumed by another back-end and this is good, as it opens up room for exploring JSON Interoperability contexts [[4]](#references), making room for techniques of “Attacking Secondary Contexts in Web Applications” [[9]](#references).
+Quite frankly, it will be difficult for you to interact directly with an API written in Perl, the chances are greater that these APIs are internal, consumed by another back-end and this is good, as it opens up room for exploring JSON interoperability contexts [[4]](#references), making room for techniques of “Attacking Secondary Contexts in Web Applications” [[9]](#references).
 
 As there are many modules in Perl to handle this type of information, the margin of attack ends up being quite large. Here we will cover the 4 most used modules based on CPAN; In this case, 8 different JSON inputs were provided, taken from Bishop Fox's research on the subject [[5]](#references). To better illustrate, I will leave a table below with all the detailed view of the outputs:
 

@@ -55,7 +55,7 @@ These findings highlighted a broader surface of exposure — not limited to sear
 
 ---
 
-### Proof of Concept
+### Proof of concept
 
 To evaluate the practical impact of this exposure, a proof of concept (PoC) was developed to demonstrate how sensitive information could be collected at scale by leveraging publicly accessible URLs.
 

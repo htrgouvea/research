@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'From an Open Redirect in a Brazilian Bank to Session Token Leak'
+title: 'From an open redirect in a Brazilian bank to session token leak'
 description: 'Through an open redirect on the financial institution website it was possible leak the users session token and realize an account takeover'
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
@@ -17,7 +17,7 @@ Table of contents:
 
 ### Summary
 
-This publication aims to share an Open Redirect vulnerability[1] discovered on the Caixa Econômica Federal website, through which it was possible to expose user Session Tokens.
+This publication aims to share an open redirect vulnerability[1] discovered on the Caixa Econômica Federal website, through which it was possible to expose user session tokens.
 
 It should be clarified that during all tests, the only account used was the one for which authorization was granted by the account holder. No other user accounts or information were accessed or violated during the development of this research and proof of concept.
 
@@ -47,7 +47,7 @@ The URL in question was as follows:
 
 [http://acessoseguro.sso.caixa.gov.br/cidadao/auth?response_type=code&client_id=portal-inter&segmento=CIDADAO01&template=portal&redirect_uri=http://acessoseguro.sso.caixa.gov.br]()
 
-The last parameter in the URL presents a potential Open Redirect vulnerability: &redirect_uri=. The value inserted in this parameter indicates the URL to which the user will be redirected after completing the login process.
+The last parameter in the URL presents a potential open redirect vulnerability: &redirect_uri=. The value inserted in this parameter indicates the URL to which the user will be redirected after completing the login process.
 
 To validate this, the value of the &redirect_uri= parameter in the original URL was changed to the Google homepage URL. After entering valid credentials and logging in, the following result was obtained:
 
@@ -55,7 +55,7 @@ To validate this, the value of the &redirect_uri= parameter in the original URL 
 
 -
 
-As shown, the application has an Open Redirect vulnerability. However, another detail was noticed: during the redirection, an additional parameter was sent, as observed in the URL:
+As shown, the application has an open redirect vulnerability. However, another detail was noticed: during the redirection, an additional parameter was sent, as observed in the URL:
 
 [https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7](https://google.com/?code=e629bd01-00cd-4b67-8f5d-f7fc50c2a9c7)
 
@@ -65,7 +65,7 @@ With this finding, it became evident that this vulnerability has a high severity
 
 ---
 
-### Proof Of Concept
+### Proof of concept
 
 To demonstrate the possibility of token leakage and capture, the following code was used:
 

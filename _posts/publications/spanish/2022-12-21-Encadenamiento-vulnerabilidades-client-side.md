@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'Encadenamiento de vulnerabilidades client-side para generar indisponibilidad en una aplicación web'
-description: 'Durante un análisis de la aplicación web de la corredora easynvest.com.br (adquirida por Nubank), se identificaron dos vulnerabilidades del lado del cliente que, al ser encadenadas, pueden comprometer la disponibilidad del servicio para usuarios legítimos. Específicamente, se observó la posibilidad de inducir una condición de Denial of Service (DoS) a partir de la explotación combinada de dichas fallas.'
+description: 'Durante un análisis de la aplicación web de la corredora easynvest.com.br (adquirida por Nubank), se identificaron dos vulnerabilidades del lado del cliente que, al ser encadenadas, pueden comprometer la disponibilidad del servicio para usuarios legítimos. Específicamente, se observó la posibilidad de inducir una condición de denial of service (DoS) a partir de la explotación combinada de dichas fallas.'
 og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
 
@@ -15,7 +15,7 @@ Tabla de contenido
 
 ### Resumen
 
-Durante un análisis de la aplicación web de la corredora easynvest.com.br (adquirida por Nubank), se identificaron dos vulnerabilidades del lado del cliente que, al ser encadenadas, pueden comprometer la disponibilidad del servicio para usuarios legítimos. Específicamente, se observó la posibilidad de inducir una condición de Denial of Service (DoS) a partir de la explotación combinada de dichas fallas.
+Durante un análisis de la aplicación web de la corredora easynvest.com.br (adquirida por Nubank), se identificaron dos vulnerabilidades del lado del cliente que, al ser encadenadas, pueden comprometer la disponibilidad del servicio para usuarios legítimos. Específicamente, se observó la posibilidad de inducir una condición de denial of service (DoS) a partir de la explotación combinada de dichas fallas.
 
 Aviso: la empresa responsable fue notificada de todos los detalles presentados en esta publicación en el menor tiempo posible y actuó de forma ética y transparente, demostrando compromiso y atención adecuados. Durante las pruebas realizadas, no se comprometió ni accedió a ningún sistema, y se llevaron a cabo acciones y modificaciones para mitigar cualquier posible uso indebido.
 
@@ -43,18 +43,18 @@ A pesar de la existencia de la vulnerabilidad, su explotación directa presenta 
 * Se trata de un XSS del tipo "reflejado", lo que dificulta su propagación automática;
 * El dominio principal implementa mecanismos de seguridad sólidos, como tokens anti-CSRF y headers HTTP bien configuradas: X-Frame-Options (XFO), Content Security Policy (CSP) y Cross-Origin Resource Sharing (CORS).
 
-Debido a estas limitaciones, se buscó otra vulnerabilidad que pudiera combinarse con el XSS para aumentar su impacto. El análisis del código JavaScript de la pantalla de autenticación reveló una vulnerabilidad de Open Redirect ([3], [4]):
+Debido a estas limitaciones, se buscó otra vulnerabilidad que pudiera combinarse con el XSS para aumentar su impacto. El análisis del código JavaScript de la pantalla de autenticación reveló una vulnerabilidad de open redirect ([3], [4]):
 
 [https://www.easynvest.com.br/autenticacao?redirect_url=https://google.com]()
 
 Demo:
 
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open Redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Este redireccionamiento no validado, ubicado en el dominio principal, permite propagar cargas maliciosas de forma más confiable, mitigando parcialmente las restricciones impuestas por el XSS reflejado. Sin embargo, los intentos de explotación con objetivos más críticos —como Account Takeover, exfiltración de datos o ejecución de acciones sensibles— no tuvieron éxito debido a la implementación de autenticación multifactor (MFA) en operaciones de alto riesgo ([7]).
 
-Ante estas restricciones, se evaluó un vector alternativo: el ataque conocido como Cookie Bomb, cuyo objetivo es hacer que la aplicación sea inaccesible para el usuario que accede a un enlace malicioso. Este ataque consiste en la inyección masiva de cookies con cargas excesivas, superando los límites que el servidor está preparado para procesar. Como resultado, las solicitudes posteriores del navegador comprometido pueden ser rechazadas, impidiendo que la aplicación cargue correctamente y generando así una condición de Denial of Service (DoS).
+Ante estas restricciones, se evaluó un vector alternativo: el ataque conocido como cookie bomb, cuyo objetivo es hacer que la aplicación sea inaccesible para el usuario que accede a un enlace malicioso. Este ataque consiste en la inyección masiva de cookies con cargas excesivas, superando los límites que el servidor está preparado para procesar. Como resultado, las solicitudes posteriores del navegador comprometido pueden ser rechazadas, impidiendo que la aplicación cargue correctamente y generando así una condición de denial of service (DoS).
 
 En términos generales, los navegadores permiten el envío de múltiples cookies, cada una con un tamaño máximo aproximado de 4KB. Sin embargo, los servidores pueden fallar al manejar este volumen excesivo de datos, resultando en indisponibilidad hasta que el usuario elimine manualmente las cookies o estas expiren.
 
@@ -91,7 +91,7 @@ Payload final: [https://easynvest.com.br/autenticacao?redirect_url=https://cutt.
 
 Resultado:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie Bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
@@ -103,11 +103,11 @@ La explotación encadenada de estas vulnerabilidades permite que un atacante pro
 
 ### Conclusión
 
-La explotación descrita requiere un bajo esfuerzo técnico y operativo, pero puede generar un impacto significativo para o usuário final. La combinación de una vulnerabilidad de XSS reflejado con una de Open Redirect permite la ejecución de un ataque de Denial of Service mediante Cookie Bomb, un vector poco común pero efectivo en contextos específicos.
+La explotación descrita requiere un bajo esfuerzo técnico y operativo, pero puede generar un impacto significativo para o usuário final. La combinación de una vulnerabilidad de XSS reflejado con una de open redirect permite la ejecución de un ataque de denial of service mediante cookie bomb, un vector poco común pero efectivo en contextos específicos.
 
 Tras el contacto con la empresa responsable, se adoptaron las siguientes medidas:
 
-* No se implementó una corrección definitiva para la vulnerabilidad de Open Redirect;
+* No se implementó una corrección definitiva para la vulnerabilidad de open redirect;
 * La mitigación del XSS reflejado se realizó mediante reglas en el Web Application Firewall (WAF), aunque se identificaron métodos para eludir esta protección. Se presentaron argumentos técnicos al respecto, sin respuesta concluyente hasta la fecha de publicación.
 
 ---

