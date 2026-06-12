@@ -11,7 +11,7 @@ class SiteComponentsTest < Minitest::Test
   end
 
   def test_layout_files_present
-    layouts = %w[content.html default.html page.html post.html]
+    layouts = %w[content.html default.html page.html post.html shoots.html]
     layouts.each do |layout|
       layout_path = File.join(project_root, "_layouts", layout)
       assert File.exist?(layout_path), "Missing layout: #{layout}"
@@ -56,7 +56,7 @@ class SiteComponentsTest < Minitest::Test
   def test_jekyll_build_generates_expected_pages
     Dir.mktmpdir do |output_directory|
       build_site(output_directory)
-      expected_paths = %w[index.html 404.html sitemap.xml]
+      expected_paths = %w[index.html 404.html shoots/index.html sitemap.xml]
       expected_paths.each do |relative_path|
         output_path = File.join(output_directory, relative_path)
         assert File.exist?(output_path), "Missing output: #{relative_path}"
