@@ -19,20 +19,6 @@ body {
     text-align: justify;
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section {
-    display: block;
-}
-
 h1,
 h2,
 h3,
@@ -49,8 +35,6 @@ img {
     vertical-align: middle;
     border: 0;
 }
-
-svg:not(:root) { overflow: hidden; }
 
 svg {
     pointer-events: none;

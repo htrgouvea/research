@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Explorando um Open Redirect para Vazamento de Session Tokens'
+title: 'Explorando um open redirect para vazamento de session tokens'
 description: ''
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
@@ -8,7 +8,7 @@ og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/ema
 Tabela de conteúdo:
 - [Sumário](#sumário)
 - [As vulnerabilidades](#descrição)
-- [Prova de Conceito](#prova-de-conceito)
+- [Prova de conceito](#prova-de-conceito)
 - [Impacto](#impacto)
 - [Conclusão](#conclusão)
 - [Referências](#referências)

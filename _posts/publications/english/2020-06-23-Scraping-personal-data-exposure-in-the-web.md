@@ -55,7 +55,7 @@ These findings indicated a broader exposure surface — not limited to search en
 
 ---
 
-### Proof of Concept
+### Proof of concept
 
 To evaluate the real-world impact of this exposure, a proof of concept (PoC) was developed to demonstrate how sensitive information could be collected at scale from publicly accessible URLs.
 

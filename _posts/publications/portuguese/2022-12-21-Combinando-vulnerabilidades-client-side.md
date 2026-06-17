@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Encadeamento de vulnerabilidades client-side para geração de Indisponibilidade em aplicação web'
+title: 'Encadeamento de vulnerabilidades client-side para geração de indisponibilidade em aplicação web'
 description: 'Durante uma análise na aplicação web da corretora easynvest.com.br (adquirida pelo Nubank), foram identificadas duas vulnerabilidades client-side que, quando exploradas em conjunto, podem colocar em risco a disponibilidade do serviço para usuários legítimos. Especificamente, observou-se a possibilidade de provocar uma condição de negação de serviço (DoS) a partir da combinação dessas falhas.'
 og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
@@ -52,7 +52,7 @@ Diante da limitação do XSS refletido isoladamente, buscou-se identificar outra
 
 Demo:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open Redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Esse redirecionamento não validado, localizado no domínio principal da aplicação, permite a disseminação de cargas maliciosas de forma mais confiável, mitigando parcialmente as restrições impostas pelo XSS refletido. No entanto, tentativas de exploração com objetivos mais críticos — como assumir o controle de contas (Account Takeover), exfiltração de dados e execução de ações sensíveis — foram ineficazes devido à implementação de autenticação multifator (MFA) para operações de maior risco ([7]).
 
@@ -65,7 +65,7 @@ Para um entendimento aprofundado desse tipo de ataque, recomenda-se a leitura do
 
 ---
 
-### Prova de Conceito
+### Prova de conceito
 
 A seguir, descreve-se a cadeia de exploração:
 
@@ -96,7 +96,7 @@ Payload final: [https://easynvest.com.br/autenticacao?redirect_url=https://cutt.
 
 Resultado:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie Bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

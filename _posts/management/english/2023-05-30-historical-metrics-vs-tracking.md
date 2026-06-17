@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Historical metrics vs Tracking metrics'
+title: 'Historical metrics vs tracking metrics'
 description: 'Continuing the discussion about metrics, another point worth considering and categorizing is the distinction between historical metrics and tracking metrics. Proper use of these metrics can be a differentiating factor.'
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 ---

@@ -62,7 +62,7 @@ Given these constraints, the analysis turned to identifying a complementary vuln
 
 **Demo:**
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open Redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/sN1J3py9aUo" title="Open redirect - Easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This unvalidated redirect on the main domain allows malicious payloads to be delivered more reliably, partially bypassing the limitations imposed by the subdomain-restricted XSS. However, further exploitation attempts targeting account takeover, data exfiltration, or critical actions were unsuccessful, as the application requires Multi-Factor Authentication (MFA) for sensitive operations (\[7]).
 
@@ -75,7 +75,7 @@ For further reading, refer to:
 
 ---
 
-### Proof of Concept
+### Proof of concept
 
 The exploitation chain proceeds as follows:
 
@@ -108,7 +108,7 @@ window.location="https://" + document.domain;
 
 **Result:**
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie Bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

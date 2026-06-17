@@ -10,7 +10,15 @@ github_username:  htrgouvea
 donate: donate
 
 include: [_pages]
-exclude: ["README.md", "SECURITY.md", "LICENSE.md", "Gemfile", "Dockerfile"]
+exclude:
+  - README.md
+  - SECURITY.md
+  - LICENSE.md
+  - Gemfile
+  - Dockerfile
+  - vendor
+  - vendor/bundle
+  - .bundle
 
 markdown: kramdown
 permalink: /:year/:month/:day/:title

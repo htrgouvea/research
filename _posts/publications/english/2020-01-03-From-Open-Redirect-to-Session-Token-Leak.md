@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'From an Open Redirect in a Brazilian Bank to Session Token Leak'
+title: 'From an open redirect in a Brazilian bank to session token leak'
 description: 'Through an open redirect on the financial institution website it was possible leak the users session token and realize an account takeover'
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---
@@ -18,7 +18,7 @@ Table of contents:
 
 ### Summary
 
-This publication aims to share an Open Redirect vulnerability[1] discovered on the Caixa Econômica Federal website, through which it was possible to expose user Session Tokens.
+This publication aims to share an open redirect vulnerability[1] discovered on the Caixa Econômica Federal website, through which it was possible to expose user session tokens.
 
 It should be clarified that throughout all testing, only one accountt—authorised by the account holder—was used. No other user accounts or information were accessed or compromised during the development of this research and proof of concept.
 
@@ -61,7 +61,7 @@ This makes the vulnerability of high severity. An attacker could redirect users 
 
 ---
 
-### Proof Of Concept
+### Proof of concept
 
 To demonstrate the possibility of token leakage and capture, the following code was used:
 

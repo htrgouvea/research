@@ -18,10 +18,6 @@ Here are some services I often offer:
 
 ---
 
-- __Pentesting/Security Audit__: if you are looking for a partner to help you discover vulnerabilities, whether in the scope of web applications, network, code review, you can count on me! In the last decade, this was the area that I worked constantly and with big brands. It's my passion.
-
----
-
 - __Product Strategy__: if you are building a product to security or engineering teams you can benefit of my experience as a builder and a user of this type of products. I will be happy to help you with: product strategy, roadmap, positioning, pricing, go-to-market, sales strategy and more.
 
 ---
@@ -35,3 +31,5 @@ Here are some services I often offer:
 ---
 
 Send me an email to [services@heitorgouvea.me](mailto:services@heitorgouvea.me) with the subject "Security Advisor" and let's set up a chat! If what you are looking for is not listed among these items but you still think I can help you, contact me and let's talk!
+
+For research/offensive security services, contact LESIS direclty trough [bussiness@lesis.lat](mailto:bussiness@lesis.lat)

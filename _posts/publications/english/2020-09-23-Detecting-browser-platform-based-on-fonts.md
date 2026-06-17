@@ -33,7 +33,7 @@ After reporting this problem, I was told that the Tor Project is already aware [
 
 ---
 
-### Proof of Concept
+### Proof of concept
 
 Exploit:
 

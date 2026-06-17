@@ -12,8 +12,8 @@ jobs:
     name: Scaneando a aplicação
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.12.0
+        uses: zaproxy/action-full-scan@v0.13.0
         with:
           target: 'https://heitorgouvea.me/'

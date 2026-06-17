@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'A lightweight static security analysis tool for modern Perl Apps'
+title: 'A lightweight static security analysis tool for modern Perl apps'
 description: 'Through the use of static analysis tools, it is possible to identify many security issues quickly and in large and complex code base. But doing this efficiently is hard.'
 og_image: https://heitorgouvea.me/images/publications/zarn/zarn.png
 ---
@@ -9,7 +9,7 @@ Table of contents:
 - [Summary](#summary)
 - [Background](#background)
 - [Objective](#objective)
-- [Static Analysis](#static-analysis)
+- [Static analysis](#static-analysis)
 - [Introduction to ZARN](#introduction-to-zarn)
 - [Conclusion](#conclusion)
 - [References](#references)
@@ -28,7 +28,7 @@ Today, software engineers who propose to do their work using the Perl language a
 
 The quantity of options are extremely low, mostly commercial. Therefore, it is difficult to contribute to the improvement of its efficiency.
 
-This same topic is also discussed in the publication: [“Scaling Libs security analysis with Differential Fuzzing”](https://heitorgouvea.me/2021/12/08/Differential-Fuzzing-Perl-Libs) [[1]](#references), where a dynamic analysis solution is presented to identify vulnerabilities in modules/libraries.
+This same topic is also discussed in the publication: [“Scaling libs security analysis with differential fuzzing”](https://heitorgouvea.me/2021/12/08/Differential-Fuzzing-Perl-Libs) [[1]](#references), where a dynamic analysis solution is presented to identify vulnerabilities in modules/libraries.
 
 ---
 
@@ -47,7 +47,7 @@ Thus, this text will illustrate how a SAST tool for Perl applications can behave
 
 ---
 
-### Static Analysis
+### Static analysis
 
 When we think about a simple and basic static analysis tool, focused on security, the general algorithm is something similar to:
 
@@ -95,9 +95,9 @@ For this last stage of variable manipulation identification, we adopted the Tain
 
 ---
 
-### Basic Demo
+### Basic demo
 
-An example in which we can understand in a practical way everything that has been presented so far would be the attempt to write a rule to try to identify a Remote Code Execution (RCE) vulnerability in a simple piece of code.
+An example in which we can understand in a practical way everything that has been presented so far would be the attempt to write a rule to try to identify a remote code execution (RCE) vulnerability in a simple piece of code.
 
 There are numerous ways for code to be considered vulnerable to RCE, but here we will focus on trying to identify cases where the following functions are used in a user-exploitable way: **system**, **eval**, and **exec**.
 
@@ -157,7 +157,7 @@ Result:
 
 ---
 
-### Future Work
+### Future work
 
 Currently, Zarn do single file context analysis, which means that it is not able to identify vulnerabilities that are not directly related to the file being analyzed. But in the future, exist a plan to implement a call graph analysis [[6]](#references) to identify vulnerabilities that are not directly related to the file being analyzed.
 

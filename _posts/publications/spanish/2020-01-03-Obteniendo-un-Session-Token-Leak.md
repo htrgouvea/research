@@ -1,6 +1,6 @@
 ---
 layout: content
-title: 'Obteniendo un Session Token Leak con un Open Redirect'
+title: 'Obteniendo un session token leak con un open redirect'
 description: ''
 og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/email-poc.png
 ---

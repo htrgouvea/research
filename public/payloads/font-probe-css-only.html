@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSS-only font probe PoC</title>
+        <style>
+            /*
+             * CSS-only font probing PoC.
+             *
+             * There is no JavaScript in this document. The signal is produced by
+             * @font-face fallback fetching:
+             *
+             * - If local("Font Name") exists, the browser can use the local font.
+             * - If it does not exist, the browser tries the url(...) fallback.
+             * - The fallback URL can be observed in access logs or the Network tab.
+             *
+             * Replace /font-probe with an endpoint you control. A 404 response is
+             * enough for the request to be visible.
+             */
+
+            @font-face {
+                font-family: "probe-macos-lucida-grande";
+                src:
+                    local("Lucida Grande"),
+                    url("/font-probe?font=lucida-grande&result=missing") format("woff2");
+            }
+
+            @font-face {
+                font-family: "probe-windows-ms-gothic";
+                src:
+                    local("MS Gothic"),
+                    url("/font-probe?font=ms-gothic&result=missing") format("woff2");
+            }
+
+            @font-face {
+                font-family: "probe-windows-segoe-ui";
+                src:
+                    local("Segoe UI"),
+                    url("/font-probe?font=segoe-ui&result=missing") format("woff2");
+            }
+
+            @font-face {
+                font-family: "probe-linux-dejavu-sans";
+                src:
+                    local("DejaVu Sans"),
+                    url("/font-probe?font=dejavu-sans&result=missing") format("woff2");
+            }
+
+            @font-face {
+                font-family: "probe-linux-liberation-sans";
+                src:
+                    local("Liberation Sans"),
+                    url("/font-probe?font=liberation-sans&result=missing") format("woff2");
+            }
+
+            html {
+                color-scheme: light dark;
+                font-family: system-ui, sans-serif;
+            }
+
+            body {
+                margin: 0;
+                padding: 32px;
+                line-height: 1.5;
+            }
+
+            body::after {
+                content: "";
+                position: fixed;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                background-image: url("/font-probe?event=page-loaded");
+            }
+
+            main {
+                max-width: 720px;
+            }
+
+            code {
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            }
+
+            .probe {
+                position: absolute;
+                left: -10000px;
+                top: -10000px;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 32px;
+            }
+
+            .macos-lucida-grande {
+                font-family: "probe-macos-lucida-grande";
+            }
+
+            .windows-ms-gothic {
+                font-family: "probe-windows-ms-gothic";
+            }
+
+            .windows-segoe-ui {
+                font-family: "probe-windows-segoe-ui";
+            }
+
+            .linux-dejavu-sans {
+                font-family: "probe-linux-dejavu-sans";
+            }
+
+            .linux-liberation-sans {
+                font-family: "probe-linux-liberation-sans";
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>CSS-only font probe PoC</h1>
+            <p>
+                This page uses only HTML and CSS. Open the Network tab or inspect
+                server access logs for requests to <code>/font-probe</code>.
+                A request for <code>font=...</code> means that local font was not
+                found, so the browser tried to fetch the CSS fallback.
+            </p>
+            <p>
+                Example: if <code>font=lucida-grande</code> is absent from the
+                logs but <code>font=ms-gothic</code> is present, that is consistent
+                with Lucida Grande being available locally and MS Gothic being
+                unavailable locally.
+            </p>
+        </main>
+
+        <span class="probe macos-lucida-grande">mmmmmmmmmmmmmmmmmmmm</span>
+        <span class="probe windows-ms-gothic">mmmmmmmmmmmmmmmmmmmm</span>
+        <span class="probe windows-segoe-ui">mmmmmmmmmmmmmmmmmmmm</span>
+        <span class="probe linux-dejavu-sans">mmmmmmmmmmmmmmmmmmmm</span>
+        <span class="probe linux-liberation-sans">mmmmmmmmmmmmmmmmmmmm</span>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'Encadenamiento de vulnerabilidades client-side para generar indisponibilidad en una aplicación web'
-description: 'Durante un análisis de la aplicación web de la corredora easynvest.com.br (adquirida por Nubank), se identificaron dos vulnerabilidades del lado del cliente que, al ser encadenadas, pueden comprometer la disponibilidad del servicio para usuarios legítimos. Específicamente, se observó la posibilidad de inducir una condición de Denial of Service (DoS) a partir de la explotación combinada de dichas fallas.'
+description: 'Durante un análisis de la aplicación web de la corredora easynvest.com.br (adquirida por Nubank), se identificaron dos vulnerabilidades del lado del cliente que, al ser encadenadas, pueden comprometer la disponibilidad del servicio para usuarios legítimos. Específicamente, se observó la posibilidad de inducir una condición de denial of service (DoS) a partir de la explotación combinada de dichas fallas.'
 og_image: https://heitorgouvea.me/images/publications/nuinvest/xss-triaged.png
 ---
 
@@ -94,7 +94,7 @@ Payload final:
 
 Resultado:
 
-<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie Bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="523" src="https://www.youtube.com/embed/-L2pl1Ke_Lo" title="Cookie bomb - easynvest.com.br" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

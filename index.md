@@ -3,7 +3,7 @@ layout: page
 title: Home | Heitor Gouvêa - Security Researcher
 og_image: https://heitorgouvea.me/images/photos/section.jpg
 permalink: /
-description: Security Researcher based in São Paulo (🇧🇷) with Software Engineering background and 8+ years of experience in the offensive security industry.
+description: Security Researcher based in São Paulo (🇧🇷) with Software Engineering background and 9+ years of experience in the offensive security industry.
 ---
 
 ## Publications
@@ -20,7 +20,19 @@ description: Security Researcher based in São Paulo (🇧🇷) with Software En
 3. __Vulnerability research notes:__
     - [23/09/2020] [Detecting Tor Browser platform based on exclusive font rendering](/2020/09/23/Detecting-browser-platform-based-on-fonts);
 
-4. __Building high-performance technical teams:__
+4. __Product lessons from the field:__
+    - [26/04/2026] [The Last 20%](/2026/04/26/last-20-percent-building-products);
+    - [23/02/2026] [Productive Inversion Strategy](/2026/02/23/productive-inversion-strategy);
+
+5. __Building high-performance Technical Teams:__
     - [30/05/2023] [The importante of context metrics](/2023/05/30/context-metrics);
     - [30/05/2023] [Historical metrics VS Tracking metrics](2023/05/30/historical-metrics-vs-tracking);
     - [05/09/2023] [Direction is more important than velocity](2023/09/05/direction-and-velocity);
+    - [27/01/2026] [A brief essay on technical mentorship](2026/01/27/technical-mentorship);
+    - [26/04/2026] [Should we buy or build?](/2026/04/26/should-we-buy-or-build);
+
+6. __Privacy notes:__
+    - [08/03/2026] [Host-based anonymous networking via transparent Tor redirection](/2026/03/08/host-based-anonymous-networking)
+
+7. __Side notes:__
+    - [11/06/2025] [On the creative process](/2025/06/11/creative-process);
