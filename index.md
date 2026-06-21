@@ -13,7 +13,7 @@ description: Security Researcher based in São Paulo (🇧🇷) with Software En
     - [23/06/2020] [A little case about scraping personal data exposure in the web](/2020/06/23/Scraping-personal-data-exposure-in-the-web);
     - [21/12/2022] [Chaining client-side vulnerabilities to make a web app unavailable](/2022/12/21/Chaining-vulnerabilities-to-make-web-unavailable);
 
-2. __Helping to keep the Perl programming language secure:__
+2. __Helping to keep the Perl Programming Language secure:__
     - [19/03/2023] [A lightweight static security analysis tool for modern Perl Apps](/2023/03/19/static-security-analysis-tool-perl);
     - [08/12/2021] [Scaling Libs security analysis with Differential Fuzzing](2021/12/08/Differential-Fuzzing-Perl-Libs);
 
