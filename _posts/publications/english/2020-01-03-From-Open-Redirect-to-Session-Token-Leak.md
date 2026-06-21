@@ -8,7 +8,7 @@ og_image: https://heitorgouvea.me/images/publications/caixa-account-takeover/ema
 Table of contents:
 - [Summary](#summary)
 - [Description](#description)
-- [Prooft of Concept](#proof-of-concept)
+- [Proof of Concept](#proof-of-concept)
 - [Impact](#impact)
 - [Conclusion](#conclusion)
 - [References](#references)
@@ -31,7 +31,7 @@ Timeline:
 01/10/2020: Technical article published;
 ```
 
-* This publication is also avaible in: [Spanish](/2020/01/03/Obteniendo-un-Session-Token-Leak) and [Portuguese](/2020/01/03/Conseguindo-Session-Token-Leak-com-Open-Redirect);
+* This publication is also available in: [Spanish](/2020/01/03/Obteniendo-un-Session-Token-Leak) and [Portuguese](/2020/01/03/Conseguindo-Session-Token-Leak-com-Open-Redirect);
 
 ---
 
