@@ -1,3 +1,15 @@
+.c-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    > .c-article {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
 .c-page__header {
     margin-bottom: 3rem;
 
@@ -17,6 +29,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
 
     p {
         @include fs--body;
