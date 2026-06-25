@@ -37,24 +37,24 @@ Timeline
 
 The application includes a feature that generates personalized referral links using URL parameters, as shown in the following example:
 
-![Imagem](/images/publications/nuinvest/link-indique.png)
+![Image](/images/publications/nuinvest/link-indique.png)
 
 [https://indique.easynvest.com.br?nome=heitor%20REDACTED&id=[NUMERICAL ID REDACTED]]()
 
-![Imagem](/images/publications/nuinvest/site.png)
+![Image](/images/publications/nuinvest/site.png)
 
 Upon accessing the link, the “?nome=” parameter is directly reflected on the user's screen. This behavior indicates the presence of a reflected Cross-Site Scripting (XSS) vulnerability ([1], [2]). The vulnerability was confirmed with the following payload:
 
 [https://indique.easynvest.com.br/?nome=<audio src/onerror=alert(1)>&id=1]()
 
-![Imagem](/images/publications/nuinvest/xss-triaged.png)
+![Image](/images/publications/nuinvest/xss-triaged.png)
 
 Although the vulnerability is exploitable, its impact is limited by several factors:
 
-* The vulnerable component is hosted on a subdomain, restricting access to LocalStorage on the main domain;
-* Sensitive cookies are protected with the HTTPOnly flag;
+* The vulnerable component is hosted on a subdomain, restricting access to `LocalStorage` on the main domain;
+* Sensitive cookies are protected with the `HttpOnly` flag;
 * Being a reflected XSS, it is not easily propagated without user interaction;
-* The main domain enforces strong security policies, including anti-CSRF tokens, and headers such as X-Frame-Options (XFO), Content Security Policy (CSP), and CORS.
+* The main domain enforces strong security policies, including anti-CSRF tokens, and headers such as `X-Frame-Options` (XFO), Content Security Policy (CSP), and CORS.
 
 Given these constraints, the investigation focused on identifying a complementary vulnerability that could be chained with the reflected XSS. Analysis of the authentication page's JavaScript revealed an open redirect vulnerability ([3], [4]):
 

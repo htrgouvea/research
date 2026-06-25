@@ -31,7 +31,7 @@ Linha do tempo:
 01/10/2020: Divulgação deste artigo técnico;
 ```
 
-* Essa publicação também está dispoível em: [Espanhol](/2020/01/03/Obteniendo-un-Session-Token-Leak) e [Inglês](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak);
+* Essa publicação também está disponível em: [Espanhol](/2020/01/03/Obteniendo-un-Session-Token-Leak) e [Inglês](/2020/01/03/From-Open-Redirect-to-Session-Token-Leak);
 
 ---
 

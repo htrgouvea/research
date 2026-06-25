@@ -8,7 +8,7 @@ og_image: https://heitorgouvea.me/images/publications/nubank-scraping/google-dor
 Table of contents:
 - [Summary](#summary)
 - [Description](#description)
-- [Prooft of Concept](#proof-of-concept)
+- [Proof of Concept](#proof-of-concept)
 - [Impact](#impact)
 - [Conclusion](#conclusion)
 - [References](#references)
@@ -21,7 +21,7 @@ During routine analysis and informal security testing of mobile applications, a 
 
 *Disclaimer:* the responsible company was informed about all details contained in this publication in the shortest possible time and it positioned itself in an ethical and transparent manner, demonstrating due attention and commitment. During all tests, no system was invaded or breached, in addition, the company performed some of the necessary actions/modifications to minimize any undue action that explores the context covered in this publication. Other recommendations to mitigate the vulnerabilities were made by me, however the company did not think it necessary to apply them.
 
-This publication is avaible also in: [Portuguese](/2020/06/23/Scraping-dados-pessoais-na-web) and [Spanish](/2020/06/23/caso-de-scraping-de-datos-personales);
+This publication is also available in: [Portuguese](/2020/06/23/Scraping-dados-pessoais-na-web) and [Spanish](/2020/06/23/caso-de-scraping-de-datos-personales);
 
 ---
 
@@ -39,7 +39,7 @@ The content embedded in the QR Code is equivalent to the URL itself, which, when
 
 The generation and distribution of these URLs are entirely user-driven. The URLs are created within the app and shared at the user’s discretion, yet the lack of protection over the content made them publicly accessible to anyone in possession of the link. [1]
 
-Further analysis revealed that many of these links were indexed by search engines. A simple crafted query (Google Dork) [2] — targeting URLs with the /pagar/ pattern on Nubank’s official domain — returned multiple publicly accessible billing pages:
+Further analysis revealed that many of these links were indexed by search engines. A simple crafted query (Google Dork) [2] — targeting URLs with the `/pagar/` pattern on Nubank’s official domain — returned multiple publicly accessible billing pages:
 
 ```text
 site:nubank.com.br inurl:/pagar/ -blog
