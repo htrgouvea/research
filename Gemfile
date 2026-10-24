@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'github-pages'
-gem 'amp-jekyll'
-gem 'jekyll-sitemap'
-gem "webrick", "~> 1.9"
+gem 'jekyll', '~> 4.4'
+gem 'jekyll-feed', '~> 0.18'
+gem 'jekyll-sitemap', '~> 1.4'
+gem 'jekyll-remote-theme', '~> 0.6'
+gem 'amp-jekyll', '~> 1.0'
+gem 'rubyzip', '>= 3.4.0'
+gem 'logger', '~> 1.6'
+gem 'base64', '~> 0.3'
+gem 'kramdown-parser-gfm', '~> 1.1'
+gem 'bigdecimal', '~> 4.1'
+gem 'jemoji', '~> 0.13'
+gem 'webrick', '~> 1.9'

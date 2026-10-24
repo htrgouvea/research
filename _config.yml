@@ -3,7 +3,7 @@ description: "Security Researcher based in São Paulo (🇧🇷) with Software E
 keywords: Heitor, Gouvêa, Security, Researcher, Independent, Vulnerability, Pentester, Bug, Bounty, Hunter, Perl, Fuzzing, Nipe, Nozaki, Spellbook
 author: Heitor Gouvêa
 baseurl: ""
-url: "https://heitorgouvea.me" 
+url: "https://heitorgouvea.me"
 
 twitter_username: htrgouvea
 github_username:  htrgouvea
@@ -28,5 +28,6 @@ sass:
 plugins:
   - jemoji
   - jekyll-sitemap
+  - jekyll-feed
 
 google_analytics: G-VHN1CKT5Q3
