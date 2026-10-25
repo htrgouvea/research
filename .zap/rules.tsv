@@ -1,0 +1,10 @@
+# Pending findings remain WARN and fail the workflow.
+#
+# False positive:
+# <rule-id>     IGNORE  (False positive; reason=<reason>; reviewed_by=<name>; reviewed_on=<YYYY-MM-DD>)
+#
+# Accepted risk:
+# <rule-id>     INFO    (Risk accepted; reason=<reason>; owner=<name>; expires=<YYYY-MM-DD>)
+#
+# Explicit security gate:
+# <rule-id>     FAIL    (Security gate; reason=<reason>)
