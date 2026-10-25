@@ -44,6 +44,7 @@ jobs:
             -T 10
             -l WARN
             -s
+            -I
             -c .zap/rules.tsv
             --hook=/zap/wrk/.zap/hooks.py
             -z "-config scanner.threadPerHost=2
